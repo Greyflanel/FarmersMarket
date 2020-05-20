@@ -1,0 +1,20 @@
+{
+  "name": "farmersmarket",
+  "version": "1.0.0",
+  "description": "online farmers market",
+  "main": "server.js",
+  "scripts": {
+    "start": "server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Greyflanel/FarmersMarket.git"
+  },
+  "author": "Richard Lovelace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Greyflanel/FarmersMarket/issues"
+  },
+  "homepage": "https://github.com/Greyflanel/FarmersMarket#readme"
+}
