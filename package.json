@@ -4,7 +4,7 @@
   "description": "online farmers market",
   "main": "server.js",
   "scripts": {
-    "start": "server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Greyflanel/FarmersMarket/issues"
   },
-  "homepage": "https://github.com/Greyflanel/FarmersMarket#readme"
+  "homepage": "https://github.com/Greyflanel/FarmersMarket#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
 }
