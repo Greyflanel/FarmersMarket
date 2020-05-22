@@ -4,11 +4,12 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
 
     return (
-        <React.Fragment>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/cart">My Cart</NavLink>
+        <>
+            <NavLink to="/">HOME</NavLink>
+            <NavLink to="/cart">MY CART</NavLink>
             <NavLink to="/productlist">PRODUCTS</NavLink>
-        </React.Fragment>
+            <h1>WELCOME TO THE FARMERS MARKET</h1>
+        </>
     );
 };
 

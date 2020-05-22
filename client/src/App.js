@@ -9,7 +9,7 @@ import NavBar from './components/NavBar';
 const App = () => {
 
   return (
-    <React.Fragment>
+    <>
       <header >
         <NavBar/>
       </header>
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/cart" component={Cart} />
         <Route path="/productlist" component={ProductList} />
       </Switch>
-    </React.Fragment>
+    </>
   );
 }
 
