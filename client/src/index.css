@@ -14,4 +14,9 @@ code {
 
 img {
   width: 250px;
+  
+}
+
+.product-wrapper {
+  margin: 0 auto;
 }

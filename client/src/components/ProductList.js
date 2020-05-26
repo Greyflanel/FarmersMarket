@@ -18,7 +18,7 @@ const ProductsList = () => {
     );
   
   return (
-    <>
+    <div className="product-wrapper">
           <h1>Products List</h1>
           {products.map(product => (
               <div key={product.id}>
@@ -26,7 +26,7 @@ const ProductsList = () => {
                   <img src={product.image} alt=""/>
               </div>
           ))}
-    </>
+    </div>
   );
 };
 
