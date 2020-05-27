@@ -19,11 +19,9 @@ const App = () => {
   };
 
   return (
-    <ProductContext.Provider value={{ }}>
+    <ProductContext.Provider value={{addItem, products }}>
       <CartContext.Provider value={{ cart }}>
-        <header >
-          <NavBar />
-        </header>
+        <NavBar />
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/login" component={Login} />
