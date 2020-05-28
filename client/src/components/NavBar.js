@@ -5,12 +5,14 @@ const NavBar = () => {
 
     return (
         <>
+            <div className="navbar">
             <NavLink to="/">HOME</NavLink>
             <NavLink to="/cart">MY CART</NavLink>
             <NavLink to="/productlist">PRODUCTS</NavLink>
             <NavLink to="/login">LOG IN</NavLink>
-            <NavLink to="/product">PRODUCT</NavLink>
+            {/* <NavLink to="/product">PRODUCT</NavLink> */}
             <h1>WELCOME TO THE FARMERS MARKET</h1>
+            </div>
         </>
     );
 };

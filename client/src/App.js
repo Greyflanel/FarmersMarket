@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage';
-import ProductList from './components/ProductList';
-import products from './components/ProductList';
+import Products from './components/Products';
+import products from './components/Products';
 import Cart from './components/Cart.js';
 import NavBar from './components/NavBar';
 import Login from './components/Login';
@@ -12,7 +12,7 @@ import CartContext from './Contexts/CartContext';
 import Product from './components/Product';
 
 const App = () => {
- 
+  const [products] = useState({});
   const [cart, setCart] = useState([]);
   const addItem = item => {
     setCart([...cart, item]);
@@ -26,7 +26,7 @@ const App = () => {
           <Route exact path="/" component={LandingPage} />
           <Route path="/login" component={Login} />
           <Route path="/cart" component={Cart} />
-          <Route path="/productlist" component={ProductList} />
+          <Route path="/productlist" component={Products} />
           <Route path="/product" component={Product} />
         </Switch>
       </CartContext.Provider>

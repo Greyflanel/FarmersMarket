@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import ProductContext from "../Contexts/ProductContext";
 
-const Product = () => {
-    const prod = useContext(ProductContext);
-    console.log({prod})
+
+const Product = (props) => {
+    console.log(props)
     return (
-        <div>
-            <h1>PRODUCT</h1>
-            
-        </div>
-    )
+      <div className="product-wrapper">
+            <h3>{props.product.name}</h3>
+            <img src={props.product.image} alt={props.product.name}/>
+      </div>
+    );
 }
 
 export default Product;
