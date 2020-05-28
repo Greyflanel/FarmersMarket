@@ -9,11 +9,11 @@ import NavBar from './components/NavBar';
 import Login from './components/Login';
 import ProductContext from './Contexts/ProductContext';
 import CartContext from './Contexts/CartContext';
+import Product from './components/Product';
 
 const App = () => {
  
   const [cart, setCart] = useState([]);
-
   const addItem = item => {
     setCart([...cart, item]);
   };
@@ -27,6 +27,7 @@ const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/cart" component={Cart} />
           <Route path="/productlist" component={ProductList} />
+          <Route path="/product" component={Product} />
         </Switch>
       </CartContext.Provider>
     </ProductContext.Provider>

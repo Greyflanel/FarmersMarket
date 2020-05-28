@@ -14,9 +14,11 @@ code {
 
 img {
   width: 250px;
-  
+  margin-left: 10px;
 }
 
 .product-wrapper {
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+   margin: 0 auto;
 }
