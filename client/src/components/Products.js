@@ -3,13 +3,13 @@ import Product from "./Product";
 import ProductContext from "../Contexts/ProductContext";
 
 const Products = () => {
-  const produce = useContext(ProductContext)
+  const {productsList} = useContext(ProductContext);
 
   return (
     <>
       <div className="list-wrapper">
         <h1>Products List</h1>
-        {produce.productsList.map((product) => (
+        {productsList.map((product) => (
           <Product product={product} key={product.id} />
         ))}
       </div>

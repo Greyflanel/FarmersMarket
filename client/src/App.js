@@ -1,40 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import axios from 'axios';
-import LandingPage from './components/LandingPage';
-import Products from './components/Products';
-import Cart from './components/Cart.js';
-import NavBar from './components/NavBar';
-import Login from './components/Login';
-import ProductContext from './Contexts/ProductContext';
-import CartContext from './Contexts/CartContext';
-import Product from './components/Product';
+import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import axios from "axios";
+import LandingPage from "./components/LandingPage";
+import Products from "./components/Products";
+import Cart from "./components/Cart.js";
+import NavBar from "./components/NavBar";
+import Login from "./components/Login";
+import ProductContext from "./Contexts/ProductContext";
+import CartContext from "./Contexts/CartContext";
+import Product from "./components/Product";
 
 const App = () => {
-
-    const [productsList, setProductsList] = useState([]);
-    useEffect(() => {
-      const getProducts = () => {
-        axios
-          .get("http://localhost:5000")
-          .then((response) => {
-            setProductsList(response.data);
-          })
-          .catch((error) => {
-            console.error("Server Error", error);
-          });
-      };
-      getProducts();
-    }, []);
+  const [productsList, setProductsList] = useState([]);
+  useEffect(() => {
+    const getProducts = () => {
+      axios
+        .get("http://localhost:5000")
+        .then((response) => {
+          setProductsList(response.data);
+        })
+        .catch((error) => {
+          console.error("Server Error", error);
+        });
+    };
+    getProducts();
+  }, []);
 
   const [cart, setCart] = useState([]);
-  const addItem = item => {
+  const addItem = (item) => {
     setCart([...cart, item]);
   };
 
   return (
-    <ProductContext.Provider value={{addItem, productsList }}>
+    <ProductContext.Provider value={{ addItem, productsList }}>
       <CartContext.Provider value={{ cart }}>
         <NavBar />
         <Switch>
