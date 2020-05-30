@@ -1,28 +1,15 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
 import Product from "./Product";
+import ProductContext from "../Contexts/ProductContext";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const getProducts = () => {
-      axios
-        .get("http://localhost:5000")
-        .then((response) => {
-          setProducts(response.data);
-        })
-        .catch((error) => {
-          console.error("Server Error", error);
-        });
-    };
-    getProducts();
-  }, []);
+  const produce = useContext(ProductContext)
 
   return (
     <>
-      <div className="list-wrapper">
+      <div className="product-wrapper">
         <h1>Products List</h1>
-        {products.map((product) => (
+        {produce.productsList.map((product) => (
           <Product product={product} key={product.id} />
         ))}
       </div>

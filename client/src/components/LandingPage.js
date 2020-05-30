@@ -1,7 +1,8 @@
 import React from 'react';
 
-const LandingPage = () => {
 
+const LandingPage = () => {
+   
     return (
         <div>
             <h3>LANDING PAGE</h3>

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import axios from 'axios';
 import LandingPage from './components/LandingPage';
 import Products from './components/Products';
-import products from './components/Products';
 import Cart from './components/Cart.js';
 import NavBar from './components/NavBar';
 import Login from './components/Login';
@@ -12,14 +12,29 @@ import CartContext from './Contexts/CartContext';
 import Product from './components/Product';
 
 const App = () => {
-  const [products] = useState({});
+
+    const [productsList, setProductsList] = useState([]);
+    useEffect(() => {
+      const getProducts = () => {
+        axios
+          .get("http://localhost:5000")
+          .then((response) => {
+            setProductsList(response.data);
+          })
+          .catch((error) => {
+            console.error("Server Error", error);
+          });
+      };
+      getProducts();
+    }, []);
+
   const [cart, setCart] = useState([]);
   const addItem = item => {
     setCart([...cart, item]);
   };
 
   return (
-    <ProductContext.Provider value={{addItem, products }}>
+    <ProductContext.Provider value={{addItem, productsList }}>
       <CartContext.Provider value={{ cart }}>
         <NavBar />
         <Switch>
