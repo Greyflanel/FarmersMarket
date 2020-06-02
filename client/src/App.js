@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 import LandingPage from "./components/LandingPage";
@@ -9,8 +9,9 @@ import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import ProductContext from "./Contexts/ProductContext";
 import CartContext from "./Contexts/CartContext";
-import UserContext from "./Contexts/UserContext";
+import AuthContext from "./Contexts/AuthContext";
 import Product from "./components/Product";
+
 
 const App = () => {
                     const [productsList, setProductsList] = useState([]);
@@ -34,7 +35,7 @@ const App = () => {
                     };
 
                     return (
-                      <UserContext.Provider value={{ user }}>
+                      <AuthContext.Provider value={{ user }}>
                         <ProductContext.Provider
                           value={{ addItem, productsList }}
                         >
@@ -42,6 +43,7 @@ const App = () => {
                             <NavBar />
                             <Switch>
                               <Route exact path="/" component={LandingPage} />
+                              {/* <Route path="/" component={() => getSession() ? (<Cart to="/"/>): (<Redirect to="/login"/>)} /> */}
                               <Route path="/login" component={Login} />
                               <Route path="/cart" component={Cart} />
                               <Route path="/productlist" component={Products} />
@@ -49,7 +51,7 @@ const App = () => {
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>
-                      </UserContext.Provider>
+                      </AuthContext.Provider>
                     );
                   };
 
