@@ -28,6 +28,8 @@ const App = () => {
                       };
                       getProducts();
                     }, []);
+  
+  
                     const [user, setUser] = useState([]);
                     const [cart, setCart] = useState([]);
                     const addItem = (item) => {
