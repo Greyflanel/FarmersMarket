@@ -11,6 +11,7 @@ import ProductContext from "./Contexts/ProductContext";
 import CartContext from "./Contexts/CartContext";
 import AuthContext from "./Contexts/AuthContext";
 import Product from "./components/Product";
+import Admin from "./components/Admin";
 
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
                               <Route path="/cart" component={Cart} />
                               <Route path="/productlist" component={Products} />
                               <Route path="/product" component={Product} />
+                              <Route path="/admin" component={Admin} />
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>

@@ -1,36 +1,51 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { Route, withRouter } from "react-router-dom";
-import { useAuth0 } from "../react-auth0-spa";
+import React from "react";
+import { Route } from "react-router-dom";
 
-const PrivateRoute = ({ component: Component, path, ...rest }) => {
-  const { loading, isAuthenticated, loginWithRedirect } = useAuth0();
 
-  useEffect(() => {
-    if (loading || isAuthenticated) {
-      return;
-    }
-    const fn = async () => {
-      await loginWithRedirect({
-        appState: { targetUrl: path }
-      });
-    };
-    fn();
-  }, [loading, isAuthenticated, loginWithRedirect, path]);
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  
+  return (
+    <Route {...rest} render={(props) => (
+      <Component {...props} />
+    )}
+    />
+  );
+}
 
-  const render = props =>
-    isAuthenticated === true ? <Component {...props} /> : null;
+export default PrivateRoute;
 
-  return <Route path={path} render={render} {...rest} />;
-};
+// import PropTypes from "prop-types";
+// import { Route, withRouter } from "react-router-dom";
+// import { useAuth0 } from "../react-auth0-spa";
 
-PrivateRoute.propTypes = {
-  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
-    .isRequired,
-  path: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string)
-  ]).isRequired
-};
+// const PrivateRoute = ({ component: Component, path, ...rest }) => {
+//   const { loading, isAuthenticated, loginWithRedirect } = useAuth0();
 
-export default withRouter(PrivateRoute);
+//   useEffect(() => {
+//     if (loading || isAuthenticated) {
+//       return;
+//     }
+//     const fn = async () => {
+//       await loginWithRedirect({
+//         appState: { targetUrl: path }
+//       });
+//     };
+//     fn();
+//   }, [loading, isAuthenticated, loginWithRedirect, path]);
+
+//   const render = props =>
+//     isAuthenticated === true ? <Component {...props} /> : null;
+
+//   return <Route path={path} render={render} {...rest} />;
+// };
+
+// PrivateRoute.propTypes = {
+//   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+//     .isRequired,
+//   path: PropTypes.oneOfType([
+//     PropTypes.string,
+//     PropTypes.arrayOf(PropTypes.string)
+//   ]).isRequired
+// };
+
+// export default withRouter(PrivateRoute);
