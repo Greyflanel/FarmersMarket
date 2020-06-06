@@ -1,51 +1,18 @@
-import React from "react";
-import { Route } from "react-router-dom";
-
+import React, { useContext } from "react";
+import { Route, Redirect } from "react-router-dom";
+import AuthContext from "../Contexts/AuthContext"
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  
+  const isAuthenticated = useContext(AuthContext);
+  console.log(isAuthenticated)
   return (
-    <Route {...rest} render={(props) => (
+    <Route {...rest} render={props => isAuthenticated ? (
       <Component {...props} />
+    ) : (
+        <Redirect to="/" />
     )}
     />
-  );
+  )
 }
 
 export default PrivateRoute;
-
-// import PropTypes from "prop-types";
-// import { Route, withRouter } from "react-router-dom";
-// import { useAuth0 } from "../react-auth0-spa";
-
-// const PrivateRoute = ({ component: Component, path, ...rest }) => {
-//   const { loading, isAuthenticated, loginWithRedirect } = useAuth0();
-
-//   useEffect(() => {
-//     if (loading || isAuthenticated) {
-//       return;
-//     }
-//     const fn = async () => {
-//       await loginWithRedirect({
-//         appState: { targetUrl: path }
-//       });
-//     };
-//     fn();
-//   }, [loading, isAuthenticated, loginWithRedirect, path]);
-
-//   const render = props =>
-//     isAuthenticated === true ? <Component {...props} /> : null;
-
-//   return <Route path={path} render={render} {...rest} />;
-// };
-
-// PrivateRoute.propTypes = {
-//   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
-//     .isRequired,
-//   path: PropTypes.oneOfType([
-//     PropTypes.string,
-//     PropTypes.arrayOf(PropTypes.string)
-//   ]).isRequired
-// };
-
-// export default withRouter(PrivateRoute);

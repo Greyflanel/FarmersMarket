@@ -12,6 +12,7 @@ import CartContext from "./Contexts/CartContext";
 import AuthContext from "./Contexts/AuthContext";
 import Product from "./components/Product";
 import Admin from "./components/Admin";
+import PrivateRoute from "./components/PrivateRoute";
 
 
 const App = () => {
@@ -38,20 +39,19 @@ const App = () => {
                     };
 
                     return (
-                      <AuthContext.Provider value={{ user }}>
+                      <AuthContext.Provider value={ false }>
                         <ProductContext.Provider
                           value={{ addItem, productsList }}
                         >
                           <CartContext.Provider value={{ cart }}>
                             <NavBar />
                             <Switch>
+                              <PrivateRoute path="/admin" component={Admin} />
                               <Route exact path="/" component={LandingPage} />
-                              {/* <Route path="/" component={() => getSession() ? (<Cart to="/"/>): (<Redirect to="/login"/>)} /> */}
                               <Route path="/login" component={Login} />
                               <Route path="/cart" component={Cart} />
                               <Route path="/productlist" component={Products} />
                               <Route path="/product" component={Product} />
-                              <Route path="/admin" component={Admin} />
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>

@@ -4,4 +4,4 @@ const AuthContext = createContext();
 
 export default AuthContext;
 
-// Creates a new context named UserContext
+// Creates a new context named AuthContext

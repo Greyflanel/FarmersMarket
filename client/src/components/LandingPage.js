@@ -7,7 +7,7 @@ const LandingPage = () => {
     return (
         <div>
             <h3>LANDING PAGE</h3>
-            {productsList.map(pro => <div>{pro.name}</div>)}
+            {productsList.map(pro => <div key={pro.id}>{pro.name}</div>)}
         </div>
     );
 };
