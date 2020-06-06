@@ -7,6 +7,7 @@ import Products from "./components/Products";
 import Cart from "./components/Cart.js";
 import NavBar from "./components/NavBar";
 import Login from "./components/Login";
+import Signup from "./components/Signup";
 import ProductContext from "./Contexts/ProductContext";
 import CartContext from "./Contexts/CartContext";
 import AuthContext from "./Contexts/AuthContext";
@@ -48,6 +49,7 @@ const App = () => {
                             <Switch>
                               <PrivateRoute path="/admin" component={Admin} />
                               <Route exact path="/" component={LandingPage} />
+                              <Route path="/signup" component={Signup} />
                               <Route path="/login" component={Login} />
                               <Route path="/cart" component={Cart} />
                               <Route path="/productlist" component={Products} />
