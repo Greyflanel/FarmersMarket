@@ -73,6 +73,16 @@ const items = [
   },
 ];
 
+
+const users = [
+  {
+  userName: "",
+  password: ""
+}
+  
+];
+
+
 app.get('/', (req, res) => {
 	res.send(items);
 });
@@ -81,6 +91,7 @@ app.get('/products/:id', (req, res) => {
 	const item = items.filter(item => item.id.toString() === req.params.id)[0];
 	res.status(200).json(item);
 });
+
 
 app.listen(5000, () => {
 	console.log('Server listening on port 5000');

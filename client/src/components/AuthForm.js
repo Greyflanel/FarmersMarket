@@ -19,6 +19,7 @@ const Form = styled.div`
 const Input = styled.input`
   padding: 1rem;
   border: 1px solid #999;
+  border-radius: 5px;
   margin-bottom: 1rem;
   font-size: 0.8rem;
 `;
@@ -26,7 +27,6 @@ const Input = styled.input`
 const Button = styled.button`
   background: linear-gradient(to bottom, #6371c7, #5563c1);
   border-color: #3f4eae;
-  border-radius: 3px;
   padding: 1rem;
   color: white;
   font-weight: 700;
@@ -35,4 +35,8 @@ const Button = styled.button`
   font-size: 0.8rem;
 `;
 
-export { Card, Form, Input, Button }
+const Error = styled.div`
+  background-color: red;
+`;
+
+export { Card, Form, Input, Button, Error }

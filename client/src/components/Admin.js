@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Button } from "./AuthForm";
+import AuthContext from "../Contexts/AuthContext";
 
-const Admin = () => {
-
+const Admin = (props) => {
+    const { setAuthTokens } = useContext(AuthContext);
+    
+    const logOut = () => {
+        setAuthTokens();
+    }
     return (
-        <div>
+        <>
             <h2>Admin</h2>
-        </div>
+            <Button onClick={logOut}>Log Out</Button>
+        </>
     );
 };
-
+ 
 export default Admin;

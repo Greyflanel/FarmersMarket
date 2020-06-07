@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 import LandingPage from "./components/LandingPage";
@@ -32,28 +32,34 @@ const App = () => {
                       getProducts();
                     }, []);
   
-  
-                    const [user, setUser] = useState([]);
+  const existingTokens = JSON.parse(localStorage.getItem("tokens"));
+  const [authTokens, setAuthTokens] = useState(existingTokens);
+
+  const setTokens = (data) => {
+    localStorage.setItem("tokens", JSON.stringify(data));
+    setAuthTokens(data);
+  };
+
                     const [cart, setCart] = useState([]);
                     const addItem = (item) => {
                       setCart([...cart, item]);
                     };
 
                     return (
-                      <AuthContext.Provider value={ false }>
+                      <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
                         <ProductContext.Provider
                           value={{ addItem, productsList }}
                         >
                           <CartContext.Provider value={{ cart }}>
                             <NavBar />
                             <Switch>
-                              <PrivateRoute path="/admin" component={Admin} />
                               <Route exact path="/" component={LandingPage} />
                               <Route path="/signup" component={Signup} />
                               <Route path="/login" component={Login} />
                               <Route path="/cart" component={Cart} />
                               <Route path="/productlist" component={Products} />
                               <Route path="/product" component={Product} />
+                              <PrivateRoute path="/admin" component={Admin} />
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>
