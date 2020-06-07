@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import Product from "./Product";
 import ProductContext from "../Contexts/ProductContext";
+import AtomSpinner from "../assets/AtomSpinner";
 
 const Products = () => {
   const {productsList} = useContext(ProductContext);
-
+  
   return (
     <>
       <div className="list-wrapper">
