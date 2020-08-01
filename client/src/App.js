@@ -26,19 +26,19 @@ const App = () => {
                             setProductsList(response.data);
                           })
                           .catch((error) => {
-                            console.error("Server Error", error);
+                            console.log(error)
                           });
                       };
                       getProducts();
                     }, []);
   
-  const existingTokens = JSON.parse(localStorage.getItem("tokens"));
-  const [authTokens, setAuthTokens] = useState(existingTokens);
+  // const existingTokens = JSON.parse(localStorage.getItem("tokens"));
+  // const [authTokens, setAuthTokens] = useState(existingTokens);
 
-  const setTokens = (data) => {
-    localStorage.setItem("tokens", JSON.stringify(data));
-    setAuthTokens(data);
-  };
+  // const setTokens = (data) => {
+  //   localStorage.setItem("tokens", JSON.stringify(data));
+  //   setAuthTokens(data);
+  // };
 
                     const [cart, setCart] = useState([]);
                     const addItem = (item) => {
@@ -46,7 +46,7 @@ const App = () => {
                     };
 
                     return (
-                      <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
+                      <AuthContext.Provider value={{  }}>
                         <ProductContext.Provider
                           value={{ addItem, productsList }}
                         >

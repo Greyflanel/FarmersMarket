@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import AtomSpinner from "@bit/bondz.react-epic-spinners.atom-spinner";
 
-export default <AtomSpinner color="#000000" size={200} />;
+export default <AtomSpinner color="purple" size="200px" />;
