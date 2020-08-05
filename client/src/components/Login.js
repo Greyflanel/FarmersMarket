@@ -4,30 +4,29 @@ import axios from "axios";
 import { Card, Form, Input, Button } from "./AuthForm";
 import AuthContext from "../Contexts/AuthContext";
 
-const Login = (props) => {
-    
+const Login = props => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
-  const [userName, setUserName] = useState("");
+  // const [authTokens, setAuthTokens] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { setAuthTokens } = useContext(AuthContext);
+  const { authTokens } = useContext(AuthContext);
   const referer = props.location;
-    
+
   const postLogin = () => {
-   
     axios
-      .post("http://localhost:4000/login", {
-        userName,
-        password,
+      .post("http://localhost:4000/api/login", {
+        username,
+        password
       })
-      .then((result) => {
+      .then(result => {
         if (result.status === 200) {
-          setAuthTokens(result.data);
+          // setAuthTokens(result.data);
           setIsLoggedIn(true);
+          console.log(result);
         }
       })
-      .catch((error) => {
-        console.log(error)
+      .catch(error => {
+        console.log({ error });
       });
   };
   if (isLoggedIn) {
@@ -41,26 +40,25 @@ const Login = (props) => {
         <Form>
           <Input
             type="text"
-            value={userName}
-            onChange={(e) => {
-                setUserName(e.target.value);
-                console.log(userName)
+            value={username}
+            onChange={e => {
+              setUsername(e.target.value);
+              
             }}
             placeholder="email"
           />
           <Input
             type="text"
             value={password}
-            onChange={(e) => {
+            onChange={e => {
               setPassword(e.target.value);
-              console.log(password)
+              
             }}
             placeholder="password"
           />
           <Button onClick={postLogin}>Sign In</Button>
         </Form>
         <NavLink to="/signup">Don't have an account?</NavLink>
-        
       </Card>
     </>
   );

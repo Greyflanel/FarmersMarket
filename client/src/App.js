@@ -21,7 +21,7 @@ const App = () => {
                     useEffect(() => {
                       const getProducts = () => {
                         axios
-                          .get("http://localhost:4000/products")
+                          .get("http://localhost:4000/api/products")
                           .then((response) => {
                             setProductsList(response.data);
                           })
