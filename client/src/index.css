@@ -17,31 +17,9 @@ code {
 
 
 img {
-  height: 180px;
-  width: 275px;
-  margin-left: 18px;
+  max-height: 180px;
+  max-width: 275px;
   border-radius: 25px;
   border: 1px solid #808080;
   box-shadow: 9px 9px 10px 0px rgba(211,211,211,1);      
 }
-
-.list-wrapper {
-  background-color: whitesmoke;
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.list-wrapper h1 {
-  width: 80%;
-  margin-top: 18vh;
-}
-
-.navbar {
-  top: 2%;
-  position: absolute;
-  width: 100%;
-}
-
