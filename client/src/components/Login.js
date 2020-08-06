@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, createContext } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import axios from "axios";
 import { Card, Form, Input, Button } from "./AuthForm";
@@ -6,10 +6,9 @@ import AuthContext from "../Contexts/AuthContext";
 
 const Login = props => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [authTokens, setAuthTokens] = useState("");
+  const [authToken, setAuthToken] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { authTokens } = useContext(AuthContext);
   const referer = props.location;
 
   const postLogin = () => {
@@ -20,16 +19,17 @@ const Login = props => {
       })
       .then(result => {
         if (result.status === 200) {
-          // setAuthTokens(result.data);
+          setAuthToken(result.data.token);
           setIsLoggedIn(true);
-          console.log(result);
+          
         }
       })
       .catch(error => {
         console.log({ error });
       });
   };
-  if (isLoggedIn) {
+  if (isLoggedIn && authToken) {
+    console.log(authToken)
     return <Redirect to={referer} />;
   }
 

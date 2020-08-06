@@ -46,7 +46,7 @@ const App = () => {
                     };
 
                     return (
-                      <AuthContext.Provider value={{  }}>
+                      <AuthContext.Provider value={{ }}>
                         <ProductContext.Provider
                           value={{ addItem, productsList }}
                         >
