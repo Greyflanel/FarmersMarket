@@ -1,35 +1,40 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import axios from "axios";
 import { Card, Form, Input, Button } from "./AuthForm";
-import AuthContext from "../Contexts/AuthContext";
+import { Context } from "../Store";
 
 const Login = props => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [authToken, setAuthToken] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [state, dispatch] = useContext(Context);
   const referer = props.location;
 
   const postLogin = () => {
+    
     axios
       .post("http://localhost:4000/api/login", {
         username,
         password
       })
-      .then(result => {
-        if (result.status === 200) {
-          setAuthToken(result.data.token);
+      .then(res => {
+        if (res.status === 200) {
+          dispatch({ type: 'SET_TOKEN', payload: res.data.token })
+          dispatch({ type: 'SET_USERNAME', payload: username })
           setIsLoggedIn(true);
-          
+          console.log()
         }
       })
       .catch(error => {
+        dispatch({ type: 'SET_ERROR', payload: {error} })
         console.log({ error });
       });
   };
-  if (isLoggedIn && authToken) {
-    console.log(authToken)
+  
+  if (isLoggedIn) {
+    
     return <Redirect to={referer} />;
   }
 

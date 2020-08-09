@@ -14,7 +14,7 @@ import AuthContext from "./Contexts/AuthContext";
 import Product from "./components/Product";
 import Admin from "./components/Admin";
 import PrivateRoute from "./components/PrivateRoute";
-
+import Store from "./Store";
 
 const App = () => {
                     const [productsList, setProductsList] = useState([]);
@@ -46,7 +46,7 @@ const App = () => {
                     };
 
                     return (
-                      <AuthContext.Provider value={{ }}>
+                      <Store>
                         <ProductContext.Provider
                           value={{ addItem, productsList }}
                         >
@@ -63,7 +63,7 @@ const App = () => {
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>
-                      </AuthContext.Provider>
+                      </Store>
                     );
                   };
 

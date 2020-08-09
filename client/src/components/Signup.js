@@ -16,7 +16,7 @@ const Signup = () => {
       .then(result => {
         if (result.status === 201) {
           console.log(result)
-          return <Redirect to={"/login"} />;
+          return <Redirect to={"/productlist"} />;
         }
       })
       .catch(error => {
