@@ -5,6 +5,7 @@ import axios from "axios";
 import LandingPage from "./components/LandingPage";
 import Products from "./components/Products";
 import Cart from "./components/Cart.js";
+import AuthNav from "./components/nav-bar";
 import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
@@ -46,7 +47,7 @@ const App = () => {
                     };
 
                     return (
-                      <Store>
+                      
                         <ProductContext.Provider
                           value={{ addItem, productsList }}
                         >
@@ -55,7 +56,7 @@ const App = () => {
                             <Switch>
                               <Route exact path="/" component={LandingPage} />
                               <Route path="/signup" component={Signup} />
-                              <Route path="/login" component={Login} />
+                              <Route path="/login" component={AuthNav} />
                               <Route path="/cart" component={Cart} />
                               <Route path="/productlist" component={Products} />
                               <Route path="/product" component={Product} />
@@ -63,7 +64,7 @@ const App = () => {
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>
-                      </Store>
+                      
                     );
                   };
 

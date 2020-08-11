@@ -1,19 +1,19 @@
 import React, { useState, useContext } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import axios from "axios";
-import { Card, Form, Input, Button } from "./AuthForm";
+import { Card, Form, Input, Button, Error } from "./AuthForm";
 import { Context } from "../Store";
 
 const Login = props => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [authToken, setAuthToken] = useState("");
+  const [isError, setIsError] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [state, dispatch] = useContext(Context);
   const referer = props.location;
 
   const postLogin = () => {
-    
+    console.log(props.history)
     axios
       .post("http://localhost:4000/api/login", {
         username,
@@ -24,16 +24,18 @@ const Login = props => {
           dispatch({ type: 'SET_TOKEN', payload: res.data.token })
           dispatch({ type: 'SET_USERNAME', payload: username })
           setIsLoggedIn(true);
-          console.log()
+          
         }
       })
       .catch(error => {
         dispatch({ type: 'SET_ERROR', payload: {error} })
         console.log({ error });
+        setIsError(true);
       });
   };
-  
-  if (isLoggedIn) {
+  const auth = useContext(Context);
+  console.log(auth)
+  if (isLoggedIn || auth[0].token) {
     
     return <Redirect to={referer} />;
   }
@@ -46,24 +48,25 @@ const Login = props => {
           <Input
             type="text"
             value={username}
-            onChange={e => {
+            onChange={(e) => {
               setUsername(e.target.value);
-              
             }}
             placeholder="email"
           />
           <Input
             type="text"
             value={password}
-            onChange={e => {
+            onChange={(e) => {
               setPassword(e.target.value);
-              
             }}
             placeholder="password"
           />
           <Button onClick={postLogin}>Sign In</Button>
         </Form>
         <NavLink to="/signup">Don't have an account?</NavLink>
+        {isError && (
+          <Error>The username or password provided was incorrect!</Error>
+        )}
       </Card>
     </>
   );
