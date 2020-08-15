@@ -56,11 +56,11 @@ const App = () => {
                             <Switch>
                               <Route exact path="/" component={LandingPage} />
                               <Route path="/signup" component={Signup} />
-                              <Route path="/login" component={AuthNav} />
+                              <Route path="/authorize" component={AuthNav} />
                               <Route path="/cart" component={Cart} />
                               <Route path="/productlist" component={Products} />
                               <Route path="/product" component={Product} />
-                              <PrivateRoute path="/admin" component={Admin} />
+                              {/* <PrivateRoute path="/admin" component={Admin} /> */}
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>
