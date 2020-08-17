@@ -8,7 +8,7 @@ const Products = () => {
   
   return (
     <>
-      <h1>Produce List</h1>
+      <h2>Produce List</h2>
       <div className="list-wrapper">
         
         {productsList.map((product) => (

@@ -6,12 +6,13 @@
 
 .navbar {
   margin-top: 1%;
+  background-color: rgb(231, 239, 247);
 }
 
 a {
-  
-  color: #2e5c5c;
-  margin-left: 3%;
+  font-size: 1.2em;
+  color: #1e5e5e;
+  margin-left: 4%;
   text-decoration: none;
 }
 
