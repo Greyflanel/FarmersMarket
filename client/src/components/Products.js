@@ -8,8 +8,9 @@ const Products = () => {
   
   return (
     <>
+      <h1>Produce List</h1>
       <div className="list-wrapper">
-        <h1>Products List</h1>
+        
         {productsList.map((product) => (
           <Product product={product} key={product.id} />
         ))}

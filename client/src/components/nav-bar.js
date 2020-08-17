@@ -11,13 +11,8 @@ const AuthNav = () => {
 
     return (
       <Navbar>
-    <Nav className="justify-content-end">
+        <Nav className="justify-content-end">
       {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-      <NavLink to="/">HOME</NavLink>
-      <NavLink to="/cart">MY CART</NavLink>
-      <NavLink to="/productlist">PRODUCTS</NavLink>
-      <NavLink to="/authorize">LOG IN</NavLink>
-      <h1>WELCOME TO THE FARMERS MARKET</h1>
         </Nav>
       </Navbar>  
   );

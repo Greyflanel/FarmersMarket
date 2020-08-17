@@ -1,8 +1,17 @@
 .App {
   text-align: center;
+  
+ 
+}
+
+.navbar {
+  margin-top: 1%;
 }
 
 a {
+  
+  color: #2e5c5c;
   margin-left: 3%;
   text-decoration: none;
 }
+
