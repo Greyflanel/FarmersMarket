@@ -1,17 +1,15 @@
 import React, {useContext} from 'react';
 import ProductContext from "../Contexts/ProductContext";
-
+import farm from "../assets/small.png"
 
 const LandingPage = () => {
     const { productsList } = useContext(ProductContext);
     
     return (
-      <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMiwlbl32JBFRaDAiRT_xNTLkelII-MuQJjA&usqp=CAU" />
+      <div className="small-farm">
+        
         <h3>LANDING PAGE</h3>
-        {productsList.map((prod) => (
-          <div key={prod.id}>{prod.product}</div>
-        ))}
+       <img src={farm} />
       </div>
     );
 };

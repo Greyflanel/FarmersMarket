@@ -33,13 +33,6 @@ const App = () => {
                       getProducts();
                     }, []);
   
-  // const existingTokens = JSON.parse(localStorage.getItem("tokens"));
-  // const [authTokens, setAuthTokens] = useState(existingTokens);
-
-  // const setTokens = (data) => {
-  //   localStorage.setItem("tokens", JSON.stringify(data));
-  //   setAuthTokens(data);
-  // };
 
                     const [cart, setCart] = useState([]);
                     const addItem = (item) => {
@@ -58,8 +51,7 @@ const App = () => {
                               <Route path="/signup" component={Signup} />
                               <Route path="/authorize" component={AuthNav} />
                               <Route path="/cart" component={Cart} />
-                              <Route path="/productlist" component={Products} />
-                              <Route path="/product" component={Product} />
+                              <Route path="/products" component={Products} />
                               {/* <PrivateRoute path="/admin" component={Admin} /> */}
                             </Switch>
                           </CartContext.Provider>
