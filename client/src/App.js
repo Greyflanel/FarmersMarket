@@ -52,7 +52,9 @@ const App = () => {
                               <Route path="/authorize" component={AuthNav} />
                               <Route path="/cart" component={Cart} />
                               <Route path="/products" component={Products} />
-                              {/* <PrivateRoute path="/admin" component={Admin} /> */}
+                            <Route path="/products/:id"
+                              component={Product}
+                            />
                             </Switch>
                           </CartContext.Provider>
                         </ProductContext.Provider>

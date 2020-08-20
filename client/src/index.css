@@ -1,7 +1,5 @@
 body {
-  background: linear-gradient(#9eff66, #abf2fc);
-  width: 80%;
-  height: 100vh;
+  width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
   /* background-color: rgb(251, 253, 215); */
@@ -21,7 +19,7 @@ code {
 }
 
 h1 {
-  letter-spacing: 0.15em;
+  letter-spacing: 0.06em;
   color: hsla(98, 96%, 18%, 0.836);
   text-shadow:
     
@@ -29,11 +27,11 @@ h1 {
     2px 1px 1px rgba(159,159,169,.6),   1px 2px 1px rgba(229,229,239,.6),
     3px 2px 1px rgba(158,158,168,.7),   2px 3px 1px rgba(228,228,238,.7),
     4px 3px 1px rgba(157,157,167,.8),   3px 4px 1px rgba(227,227,237,.8),
-    12px 12px 20px rgba(0,0,0,.20);
+    12px 12px 20px rgba(23, 26, 25, 0.2);
 }
 
 h2, h3, h4 {
-    color: hsla(98, 96%, 18%, 0.836);
+    color: #225a02d5;
     padding-top: 0.5em;
 }
 
@@ -66,7 +64,7 @@ h2, h3, h4 {
   width: 220px;
   height: 260px;
   margin: 0.6% 0.6%;
-  background-color: #9eff66;
+  background-color: #74fd24;
   cursor: pointer;
   position: relative;
   top: 0px;
@@ -104,13 +102,13 @@ button {
 
 .navbar {
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
-  
   margin-top: 1%;
-  margin-bottom: 2%;
-  background: linear-gradient(#35D6ED, #EBFBFD);
+  margin-bottom: 1%;
+  
+  background: linear-gradient(#35D6ED, #cef5fa);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  
   width: 100%;
   border-radius: 15px;
 }
@@ -127,9 +125,20 @@ a {
   text-decoration: none;
 }
 
-.small-farm img {
-  width: 150px;
+.navbar img {
+  width: 180px;
   height: auto;
+ 
+}
+
+.small-farm img {
+  width: 250px;
+  height: auto;
+  
 }
 
 /* <a href='https://pngtree.com/so/agriculture'>agriculture png from pngtree.com</a> */
+
+/* <a href='https://pngtree.com/so/background'>background png from pngtree.com</a> */
+
+/* <a href='https://pngtree.com/so/natural'>natural png from pngtree.com</a> */
