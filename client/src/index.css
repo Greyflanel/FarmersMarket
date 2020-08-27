@@ -1,13 +1,16 @@
+/* * {
+  border: 1px solid #f00 !important;
+} */
 body {
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
-  /* background-color: rgb(251, 253, 215); */
+  
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
   font-family: 'Exo 2', sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -19,10 +22,12 @@ code {
 }
 
 h1 {
+  font-size: 2em;
   letter-spacing: 0.06em;
   color: hsla(98, 96%, 18%, 0.836);
+  
+ 
   text-shadow:
-    
     1px 0px 1px rgba(160,160,170,.5),   0px 1px 1px rgba(230,230,240,.5), 
     2px 1px 1px rgba(159,159,169,.6),   1px 2px 1px rgba(229,229,239,.6),
     3px 2px 1px rgba(158,158,168,.7),   2px 3px 1px rgba(228,228,238,.7),
@@ -33,13 +38,15 @@ h1 {
 h2, h3, h4 {
     color: #225a02d5;
     padding-top: 0.5em;
+    
 }
 
 .product-container {
-   background: linear-gradient(#77ebfd, #abf2fc);
+   background: linear-gradient(#9cedfa, #cef5fa);
    border-radius: 15px;
-   
    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+   margin: 2% 0;
+   padding: 1% 0;
 }
 
 .list-wrapper {
@@ -55,7 +62,6 @@ h2, h3, h4 {
   width: 185px;
   border-radius: 5px;
   border: 1px solid #afafaf;
-  
 }
 
 
@@ -90,55 +96,93 @@ h2, h3, h4 {
 
 button {
   margin-top: 10%;
-  width: 65%;
-  height: 8%;
+  width: 15%;
+  height: 40%;
   font-weight: 600;
   background-color: #ecf840;
   color: #2e5c5c;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
   border: none;
   border-radius: 2px;
+  align-self: center;
 }
 
 .navbar {
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
-  margin-top: 1%;
-  margin-bottom: 1%;
-  
   background: linear-gradient(#35D6ED, #cef5fa);
-  display: flex;
-  flex-direction: column;
-  
-  width: 100%;
   border-radius: 15px;
+  padding-top: 1%;
+  margin-top: 1%;
 }
 
 .navbar a {
-  
   font-size: 1.2em;
+  height: 1em;
   color: hsla(98, 96%, 18%, 0.836);
   margin-left: 4%;
-  
+  padding-top: 1%;
 }
 
 a {
   text-decoration: none;
 }
 
-.navbar img {
-  width: 180px;
-  height: auto;
- 
-}
 
-.small-farm img {
-  width: 250px;
+.navbar img {
+  width: 14%;
   height: auto;
+  border-radius: 150px;
+  /* background-color:rgb(129, 150, 91); */
+  
   
 }
 
+.farm img {
+  width: 150px;
+  height: auto;
+  margin: 0;
+}
+
+
+.small-farm img {
+  width: 25%;
+  height: auto;
+}
+
+.carder {
+  width: 30%;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto;
+  background-color: #74fd24;
+  box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+  padding: 2.5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  
+}
+
+.carder img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #afafaf;
+  
+  
+}
 /* <a href='https://pngtree.com/so/agriculture'>agriculture png from pngtree.com</a> */
 
 /* <a href='https://pngtree.com/so/background'>background png from pngtree.com</a> */
 
 /* <a href='https://pngtree.com/so/natural'>natural png from pngtree.com</a> */
+
+
+.testCircle{
+   width: 50px; 
+   height: 50px;
+   border-radius: 900px;
+   background-color:rgb(129, 150, 91);
+   margin: 0 auto;
+   box-shadow: 1px 1px 5px 0px rgba(53, 80, 66, 0.75);
+   padding: 10%;
+}
