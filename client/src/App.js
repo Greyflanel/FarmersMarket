@@ -4,11 +4,11 @@ import "./App.css";
 import axios from "axios";
 import LandingPage from "./components/LandingPage";
 import Products from "./components/Products";
-import Cart from "./components/Cart.js";
+import {ShoppingCart} from "./components/ShoppingCart.js";
 import AuthNav from "./components/nav-bar";
 import NavBar from "./components/NavBar";
 import ProductContext from "./Contexts/ProductContext";
-import CartContext from "./Contexts/CartContext";
+import { CartProvider } from "./Contexts/CartContext";
 import Product from "./components/Product";
 
 const App = () => {
@@ -27,23 +27,20 @@ const App = () => {
     getProducts();
   }, []);
 
-  const [cart, setCart] = useState([]);
-  const addItem = (item) => {
-    setCart([...cart, item]);
-  };
+  
 
   return (
-    <ProductContext.Provider value={{ addItem, productsList }}>
-      <CartContext.Provider value={{ cart }}>
+    <ProductContext.Provider value={{ productsList }}>
+      <CartProvider>
         <NavBar />
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/products/:id" component={Product}/>
           <Route path="/products" component={Products} />
           <Route path="/authorize" component={AuthNav} />
-          <Route path="/cart" component={Cart} />
+          <Route path="/cart" component={ShoppingCart} />
         </Switch>
-      </CartContext.Provider>
+      </CartProvider>
     </ProductContext.Provider>
   );
 };

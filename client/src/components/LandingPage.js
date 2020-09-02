@@ -1,12 +1,11 @@
-import React, {useContext} from 'react';
-import ProductContext from "../Contexts/ProductContext";
+import React from 'react';
+
 import farm from "../assets/small.png"
 import organic from "../assets/100organic.png";
 
 
 
 const LandingPage = () => {
-    const { productsList } = useContext(ProductContext);
     
     return (
       <div className="small-farm">

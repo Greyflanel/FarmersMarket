@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Route } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import SingleProduct from "./SingleProduct";
-import farm from "../assets/small.png";
-import organic from "../assets/100organic.png";
+;
 
 const Product = (props) => {
   const [singleProduct, setSingleProduct] = useState({});
@@ -19,7 +18,7 @@ const Product = (props) => {
       console.log({error})
     })
   }, [id])
-  console.log(singleProduct)
+  
   return (
     <div className="farm">
       {/* <img src={organic} alt="100% organic sign" />

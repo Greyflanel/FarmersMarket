@@ -95,15 +95,16 @@ h2, h3, h4 {
 }
 
 button {
-  margin-top: 10%;
-  width: 15%;
-  height: 40%;
-  font-weight: 600;
+  width: 25%;
+  height: auto;
+  line-height: 1.8em;
+  margin-bottom: 5%;
+  font-size: 1em;
   background-color: #ecf840;
   color: #2e5c5c;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
   border: none;
-  border-radius: 2px;
+  
   align-self: center;
 }
 
