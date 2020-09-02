@@ -6,9 +6,9 @@ export const ShoppingCart = () => {
     
     const  [cart, setCart] = useContext(CartContext);
     const [carts, setCarts] = useState(cart)
-    console.log(cart)
+    console.log(carts)
     
-    const totalPrice = cart.reduce((acc, curr) => (acc + curr.price), 0 );
+    const totalPrice = cart.reduce((acc, curr) => (parseFloat(acc) + parseFloat(curr.price)), 0 ).toFixed(2);
     
     return (
         <div className="shopping-cart">

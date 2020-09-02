@@ -167,15 +167,20 @@ a {
   height: auto;
   border-radius: 5px;
   border: 1px solid #afafaf;
-  
-  
 }
+
+.carder button {
+  width: 35%;
+}
+
 /* <a href='https://pngtree.com/so/agriculture'>agriculture png from pngtree.com</a> */
 
 /* <a href='https://pngtree.com/so/background'>background png from pngtree.com</a> */
 
 /* <a href='https://pngtree.com/so/natural'>natural png from pngtree.com</a> */
 
+
+/* Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> */
 
 .testCircle{
    width: 50px; 
@@ -192,10 +197,10 @@ a {
 margin: 0 auto;
 }
 .shopping-cart-item button {
-  width: 65%;
+  width: 50%;
 }
 .shopping-cart-item  img {
-  width: 25%;
+  width: 45%;
   height: auto;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
 }
@@ -203,4 +208,8 @@ margin: 0 auto;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
   width:40%;
   margin: 0 auto;
+}
+
+.shopping-cart-checkout p {
+  font-size: 2em;
 }
