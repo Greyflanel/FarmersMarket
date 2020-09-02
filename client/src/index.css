@@ -152,14 +152,13 @@ a {
 
 .carder {
   width: 30%;
-  height: auto;
   border-radius: 15px;
   margin: 0 auto;
   background-color: #74fd24;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
-  padding: 2.5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  padding: .5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   
 }
 
@@ -186,4 +185,22 @@ a {
    margin: 0 auto;
    box-shadow: 1px 1px 5px 0px rgba(53, 80, 66, 0.75);
    padding: 10%;
+}
+
+.shopping-cart {
+  width: 80%;
+margin: 0 auto;
+}
+.shopping-cart-item button {
+  width: 65%;
+}
+.shopping-cart-item  img {
+  width: 25%;
+  height: auto;
+  box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+}
+.shopping-cart-item {
+  box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+  width:40%;
+  margin: 0 auto;
 }

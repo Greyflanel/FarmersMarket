@@ -18,8 +18,8 @@ const SingleProduct = (props) => {
       <div className="product-container">
       <div className="carder">
         <h1>{product}</h1>
-        <img src={product_image_url} alt={product_image_url} />
-        <h3>PricePerPound: ${price}</h3>
+        <img className="cartItem" src={product_image_url} alt={product_image_url} />
+        <h3>PricePerPound: ${price}</h3><br/>
         <button onClick={addItem}>Add to Cart</button>
         <div className="testCircle">Text inside a circle</div>
         
