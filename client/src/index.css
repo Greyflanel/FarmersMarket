@@ -112,16 +112,14 @@ button {
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
   background: linear-gradient(#35D6ED, #cef5fa);
   border-radius: 15px;
-  padding-top: 1%;
+  padding-top: 0.2%;
   margin-top: 1%;
 }
 
 .navbar a {
-  font-size: 1.2em;
-  height: 1em;
+  font-size: 1.3em;
   color: hsla(98, 96%, 18%, 0.836);
-  margin-left: 4%;
-  padding-top: 1%;
+  margin-left: 2%;
 }
 
 a {
@@ -130,7 +128,7 @@ a {
 
 
 .navbar img {
-  width: 14%;
+  width: 150px;
   height: auto;
   border-radius: 150px;
   /* background-color:rgb(129, 150, 91); */
@@ -151,7 +149,7 @@ a {
 }
 
 .carder {
-  width: 30%;
+  width: 25%;
   border-radius: 15px;
   margin: 0 auto;
   background-color: #74fd24;
@@ -163,7 +161,7 @@ a {
 }
 
 .carder img {
-  width: 80%;
+  width: 70%;
   height: auto;
   border-radius: 5px;
   border: 1px solid #afafaf;
@@ -213,3 +211,56 @@ margin: 0 auto;
 .shopping-cart-checkout p {
   font-size: 2em;
 }
+
+.shopping-cart-icon img {
+  width: 2em;
+  margin-left: 66%;
+}
+/* button {
+  width: 50%;
+  font-size: 2em;
+  background: hsla(98, 96%, 18%, 0.836);
+  color: #fff;
+  border: 0.15rem solid hsla(98, 96%, 18%, 0.836);
+  border-radius: 15px;
+  padding: 0.85em 0.75em;
+  margin: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+button:hover {
+  color: hsla(98, 96%, 18%, 0.836);
+}
+
+button::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
+  border-radius: 15px;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+
+button[class^="grow"]::after {
+  transition: all 5s ease;
+}
+
+button[class^="grow"]:hover::after {
+  transition: all 5s ease-out;
+}
+
+button.grow_spin::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0) rotate(-360deg);
+}
+
+button.grow_spin:hover::after {
+  transform: scale(1, 1) rotate(0deg);
+} */
+

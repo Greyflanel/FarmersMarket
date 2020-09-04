@@ -12,6 +12,9 @@ const LandingPage = () => {
         <h3>LANDING PAGE</h3>
         <img src={farm} alt="organic farm sign with red barn  " />
         <img src={organic} alt="100% organic sign" />
+        {/* <div>
+          <button className="grow_spin">Button</button>
+        </div> */}
       </div>
     );
 };

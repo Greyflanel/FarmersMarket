@@ -10,9 +10,9 @@ const NavBar = () => {
         <div className="navbar">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/products">PRODUCTS</NavLink>
-          <NavLink to="/authorize">LOG</NavLink>
+          <NavLink to="/authorize">LOGIN</NavLink>
           <NavLink to="/admin">ADMIN</NavLink>
-          <NavLink to="/cart" ><img src={shoppingCart} alt="shopping cart icon" style={{width: "3%"}}/></NavLink>
+          <NavLink to="/cart" className="shopping-cart-icon"><img src={shoppingCart} alt="shopping cart icon"/></NavLink>
           <h1>WELCOME TO THE FARMERS MARKET</h1>
 
           <img src={farmdesign} alt="farming logo with fruits and vegetables" />

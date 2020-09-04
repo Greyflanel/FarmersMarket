@@ -1,6 +1,11 @@
 import React from 'react';
 
 const ShoppingCartItem = props => {
+
+    // const removeFromCart = props => {
+        
+    // }
+
     return (
         <div className="shopping-cart-item">
             <h2>{props.product}</h2>
