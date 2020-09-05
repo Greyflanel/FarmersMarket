@@ -21,8 +21,6 @@ const Product = (props) => {
   
   return (
     <div className="farm">
-      {/* <img src={organic} alt="100% organic sign" />
-      <img src={farm} alt="organic farm sign with red barn  " /> */}
       <SingleProduct singleProduct={singleProduct} />
     </div>
   );

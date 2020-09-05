@@ -6,7 +6,6 @@ const [cart, setCart] = useContext(CartContext);
 
     const removeFromCart = () => {
       setCart(cart.filter((item) => item.product !== props.product))
-      
     };
     
     return (

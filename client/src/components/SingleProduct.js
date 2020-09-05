@@ -17,7 +17,7 @@ const SingleProduct = (props) => {
     return (
       <div className="product-container">
       <div className="carder">
-        <h1>{product}</h1>
+        <h2>{product}</h2>
         <img className="cartItem" src={product_image_url} alt={product_image_url} />
         <h3>PricePerPound: ${price}</h3><br/>
         <button onClick={addItem}>Add to Cart</button>
@@ -38,3 +38,4 @@ const SingleProduct = (props) => {
 };
 
 export default SingleProduct;
+
