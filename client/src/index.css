@@ -16,8 +16,7 @@ h1 {
   font-size: 2rem;
   letter-spacing: 0.06rem;
   color: hsla(98, 96%, 18%, 0.836);
-  
- 
+  margin: 0.5%;
   text-shadow:
     1px 0px 1px rgba(160,160,170,.5),   0px 1px 1px rgba(230,230,240,.5), 
     2px 1px 1px rgba(159,159,169,.6),   1px 2px 1px rgba(229,229,239,.6),
@@ -213,8 +212,5 @@ margin: 0 auto;
 }
 
 .shopping-cart-icon img:hover {
-  box-shadow: inset 1px 3px 5px 2px rgba(80, 190, 36, 0.9),
-  inset 0 0 15px 1px rgba(119, 216, 81, 0.541)
-  
-
+  box-shadow: inset 1px 3px 5px 0.2px rgba(64, 143, 33, 0.9);
 }
