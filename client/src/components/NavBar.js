@@ -8,17 +8,25 @@ const NavBar = () => {
     return (
       <>
         <div className="navbar">
-          <h1>HYDROPONIC</h1>
+          <h1 className="hydro-h1">HYDROPONIC</h1>
           <h1>FARMERS MARKET</h1>
-          <NavLink to="/products">PRODUCTS</NavLink>
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to="/authorize">LOGIN</NavLink>
-          <NavLink to="/admin">ADMIN</NavLink>
-          <NavLink to="/cart" className="shopping-cart-icon"><img src={shoppingCart} alt="shopping cart icon"/></NavLink>
-          
+          <NavLink className="nav-links" to="/products">
+            PRODUCTS
+          </NavLink>
+          <NavLink className="nav-links" to="/">
+            HOME
+          </NavLink>
+          <NavLink className="nav-links" to="/authorize">
+            LOGIN
+          </NavLink>
+          <NavLink className="nav-links" to="/admin">
+            ADMIN
+          </NavLink>
+          <NavLink to="/cart" className="shopping-cart-icon">
+            <img src={shoppingCart} alt="shopping cart icon" />
+          </NavLink>
 
           {/* <img src={farmdesign} alt="farming logo with fruits and vegetables" /> */}
-          
         </div>
       </>
     );

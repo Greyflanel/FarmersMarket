@@ -13,8 +13,9 @@ body {
 }
 
 h1 {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 2rem;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.09rem;
   color: hsla(98, 96%, 18%, 0.836);
   margin: 0.5%;
   text-shadow:
