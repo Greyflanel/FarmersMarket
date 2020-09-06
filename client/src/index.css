@@ -5,10 +5,6 @@ body {
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
-  
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
   font-family: 'Exo 2', sans-serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
@@ -16,14 +12,9 @@ body {
   text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 h1 {
-  font-size: 2em;
-  letter-spacing: 0.06em;
+  font-size: 2rem;
+  letter-spacing: 0.06rem;
   color: hsla(98, 96%, 18%, 0.836);
   
  
@@ -37,7 +28,7 @@ h1 {
 
 h2, h3, h4 {
     color: #225a02d5;
-    padding-top: 0.5em;
+    padding-top: 0.5rem;
     
 }
 
@@ -84,7 +75,7 @@ h2, h3, h4 {
 .card:hover {
 	top: -2px;
 	left: -2px;
-  box-shadow: 3px 3px 15px 0px rgba(161, 158, 158, 0.85),
+  box-shadow: 3px 3px 15px 0px rgba(118, 159, 197, 0.85),
   inset 0 0 15px 0.6px rgba(32, 83, 49, 0.85);
 }
 .card:active {
@@ -97,9 +88,9 @@ h2, h3, h4 {
 button {
   width: 25%;
   height: auto;
-  line-height: 2em;
+  line-height: 2rem;
   margin-bottom: 5%;
-  font-size: 1em;
+  font-size: 1rem;
   background-color: #eeff00;
   color: #1e5353;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
@@ -108,6 +99,8 @@ button {
 }
 
 .navbar {
+  display: flex;
+  flex-direction: column;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
   background: linear-gradient(#35D6ED, #cef5fa);
   border-radius: 15px;
@@ -116,7 +109,7 @@ button {
 }
 
 .navbar a {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: hsla(98, 96%, 18%, 0.836);
   margin-left: 2%;
 }
@@ -144,28 +137,29 @@ a {
   height: auto;
 }
 
-.carder {
+.singleCard {
   width: 30%;
   margin: 0 auto;
   background-color: #74fd24;
   border-radius: 10px;
-  box-shadow: 3px 3px 15px 0px rgba(92, 91, 91, 0.85);
-  box-shadow: inset 0.1px 0.1px 15px 0.5px rgba(85, 141, 62, 0.9);
+  box-shadow: 3px 3px 15px 0px rgba(221, 221, 221, 0.85),
+  inset 0 0 10px 1px rgba(64, 143, 33, 0.9),
+  inset 0 0 15px 1px rgba(86, 206, 39, 0.9),
+   inset 0 0 20px 1px rgba(109, 182, 80, 0.9);
   padding: 2%;
   margin-top: 1%;
   margin-bottom: 1%;
   
 }
 
-.carder img {
+.singleCard img {
   width: 70%;
   height: auto;
   border-radius: 5px;
   border: 2px solid #258825;
-  /* box-shadow: inset 1px 1px 5px 1px rgba(73, 128, 51, 0.9); */
 }
 
-.carder button {
+.singleCard button {
   width: 40%;
   border-radius: 5px;
   cursor: pointer;
@@ -209,117 +203,10 @@ margin: 0 auto;
 }
 
 .shopping-cart-checkout p {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .shopping-cart-icon img {
-  width: 2em;
-  margin-left: 66%;
+  width: 2rem;
+  
 }
-/* button {
-  width: 50%;
-  font-size: 2em;
-  background: hsla(98, 96%, 18%, 0.836);
-  color: #fff;
-  border: 0.15rem solid hsla(98, 96%, 18%, 0.836);
-  border-radius: 15px;
-  padding: 0.85em 0.75em;
-  margin: 1rem;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-button:hover {
-  color: hsla(98, 96%, 18%, 0.836);
-}
-
-button::after {
-  content: "";
-  background: #ecf0f1;
-  position: absolute;
-  border-radius: 15px;
-  z-index: -1;
-  padding: 0.85em 0.75em;
-  display: block;
-}
-
-button[class^="grow"]::after {
-  transition: all 5s ease;
-}
-
-button[class^="grow"]:hover::after {
-  transition: all 5s ease-out;
-}
-
-button.grow_spin::after {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transform: scale(0, 0) rotate(-360deg);
-}
-
-button.grow_spin:hover::after {
-  transform: scale(1, 1) rotate(0deg);
-} */
-
-/* .glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: rgb(248, 244, 244);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(3px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover {
-    color: rgb(15, 248, 73)
-}
-
-.glow-on-hover:hover:after {
-    background: transparent;
-}
-
-.glow-on-hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-} */
