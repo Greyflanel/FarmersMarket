@@ -9,10 +9,11 @@ const Admin = (props) => {
         setAuthTokens();
     }
     return (
-        <>
-            <h2>Admin</h2>
-            <Button onClick={logOut}>Log Out</Button>
-        </>
+      <>
+        <h2>Admin</h2>
+        <Button onClick={logOut}>Log Out</Button>
+        
+      </>
     );
 };
  
