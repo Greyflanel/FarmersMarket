@@ -67,8 +67,8 @@ h2, h3, h4 {
   top: 0px;
   left: 0px;
   border-radius: 20px;
- box-shadow:  0 0 12px 10px rgba(118, 159, 197, 0.3),
- inset  0 0 5px 2px rgba(59, 168, 126, 0.8),
+ box-shadow:  0 0 10px 4px rgba(82, 107, 119, 0.1),
+ inset 0 1px 1px 0.7px rgba(50, 131, 73, 0.2),
  inset 0 0 10px 5px rgba(53, 155, 82, 0.3),
  inset 0 0 11px 6px rgba(53, 155, 82, 0.2),
  inset 0 2px 1px 0.5px rgba(183, 248, 201, 0.9),
@@ -80,8 +80,8 @@ h2, h3, h4 {
 .card:hover {
 	top: -2px;
 	left: -2px;
-  box-shadow: 0 4px 18px 10px rgba(118, 159, 197, 0.5),
-  inset 0 0 5px 2px rgba(59, 168, 126, 0.8),
+  box-shadow: 0 0 14px 3px  rgba(82, 107, 119, 0.3),
+  inset 0 1px 1px 0.7px rgba(50, 131, 73, 0.6),
   inset 0 0 10px 5px rgba(53, 155, 82, 0.3),
   inset 0 0 11px 6px rgba(53, 155, 82, 0.2),
   inset 0 1px 1px 0.7px rgba(183, 248, 201, 0.6),
@@ -128,6 +128,14 @@ a {
   text-decoration: none;
 }
 
+.login-button {
+  align-self: flex-end;
+  width: 100px;
+  border: 2px solid rgb(115, 214, 247);
+  padding: 1rem;
+  border-radius: 15rem;
+}
+
 .navbar img {
   width: 120px;
   height: auto;
@@ -151,10 +159,13 @@ a {
   margin: 0 auto;
   background-color: #74fd24;
   border-radius: 10px;
-  box-shadow: 3px 3px 15px 0px rgba(221, 221, 221, 0.85),
-  inset 0 0 0.1px 0.2px rgba(154, 238, 182, 0.699),
-  inset 0 0 20px 0.1px rgba(16, 22, 18, 0.5),
-  inset 0 0 40px 0.2px rgba(32, 83, 49, 0.8);
+  box-shadow:  0 0 10px 4px rgba(82, 107, 119, 0.1),
+ inset 0 1px 1px 0.7px rgba(50, 131, 73, 0.2),
+ inset 0 0 10px 5px rgba(53, 155, 82, 0.3),
+ inset 0 0 11px 6px rgba(53, 155, 82, 0.2),
+ inset 0 2px 1px 0.5px rgba(183, 248, 201, 0.9),
+ inset 0 -4px 5px 4px rgba(49, 133, 74, 0.7),
+ inset 0 0 2px 2px rgba(49, 138, 75, 0.6);
   padding: 2%;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -220,12 +231,12 @@ margin: 0 auto;
 .shopping-cart-icon img {
   width: 2rem;
   padding: 0.8rem;
-  background-color: rgb(29, 235, 29);
-  box-shadow: inset 0 0 15px 2px rgba(64, 143, 33, 0.9);
+  background: radial-gradient(circle at 40px 10px,#74fd24, #1e8a52);
+  
 }
 
 .shopping-cart-icon img:hover {
-  box-shadow: inset 1px 3px 5px 0.2px rgba(64, 143, 33, 0.9);
+  background: radial-gradient(circle at 20px 20px, #74fd24, rgb(39, 184, 109));
 }
 
 
@@ -233,8 +244,153 @@ margin: 0 auto;
   display: block;
   background: black;
   border-radius: 50%;
-  height: 300px;
-  width: 300px;
+  height: 100px;
+  width: 100px;
   margin: 0;
-  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+  background: radial-gradient(circle at 80px 30px, #74fd24, rgb(26, 73, 49));
+  align-self: center;
 }
+
+.nav-container {
+  align-self: center;
+  position: relative;
+}
+
+#simple_arc {
+       display: block;
+       height: 40px;
+       align-self: center;
+  }
+  
+  #simple_arc>span[class^=w]:nth-of-type(n+0){
+					 display:block;
+					 
+                     -moz-transform-origin:50% 100%;
+					 -webkit-transform-origin:50% 100%;
+					 -o-transform-origin:50% 100%;
+					 -ms-transform-origin:50% 100%;
+           transform-origin:50% 100%;
+           }
+           
+           #simple_arc span{
+           position: absolute;
+					 font-family: 'Courier New', Courier, monospace;
+					 font-size: 2.7rem;
+					 font-weight:regular;
+					 font-style:normal;
+           line-height: 3;
+					 white-space:pre;
+					 overflow:visible;
+           padding:0px;
+           }
+           
+           #simple_arc .w0 {
+					 -moz-transform: rotate(-1rad);
+					 -webkit-transform: rotate(-1rad);
+					 -o-transform: rotate(-1rad);
+					 -ms-transform: rotate(-1rad);
+					 transform: rotate(-1.1rad);
+                     width: 21px;
+					 height: 1%;
+					 left: -170px;
+					 top: 62px;
+           }
+            #simple_arc .w1 {
+					 -moz-transform: rotate(-1.10rad);
+					 -webkit-transform: rotate(-1.10rad);
+					 -o-transform: rotate(-1.10rad);
+					 -ms-transform: rotate(-1.10rad);
+					 transform: rotate(-0.9rad);
+                     width: 21px;
+					 height: 1%;
+					 left: -147px;
+					 top: 26px;
+           } 
+           #simple_arc .w2 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(-0.8rad);
+                     width: 21px;
+					 height: 1%;
+					 left: -121px;
+					 top: -1px;
+           } 
+           #simple_arc .w3 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(-0.5rad);
+                     width: 21px;
+					 height: 1%;
+					 left: -80px;
+					 top: -31px;
+           }
+           #simple_arc .w4 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(-0.1rad);
+                     width: 21px;
+					 height: 1%;
+					 left: -24px;
+					 top: -49px;
+           }
+           #simple_arc .w5 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(0.12rad);
+                     width: 21px;
+					 height: 1%;
+					 left: 18px;
+					 top: -47px;
+           }
+           #simple_arc .w6 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(0.5rad);
+                     width: 21px;
+					 height: 1%;
+					 left: 69px;
+					 top: -32px;
+           }
+           #simple_arc .w7 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(0.65rad);
+                     width: 21px;
+					 height: 1%;
+					 left: 102px;
+					 top: -12px;
+           }
+           #simple_arc .w8 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(0.8rad);
+                     width: 21px;
+					 height: 1%;
+					 left: 130px;
+					 top: 14px;
+           }
+           #simple_arc .w9 {
+					 -moz-transform: rotate(-1.14rad);
+					 -webkit-transform: rotate(-1.14rad);
+					 -o-transform: rotate(-1.14rad);
+					 -ms-transform: rotate(-1.14rad);
+					 transform: rotate(.9rad);
+                     width: 21px;
+					 height: 1%;
+					 left: 150px;
+					 top: 41px;
+					 }
