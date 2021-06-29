@@ -11,19 +11,19 @@ const NavBar = () => {
           {/* <h1 className="hydro-h1">HYDROPONIC</h1> */}
           <div className="nav-container">
             <h1 className="hydro-h1" id="simple_arc">
-              <span class="w0">H</span>
-              <span class="w1">Y</span>
-              <span class="w2">D</span>
-              <span class="w3">R</span>
-              <span class="w4">O</span>
-              <span class="w5">P</span>
-              <span class="w6">O</span>
-              <span class="w7">N</span>
-              <span class="w8">I</span>
-              <span class="w9">C</span>
+              <span className="w0">H</span>
+              <span className="w1">Y</span>
+              <span className="w2">D</span>
+              <span className="w3">R</span>
+              <span className="w4">O</span>
+              <span className="w5">P</span>
+              <span className="w6">O</span>
+              <span className="w7">N</span>
+              <span className="w8">I</span>
+              <span className="w9">C</span>
             </h1>
           </div>
-          <figure class="circle"></figure>
+          <figure className="circle"></figure>
           <h1>FARMERS MARKET</h1>
           <NavLink className="nav-links" to="/products">
             PRODUCTS
