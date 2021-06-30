@@ -4,7 +4,7 @@ import { CartContext } from "../Contexts/CartContext.js";
 
 const SingleProduct = (props) => {
   const [cart, setCart] = useContext(CartContext);
-
+  console.log(props)
   if (props.singleProduct.length > 0) {
     const { product, product_image_url, price  } = props.singleProduct[0];
     const addItem = () => {
