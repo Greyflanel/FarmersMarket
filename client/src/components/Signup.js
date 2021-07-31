@@ -47,7 +47,7 @@ const Signup = () => {
             }}
             placeholder="password"
           />
-          {/* <Input type="password" placeholder="password again" /> */}
+          <Input type="password" placeholder="password again" />
           <Button onClick={postSignup}>Sign Up</Button>
         </Form>
         <NavLink to="/login">Already have an account?</NavLink>

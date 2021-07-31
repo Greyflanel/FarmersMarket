@@ -32,7 +32,7 @@ const App = () => {
   return (
     <ProductContext.Provider value={{ productsList }}>
       <CartProvider>
-        <NavBar />
+        <NavBar/>
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/products/:id" component={Product}/>

@@ -1,23 +1,17 @@
-import React from 'react';
-
-import farm from "../assets/small.png"
-import organic from "../assets/100organic.png";
-
-
+import React, { useState } from "react";
+import video from "../Flowers.mp4";
+import "../index.css";
+import NavBar from "./NavBar";
 
 const LandingPage = () => {
-    
-    return (
-      <div className="small-farm">
-        <h3>LANDING PAGE</h3>
-        
-        {/* <img src={farm} alt="organic farm sign with red barn  " />
-        <img src={organic} alt="100% organic sign" /> */}
-        {/* <div>
-          <button className="grow_spin">Button</button>
-        </div> */}
-      </div>
-    );
+  return (
+    <section className="showcase">
+      <video muted loop autoPlay>
+        <source src={video} type="video/mp4" />
+      </video>
+      <div className="overlay"></div>
+    </section>
+  );
 };
 
 export default LandingPage;
