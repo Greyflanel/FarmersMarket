@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 
 
+
+
 const NavBar = () => {
 const [isActive, setIsActive] = useState("false");
 const menuToggle = () => setIsActive(!isActive);
   
     return (
-      <nav className={isActive ? "" : "nav.active"}>
+      <header className={isActive ? "" : "header.active"}>
         <div className={isActive ? "menu" : "menu.active"}>
           <ul>
             <li>
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/products">Shop</a>
+              <a href="/products">News</a>
             </li>
             <li>
               <a href="#_blank">Destination</a>
@@ -26,11 +28,12 @@ const menuToggle = () => setIsActive(!isActive);
             </li>
           </ul>
         </div>
+
         <button
           className={isActive ? "toggle" : "active"}
           onClick={menuToggle}
         ></button>
-      </nav>
+      </header>
     );
 };
 

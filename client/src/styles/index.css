@@ -51,27 +51,18 @@
 
 html, body {
   min-height: 100vh;
+  width: 100vw;
   font-family: 'Exo 2', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  overflow-x: hidden;
   
 }
 
 /* * {
   border: 1px solid #f00 !important;
 } */
-body {
-  
-  box-sizing: border-box;
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  overflow-x: hidden;
-}
+
  
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 *
@@ -81,9 +72,21 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-header
+
+body {
+  
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+ 
+}
+
+nav
 {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
@@ -93,24 +96,24 @@ header
   align-items: center;
 }
  
-header ul {
+nav ul {
   list-style-type: none;
 }
 
-header ul li a {
+nav ul li a {
   text-decoration: none;
   font-size: 1.7rem;
   padding: 1rem;
   color: white;
 }
 
-header.active {
+nav.active {
   position: absolute;
   justify-content: center;
   z-index: 200;
 }
 
-header .logo
+nav .logo
 {
   color: #fff;
   text-transform: uppercase;
@@ -129,6 +132,7 @@ header .logo
   background-size: 30px;
   background-position: center;
   cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.347);
 }
 
 .active
@@ -144,6 +148,7 @@ header .logo
   background-position: center;
   cursor: pointer;
   z-index: 20000;
+  background-color: var(--baby-blue-eyes);
 }
 
 .showcase
@@ -178,7 +183,7 @@ header .logo
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 .overlay
 {
@@ -186,60 +191,12 @@ header .logo
   z-index: 100;
   width: 100vw;
   height: 100vh;
-  background: #03a9f4;
+  background: var(--baby-blue-eyes);
   mix-blend-mode: overlay;
-}
-.text
-{
-  position: relative;
-  z-index: 1000;
-  
-}
- 
-.text h2
-{
-  font-size: 5em;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-.text h3
-{
-  font-size: 4em;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-.text p
-{
-  font-size: 1.1em;
-  color: #fff;
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
-}
-.text a
-{
-  display: inline-block;
-  font-size: 2em;
-  background: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition: 0.2s;
-}
-.text a:hover
-{
-  letter-spacing: 6px;
 }
 
 .menu {
+  display: none;
   visibility: hidden;
   position: relative;
   right: 0;
@@ -259,8 +216,8 @@ section {
 
 ul {
   position: relative;
-  background-color: blue;
-  z-index: 1;
+  background-color: var(--baby-blue-eyes);
+  z-index: 0;
   height: 100vh;
   width: 300px;
   display: flex;
@@ -275,7 +232,7 @@ a {
 }
 
 a:hover {
-  color: rgb(0, 195, 255);
+  color: rgb(0, 111, 202);
 }
 
 /* .singleCard {
