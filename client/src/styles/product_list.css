@@ -59,7 +59,7 @@
 
 
 .card {
-  width: 35vw;
+  width: 55vw;
   height: 70vh;
   border-radius: 30px;
   margin: 4rem;
@@ -73,7 +73,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 0.1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
-  
 }
 
 .card:hover {
@@ -90,18 +89,19 @@
   
 }
 .flowers img {
-  
   border-radius: 10px;
   z-index: 200;
   
 }
 .circle {
-  width: 15rem;
-  height: 15rem;
-  background: var(--baby-blue-eyes);
+  width: 14rem;
+  height: 14rem;
+  background: rgba(0, 0, 255, 0.308);
   position: absolute;
+  top: 5%;
+  left: 8%;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .info {
@@ -144,17 +144,54 @@
 .purchase button {
   width: 100%;
   padding: 1rem 0rem;
-  background: #2196f3;
+  background: var(--baby-blue-eyes);
   border: none;
   color: #000000;
   cursor: pointer;
   border-radius: 999999px;
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 1em;
 }
 
 .product-list-image {
   width: 200px;
   height: 200px;
+  border: 1px solid rgb(0, 0, 0);
+  object-fit: cover;
 }
 
+.circle1,
+.circle2,
+.circle3 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(2, 82, 119, 0.8),
+    rgba(33, 189, 2, 0.252)
+  );
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  top: 10%;
+  right: 15%;
+  height: 20rem;
+  width: 20rem;
+  
+}
+.circle2 {
+  top: 3%;
+  left: 0;
+  height: 25rem;
+  width: 25rem;
+  
+}
+
+.circle3 {
+  bottom: 10%;
+  left: 45%;
+  height: 15rem;
+  width: 15rem;
+  
+}

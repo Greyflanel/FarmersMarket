@@ -132,7 +132,7 @@ nav .logo
   background-size: 30px;
   background-position: center;
   cursor: pointer;
-  background-color: rgba(0, 0, 255, 0.347);
+  background-color: rgba(0, 0, 255, 0.15);
 }
 
 .active
@@ -238,7 +238,13 @@ a:hover {
   color: rgb(0, 111, 202);
 }
 
-/* .singleCard {
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.singleCard {
   perspective: 1000px;
   z-index: 100;
   
@@ -352,4 +358,3 @@ background-color: blue;
 .shopping-cart-icon img:hover {
   background: radial-gradient(circle at 20px 20px, #74fd24, rgb(39, 184, 109));
 }
-*/
