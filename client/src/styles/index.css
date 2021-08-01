@@ -51,12 +51,12 @@
 
 html, body {
   min-height: 100vh;
-  width: 100vw;
+  
   font-family: 'Exo 2', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  
+  scroll-behavior: smooth;
 }
 
 /* * {
@@ -104,7 +104,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.7rem;
   padding: 1rem;
-  color: white;
+  color: black;
 }
 
 nav.active {
@@ -212,6 +212,7 @@ nav .logo
 section {
   position: absolute;
   overflow-x: hidden;
+  
 }
 
 ul {
@@ -223,12 +224,14 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 a {
   position: relative;
   display: flex;
   justify-content: center;
+  
 }
 
 a:hover {

@@ -29,7 +29,7 @@
 
 --gradient-top-right: linear-gradient(45deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
---gradient-bottom-right: linear-gradient(135deg, #ffadadff,  #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff);
+--gradient-bottom-right: linear-gradient(135deg, #ffadadff,  #fdffb6ff, #caffbfff, #a0c4ffff);
 
 --gradient-top-left: linear-gradient(225deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
@@ -41,9 +41,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 
-*,
-*::after,
-*::before {
+* {
   box-sizing: border-box;
   
 }
@@ -51,21 +49,21 @@
 .horizontal-scroll {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   background: var(--gradient-bottom-right);
-  
+  display: flex;
+  align-items: center;
   
 }
 
 
 .card {
-  width: 30vw;
-  z-index: 1;
-  min-height: 70vh;
+  width: 35vw;
+  height: 70vh;
   border-radius: 30px;
-  margin: 2em;
-  padding: 6rem; 
+  margin: 4rem;
+  padding: 5rem; 
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.1);
   display: flex;
@@ -154,3 +152,9 @@
   font-weight: bolder;
   font-size: 1em;
 }
+
+.product-list-image {
+  width: 200px;
+  height: 200px;
+}
+
