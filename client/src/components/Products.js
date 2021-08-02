@@ -44,13 +44,10 @@ const Products = () => {
                 alt={product.product}
               />
             </div>
-            <div className="info">
-              <h1 className="title">Adidas</h1>
+            <div>
               
-              <div className="sizes">
-                <button></button> <button></button>
-                <button ></button> <button></button>
-              </div>
+              
+              
               <div className="purchase">
                 <button></button>
               </div>

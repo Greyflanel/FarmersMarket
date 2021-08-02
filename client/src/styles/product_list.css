@@ -8,7 +8,7 @@
 --maximum-blue-purple: #bdb2ffff;
 --mauve: #ffc6ffff;
 --baby-powder: #fffffcff;
-
+--light-blue: rgba(0, 0, 255, 0.308);
 /* CSS HSL */
 --light-pink: hsla(0, 100%, 84%, 1);
 --deep-champagne: hsla(33, 100%, 82%, 1);
@@ -29,7 +29,7 @@
 
 --gradient-top-right: linear-gradient(45deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
---gradient-bottom-right: linear-gradient(135deg, #ffadadff,  #fdffb6ff, #caffbfff, #a0c4ffff);
+--gradient-bottom-right: linear-gradient(135deg, #ffadadff,  #fdffb6ff, #a0c4ffff);
 
 --gradient-top-left: linear-gradient(225deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
@@ -51,7 +51,7 @@
   height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
-  background: var(--gradient-bottom-right);
+  background: var(--deep-champagne);
   display: flex;
   align-items: center;
   
@@ -63,7 +63,7 @@
   height: 70vh;
   border-radius: 30px;
   margin: 4rem;
-  padding: 5rem; 
+  padding: 100px; 
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.1);
   display: flex;
@@ -94,9 +94,9 @@
   
 }
 .circle {
-  width: 14rem;
-  height: 14rem;
-  background: rgba(0, 0, 255, 0.308);
+  width: 200px;
+  height: 200px;
+  background: var(--light-blue);
   position: absolute;
   top: 5%;
   left: 8%;
@@ -106,13 +106,14 @@
 
 .info {
     margin-top: 4rem;
-    text-decoration: none;
-    
+    text-decoration: none !important;
+    text-decoration-thickness: 0;
 }
 
 .info h1 {
   font-size: 3rem;
   transition: all 0.75s ease-out;
+  text-decoration: none !important;
 }
 .info h3 {
   font-size: 1.3rem;
@@ -142,9 +143,9 @@
   transition: all 0.75s ease-out;
 }
 .purchase button {
-  width: 100%;
-  padding: 1rem 0rem;
-  background: var(--baby-blue-eyes);
+  width: 200px;
+  padding: 1rem;
+  background: var(--light-blue);
   border: none;
   color: #000000;
   cursor: pointer;
@@ -154,9 +155,9 @@
 }
 
 .product-list-image {
-  width: 200px;
-  height: 200px;
-  border: 1px solid rgb(0, 0, 0);
+  width: 250px;
+  height: 250px;
+  border: 1px solid var(--light-blue);
   object-fit: cover;
 }
 
@@ -164,13 +165,10 @@
 .circle2,
 .circle3 {
   background: white;
-  background: linear-gradient(
-    to right bottom,
-    rgba(2, 82, 119, 0.8),
-    rgba(33, 189, 2, 0.252)
-  );
+  background: var(--lemon-yellow-crayola);
   position: absolute;
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .circle1 {
