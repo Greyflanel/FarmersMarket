@@ -71,6 +71,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -101,7 +102,6 @@ nav ul {
 }
 
 nav ul li a {
-  text-decoration: none;
   font-size: 1.7rem;
   padding: 1rem;
   color: black;
@@ -132,7 +132,7 @@ nav .logo
   background-size: 30px;
   background-position: center;
   cursor: pointer;
-  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   border: 1px solid blue;
 }
 
@@ -250,7 +250,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--gradient-bottom-right); 
+  background: #4a4a92; 
+  background: linear-gradient(to right, rgb(164, 147, 255), #caffbfff);
 }
 
 .singleCard {

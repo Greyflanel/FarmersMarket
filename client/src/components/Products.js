@@ -45,11 +45,8 @@ const Products = () => {
               />
             </div>
             <div>
-              
-              
-              
-              <div className="purchase">
-                <button></button>
+              <div className="product-name">
+                <h2>{product.product}</h2>
               </div>
             </div>
           </NavLink>

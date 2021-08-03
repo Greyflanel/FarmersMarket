@@ -25,7 +25,7 @@
 
 --gradient-bottom: linear-gradient(180deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
---gradient-left: linear-gradient(270deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
+--gradient-left: linear-gradient(270deg,  #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
 --gradient-top-right: linear-gradient(45deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
@@ -35,8 +35,11 @@
 
 --gradient-bottom-left: linear-gradient(315deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
---gradient-radial: radial-gradient(#ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff)
+--gradient-radial: radial-gradient( #ffd6a5ff 20%, #fdffb6ff, #caffbfff,#a0c4ffff 90%)
 }
+
+ 
+
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
@@ -54,9 +57,7 @@
   background: var(--deep-champagne);
   display: flex;
   align-items: center;
-  
 }
-
 
 .card {
   width: 55vw;
@@ -104,61 +105,30 @@
   z-index: 0;
 }
 
-.info {
-    margin-top: 4rem;
-    text-decoration: none !important;
-    text-decoration-thickness: 0;
-}
-
-.info h1 {
-  font-size: 3rem;
-  transition: all 0.75s ease-out;
-  text-decoration: none !important;
-}
-.info h3 {
-  font-size: 1.3rem;
-  padding: 2rem 0rem;
-  color: #585858;
-  font-weight: lighter;
-  transition: all 0.75s ease-out;
-}
-.sizes {
-  display: flex;
-  justify-content: space-between;
-  transition: all 0.75s ease-out;
-}
-.sizes button {
-  padding: 0.5rem 2rem;
-  background: none;
-  border: none;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #585858;
-}
-
-.purchase {
+.product-name {
   margin-top: 5rem;
   transition: all 0.75s ease-out;
+  
+  
 }
-.purchase button {
-  width: 200px;
-  padding: 1rem;
+.product-name h2 {
+  width: 100%;
+  padding:  1.5rem;
   background: var(--light-blue);
-  border: none;
-  color: #000000;
+  color: var(--baby-powder);
   cursor: pointer;
   border-radius: 999999px;
-  font-weight: 500;
-  font-size: 1em;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .product-list-image {
   width: 250px;
   height: 250px;
-  border: 1px solid var(--light-blue);
+  border: 1px solid var(--tea-green);
   object-fit: cover;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .circle1,
@@ -187,7 +157,7 @@
 }
 
 .circle3 {
-  bottom: 10%;
+  bottom: 5%;
   left: 45%;
   height: 15rem;
   width: 15rem;
