@@ -20,7 +20,7 @@ const Product = (props) => {
   }, [id])
   
   return (
-    <div className="farm">
+    <div className="single-card">
       <SingleProduct singleProduct={singleProduct} />
     </div>
   );

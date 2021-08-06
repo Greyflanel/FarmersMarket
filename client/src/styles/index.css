@@ -51,8 +51,7 @@
 
 html, body {
   min-height: 100vh;
-  
-  font-family: 'Exo 2', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -78,7 +77,7 @@ body {
   
   box-sizing: border-box;
   font-family: 'Exo 2', sans-serif;
-  font-weight: 100;
+  font-weight: 150;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -97,6 +96,15 @@ nav
   align-items: center;
 }
  
+button {
+  position: absolute;
+  z-index: 1000;
+}
+
+.login {
+  margin-top: 2%;
+}
+
 nav ul {
   list-style-type: none;
 }
@@ -104,7 +112,7 @@ nav ul {
 nav ul li a {
   font-size: 1.7rem;
   padding: 1rem;
-  color: black;
+  
 }
 
 nav.active {
@@ -197,7 +205,7 @@ nav .logo
   z-index: 100;
   width: 100vw;
   height: 100vh;
-  background: var(--baby-blue-eyes);
+  background: var(--deep-champagne);
   mix-blend-mode: overlay;
 }
 
@@ -223,7 +231,7 @@ section {
 
 ul {
   position: relative;
-  background-color: var(--baby-blue-eyes);
+  background-color: var(--maximum-blue-purple);
   z-index: 0;
   height: 100vh;
   width: 300px;
@@ -237,11 +245,11 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  
+  color: var(--baby-powder);
 }
 
 a:hover {
-  color: rgb(0, 111, 202);
+  color: blue;
 }
 
 .product-container {
@@ -250,8 +258,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #4a4a92; 
-  background: linear-gradient(to right, rgb(164, 147, 255), #caffbfff);
+  background: var(--deep-champagne); 
+  
 }
 
 .singleCard {

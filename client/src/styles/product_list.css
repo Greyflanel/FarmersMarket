@@ -77,13 +77,13 @@
 }
 
 .card:hover {
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
     transition: 0.15s ease-in-out;
 }
 
 .flowers {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,9 +95,9 @@
   
 }
 .circle {
-  width: 200px;
-  height: 200px;
-  background: var(--light-blue);
+  width: 250px;
+  height: 250px;
+  background: var(--maximum-blue-purple);
   position: absolute;
   top: 5%;
   left: 8%;
@@ -113,19 +113,19 @@
 }
 .product-name h2 {
   width: 100%;
-  padding:  1.5rem;
-  background: var(--light-blue);
+  padding:  1.3rem 2rem;
+  background: var(--maximum-blue-purple);
   color: var(--baby-powder);
   cursor: pointer;
   border-radius: 999999px;
   font-weight: 300;
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: 1.3rem;
 }
 
 .product-list-image {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   border: 1px solid var(--tea-green);
   object-fit: cover;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);

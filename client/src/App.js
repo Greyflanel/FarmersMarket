@@ -10,6 +10,9 @@ import NavBar from "./components/NavBar";
 import ProductContext from "./Contexts/ProductContext";
 import { CartProvider } from "./Contexts/CartContext";
 import Product from "./components/Product";
+import LoginButton from "./components/LoginButton";
+import LogoutButton from "./components/LogoutButton.js";
+
 
 const App = () => {
   const [productsList, setProductsList] = useState([]);
@@ -32,10 +35,12 @@ const App = () => {
   return (
     <ProductContext.Provider value={{ productsList }}>
       <CartProvider>
-        <NavBar/>
+        <NavBar />
+        <LoginButton />
+        <LogoutButton />
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route path="/products/:id" component={Product}/>
+          <Route path="/products/:id" component={Product} />
           <Route path="/products" component={Products} />
           <Route path="/authorize" component={AuthNav} />
           <Route path="/cart" component={ShoppingCart} />

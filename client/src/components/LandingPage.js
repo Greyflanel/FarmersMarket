@@ -5,9 +5,9 @@ import "../styles/index.css";
 const LandingPage = () => {
   return (
     <section className="showcase">
-      <video muted loop autoPlay>
+      {/* <video muted loop autoPlay>
         <source src={video} type="video/mp4"/>
-      </video>
+      </video> */}
       <div className="overlay"></div>
     </section>
   );
