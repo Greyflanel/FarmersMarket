@@ -71,11 +71,16 @@ const SingleProduct = (props) => {
             src={product_image_url}
             alt={product_image_url}
           />
-          <h3>PricePerPound: ${price}</h3>
+          <h3>Price: ${price}</h3>
           <br />
-          <button onClick={addItem}>Add to Cart</button>
-          <div className="testCircle"></div>
+          <button className="add-to-cart-btn" onClick={addItem}>Add to Cart</button>
         </div>
+        <button
+          onClick={() => window.location.href = "/products"}
+          className="back-to-product-list-btn"
+        >
+          Back to Product List
+        </button>
       </div>
     );
   }

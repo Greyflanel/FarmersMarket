@@ -74,14 +74,11 @@ html, body {
 }
 
 body {
-  
   box-sizing: border-box;
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 150;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
- 
+ font-family: 'Poppins', sans-serif;
 }
 
 nav
@@ -224,7 +221,7 @@ nav .logo
 }
 
 section {
-  position: absolute;
+  position: relative;
   overflow-x: hidden;
   
 }
@@ -265,7 +262,9 @@ a:hover {
 .singleCard {
   width: 600px;
   height: 800px;
-  perspective: 1000px;
+  color: grey;
+  font-size: 1.7rem;
+  font-weight: 100;
   z-index: 100;
   border-radius: 30px;
   padding: 60px; 
@@ -281,36 +280,43 @@ a:hover {
   backdrop-filter: blur(5px);
 }
 
+.singleCard h2 {
+  font-weight: 300;
+}
+
+.singleCard h3 {
+  padding-top: 1.2rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
 .singleCard img {
-  width: 70%;
+  width: 85%;
   height: auto;
   border-radius: 5px;
   border: 2px solid #258825;
 }
 
 .singleCard button {
-  width: 40%;
+  position: absolute;
+  bottom: 10%;
+  width: 30%;
   border-radius: 5px;
+  padding: 5px;
   cursor: pointer;
+  background-color: var(--maximum-blue-purple);
+  color: var(--baby-powder);
 }
 
 .singleCard button:hover {
 transform: scale(1.08);
+background-color: var(--baby-powder);
+color: var(--maximum-blue-purple);
 }
 
 .singleCard button:active {
   background-color: blue;
   color: white;
-}
-
-.testCircle{
-   width: 10px; 
-   height: 10px;
-   border-radius: 100px;
-   background-color:#ffffff50;
-   margin: 0 auto;
-   box-shadow: 1px 1px 5px 0px rgba(53, 80, 66, 0.75);
-   padding: 15%;
 }
 
 .shopping-cart {
@@ -369,4 +375,25 @@ background-color: blue;
 
 .shopping-cart-icon img:hover {
   background: radial-gradient(circle at 20px 20px, #74fd24, rgb(39, 184, 109));
+}
+
+ .back-to-product-list-btn {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 10vw;
+  background-color: var(--maximum-blue-purple);
+  color: var(--baby-powder);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.back-to-product-list-btn:hover {
+  transform: scale(1.08);
+background-color: var(--baby-powder);
+color: var(--maximum-blue-purple);
+}
+
+.add-to-cart-btn {
+  margin-top: -1rem;
 }
