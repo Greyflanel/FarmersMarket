@@ -16,7 +16,7 @@ const menuToggle = () => setIsActive(!isActive);
               <a href="/products">Shop</a>
             </li>
             <li>
-              <a href="#_blank">Destination</a>
+              <a href="/cart">Cart</a>
             </li>
             <li>
               <a href="#_blank">Blog</a>

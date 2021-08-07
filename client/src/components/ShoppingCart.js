@@ -10,16 +10,16 @@ export const ShoppingCart = () => {
     const totalPrice = cart.reduce((acc, curr) => (parseFloat(acc) + parseFloat(curr.price)), 0 ).toFixed(2);
     
     return (
-        <div className="shopping-cart">
-            <p>{cart.length} item(s) in your Cart</p>
-            {cart.map(cart => (
-                <ShoppingCartItem key={cart.product} {...cart} />
-            ))}
-            <div className="shopping-cart-checkout">
-                <p>Total: ${totalPrice}</p>
-                <button>Checkout</button>
-            </div>
+      <div className="shopping-cart">
+        {cart.map((cart) => (
+          <ShoppingCartItem key={cart.product} {...cart} />
+        ))}
+        <div className="shopping-cart-checkout">
+          <p>{cart.length} item(s) in your Cart</p>
+          <p>Total: ${totalPrice}</p>
+          <button className="checkout-btn">Checkout</button>
         </div>
+      </div>
     );
 
 };

@@ -69,7 +69,7 @@ const SingleProduct = (props) => {
           <img
             className="cartItem"
             src={product_image_url}
-            alt={product_image_url}
+            alt={product}
           />
           <h3>Price: ${price}</h3>
           <br />
@@ -79,7 +79,7 @@ const SingleProduct = (props) => {
           onClick={() => window.location.href = "/products"}
           className="back-to-product-list-btn"
         >
-          Back to Product List
+          Back
         </button>
       </div>
     );
