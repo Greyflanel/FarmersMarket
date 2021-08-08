@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../Flowers.mp4";
+import video from "../assets/Flower.mp4";
 import "../styles/index.css";
 
 const LandingPage = () => {
