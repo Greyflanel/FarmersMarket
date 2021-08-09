@@ -10,8 +10,11 @@ import NavBar from "./components/NavBar";
 import ProductContext from "./Contexts/ProductContext";
 import { CartProvider } from "./Contexts/CartContext";
 import Product from "./components/Product";
-import LoginButton from "./components/LoginButton";
-import LogoutButton from "./components/LogoutButton.js";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Admin from "./components/Admin";
+import PrivateRoute from "./components/PrivateRoute";
+import Store from "./Store";
 
 
 const App = () => {
@@ -30,23 +33,32 @@ const App = () => {
     getProducts();
   }, []);
 
-  
+  // const existingTokens = JSON.parse(localStorage.getItem("tokens"));
+  // const [authTokens, setAuthTokens] = useState(existingTokens);
+
+  // const setTokens = (data) => {
+  //   localStorage.setItem("tokens", JSON.stringify(data));
+  //   setAuthTokens(data);
+  // };
 
   return (
-    <ProductContext.Provider value={{ productsList }}>
-      <CartProvider>
-        <NavBar />
-        <LoginButton />
-        <LogoutButton />
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route path="/products/:id" component={Product} />
-          <Route path="/products" component={Products} />
-          <Route path="/authorize" component={AuthNav} />
-          <Route path="/cart" component={ShoppingCart} />
-        </Switch>
-      </CartProvider>
-    </ProductContext.Provider>
+    <Store>
+      <ProductContext.Provider value={{ productsList }}>
+        <CartProvider>
+          <NavBar />
+          <Switch>
+            <Route path="/register" component={Signup} />
+            <Route path="/login" component={Login} />
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/products/:id" component={Product} />
+            <Route path="/products" component={Products} />
+            <Route path="/authorize" component={AuthNav} />
+            <Route path="/cart" component={ShoppingCart} />
+            <PrivateRoute path="/admin" component={Admin} />
+          </Switch>
+        </CartProvider>
+      </ProductContext.Provider>
+    </Store>
   );
 };
 

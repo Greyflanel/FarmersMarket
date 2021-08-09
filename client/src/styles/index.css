@@ -95,11 +95,11 @@ nav
  
 
 
-.login {
+.login, .sign-up {
   position: absolute;
-  top: 2%;
-  right: 30%;
-  width: 5vw;
+  top: 10%;
+  left: 35%;
+  width: 30%;
   background-color: var(--maximum-blue-purple);
   color: var(--baby-powder);
   border-radius: 5px;
@@ -175,6 +175,13 @@ nav .logo
   cursor: pointer;
   z-index: 20000;
   background-color: transparent
+}
+
+.nav-login {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  z-index: -1;
 }
 
 .showcase

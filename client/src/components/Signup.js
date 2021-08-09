@@ -9,14 +9,14 @@ const Signup = () => {
 
   const postSignup = () => {
     axios
-      .post("http://localhost:4000/api/register", {
+      .post("http://localhost:3000/api/register", {
         username,
         password
       })
       .then(result => {
         if (result.status === 201) {
           console.log(result)
-          return <Redirect to={"/productlist"} />;
+          return <Redirect to={"/products"} />;
         }
       })
       .catch(error => {
@@ -25,7 +25,7 @@ const Signup = () => {
   };
 
   return (
-    <>
+    <div className="sign-up">
       <h3>SIGN-UP FORM</h3>
       <Card>
         <Form>
@@ -36,7 +36,7 @@ const Signup = () => {
               setUsername(e.target.value);
               
             }}
-            placeholder="username"
+            placeholder="email address"
           />
           <Input
             type="password"
@@ -47,12 +47,12 @@ const Signup = () => {
             }}
             placeholder="password"
           />
-          <Input type="password" placeholder="password again" />
+          <Input type="password" placeholder="repeat password" />
           <Button onClick={postSignup}>Sign Up</Button>
         </Form>
         <NavLink to="/login">Already have an account?</NavLink>
       </Card>
-    </>
+    </div>
   );
 };
 

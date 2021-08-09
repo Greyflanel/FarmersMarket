@@ -15,7 +15,7 @@ const Login = props => {
   const postLogin = () => {
     console.log(props.history)
     axios
-      .post("http://localhost:4000/api/login", {
+      .post("http://localhost:3000/api/login", {
         username,
         password
       })
@@ -34,14 +34,14 @@ const Login = props => {
       });
   };
   const auth = useContext(Context);
-  console.log(auth)
+  
   if (isLoggedIn || auth[0].token) {
     
-    return <Redirect to={referer} />;
+    return <Redirect to="/products" />;
   }
 
   return (
-    <>
+    <div className="login">
       <h3>LOG-IN FORM</h3>
       <Card>
         <Form>
@@ -51,7 +51,7 @@ const Login = props => {
             onChange={(e) => {
               setUsername(e.target.value);
             }}
-            placeholder="email"
+            placeholder="email address"
           />
           <Input
             type="text"
@@ -61,14 +61,14 @@ const Login = props => {
             }}
             placeholder="password"
           />
-          <Button onClick={postLogin}>Sign In</Button>
+          <Button onClick={postLogin}>Log In</Button>
         </Form>
-        <NavLink to="/signup">Don't have an account?</NavLink>
+        <NavLink to="/register">Don't have an account?</NavLink>
         {isError && (
           <Error>The username or password provided was incorrect!</Error>
         )}
       </Card>
-    </>
+    </div>
   );
 };
 

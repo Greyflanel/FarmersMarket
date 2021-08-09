@@ -19,10 +19,10 @@ const menuToggle = () => setIsActive(!isActive);
               <a href="/cart">Cart</a>
             </li>
             <li>
-              <a href="#_blank">Blog</a>
+              <a href="/login">Login</a>
             </li>
             <li>
-              <a href="#_blank">Contact</a>
+              <a href="/register">Register</a>
             </li>
           </ul>
         </div>

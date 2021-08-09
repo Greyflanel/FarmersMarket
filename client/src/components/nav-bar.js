@@ -9,7 +9,7 @@ const AuthNav = () => {
 
     return (
       <Navbar>
-        <Nav className="justify-content-end">
+        <Nav className="nav-login">
       {isAuthenticated ? <LogoutButton /> : <LoginButton />}
         </Nav>
       </Navbar>  
