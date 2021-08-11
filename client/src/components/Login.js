@@ -32,7 +32,7 @@ const Login = props => {
   
   if (isLoggedIn && token) {
     
-    return <Redirect to="/products/2" />;
+    return <Redirect to="/products" />;
   } 
 
   return (

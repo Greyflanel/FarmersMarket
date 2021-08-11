@@ -64,19 +64,20 @@ const SingleProduct = (props) => {
 
     return (
       <div className="product-container">
+        <div className="circle4"></div>
+        <div className="circle5"></div>
+        <div className="circle6"></div>
         <div className="singleCard">
           <h2>{product}</h2>
-          <img
-            className="cartItem"
-            src={product_image_url}
-            alt={product}
-          />
+          <img className="cartItem" src={product_image_url} alt={product} />
           <h3>Price: ${price}</h3>
           <br />
-          <button className="add-to-cart-btn" onClick={addItem}>Add to Cart</button>
+          <button className="add-to-cart-btn" onClick={addItem}>
+            Add to Cart
+          </button>
         </div>
         <button
-          onClick={() => window.location.href = "/products"}
+          onClick={() => (window.location.href = "/products")}
           className="back-to-product-list-btn"
         >
           Back
