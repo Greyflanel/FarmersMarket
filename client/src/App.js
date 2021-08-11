@@ -5,7 +5,6 @@ import axios from "axios";
 import LandingPage from "./components/LandingPage";
 import Products from "./components/Products";
 import {ShoppingCart} from "./components/ShoppingCart.js";
-import AuthNav from "./components/nav-bar";
 import NavBar from "./components/NavBar";
 import ProductContext from "./Contexts/ProductContext";
 import { CartProvider } from "./Contexts/CartContext";
@@ -52,7 +51,6 @@ const App = () => {
             <Route exact path="/" component={LandingPage} />
             <Route path="/products/:id" component={Product} />
             <Route path="/products" component={Products} />
-            <Route path="/authorize" component={AuthNav} />
             <Route path="/cart" component={ShoppingCart} />
             <PrivateRoute path="/admin" component={Admin} />
           </Switch>
