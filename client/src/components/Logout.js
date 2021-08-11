@@ -1,10 +1,10 @@
 import React from "react";
 
 
-const Loading = () => (
+const Logout = () => (
   <div>
     
   </div>
 );
 
-export default Loading;
+export default Logout;
