@@ -56,7 +56,7 @@
   overflow-y: hidden;
   background: var(--deep-champagne);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .card {
@@ -152,7 +152,6 @@
 .circle1,
 .circle2,
 .circle3 {
-  background: white;
   background: var(--lemon-yellow-crayola);
   position: absolute;
   border-radius: 50%;

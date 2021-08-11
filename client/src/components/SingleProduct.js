@@ -67,6 +67,9 @@ const SingleProduct = (props) => {
         <div className="circle4"></div>
         <div className="circle5"></div>
         <div className="circle6"></div>
+        <div className="single-product-details">
+          <h2 className="details-h2">Product Details</h2>
+        </div>
         <div className="singleCard">
           <h2>{product}</h2>
           <img className="cartItem" src={product_image_url} alt={product} />

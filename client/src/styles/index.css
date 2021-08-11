@@ -81,6 +81,24 @@ body {
  font-family: 'Poppins', sans-serif;
 }
 
+header {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 10vh;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  border-radius: 9px;
+}
+
+header h2 {
+  color: grey;
+}
+
 nav
 {
   position: fixed;
@@ -143,7 +161,7 @@ nav .logo
 .toggle
 {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
   width: 60px;
   height: 60px;
@@ -152,8 +170,7 @@ nav .logo
   background-size: 30px;
   background-position: center;
   cursor: pointer;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-  border: 1px solid blue;
+  border: none;
 }
 
 
@@ -280,7 +297,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   background: var(--lemon-yellow-crayola); 
-  
 }
 
 .circle4, .circle5, .circle6 {
@@ -311,8 +327,10 @@ a:hover {
 }
 
 .singleCard {
-  width: 600px;
-  height: 800px;
+  position: absolute;
+  top: 15%;
+  width: 30%;
+  height: 80%;
   color: grey;
   font-size: 1.7rem;
   font-weight: 100;
@@ -321,7 +339,8 @@ a:hover {
   padding: 60px; 
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.1);
-  
+  position: absolute;
+  z-index: 500;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,7 +475,7 @@ background-color: blue;
  .back-to-product-list-btn {
   position: absolute;
   bottom: 10%;
-  right: 25%;
+  right: 5%;
   width: 5vw;
   background-color: var(--maximum-blue-purple);
   color: var(--baby-powder);
@@ -472,4 +491,18 @@ color: var(--maximum-blue-purple);
 
 .add-to-cart-btn {
   margin-top: -1rem;
+}
+
+.single-product-details {
+  position: relative;
+  bottom: 5%;
+  left: 33%;
+  width: 25%;
+  height: 60%;
+ 
+}
+
+.details-h2 {
+  font-size: 3rem;
+  font-weight: 400;
 }

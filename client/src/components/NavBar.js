@@ -6,6 +6,10 @@ const [isActive, setIsActive] = useState("false");
 const menuToggle = () => setIsActive(!isActive);
   
     return (
+      <>
+      <header>
+        <h2>Logo</h2>
+      </header>
       <nav className={isActive ? "" : "nav.active"}>
         <div className={isActive ? "menu" : "menu.active"}>
           <ul>
@@ -31,6 +35,7 @@ const menuToggle = () => setIsActive(!isActive);
           onClick={menuToggle}
         ></button>
       </nav>
+      </>
     );
 };
 
