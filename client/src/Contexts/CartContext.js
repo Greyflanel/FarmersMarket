@@ -14,5 +14,3 @@ export const CartProvider = (props) => {
             {props.children}
         </CartContext.Provider>;
 };
-
-// Creates a new context named CartContext
