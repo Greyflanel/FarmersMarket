@@ -71,6 +71,7 @@ html, body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
+  
 }
 
 body {
@@ -83,6 +84,7 @@ body {
 
 header {
   position: fixed;
+  top: 0;
   z-index: 10;
   width: 100vw;
   height: 10vh;
@@ -93,7 +95,9 @@ header {
   align-items: center;
   padding: 2%;
   border-radius: 9px;
+  backdrop-filter: blur(5px);
 }
+
 
 header h2 {
   color: grey;
@@ -115,7 +119,7 @@ nav
 
 .login, .sign-up {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 35%;
   width: 30%;
   background-color: var(--maximum-blue-purple);
@@ -391,40 +395,45 @@ color: var(--maximum-blue-purple);
 
 .shopping-cart {
   display: flex;
+  overflow-x: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 80%;
-  height: 50%;
-  margin: 10% auto;
-  
+  background-color: var(--deep-champagne);
+  padding-top: 4%;
+  font-size: 1.5rem;
+  min-height: 100vh;
 }
 
 .shopping-cart-item   {
-  width: 45vw;
-  padding: 2%;
-  margin: 4%;
-  
+  width: 35vw;
+  padding: 3%;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.1);
-  background-color: var(--deep-champagne);
+  margin: 2%;
 }
 
 
 .shopping-cart-item button {
+  position: relative;
+  z-index: 1000;
   width: 200px;
-  line-height: 30px;
-  background-color: rgb(91, 238, 91);
+  line-height: 1.8rem;
+  background: var(--lemon-yellow-crayola);
   cursor: pointer;
   overflow: hidden;
   font-size: 1rem;
   padding: 0.1%;
   border-radius: 5px;
+  color: grey;
+  border:none;
+  transition: all 0.3s;
 }
 
 .shopping-cart-item button:hover {
   background-color: yellow;
   transform: scale(1.05);
+  color: red;
 }
 
 .shopping-cart-item button:active {
@@ -435,11 +444,14 @@ color: var(--maximum-blue-purple);
 
 
 .shopping-cart-checkout {
-  width: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  right: -35%;
 }
 
 .shopping-cart-checkout p {
@@ -448,7 +460,9 @@ color: var(--maximum-blue-purple);
 
 .shopping-cart-checkout button {
   width: 15%;
-  
+  padding: 0.3%;
+  font-size: 1.5rem;
+   background: radial-gradient(circle at 40px 10px,#74fd24, #1e8a52);
 }
 
 .shopping-cart-checkout button:hover {
@@ -497,12 +511,15 @@ color: var(--maximum-blue-purple);
   position: relative;
   bottom: 5%;
   left: 33%;
-  width: 25%;
-  height: 60%;
- 
+  width: 20%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
 }
 
 .details-h2 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: 400;
+  color: grey;
 }
