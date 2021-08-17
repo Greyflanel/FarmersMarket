@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import axios from "axios";
-import { Card, Form, Input, Button, Error } from "./AuthForm";
+import { CardWindow, Card, Form, FormHeading, Input, Button, Error } from "./AuthForm";
 import { AuthContext } from "../Contexts/AuthContext.js";
 
 const Login = props => {
@@ -36,10 +36,10 @@ const Login = props => {
   } 
 
   return (
-    <div className="login">
-      <h3>LOG-IN FORM</h3>
+    <CardWindow>
       <Card>
         <Form>
+          <FormHeading>LOG-IN FORM</FormHeading>
           <Input
             type="text"
             value={username}
@@ -63,7 +63,7 @@ const Login = props => {
           <Error>The username or password provided was incorrect!</Error>
         )}
       </Card>
-    </div>
+    </CardWindow>
   );
 };
 

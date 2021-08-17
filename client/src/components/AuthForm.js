@@ -1,13 +1,27 @@
 import styled from "styled-components";
 
+const CardWindow = styled.div`
+position: relative;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
 const Card = styled.div`
-  box-sizing: border-box;
-  max-width: 410px;
+  width: 65vw;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: hsla(249, 100%, 85%, 1);
 `;
 
 const Form = styled.div`
@@ -15,6 +29,13 @@ const Form = styled.div`
   flex-direction: column;
   width: 100%;
 `;
+
+const FormHeading = styled.h3 `
+  color: white;
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+`
 
 const Input = styled.input`
   padding: 1rem;
@@ -39,4 +60,4 @@ const Error = styled.div`
   background-color: red;
 `;
 
-export { Card, Form, Input, Button, Error }
+export { CardWindow, Card, Form, FormHeading, Input, Button, Error }

@@ -15,12 +15,45 @@ import Signup from "./components/Signup.js";
 // import Admin from "./components/Admin";
 // import PrivateRoute from "./components/PrivateRoute";
 
+// const responsive = {
+//   showTopNavMenu: width > 1023,
+// };
+// return (
+//   <>
+//     <Header showTopNavMenu={responsive.showTopNavMenu} />
+//     <Main />
+//   </>
+// );
 
+// const showNav = {
+//   display: showTopNavMenu ? "flex" : "none",
+// };
+// const showMenuIcon = {
+//   display: showTopNavMenu ? "none" : "flex",
+// };
+// return (
+//   <>
+//     <div id="nav_container" style={showNav}>
+//       <nav id="navigation">{navMenuItems}</nav>
+//     </div>
+//     <span className="menu-icon" style={showMenuIcon} />
+//   </>
+// );
 
 const App = () => {
   
   const [productsList, setProductsList] = useState([]);
+  const [width, setWindowWidth] = useState(0);
   useEffect(() => {
+    
+
+    
+
+       const updateDimensions = () => {
+         const width = window.innerWidth;
+         setWindowWidth(width);
+         
+       };
     const getProducts = () => {
       axios
         .get("http://localhost:3000/api/products")
@@ -32,6 +65,10 @@ const App = () => {
         });
     };
     getProducts();
+    updateDimensions();
+   window.addEventListener("resize", updateDimensions);
+     return () => 
+       window.removeEventListener("resize",updateDimensions);  
   }, []);
 
 
