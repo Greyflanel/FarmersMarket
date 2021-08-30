@@ -7,13 +7,13 @@ import Products from "./components/Products";
 import {ShoppingCart} from "./components/ShoppingCart.js";
 import NavBar from "./components/NavBar";
 import ProductContext from "./Contexts/ProductContext.js";
-import AuthContext from "./Contexts/AuthContext.js";
+import {AuthContext} from "./Contexts/AuthContext.js";
 import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
 import Login from "./components/Login.js";
 import Signup from "./components/Signup.js";
-// import Admin from "./components/Admin";
-// import PrivateRoute from "./components/PrivateRoute";
+import Admin from "./components/Admin";
+import PrivateRoute from "./components/PrivateRoute";
 
 // const responsive = {
 //   showTopNavMenu: width > 1023,
@@ -73,7 +73,7 @@ const App = () => {
 
 
   return (
-    <AuthContext.Provider value={{}}>
+    <AuthContext.Provider value={false}>
       <ProductContext.Provider value={{ productsList }}>
         <CartProvider>
           <NavBar />
@@ -84,6 +84,7 @@ const App = () => {
             <Route path="/products/:id" component={Product} />
             <Route path="/products" component={Products} />
             <Route path="/cart" component={ShoppingCart} />
+            <PrivateRoute path="/admin" component={Admin} />
           </Switch>
         </CartProvider>
       </ProductContext.Provider>

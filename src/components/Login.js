@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, createContext } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import axios from "axios";
 import { CardWindow, Card, Form, FormHeading, Input, Button, Error } from "./AuthForm";
-import { AuthContext } from "../Contexts/AuthContext.js";
+import  {AuthContext} from "../Contexts/AuthContext.js";
 
 const Login = props => {
   const [token, setToken] = useState("");
@@ -31,7 +31,8 @@ const Login = props => {
   
   
   if (isLoggedIn && token) {
-    
+    const authTokens = createContext(token)
+    console.log(authTokens, "token:", token)
     return <Redirect to="/products" />;
   } 
 

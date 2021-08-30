@@ -16,7 +16,7 @@ const Admin = () => {
       .then((result) => {
         if (result.status === 201) {
           console.log(result);
-          return <Redirect to={"/products"} />;
+          return <Redirect to={"/products/1"} />;
         }
       })
       .catch((error) => {
