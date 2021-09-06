@@ -45,7 +45,7 @@ const Login = props => {
         <Form>
           <FormHeading>LOG-IN FORM</FormHeading>
           <Input
-            type="text"
+            type="email"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
@@ -53,7 +53,7 @@ const Login = props => {
             placeholder="email address"
           />
           <Input
-            type="text"
+            type="password"
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);

@@ -29,7 +29,7 @@ const Signup = () => {
         <Form>
           <FormHeading>SIGN-UP FORM</FormHeading>
           <Input
-            type="text"
+            type="email"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
