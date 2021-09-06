@@ -10,7 +10,7 @@ const Product = (props) => {
   
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/products/${id}`)
+      .get(`http://localhost:4000/api/products/${id}`)
       .then(response => {
         setSingleProduct(response.data);
       })

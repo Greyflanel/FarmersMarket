@@ -4,13 +4,13 @@ import { NavLink, Redirect } from "react-router-dom";
 import { Card, Form, Input, Button } from "./AuthForm";
 
 const Admin = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const postSignup = () => {
     axios
-      .post("http://localhost:3000/api/register", {
-        username,
+      .post("http://localhost:4000/api/register", {
+        email,
         password,
       })
       .then((result) => {
@@ -31,9 +31,9 @@ const Admin = () => {
         <Form>
           <Input
             type="text"
-            value={username}
+            value={email}
             onChange={(e) => {
-              setUsername(e.target.value);
+              setEmail(e.target.value);
             }}
             placeholder="email address"
           />

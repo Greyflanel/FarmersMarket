@@ -8,20 +8,24 @@ const Login = props => {
   const [token, setToken] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
   
   const postLogin = () => {
     axios
-      .post("http://localhost:3000/api/login", {
-        username,
+      .post("http://localhost:4000/api/login", {
+        email,
         password
       })
       .then(res => {
         setToken(res.data.token)
+        setIsAdmin(res.data.role === "admin" ? true: false);
         if (res.status === 200) {
           setIsLoggedIn(true);
+          
         }
+        
       })
       .catch(error => {
         console.log({ error });
@@ -30,10 +34,9 @@ const Login = props => {
   };
   
   
-  if (isLoggedIn && token) {
-    const authTokens = createContext(token)
-    console.log(authTokens, "token:", token)
-    return <Redirect to="/products" />;
+  if (isLoggedIn && token && isAdmin) {
+    console.log("LoggedIn:", isLoggedIn, "Admin:", isAdmin)
+    return <Redirect to="/products/2" />;
   } 
 
   return (
@@ -43,9 +46,9 @@ const Login = props => {
           <FormHeading>LOG-IN FORM</FormHeading>
           <Input
             type="text"
-            value={username}
+            value={email}
             onChange={(e) => {
-              setUsername(e.target.value);
+              setEmail(e.target.value);
             }}
             placeholder="email address"
           />
@@ -61,7 +64,7 @@ const Login = props => {
         </Form>
         <NavLink to="/register">Don't have an account?</NavLink>
         {isError && (
-          <Error>The username or password provided was incorrect!</Error>
+          <Error>The email or password provided was incorrect!</Error>
         )}
       </Card>
     </CardWindow>
