@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
 import axios from "axios";
 import LandingPage from "./components/LandingPage.js";
 import Products from "./components/Products";
 import {ShoppingCart} from "./components/ShoppingCart.js";
 import NavBar from "./components/NavBar";
 import ProductContext from "./Contexts/ProductContext.js";
-import {AuthContext} from "./Contexts/AuthContext.js";
+import {AuthProvider} from "./Contexts/AuthContext.js";
 import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
 import Login from "./components/Login.js";
@@ -46,9 +45,6 @@ const App = () => {
   const [width, setWindowWidth] = useState(0);
   useEffect(() => {
     
-
-    
-
        const updateDimensions = () => {
          const width = window.innerWidth;
          setWindowWidth(width);
@@ -71,24 +67,23 @@ const App = () => {
        window.removeEventListener("resize",updateDimensions);  
   }, []);
 
-
   return (
-    <AuthContext.Provider value={false}>
+    <AuthProvider>
       <ProductContext.Provider value={{ productsList }}>
         <CartProvider>
           <NavBar />
           <Switch>
-            <Route path="/register" component={Signup} />
-            <Route path="/login" component={Login} />
             <Route exact path="/" component={LandingPage} />
             <Route path="/products/:id" component={Product} />
             <Route path="/products" component={Products} />
             <Route path="/cart" component={ShoppingCart} />
             <PrivateRoute path="/admin" component={Admin} />
+            <Route path="/register" component={Signup} />
+            <Route path="/login" component={Login} />
           </Switch>
         </CartProvider>
       </ProductContext.Provider>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 };
 

@@ -607,3 +607,13 @@ border: 2px solid var(--maximum-blue-purple);
   color: grey;
   padding-top: 1rem;
 }
+
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color:hsla(217, 100%, 81%, 1);
+  font-size: 4rem;
+}

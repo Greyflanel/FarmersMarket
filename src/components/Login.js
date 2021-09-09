@@ -2,16 +2,15 @@ import React, { useState, useContext, createContext } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import axios from "axios";
 import { CardWindow, Card, Form, FormHeading, Input, Button, Error } from "./AuthForm";
-import  {AuthContext} from "../Contexts/AuthContext.js";
+import {AuthProvider} from "../Contexts/AuthContext.js";
 
 const Login = props => {
-  const [token, setToken] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isError, setIsError] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false);
   
+  
+
   const postLogin = () => {
     axios
       .post("http://localhost:4000/api/login", {
@@ -19,13 +18,12 @@ const Login = props => {
         password
       })
       .then(res => {
-        setToken(res.data.token)
-        setIsAdmin(res.data.role === "admin" ? true: false);
-        if (res.status === 200) {
-          setIsLoggedIn(true);
-          
-        }
-        
+          const value = {
+           isLoggedIn: res.status === 200 ? true: false,
+           isAdmin: res.data.role === "admin" ? true: false,
+           token: res.data.token,
+          }
+          console.log(value)
       })
       .catch(error => {
         console.log({ error });
@@ -33,41 +31,45 @@ const Login = props => {
       });
   };
   
+          
+
   
-  if (isLoggedIn && token && isAdmin) {
-    console.log("LoggedIn:", isLoggedIn, "Admin:", isAdmin)
-    return <Redirect to="/products/2" />;
-  } 
+  // if (isLoggedIn && token && isAdmin) {
+  //   console.log("LoggedIn:", isLoggedIn, "Admin:", isAdmin)
+  //   return <Redirect to="/admin" />;
+  // } 
 
   return (
-    <CardWindow>
-      <Card>
-        <Form>
-          <FormHeading>LOG-IN FORM</FormHeading>
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            placeholder="email address"
-          />
-          <Input
-            type="password"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            placeholder="password"
-          />
-          <Button onClick={postLogin}>Log In</Button>
-        </Form>
-        <NavLink to="/register">Don't have an account?</NavLink>
-        {isError && (
-          <Error>The email or password provided was incorrect!</Error>
-        )}
-      </Card>
-    </CardWindow>
+    <AuthProvider value={() => {}}>
+      <CardWindow>
+        <Card>
+          <Form>
+            <FormHeading>LOG-IN FORM</FormHeading>
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="email address"
+            />
+            <Input
+              type="password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              placeholder="password"
+            />
+            <Button onClick={postLogin}>Log In</Button>
+          </Form>
+          <NavLink to="/register">Don't have an account?</NavLink>
+          {isError && (
+            <Error>The email or password provided was incorrect!</Error>
+          )}
+        </Card>
+      </CardWindow>
+    </AuthProvider>
   );
 };
 
