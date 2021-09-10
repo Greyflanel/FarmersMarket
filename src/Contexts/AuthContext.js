@@ -9,7 +9,7 @@ export const AuthProvider = props => {
         isLoggedIn: false,
         isAdmin: false,
     });
-console.log(auth)
+
     return (
         <AuthContext.Provider value={[auth, setAuth]}>
             {props.children}

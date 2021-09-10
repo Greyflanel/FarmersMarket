@@ -77,7 +77,7 @@ const App = () => {
             <Route path="/products/:id" component={Product} />
             <Route path="/products" component={Products} />
             <Route path="/cart" component={ShoppingCart} />
-            <PrivateRoute path="/admin" component={Admin} />
+            <PrivateRoute path="/admin" component={LandingPage} />
             <Route path="/register" component={Signup} />
             <Route path="/login" component={Login} />
           </Switch>

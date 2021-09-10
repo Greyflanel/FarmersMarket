@@ -27,6 +27,7 @@ const Login = props => {
            isAdmin: res.data.role === 'admin' ? true: false,
          })
          alert("Successfully Logged In!")
+         
         }
          
       })
@@ -39,10 +40,7 @@ const Login = props => {
           
 
  
-  // if (isLoggedIn && token && isAdmin) {
-  //   console.log("LoggedIn:", isLoggedIn, "Admin:", isAdmin)
-  //   return <Redirect to="/admin" />;
-  // } 
+  
 
   return (
       <CardWindow>
