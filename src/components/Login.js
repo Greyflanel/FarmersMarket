@@ -2,13 +2,13 @@ import React, { useState, useContext, createContext } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 import axios from "axios";
 import { CardWindow, Card, Form, FormHeading, Input, Button, Error } from "./AuthForm";
-import {AuthProvider} from "../Contexts/AuthContext.js";
+import {AuthContext} from "../Contexts/AuthContext.js";
 
 const Login = props => {
   const [isError, setIsError] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  const [auth, setAuth] = useContext(AuthContext);
   
 
   const postLogin = () => {
@@ -18,12 +18,17 @@ const Login = props => {
         password
       })
       .then(res => {
-          const value = {
-           isLoggedIn: res.status === 200 ? true: false,
-           isAdmin: res.data.role === "admin" ? true: false,
-           token: res.data.token,
-          }
-          console.log(value)
+        if (res.status === 200) {
+          setAuth({
+           ...auth,
+           email: res.data.email,
+           role: res.data.role,
+           isLoggedIn: res.data.token ? true: false,
+           isAdmin: res.data.role === 'admin' ? true: false,
+         })
+         alert("Successfully Logged In!")
+        }
+         
       })
       .catch(error => {
         console.log({ error });
@@ -33,14 +38,13 @@ const Login = props => {
   
           
 
-  
+ 
   // if (isLoggedIn && token && isAdmin) {
   //   console.log("LoggedIn:", isLoggedIn, "Admin:", isAdmin)
   //   return <Redirect to="/admin" />;
   // } 
 
   return (
-    <AuthProvider value={() => {}}>
       <CardWindow>
         <Card>
           <Form>
@@ -69,7 +73,6 @@ const Login = props => {
           )}
         </Card>
       </CardWindow>
-    </AuthProvider>
   );
 };
 

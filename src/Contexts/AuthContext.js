@@ -6,10 +6,10 @@ export const AuthProvider = props => {
     const [auth, setAuth] = useState({
         email: '',
         role: '',
-        isLoggedIn: '',
-        isAdmin: '',
+        isLoggedIn: false,
+        isAdmin: false,
     });
-
+console.log(auth)
     return (
         <AuthContext.Provider value={[auth, setAuth]}>
             {props.children}

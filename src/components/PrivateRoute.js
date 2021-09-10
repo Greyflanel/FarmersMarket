@@ -3,13 +3,13 @@ import { Route, Redirect } from "react-router-dom";
 import {AuthContext} from "../Contexts/AuthContext.js"
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const auth = useContext(AuthContext);
-  console.log(auth)
+  const {auth} = useContext(AuthContext);
+  
   return (
     <Route {...rest} render={props => auth ? (
       <Component {...props} />
     ) : (
-        <Redirect to={{ pathname: "/login", state: {referer: props.location } }} />
+        <Redirect to={{ pathname: "/admin", state: {referer: props.location } }} />
       )}
     />
   )

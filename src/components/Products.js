@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import { AuthContext} from "../Contexts/AuthContext.js";
 import ProductContext from "../Contexts/ProductContext";
 import { NavLink } from "react-router-dom";
 import "../styles/product_list.css";
@@ -8,7 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Products = () => {
   const { productsList } = useContext(ProductContext);
-
+  const {user} = useContext(AuthContext);
+  
   useEffect(() => {
     const mouseWheel = document.querySelector(".horizontal-scroll");
 
@@ -44,7 +46,6 @@ const Products = () => {
                 alt={product.product}
               />
             </div>
-            
               <div className="product-name">
                 <h2>{product.product}</h2>
               </div>
