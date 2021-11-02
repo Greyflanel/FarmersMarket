@@ -9,6 +9,7 @@
 --maximum-blue-purple: #bdb2ffff;
 --mauve: #ffc6ffff;
 --baby-powder: #fffffcff;
+--new-blue: rgb(1, 86, 155);
 
 /* CSS HSL */
 --light-pink: hsla(0, 100%, 84%, 1);
@@ -88,8 +89,9 @@ header {
   z-index: 10;
   width: 100vw;
   height: 10vh;
+  min-height: 85px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -100,7 +102,7 @@ header {
 
 
 header h2 {
-  color: grey;
+  color: rgb(255, 255, 255);
 }
 
 nav
@@ -131,7 +133,7 @@ nav ul {
 }
 
 nav ul li a {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   padding: 1rem;
   
 }
@@ -152,7 +154,7 @@ nav .logo
 .toggle
 {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 20px;
   width: 60px;
   height: 60px;
@@ -161,7 +163,7 @@ nav .logo
   background-size: 30px;
   background-position: center;
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid var(--new-blue);
 }
 
 
@@ -172,7 +174,7 @@ nav .logo
 .active
 {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 20px;
   width: 60px;
   height: 60px;
@@ -299,7 +301,7 @@ nav .logo
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.75;
+ 
 }
 .overlay
 {
@@ -307,21 +309,23 @@ nav .logo
   z-index: 100;
   width: 100vw;
   height: 100vh;
-  background: var(--deep-champagne);
-  mix-blend-mode: overlay;
+  background: var(--new-blue);
+  mix-blend-mode: color;
 }
+
+
 
 .menu {
   display: none;
   visibility: hidden;
   position: relative;
   right: 0;
+  
 }
 
 .menu.active {
   visibility: visible;
   position: relative;
-  
   
 }
 
@@ -333,7 +337,7 @@ section {
 
 ul {
   position: relative;
-  background-color: var(--maximum-blue-purple);
+  background-color: var(--new-blue);
   z-index: 0;
   height: 100vh;
   width: 300px;
@@ -347,12 +351,12 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  color: var(--baby-powder);
+  color: rgb(255, 255, 255);
   font-weight: 200;
 }
 
 a:hover {
-  color: var(--light-blue);
+  color: black;
   
 }
 
@@ -362,12 +366,12 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--lemon-yellow-crayola); 
+  background: white; 
 }
 
 .circle4, .circle5, .circle6 {
   position: absolute;
-  background-color: var(--deep-champagne);
+  background-color: var(--new-blue);
   border-radius: 50%;
 }
 
@@ -376,6 +380,7 @@ a:hover {
   right: 15%;
   height: 20rem;
   width: 20rem;
+ 
 }
 
 .circle5 {
@@ -387,9 +392,10 @@ a:hover {
 
 .circle6 {
   bottom: 3%;
-  left: 0;
+  left: -8%;
   height: 25rem;
   width: 25rem;
+  
 }
 
 .singleCard {
@@ -416,7 +422,7 @@ a:hover {
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 0.1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(8px);
 }
 
 .singleCard h2 {
@@ -434,7 +440,7 @@ a:hover {
   max-width: 350px;
   height: auto;
   border-radius: 5px;
-  border: 2px solid #258825;
+  border: 2px solid #ffffff;
 }
 
 .singleCard button {
@@ -444,8 +450,8 @@ a:hover {
   border-radius: 9999999px;
   padding: 5px;
   cursor: pointer;
-  background-color: var(--maximum-blue-purple);
-  color: var(--baby-powder);
+  background-color: var(--new-blue);
+  color: white;
  font-size: 1.2rem;
   border: none;
   cursor: pointer;
@@ -454,14 +460,14 @@ a:hover {
 }
 
 .singleCard button:hover {
-background-color: var(--lemon-yellow-crayola);
-color: var(--maximum-blue-purple);
-border: 2px solid var(--maximum-blue-purple);
+background-color: white;
+color: var(--new-blue);
+border: 2px solid var(--new-blue);
 }
 
 .singleCard button:active {
-  background-color: var(--tea-green);
-  color: var(--maximum-blue-purple);
+  background-color: var(--new-blue);
+  color: white;
 }
 
 .shopping-cart {
@@ -470,7 +476,7 @@ border: 2px solid var(--maximum-blue-purple);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: var(--deep-champagne);
+  background-color: white;
   padding-top: 4%;
   font-size: 1.5rem;
   min-height: 100vh;
@@ -490,21 +496,21 @@ border: 2px solid var(--maximum-blue-purple);
   z-index: 1000;
   width: 200px;
   line-height: 1.8rem;
-  background: var(--lemon-yellow-crayola);
+  background: var(--new-blue);
   cursor: pointer;
   overflow: hidden;
   font-size: 1rem;
   padding: 0.1%;
   border-radius: 5px;
-  color: grey;
+  color: white;
   border:none;
   transition: all 0.3s;
 }
 
 .shopping-cart-item button:hover {
-  background-color: yellow;
+  background-color: red;
   transform: scale(1.05);
-  color: red;
+  color: yellow;
 }
 
 .shopping-cart-item button:active {
@@ -535,7 +541,8 @@ border: 2px solid var(--maximum-blue-purple);
   padding: 0.3%;
   font-size: 1.5rem;
   border-radius: 9999999px;
-   background: radial-gradient(circle at 40px 10px,#74fd24, #1e8a52);
+   background: radial-gradient(circle at 40px 10px,var(--new-blue), rgb(70, 142, 201));
+   color: white;
 }
 
 .shopping-cart-checkout button:hover {
@@ -564,7 +571,7 @@ background-color: blue;
   bottom: 10%;
   right: 10%;
   max-width: 100px;
-  background-color: var(--maximum-blue-purple);
+  background-color: var(--new-blue);
   color: var(--baby-powder);
   border-radius: 9999999px;
   font-size: 1.2rem;
@@ -576,17 +583,19 @@ background-color: blue;
 
 .back-to-product-list-btn:hover {
   
-background-color: var(--lemon-yellow-crayola);
-color: var(--maximum-blue-purple);
-border: 2px solid var(--maximum-blue-purple);
+background-color: white;
+color: var(--new-blue);
+border: 2px solid var(--new-blue);
 }
 
 .back-to-product-list-btn:active {
-  background-color: var(--tea-green);
+  background-color: var(--new-blue);
+  color: white;
 }
 
 .add-to-cart-btn {
   margin-top: -1rem;
+  background-color: var(--new-blue);
 }
 
 .single-product-details {
