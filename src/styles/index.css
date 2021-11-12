@@ -94,7 +94,14 @@ header h2 {
   border: 0.2px solid rgb(192, 175, 175) !important;
 }
 
-
+@media (min-width: 250px) {
+  .btn-margin {
+    right: 100px;
+  }
+  #qsLogoutBtn {
+    right: 100px;
+  }
+}
 
 .nav-item {
   list-style: none;
@@ -143,6 +150,7 @@ nav .logo
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-color: var(--new-blue);
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;

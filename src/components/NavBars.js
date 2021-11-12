@@ -48,10 +48,7 @@ const logoutWithRedirect = () =>
             )}
             {isAuthenticated && (
               <UncontrolledDropdown nav inNavbar>
-                
                 <DropdownMenu>
-                  
-                  
                   <DropdownItem
                     id="qsLogoutBtn"
                     onClick={() => logoutWithRedirect()}
@@ -81,12 +78,6 @@ const logoutWithRedirect = () =>
               </li>
               <li>
                 <a href="/cart">Cart</a>
-              </li>
-              <li>
-                <a href="/login">Login</a>
-              </li>
-              <li>
-                <a href="/register">Register</a>
               </li>
             </ul>
           </div>
