@@ -9,35 +9,9 @@
 --maximum-blue-purple: #bdb2ffff;
 --mauve: #ffc6ffff;
 --baby-powder: #fffffcff;
---new-blue: rgb(1, 86, 155);
+--new-blue: #01569b;
 
-/* CSS HSL */
---light-pink: hsla(0, 100%, 84%, 1);
---deep-champagne: hsla(33, 100%, 82%, 1);
---lemon-yellow-crayola: hsla(62, 100%, 86%, 1);
---tea-green: hsla(110, 100%, 87%, 1);
---celeste: hsla(185, 100%, 80%, 1);
---baby-blue-eyes: hsla(217, 100%, 81%, 1);
---maximum-blue-purple: hsla(249, 100%, 85%, 1);
---mauve: hsla(300, 100%, 89%, 1);
---baby-powder: hsla(60, 100%, 99%, 1);
---gradient-top: linear-gradient(0deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
 
---gradient-right: linear-gradient(90deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
-
---gradient-bottom: linear-gradient(180deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
-
---gradient-left: linear-gradient(270deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
-
---gradient-top-right: linear-gradient(45deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
-
---gradient-bottom-right: linear-gradient(135deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
-
---gradient-top-left: linear-gradient(225deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
-
---gradient-bottom-left: linear-gradient(315deg, #ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff, #9bf6ffff, #a0c4ffff, #bdb2ffff, #ffc6ffff, #fffffcff);
-
---gradient-radial: radial-gradient(#ffadadff, #ffd6a5ff, #fdffb6ff, #caffbfff)
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
@@ -47,7 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    
+    /* border: 2px solid red !important; */
 }
 
 html, body {
@@ -92,17 +66,38 @@ header {
   min-height: 85px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: rgb(1, 86, 155, 0.3);
+  color: white;
   pointer-events: none;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 2%;
   border-radius: 9px;
   backdrop-filter: blur(5px);
 }
 
-
 header h2 {
-  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+.btn-margin, #qsLogoutBtn {
+  position: relative;
+  z-index: 500;
+  right: 150px;
+  pointer-events: auto;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 9px;
+  background-color: var(--new-blue);
+  color: white;
+  border: 0.2px solid rgb(192, 175, 175) !important;
+}
+
+
+
+.nav-item {
+  list-style: none;
 }
 
 nav
@@ -115,17 +110,6 @@ nav
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.logout {
-  position: absolute;
-  top: 2%;
-  right: 20%;
-  width: 5vw;
-  background-color: var(--maximum-blue-purple);
-  color: var(--baby-powder);
-  border-radius: 5px;
-  padding: 5px;
 }
 
 nav ul {
@@ -193,24 +177,6 @@ nav .logo
   top: 5%;
   left: 10%;
   z-index: -1;
-}
-
-.btn-margin {
-  position: absolute;
-  top: 30%;
-  z-index: 500;
-  pointer-events: auto;
-  padding: 0.3rem 0.6rem;
-  font-size: 1.3rem;
-  cursor: pointer;
-  border-radius: 9px;
-  background-color: var(--new-blue);
-  color: white;
-  border: 0.2px solid rgb(192, 175, 175) !important;
-}
-
-.nav-item {
-  list-style: none;
 }
 
 /* #nav-icon3 {

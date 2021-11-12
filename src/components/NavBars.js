@@ -32,7 +32,7 @@ const logoutWithRedirect = () =>
     return (
       <div>
         <header>
-          
+          <h2>Logo</h2>
           <div >
             {!isAuthenticated && (
               <NavItem>
@@ -48,22 +48,10 @@ const logoutWithRedirect = () =>
             )}
             {isAuthenticated && (
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret id="profileDropDown">
-                  <img
-                    src={user.picture}
-                    alt="Profile"
-                    className="nav-user-profile rounded-circle"
-                    width="50"
-                  />
-                </DropdownToggle>
+                
                 <DropdownMenu>
-                  <DropdownItem header>{user.name}</DropdownItem>
-                  <DropdownItem
-                    tag={RouterNavLink}
-                    to="/profile"
-                    className="dropdown-profile"
-                    activeClassName="router-link-exact-active"
-                  ></DropdownItem>
+                  
+                  
                   <DropdownItem
                     id="qsLogoutBtn"
                     onClick={() => logoutWithRedirect()}
