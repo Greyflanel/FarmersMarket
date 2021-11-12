@@ -11,9 +11,7 @@ const LandingPage = () => {
       </video>
       <div className="overlay"></div>
     </section>
-    <section className="new-section">
-    
-    </section>
+   
     </>
   );
 };
