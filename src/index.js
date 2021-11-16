@@ -30,7 +30,6 @@ ReactDOM.render(
     <Router>
       <App />
     </Router>
-    ,
   </Auth0Provider>,
   document.getElementById("root")
 );

@@ -79,6 +79,9 @@ const logoutWithRedirect = () =>
               <li>
                 <a href="/cart">Cart</a>
               </li>
+              <li>
+                <a href="/external-api">API</a>
+              </li>
             </ul>
           </div>
           <button
