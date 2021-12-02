@@ -11,20 +11,6 @@ const Products = () => {
   const { productsList } = useContext(ProductContext);
   const {user} = useContext(AuthContext);
   
-  useEffect(() => {
-    const mouseWheel = document.querySelector(".horizontal-scroll");
-
-    mouseWheel.addEventListener("wheel", function (e) {
-      const scroll = 100; // How many pixels to scroll
-
-      if (e.deltaY > 0)
-        // Scroll right
-        mouseWheel.scrollLeft += scroll;
-      // Scroll left
-      else mouseWheel.scrollLeft -= scroll;
-      e.preventDefault();
-    });
-  }, []);
 
   return (
     <section>

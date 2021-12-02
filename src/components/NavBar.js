@@ -1,49 +1,172 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { NavLink as RouterNavLink } from "react-router-dom";
 
+
+import {
+  Collapse,
+  Container,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Button,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
+
+import { useAuth0 } from "@auth0/auth0-react";
 
 const NavBar = () => {
-const [isActive, setIsActive] = useState("false");
-const menuToggle = () => setIsActive(!isActive);
-  
-    return (
-      <div>
-        <header>
-          <h2>Logo</h2>
-        </header>
+  const [isOpen, setIsOpen] = useState(false);
+  const {
+    user,
+    isAuthenticated,
+    loginWithRedirect,
+    logout,
+  } = useAuth0();
+  const toggle = () => setIsOpen(!isOpen);
 
-        <nav className={isActive ? "" : "nav.active"}>
-          <div id="nav-icon3">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div className={isActive ? "menu" : "menu.active"}>
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/products">Shop</a>
-              </li>
-              <li>
-                <a href="/cart">Cart</a>
-              </li>
-              <li>
-                <a href="/login">Login</a>
-              </li>
-              <li>
-                <a href="/register">Register</a>
-              </li>
-            </ul>
-          </div>
-          <button
-            className={isActive ? "toggle" : "active"}
-            onClick={menuToggle}
-          ></button>
-        </nav>
-      </div>
-    );
+  const logoutWithRedirect = () =>
+    logout({
+      returnTo: window.location.origin,
+    });
+
+  return (
+    <div className="nav-container">
+      <Navbar color="light" light expand="md">
+        <Container>
+          <NavbarBrand className="logo" />
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="mr-auto" navbar>
+              <NavItem>
+                <NavLink
+                  tag={RouterNavLink}
+                  to="/"
+                  exact
+                  activeClassName="router-link-exact-active"
+                >
+                  Home
+                </NavLink>
+              </NavItem>
+              {isAuthenticated && (
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/external-api"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    External API
+                  </NavLink>
+                </NavItem>
+              )}
+            </Nav>
+            <Nav className="d-none d-md-block" navbar>
+              {!isAuthenticated && (
+                <NavItem>
+                  <Button
+                    id="qsLoginBtn"
+                    color="primary"
+                    className="btn-margin"
+                    onClick={() => loginWithRedirect()}
+                  >
+                    Log in
+                  </Button>
+                </NavItem>
+              )}
+              {isAuthenticated && (
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret id="profileDropDown">
+                    <img
+                      src={user.picture}
+                      alt="Profile"
+                      className="nav-user-profile rounded-circle"
+                      width="50"
+                    />
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem header>{user.name}</DropdownItem>
+                    <DropdownItem
+                      tag={RouterNavLink}
+                      to="/profile"
+                      className="dropdown-profile"
+                      activeClassName="router-link-exact-active"
+                    >
+                      
+                    </DropdownItem>
+                    <DropdownItem
+                      id="qsLogoutBtn"
+                      onClick={() => logoutWithRedirect()}
+                    >
+                       Log
+                      out
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              )}
+            </Nav>
+            {!isAuthenticated && (
+              <Nav className="d-md-none" navbar>
+                <NavItem>
+                  <Button
+                    id="qsLoginBtn"
+                    color="primary"
+                    block
+                    onClick={() => loginWithRedirect({})}
+                  >
+                    Log in
+                  </Button>
+                </NavItem>
+              </Nav>
+            )}
+            {isAuthenticated && (
+              <Nav
+                className="d-md-none justify-content-between"
+                navbar
+                style={{ minHeight: 170 }}
+              >
+                <NavItem>
+                  <span className="user-info">
+                    <img
+                      src={user.picture}
+                      alt="Profile"
+                      className="nav-user-profile d-inline-block rounded-circle mr-3"
+                      width="50"
+                    />
+                    <h6 className="d-inline-block">{user.name}</h6>
+                  </span>
+                </NavItem>
+                <NavItem>
+                  
+                  <RouterNavLink
+                    to="/profile"
+                    activeClassName="router-link-exact-active"
+                  >
+                    Profile
+                  </RouterNavLink>
+                </NavItem>
+                <NavItem>
+                  
+                  <RouterNavLink
+                    to="#"
+                    id="qsLogoutBtn"
+                    onClick={() => logoutWithRedirect()}
+                  >
+                    Log out
+                  </RouterNavLink>
+                </NavItem>
+              </Nav>
+            )}
+          </Collapse>
+        </Container>
+      </Navbar>
+    </div>
+  );
 };
 
 export default NavBar;

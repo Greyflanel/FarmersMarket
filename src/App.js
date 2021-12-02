@@ -4,14 +4,13 @@ import axios from "axios";
 import LandingPage from "./components/LandingPage.js";
 import Products from "./components/Products";
 import {ShoppingCart} from "./components/ShoppingCart.js";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBars";
 import ProductContext from "./Contexts/ProductContext.js";
 import {AuthProvider} from "./Contexts/AuthContext.js";
 import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
-import Login from "./components/Login.js";
-import Signup from "./components/Signup.js";
-import Admin from "./components/Admin";
+import ExternalApi from "./ExternalApi.js"
+import { useAuth0 } from "@auth0/auth0-react";
 import PrivateRoute from "./components/PrivateRoute";
 
 // const responsive = {
@@ -78,8 +77,7 @@ const App = () => {
             <Route path="/products" component={Products} />
             <Route path="/cart" component={ShoppingCart} />
             <PrivateRoute path="/admin" component={LandingPage} />
-            <Route path="/register" component={Signup} />
-            <Route path="/login" component={Login} />
+            <Route path="/external-api" component={ExternalApi} />
           </Switch>
         </CartProvider>
       </ProductContext.Provider>
