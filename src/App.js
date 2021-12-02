@@ -11,8 +11,7 @@ import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
 import Login from "./components/Login.js";
 import Signup from "./components/Signup.js";
-import Admin from "./components/Admin";
-import PrivateRoute from "./components/PrivateRoute";
+
 
 // const responsive = {
 //   showTopNavMenu: width > 1023,
