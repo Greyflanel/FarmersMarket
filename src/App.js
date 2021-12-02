@@ -51,7 +51,7 @@ const App = () => {
        };
     const getProducts = () => {
       axios
-        .get("http://localhost:4000/api/products")
+        .get("http://api.computerspartselectronics.com")
         .then((response) => {
           setProductsList(response.data);
         })
