@@ -11,7 +11,7 @@ import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
 import ExternalApi from "./ExternalApi.js"
 import { useAuth0 } from "@auth0/auth0-react";
-import PrivateRoute from "./components/PrivateRoute";
+
 
 // const responsive = {
 //   showTopNavMenu: width > 1023,
