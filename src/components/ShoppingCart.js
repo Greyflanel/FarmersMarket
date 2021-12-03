@@ -4,7 +4,7 @@ import ShoppingCartItem from './ShoppingCartItem';
 
 export const ShoppingCart = () => {
     
-    const  [cart, setCart] = useContext(CartContext);
+    const  [cart, ] = useContext(CartContext);
     
     
     const totalPrice = cart.reduce((acc, curr) => (parseFloat(acc) + parseFloat(curr.price)), 0 ).toFixed(2);

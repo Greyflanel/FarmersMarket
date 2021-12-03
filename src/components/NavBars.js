@@ -14,7 +14,7 @@ import {
 const NavBar = () => {
 const [isActive, setIsActive] = useState("false");
 const menuToggle = () => setIsActive(!isActive);
-const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 console.log(useAuth0().user)
 const logoutWithRedirect = () =>
   logout({
