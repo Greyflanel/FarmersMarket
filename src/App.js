@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import LandingPage from "./components/LandingPage.js";
 import Products from "./components/Products";
@@ -71,13 +71,13 @@ const App = () => {
       <ProductContext.Provider value={{ productsList }}>
         <CartProvider>
           <NavBar />
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
+          <Routes>
+            <Route path="/" component={LandingPage} />
             <Route path="/products/:id" component={Product} />
             <Route path="/products" component={Products} />
             <Route path="/cart" component={ShoppingCart} />
             <Route path="/external-api" component={ExternalApi} />
-          </Switch>
+          </Routes>
         </CartProvider>
       </ProductContext.Provider>
     </AuthProvider>
