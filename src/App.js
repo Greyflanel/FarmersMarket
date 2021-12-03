@@ -10,7 +10,6 @@ import {AuthProvider} from "./Contexts/AuthContext.js";
 import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
 import ExternalApi from "./ExternalApi.js"
-import { useAuth0 } from "@auth0/auth0-react";
 
 
 // const responsive = {
@@ -42,6 +41,7 @@ const App = () => {
   
   const [productsList, setProductsList] = useState([]);
   const [width, setWindowWidth] = useState(0);
+  console.log(width);
   useEffect(() => {
     
        const updateDimensions = () => {
@@ -51,7 +51,7 @@ const App = () => {
        };
     const getProducts = () => {
       axios
-        .get("http://localhost:4000/api/products")
+        .get("http://api.computerspartselectronics.com")
         .then((response) => {
           setProductsList(response.data);
         })
@@ -76,7 +76,6 @@ const App = () => {
             <Route path="/products/:id" component={Product} />
             <Route path="/products" component={Products} />
             <Route path="/cart" component={ShoppingCart} />
-            <PrivateRoute path="/admin" component={LandingPage} />
             <Route path="/external-api" component={ExternalApi} />
           </Switch>
         </CartProvider>

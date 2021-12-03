@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import "../styles/index.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import { NavLink as RouterNavLink } from "react-router-dom";
 import {
-  Collapse,
-  Container,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
+  
   NavItem,
-  NavLink,
-  Button,
+
   UncontrolledDropdown,
-  DropdownToggle,
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
@@ -23,7 +15,7 @@ const NavBar = () => {
 const [isActive, setIsActive] = useState("false");
 const menuToggle = () => setIsActive(!isActive);
 const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
-
+console.log(useAuth0().user)
 const logoutWithRedirect = () =>
   logout({
     returnTo: window.location.origin,
