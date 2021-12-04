@@ -516,7 +516,7 @@ border: 2px solid var(--new-blue);
 .shopping-cart-item button:hover {
   background-color: red;
   transform: scale(1.05);
-  color: yellow;
+  color: white;
 }
 
 .shopping-cart-item button:active {

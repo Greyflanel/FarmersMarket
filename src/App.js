@@ -51,7 +51,7 @@ const App = () => {
        };
     const getProducts = () => {
       axios
-        .get("https://api.computerspartselectronics.com")
+        .get("http://api.computerspartselectronics.com")
         .then((response) => {
           setProductsList(response.data);
         })
@@ -72,11 +72,11 @@ const App = () => {
         <CartProvider>
           <NavBar />
           <Routes>
-            <Route path="/" component={LandingPage} />
-            <Route path="/products/:id" component={Product} />
-            <Route path="/products" component={Products} />
-            <Route path="/cart" component={ShoppingCart} />
-            <Route path="/external-api" component={ExternalApi} />
+            <Route path="/" element={<LandingPage/>} />
+            <Route path="/products/:id" element={<Product/>} />
+            <Route path="/products" element={<Products/>} />
+            <Route path="/cart" element={<ShoppingCart/>} />
+            <Route path="/external-api" element={<ExternalApi/>} />
           </Routes>
         </CartProvider>
       </ProductContext.Provider>
