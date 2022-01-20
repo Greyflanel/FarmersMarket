@@ -9,7 +9,13 @@ const LandingPage = () => {
       <video muted loop autoPlay>
         <source src={video} type="video/mp4"/>
       </video>
+      <div>
+        <span className="underlined_text_container">
+          <a href="https://github.com/">Computer Parts & Electronics</a>
+        </span>
+      </div>
       <div className="overlay"></div>
+      <div className="overlay1"></div>
     </section>
    
     </>

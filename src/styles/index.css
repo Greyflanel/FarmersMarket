@@ -64,7 +64,7 @@ header {
   height: 10vh;
   min-height: 85px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background: rgb(1, 86, 155, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   pointer-events: none;
   display: flex;
@@ -308,6 +308,27 @@ nav .logo
   object-fit: cover;
  
 }
+
+.underlined_text_container {
+  position: relative;
+  z-index: 50000;
+  font-size: 6ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, var(--new-blue), white, var(--new-blue));
+  background-size: 0 3px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: all 500ms ease;
+}
+
+.underlined_text_container:hover {
+  background-size: 100% 4px;
+  color: var(--new-blue);
+  text-shadow: 1px 1.1px white;
+}
+
 .overlay
 {
   position: absolute;
@@ -315,10 +336,17 @@ nav .logo
   width: 100vw;
   height: 100vh;
   background: var(--new-blue);
-  mix-blend-mode: color;
+  mix-blend-mode: soft-light;
 }
 
-
+.overlay1 {
+  position: absolute;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(8, 12, 80, 0.767));
+  
+}
 
 .menu {
   display: none;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import axios from "axios";
+import { productList } from "./components/server.js";
 import LandingPage from "./components/LandingPage.js";
 import Products from "./components/Products";
 import {ShoppingCart} from "./components/ShoppingCart.js";
@@ -39,7 +39,7 @@ import ExternalApi from "./ExternalApi.js"
 
 const App = () => {
   
-  const [productsList, setProductsList] = useState([]);
+  const [productsList, setProductsList] = useState(productList);
   const [width, setWindowWidth] = useState(0);
   console.log(width);
   useEffect(() => {
@@ -50,14 +50,7 @@ const App = () => {
          
        };
     const getProducts = () => {
-      axios
-        .get("http://api.computerspartselectronics.com")
-        .then((response) => {
-          setProductsList(response.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      
     };
     getProducts();
     updateDimensions();
