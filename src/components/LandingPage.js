@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/index.css";
 import video from "../assets/CPU.mp4";
-
+import {gsap} from "gsap";
 const LandingPage = () => {
   return (
     <div className="landing-page-container">
