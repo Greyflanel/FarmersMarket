@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Products = () => {
   const { productsList } = useContext(ProductContext);
   // const {user} = useContext(AuthContext);
-  console.log(productsList[0])
+  console.log(productsList)
 
   return (
     <section>
@@ -19,25 +19,25 @@ const Products = () => {
       <div className="circle3"></div>
       <div className="horizontal-scroll">
         {productsList.map((product) => (
-          <div>
+          <div key={product.name}>
             <NavLink
               to={`/products/${product.id}`}
-              key={product.id}
+              
               className="card"
             >
-              <div className="flowers" key={product.id}>
+              <div className="flowers" >
                 <div className="circle"></div>
                 <img
                   className="product-list-image"
-                  src={product.product_image_url}
-                  alt={product.product}
+                  src={product.image}
+                  alt={product.name}
                 />
               </div>
               <div className="product-name">
-                <h2>{product.product}</h2>
+                <h2>{product.name}</h2>
               </div>
               <div className="product-details">
-                <p>{product.product_details}</p>
+                {/* <p>{product.product_details}</p> */}
               </div>
             </NavLink>
           </div>
