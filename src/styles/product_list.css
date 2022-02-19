@@ -21,17 +21,23 @@
 
 * {
   box-sizing: border-box;
-  
 }
 
-.horizontal-scroll {
+.product-container {
   width: 100vw;
   height: 100%;
   min-height: 100vh;
-  background: rgb(255, 255, 255);
+  background: rgba(14, 12, 165, 0.01);
   display: flex;
   flex-wrap: wrap;
   padding-top: 8%;
+  color: #274764;
+  background-image: url("/src/assets/white.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-attachment: fixed;
+  
   
 }
 
@@ -51,35 +57,31 @@
   border-left: 0.1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
   transition: 0.2s ease-in-out;
+ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+     /* From https://css.glass */
+background: rgba(255, 255, 255, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.4px);
+-webkit-backdrop-filter: blur(2.2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
     transform: translateY(-10px);
     
 }
 
-.flowers {
+.items {
   width: 280px;
   height: 280px;
   display: flex;
  
   
 }
-.flowers img {
+.items img {
   border-radius: 10px;
   z-index: 200;
   
-}
-.circle {
-  width: 280px;
-  height: 280px;
-  background: var(--new-blue);
-  position: absolute;
-  top: 7%;
-  left: 12%;
-  border-radius: 10px;
-  z-index: 0;
 }
 
 .product-name {
@@ -121,38 +123,5 @@
 
 .card:hover .product-details {
   opacity: 1;
- 
 }
-
-/* .circle1,
-.circle2,
-.circle3 {
-  background: rgba(1, 86, 155, 0.238);
-  position: absolute;
-  border-radius: 10%;
-  pointer-events: none;
-}
-
-.circle1 {
-  top: 10%;
-  right: 15%;
-  height: 20rem;
-  width: 20rem;
-  
-}
-.circle2 {
-  top: 3%;
-  left: 0;
-  height: 25rem;
-  width: 25rem;
-  
-}
-
-.circle3 {
-  bottom: 5%;
-  left: 45%;
-  height: 15rem;
-  width: 15rem;
-  
-} */
 

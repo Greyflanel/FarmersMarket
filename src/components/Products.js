@@ -14,34 +14,29 @@ const Products = () => {
 
   return (
     <section>
-      <div className="circle1"></div>
-      <div className="circle2"></div>
-      <div className="circle3"></div>
-      <div className="horizontal-scroll">
-        {productsList.map((product) => (
-          <div key={product.name}>
-            <NavLink
-              to={`/products/${product.id}`}
-              
-              className="card"
-            >
-              <div className="flowers" >
-                <div className="circle"></div>
-                <img
-                  className="product-list-image"
-                  src={product.image}
-                  alt={product.name}
-                />
-              </div>
-              <div className="product-name">
-                <h2>{product.name}</h2>
-              </div>
-              <div className="product-details">
-                {/* <p>{product.product_details}</p> */}
-              </div>
-            </NavLink>
-          </div>
-        ))}
+      <div className="circle1">
+        <div className="product-container">
+          {productsList.map((product) => (
+            <div key={product.name}>
+              <NavLink to={`/products/${product.id}`} className="card">
+                <div className="items">
+                  <div className="circle"></div>
+                  <img
+                    className="product-list-image"
+                    src={product.image}
+                    alt={product.name}
+                  />
+                </div>
+                <div className="product-name">
+                  <h2>{product.name}</h2>
+                </div>
+                {/* <div className="product-details">
+                <p>{product.product_details}</p>
+              </div> */}
+              </NavLink>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

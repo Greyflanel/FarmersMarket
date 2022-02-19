@@ -12,52 +12,9 @@ import Product from "./components/Product.js";
 import ExternalApi from "./ExternalApi.js"
 
 
-// const responsive = {
-//   showTopNavMenu: width > 1023,
-// };
-// return (
-//   <>
-//     <Header showTopNavMenu={responsive.showTopNavMenu} />
-//     <Main />
-//   </>
-// );
-
-// const showNav = {
-//   display: showTopNavMenu ? "flex" : "none",
-// };
-// const showMenuIcon = {
-//   display: showTopNavMenu ? "none" : "flex",
-// };
-// return (
-//   <>
-//     <div id="nav_container" style={showNav}>
-//       <nav id="navigation">{navMenuItems}</nav>
-//     </div>
-//     <span className="menu-icon" style={showMenuIcon} />
-//   </>
-// );
-
 const App = () => {
   
   const [productsList, setProductsList] = useState(productList);
-  const [width, setWindowWidth] = useState(0);
-  console.log(width);
-  useEffect(() => {
-    
-       const updateDimensions = () => {
-         const width = window.innerWidth;
-         setWindowWidth(width);
-         
-       };
-    const getProducts = () => {
-      
-    };
-    getProducts();
-    updateDimensions();
-   window.addEventListener("resize", updateDimensions);
-     return () => 
-       window.removeEventListener("resize",updateDimensions);  
-  }, []);
 
   return (
     <AuthProvider>
