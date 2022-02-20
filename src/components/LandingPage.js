@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import blob1Image from "../assets/blob1-image.png";
-import blob2Image from "../assets/blob2-image.png";
+import lion from "../assets/lion.jpg";
 import video from "../assets/CPU.mp4";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -30,8 +30,9 @@ const LandingPage = () => {
     let tl = gsap.timeline({ repeat: 0 });
     let tl2 = gsap.timeline({ repeat: 0 });
     let tl3 = gsap.timeline({ repeat: 0 });
-    let tl4 = gsap.timeline({ repeat: -1, zIndex: 999999999999999999999, ease: "power4.inout" });
+    let tl4 = gsap.timeline({ yoyo: "true", repeat: -1, zIndex: 999999999999999999999, ease: "power4.inout" });
     let tl5 = gsap.timeline({
+      yoyo: "true",
       repeat: -1,
       zIndex: 9999999999999999999,
       ease: "power4.inout",
@@ -40,7 +41,7 @@ const LandingPage = () => {
     tl.to(".overlay1", {
       background: "rgba(5, 0, 54, 0.9)",
       duration: 3,
-      delay: 1,
+      
     });
 
     tl2
@@ -50,9 +51,8 @@ const LandingPage = () => {
         scale: 1.1,
         x: "38vw",
         y: "15%",
-        duration: 1.35,
-        ease: "power2.in",
-        delay: 0.6,
+        duration: 5,
+        ease: "power4.inOut",
       });
 
     tl3
@@ -70,14 +70,14 @@ const LandingPage = () => {
     tl4
       .set("#blob", { yPercent: 300 })
       .to("#blob", { y: "20%", duration: 60 })
-      .to("#blob", { y: "-20%", duration: 60 });
+      .to("#blob", { y: "-20%", x: "20%", duration: 60 });
 
     tl5
       .set("#new-blob", { yPercent: -200, xPercent: -60 })
       .to("#new-blob", { y: "-50%", duration: 30 })
       .to("#new-blob", {
-        y: "50%",
-        x: "50%",
+        y: "40%",
+        x: "-20%",
         duration: 30,
       });
   }, []);
@@ -97,7 +97,7 @@ const LandingPage = () => {
             id="blob1"
             d="M169.3 -167.7C215.2 -123.5 245.1 -61.8 242 -3.1C239 55.6 202.9 111.3 157.1 136.3C111.3 161.3 55.6 155.6 8.8 146.8C-37.9 138 -75.9 125.9 -125.9 100.9C-175.9 75.9 -237.9 37.9 -246.4 -8.5C-254.9 -54.9 -209.8 -109.8 -159.8 -154C-109.8 -198.2 -54.9 -231.6 3.4 -235C61.8 -238.4 123.5 -211.8 169.3 -167.7"
             opacity="1"
-            fill="#08208e"
+            fill="#F5BC18"
           ></path>
         </g>
         <g transform="translate(501.67205826772965 288.8382467986756)">
@@ -108,27 +108,19 @@ const LandingPage = () => {
           ></path>
         </g>
       </svg>
+      
       <section className="first-section">
         <video id="video-bg" muted autoPlay>
           <source src={video} type="video/mp4" />
         </video>
         <div className="landing-page-text">
-          <h1>Computer Parts & Electronics</h1>
+          <h1>Sharif's<br/>Computer Parts<br/> & Electronics</h1>
         </div>
         <div className="landing-page-content">
-          <img className="blob1-image" src={blob1Image} alt="blob shape" />
-          {/* <p>
-            <span>lorem ipsum dolor sit</span> <span>amet consectetur adi</span>
-            <br />
-            <span>lorem ipsum dolor sit amet</span>
-          </p> */}
+          {/* <img width="200px" className="blob2-image" src={blob1Image} alt="blob shape" /> */}
         </div>
         <div className="landing-page-content2">
-          {/* <img className="blob2-image" src={blob2Image} alt="blob shape" /> */}
-          {/* <p>
-            lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit
-            amet lorem
-          </p> */}
+          
         </div>
         <div className="overlay"></div>
         <div className="overlay1"></div>
@@ -141,7 +133,7 @@ const LandingPage = () => {
           >
             <path
               d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".5"
+              opacity=".6"
               className="shape-fill"
             ></path>
             <path
@@ -203,7 +195,8 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        <h2>Third-Section</h2>
+        {/* <img className="lion" src={lion} alt="lion statue"/> */}
+        {/* <h2>Third-Section</h2> */}
       </section>
       <section className="fourth-section">
         <div className="custom-shape-divider-top-1645218211">
@@ -225,7 +218,7 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        <div className="cardinal">
+        {/* <div className="cardinal">
           <div className="face face1">
             <div className="content">
               <i className="fab fa-windows"></i>
@@ -246,7 +239,7 @@ const LandingPage = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
       <svg
         id="new-blob"
