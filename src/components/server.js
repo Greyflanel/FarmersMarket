@@ -1,70 +1,70 @@
 
 
-export const productList = [
-  {
-    id: 0,
-    name: "Cherry Tomatoes",
-    pricePerPound: 0.5,
-    image:
-      "https://gardenandhappy.com/wp-content/uploads/2018/07/Bing-Cherry-Tomatoes.png",
-  },
+// export const productList = [
+//   {
+//     id: 0,
+//     name: "CPU",
+//     pricePerPound: 0.5,
+//     image:
+//       "https://www.tlgtechnologies.com/wp-content/uploads/2021/02/what-is-computer-hardware-scaled.jpg",
+//   },
 
-  {
-    id: 1,
-    name: "Bananas",
-    pricePerPound: 0.8,
-    image:
-      "https://149366112.v2.pressablecdn.com/wp-content/uploads/2013/06/ripe-unripe-bananas.jpg",
-  },
+//   {
+//     id: 1,
+//     name: "GPU",
+//     pricePerPound: 0.8,
+//     image:
+//       "https://icdn.digitaltrends.com/image/digitaltrends/graphics-card-gpu-feature-image-shutterstock-3.jpg",
+//   },
 
-  {
-    id: 2,
-    name: "Grapes",
-    pricePerPound: 1.0,
-    image:
-      "https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/content/66/d8/d65cfa263546a30df60d24626846/grapes1._TTW_._CR0,20,400,225_.jpg",
-  },
+//   {
+//     id: 2,
+//     name: "PSU",
+//     pricePerPound: 1.0,
+//     image:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxiSmkpbAEA5rV4DRdtFGvEmpOxjlqtJ3tGw&usqp=CAU",
+//   },
 
-  {
-    id: 3,
-    name: "Oranges",
-    pricePerPound: 1.2,
-    image:
-      "https://www.juicebuff.com/wp-content/uploads/2019/04/Oranges-For-Juicing-1.jpg",
-  },
+//   {
+//     id: 3,
+//     name: "SSD",
+//     pricePerPound: 1.2,
+//     image:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ5U99wtD9z56TKvr7Gitgrb5c-Dly3MCePA&usqp=CAU",
+//   },
 
-  {
-    id: 4,
-    name: "Strawberries",
-    pricePerPound: 2.0,
-    image:
-      "https://images.pexels.com/photos/70746/strawberries-red-fruit-royalty-free-70746.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-  },
+//   {
+//     id: 4,
+//     name: "Cases",
+//     pricePerPound: 2.0,
+//     image:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8zF2Tp9nuYfozchtBJ9GF5fmpaFIT1_IpTg&usqp=CAU",
+//   },
 
-  {
-    id: 5,
-    name: "Watermelon",
-    pricePerPound: 1.5,
-    image:
-      "https://media.gettyimages.com/photos/melon-wallpaper-picture-id157405770?s=612x612",
-  },
+//   {
+//     id: 5,
+//     name: "Monitors",
+//     pricePerPound: 1.5,
+//     image:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvbrLmNvCoDeP4cZLNmTXjftQIBRheWww36w&usqp=CAU",
+//   },
 
-  {
-    id: 6,
-    name: "Jalapeno Peppers",
-    pricePerPound: 0.6,
-    image:
-      "https://www.pepperscale.com/wp-content/uploads/2013/06/jalapeno-pepper-1.jpg",
-  },
+//   {
+//     id: 6,
+//     name: "Keyboards",
+//     pricePerPound: 0.6,
+//     image:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSepprO4_51pg50eDdaGJq6bn-CS-c8UFrnhw&usqp=CAU",
+//   },
 
-  {
-    id: 7,
-    name: "Blueberries",
-    pricePerPound: 1.8,
-    image:
-      "https://extension.umaine.edu/blueberries/wp-content/uploads/sites/41/2020/01/Blueberries-picked-1-846x476.jpg",
-  },
-];
+//   {
+//     id: 7,
+//     name: "Mouse",
+//     pricePerPound: 1.8,
+//     image:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK819xrwIOLrwAOdOUDt3rhRZrubUzmpgJ2A&usqp=CAU",
+//   },
+// ];
 
 
 // app.get("/", (req, res) => {

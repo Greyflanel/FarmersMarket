@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import blob1Image from "../assets/blob1-image.png";
-import lion from "../assets/lion.jpg";
 import video from "../assets/CPU.mp4";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import KUTE from "kute.js";
+import FlipCard from "../components/Card.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +14,7 @@ const LandingPage = () => {
       "#blob1",
       { path: "#blob1" },
       { path: "#blob2" },
-      { repeat: 9999, duration: 4800, yoyo: true }
+      { repeat: 99999999999, duration: 4800, yoyo: true }
     );
     tween.start();
 
@@ -23,63 +22,59 @@ const LandingPage = () => {
       "#blob3",
       { path: "#blob3" },
       { path: "#blob4" },
-      { repeat: 9999, duration: 4800, yoyo: true }
+      { repeat: 99999999999, 
+        duration: 4800, 
+        yoyo: true }
     );
     tween2.start();
 
-    let tl = gsap.timeline({ repeat: 0 });
-    let tl2 = gsap.timeline({ repeat: 0 });
-    let tl3 = gsap.timeline({ repeat: 0 });
-    let tl4 = gsap.timeline({ yoyo: "true", repeat: -1, zIndex: 999999999999999999999, ease: "power4.inout" });
+    
+    let tl4 = gsap.timeline({
+      yoyo: "true",
+      repeat: -1,
+      zIndex: 99999,
+      ease: "power4.inout",
+    });
     let tl5 = gsap.timeline({
       yoyo: "true",
       repeat: -1,
-      zIndex: 9999999999999999999,
+      zIndex: 9999,
       ease: "power4.inout",
     });
 
-    tl.to(".overlay1", {
-      background: "rgba(5, 0, 54, 0.9)",
-      duration: 3,
-      
-    });
+    
 
-    tl2
-      .set(".landing-page-content", { xPercent: -100, yPercent: -100 })
-      .to(".landing-page-content", {
-        autoAlpha: 0.6,
-        scale: 1.1,
-        x: "38vw",
-        y: "15%",
-        duration: 5,
-        ease: "power4.inOut",
-      });
-
-    tl3
-      .set(".landing-page-content2", { xPercent: 100, yPercent: -100 })
-      .to(".landing-page-content2", {
-        autoAlpha: 0.6,
-        scale: 1.3,
-        x: "-85vw",
-        y: "30vh",
-        duration: 1.35,
-        ease: "power2.in",
-        delay: 0.6,
-      });
+    // tl3
+    //   .set(".svg-container", { rotateZ: "90deg", scale: 0.8 })
 
     tl4
-      .set("#blob", { yPercent: 300 })
-      .to("#blob", { y: "20%", duration: 60 })
-      .to("#blob", { y: "-20%", x: "20%", duration: 60 });
-
+      .set("#blob", { autoAlpha: 1, yPercent: 300, xPercent: -50 })
+      .to("#blob", { x: "-30%", y: "-70%", duration: 30 });
     tl5
-      .set("#new-blob", { yPercent: -200, xPercent: -60 })
-      .to("#new-blob", { y: "-50%", duration: 30 })
-      .to("#new-blob", {
-        y: "40%",
-        x: "-20%",
-        duration: 30,
-      });
+      .set("#new-blob", { autoAlpha: 1, yPercent: -200, xPercent: -40 })
+      .to("#new-blob", { x: "40%", y: "-80%", duration: 30 });
+
+    // tl6
+    //   .set(".landing-page-text", {
+    //     transformOrigin: "bottom",
+    //     rotateY: "-30deg",
+    //     rotateX: "-50deg",
+    //     // backfaceVisibility: "hidden",
+    //   })
+    //   .to(".landing-page-text", {
+    //     autoAlpha: 1,
+    //     duration: 14,
+    //     y: "12%",
+    //     x: "24%",
+    //     rotateX: "0deg",
+    //     rotateY: "45deg",
+    //     rotateZ: "1.5deg",
+
+    //   })
+    // .to(".landing-page-text", {
+    //   rotateZ: "0deg",
+    //   duration: 2
+    // });
   }, []);
 
   return (
@@ -108,20 +103,21 @@ const LandingPage = () => {
           ></path>
         </g>
       </svg>
-      
       <section className="first-section">
         <video id="video-bg" muted autoPlay>
           <source src={video} type="video/mp4" />
         </video>
-        <div className="landing-page-text">
-          <h1>Sharif's<br/>Computer Parts<br/> & Electronics</h1>
-        </div>
-        <div className="landing-page-content">
-          {/* <img width="200px" className="blob2-image" src={blob1Image} alt="blob shape" /> */}
-        </div>
-        <div className="landing-page-content2">
-          
-        </div>
+        <FlipCard />
+        {/* <div className="landing-page-text">
+          <h1>
+            Sharif's
+            <br />
+            Computer Parts
+            <br /> & Electronics
+          </h1>
+        </div> */}
+        <div className="landing-page-content"></div>
+        <div className="landing-page-content2"></div>
         <div className="overlay"></div>
         <div className="overlay1"></div>
         <div className="custom-shape-divider-bottom-1645215428">
@@ -133,7 +129,7 @@ const LandingPage = () => {
           >
             <path
               d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".6"
+              opacity=".0"
               className="shape-fill"
             ></path>
             <path
@@ -172,6 +168,10 @@ const LandingPage = () => {
       </section>
 
       <section className="third-section">
+        {/* <div className="blob-text">
+          <img src={blobText} alt="blob shape" />
+        </div> */}
+
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
@@ -195,7 +195,7 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        {/* <img className="lion" src={lion} alt="lion statue"/> */}
+        {/* <Svg /> */}
         {/* <h2>Third-Section</h2> */}
       </section>
       <section className="fourth-section">
@@ -208,7 +208,7 @@ const LandingPage = () => {
           >
             <path
               d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".75"
+              opacity=".5"
               className="shape-fill"
             ></path>
 
@@ -244,7 +244,7 @@ const LandingPage = () => {
       <svg
         id="new-blob"
         viewBox="0 0 900 600"
-        width="1200"
+        width="900"
         height="600"
         xmlns="http://www.w3.org/2000/svg"
       >

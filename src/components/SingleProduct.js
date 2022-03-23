@@ -91,7 +91,7 @@ const SingleProduct = (props) => {
 
   return (
     <div>
-      <h6>Loading....</h6>
+     "Loading..."
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/index.css";
 import { useAuth0 } from "@auth0/auth0-react";
+import logo from "../assets/logo3-removebg.png";
 import {
   
   NavItem,
@@ -15,7 +16,7 @@ const NavBar = () => {
 const [isActive, setIsActive] = useState("false");
 const menuToggle = () => setIsActive(!isActive);
 const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
-console.log(useAuth0().user)
+
 const logoutWithRedirect = () =>
   logout({
     returnTo: window.location.origin,
@@ -24,7 +25,7 @@ const logoutWithRedirect = () =>
     return (
       <div>
         <header>
-          <h2>Logo</h2>
+          <img src={logo} alt="Sharif logo" className="logo"/>
           <div >
             {!isAuthenticated && (
               <NavItem>

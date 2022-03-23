@@ -9,7 +9,7 @@ import ProductContext from "./Contexts/ProductContext.js";
 import {AuthProvider} from "./Contexts/AuthContext.js";
 import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
-import ExternalApi from "./ExternalApi.js"
+import ExternalApi from "./ExternalApi.js";
 
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
           <NavBar />
           <Routes>
             <Route path="/" element={<LandingPage/>} />
-            <Route path="/products/:id" element={<Product/>} />
+            {/* <Route path="/products/:id" element={<Product/>} /> */}
             <Route path="/products" element={<Products/>} />
             <Route path="/cart" element={<ShoppingCart/>} />
             <Route path="/external-api" element={<ExternalApi/>} />
