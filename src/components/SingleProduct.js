@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from "react";
 import { CartContext } from "../Contexts/CartContext.js";
-
+import Loading from "./Loading.js";
 
 const SingleProduct = (props) => {
 
@@ -9,7 +9,7 @@ const SingleProduct = (props) => {
   const card = document.querySelector(".singleCard");
   
   //Items
-  const title = document.querySelector(".title");
+  const title = document.querySelector(".product");
   const sneaker = document.querySelector(".sneaker img");
   const purchase = document.querySelector(".purchase");
   const description = document.querySelector(".info h3");
@@ -91,7 +91,7 @@ const SingleProduct = (props) => {
 
   return (
     <div>
-     "Loading..."
+     <Loading/>
     </div>
   );
 };

@@ -107,7 +107,7 @@ const LandingPage = () => {
         <video id="video-bg" muted autoPlay>
           <source src={video} type="video/mp4" />
         </video>
-        <FlipCard />
+        
         {/* <div className="landing-page-text">
           <h1>
             Sharif's

@@ -5,7 +5,7 @@ import { getConfig } from "./config.js";
 import Loading from "./components/Loading.js";
 
 export const ExternalApiComponent = () => {
-  const { apiOrigin = "http://localhost:4000", audience } = getConfig();
+  const { apiOrigin = "https://api.computerspartselectronics.com/products", audience } = getConfig();
 
   const [state, setState] = useState({
     showResult: false,
@@ -57,7 +57,7 @@ export const ExternalApiComponent = () => {
     try {
       const token = await getAccessTokenSilently();
 
-      const response = await fetch(`${apiOrigin}/api/external`, {
+      const response = await fetch(`${apiOrigin}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -115,13 +115,6 @@ export const ExternalApiComponent = () => {
         <h1>External API</h1>
         <p className="lead">
           Ping an external API by clicking the button below.
-        </p>
-
-        <p>
-          This will call a local API on port 3001 that would have been started
-          if you run <code>npm run dev</code>. An access token is sent as part
-          of the request's `Authorization` header and the API will validate it
-          using the API's audience value.
         </p>
 
         {!audience && (

@@ -16,7 +16,7 @@ export const ShoppingCart = () => {
         <ShoppingCartItem key={cart.product} {...cart} />
       ))}
       <div className="shopping-cart-checkout">
-        <Svg />
+        
         <p>{cart.length} item(s) in your Cart</p>
         <p>Total: ${totalPrice}</p>
         <button className="checkout-btn">Checkout</button>

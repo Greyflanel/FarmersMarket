@@ -33,17 +33,17 @@ const Products = (props) => {
                   <div className="circle"></div>
                   <img
                     className="product-list-image"
-                    src={product.image}
-                    alt={product.name}
+                    src={product.product}
+                    alt={product.product}
                   />
                 </div>
                 <div className="product-name">
                   <h2>{product.product}</h2>
                   <h3>${product.price}</h3>
                 </div>
-                {/* <div className="product-details">
+                <div className="product-details">
                 <p>{product.product_details}</p>
-              </div> */}
+              </div>
               </NavLink>
             </div>
           ))}
