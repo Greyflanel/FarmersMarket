@@ -1,6 +1,6 @@
 /* CSS HEX */
 :root {
-  --primary: #1f48cf;
+  --primary: #1A71BD;
   --secondary: rgba(8, 32, 140, 0.315);
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
@@ -46,7 +46,7 @@ header {
   height: 12vh;
   min-height: 85px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.09);
   color: var(--primary);
   pointer-events: none;
   display: flex;
@@ -79,7 +79,7 @@ header h2 {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 9999px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: white;
   border: 0.1px solid rgb(255, 255, 255) !important;
 }
@@ -135,7 +135,7 @@ nav .logo {
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-color: var(--secondary);
+  background-color: var(--primary);
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
@@ -504,7 +504,7 @@ a:hover {
   border-radius: 9999999px;
   padding: 5px;
   cursor: pointer;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: white;
   font-size: 1.2rem;
   border: none;
@@ -630,7 +630,7 @@ a:hover {
   bottom: 10%;
   right: 10%;
   max-width: 100px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--baby-powder);
   border-radius: 9999999px;
   font-size: 1.2rem;
@@ -671,7 +671,7 @@ a:hover {
 .details-h2 {
   font-size: 2.3rem;
   font-weight: 400;
-  color: grey;
+  color: #1A71BD;
   padding-top: 1rem;
 }
 
@@ -801,34 +801,14 @@ a {
   visibility: hidden;
 }
 
-/* .spark {
-  position: absolute;
-  z-index: 0;
-  top:30%;
-  width: 10%;
-  display: none;
-} */
-
-.product-back-button {
-  position: absolute;
-  width: 10rem;
-  bottom: 20%;
-  padding: 2rem 2rem;
-  font-size: 1.5rem;
-  border-radius: 9999999px;
-  background-color: var(--secondary);
-  color: var(--dark-accent);
-}
-
 .logo {
   position: relative;
   left: -2.8%;
   width: clamp(7.5rem, 3.5vw + 6rem, 10.25rem);
   height: auto;
   z-index: -1;
-
   border-radius: 99999999999px;
-  backdrop-filter: brightness("500%") saturate("300%") blur(300px);
+  backdrop-filter: brightness("800%") saturate("500%") blur(300px);
 }
 
 .full-bleed {
@@ -836,11 +816,3 @@ a {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-
-/* .flip-card {
-  position: absolute;
-  
-  width: 100%;
-  height: 100%;
-  background-color: var(--dark-accent);
-} */

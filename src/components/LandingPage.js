@@ -104,9 +104,9 @@ const LandingPage = () => {
         </g>
       </svg>
       <section className="first-section">
-        <video id="video-bg" muted autoPlay>
+        {/* <video id="video-bg" muted autoPlay>
           <source src={video} type="video/mp4" />
-        </video>
+        </video> */}
         
         {/* <div className="landing-page-text">
           <h1>
