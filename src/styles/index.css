@@ -73,9 +73,8 @@ header h2 {
 #qsLogoutBtn {
   position: relative;
   z-index: 50000;
-  right: 150px;
   pointer-events: auto;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 1.2rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 9999px;
@@ -131,7 +130,7 @@ nav .logo {
 .toggle {
   position: absolute;
   top: 2.5vh;
-  right: 1vw;
+  right: 1.5vw;
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
@@ -150,8 +149,8 @@ nav .logo {
 
 .active {
   position: absolute;
-  top: 3vh;
-  right: 2vw;
+  top: 2.5vh;
+  right: 1.5vw;
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/rt3HybH/close.png);
@@ -233,7 +232,7 @@ section {
 }
 
 .custom-shape-divider-top-1645218211 .shape-fill {
-  fill: #ecf3f9;
+  fill: #ECF3F9;
 }
 
 .first-section {
