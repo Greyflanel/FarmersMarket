@@ -13,7 +13,7 @@ const Products = (props) => {
   
   useEffect(() => {
     axios
-      .get('https://api.computerspartselectronics.com/products')
+      .get('https://api.computerspartselectronics.com/products' || 'http://localhost:3000')
       .then(response => {
         
         setProd(response.data)
