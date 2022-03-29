@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import ProductContext from "../Contexts/ProductContext";
 import { NavLink } from "react-router-dom";
 import "../styles/product_list.css";
@@ -15,7 +14,6 @@ const Products = (props) => {
     axios
       .get('https://api.computerspartselectronics.com/products')
       .then(response => {
-        
         setProd(response.data)
       })
       .catch(error => {

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import video from "../assets/CPU.mp4";
+import lion from "../assets/newbluelion4.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import KUTE from "kute.js";
@@ -107,6 +108,9 @@ const LandingPage = () => {
         {/* <video id="video-bg" muted autoPlay>
           <source src={video} type="video/mp4" />
         </video> */}
+        <div className="blue-lion">
+          <img  src={lion} alt="Stylized Lion"/>
+        </div>
         
         {/* <div className="landing-page-text">
           <h1>

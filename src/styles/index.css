@@ -236,15 +236,16 @@ section {
 }
 
 .first-section {
-  overflow-y: hidden;
+  
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.first-section video {
+.first-section img {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+  border-radius: 5%;
+  
   background-attachment: fixed;
 }
 
@@ -874,4 +875,17 @@ button:active {
 h1,
 h3 {
 	text-align: center;
+}
+
+.blue-lion {
+  position: relative;
+  width: clamp(25.1rem, 35.7153rem + 35.6368vw, 25.5rem);
+  height: 50vh;
+  
+}
+
+.blue-lion img {
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
