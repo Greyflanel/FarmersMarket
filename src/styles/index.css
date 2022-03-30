@@ -234,6 +234,19 @@ section {
   fill: #ECF3F9;
 }
 
+.first-section {
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-section img {
+  position: absolute;
+  border-radius: 5%;
+  
+  background-attachment: fixed;
+}
 
 .landing-page-text h1 {
   font-weight: 300;
@@ -867,9 +880,15 @@ h3 {
 
 .blue-lion {
   position: relative;
+<<<<<<< HEAD
   width: clamp(300px, 45rem, 50vw);
   height: 50vh;
   
+=======
+  width: 40%;
+  bottom: 35%;
+  left: -25%;
+>>>>>>> 9cb3a93add7277c7568134e130a063cfb6b23b57
 }
 
 .blue-lion img {
