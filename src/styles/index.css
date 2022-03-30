@@ -236,7 +236,7 @@ section {
 }
 
 .first-section {
-  
+  overflow-y: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -879,9 +879,9 @@ h3 {
 
 .blue-lion {
   position: relative;
-  width: clamp(25.1rem, 35.7153rem + 35.6368vw, 25.5rem);
-  height: 50vh;
-  
+  width: 40%;
+  bottom: 35%;
+  left: -25%;
 }
 
 .blue-lion img {
