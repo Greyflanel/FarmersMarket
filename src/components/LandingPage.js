@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import video from "../assets/CPU.mp4";
-import lion from "../assets/newbluelion4.png";
+import lion from "../assets/rsz_1newbluelion53.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import KUTE from "kute.js";

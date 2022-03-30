@@ -14,7 +14,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-
   text-decoration: none;
 
   /* border: 2px solid red !important; */
@@ -235,19 +234,6 @@ section {
   fill: #ECF3F9;
 }
 
-.first-section {
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.first-section img {
-  position: absolute;
-  border-radius: 5%;
-  
-  background-attachment: fixed;
-}
 
 .landing-page-text h1 {
   font-weight: 300;
@@ -282,6 +268,8 @@ section {
       -1px 0 28px 0 rgba(34, 33, 81, 0.01),
       54px 54px 28px -15px rgba(34, 33, 81, 0.15);
 } */
+
+
 
 .overlay {
   position: absolute;
@@ -879,7 +867,7 @@ h3 {
 
 .blue-lion {
   position: relative;
-  width: clamp(25.1rem, 35.7153rem + 35.6368vw, 25.5rem);
+  width: clamp(300px, 45rem, 50vw);
   height: 50vh;
   
 }
@@ -887,5 +875,12 @@ h3 {
 .blue-lion img {
   position: absolute;
   width: 100%;
+  top: 8rem;
   left: 0;
+ 
+}
+
+.first-section {
+  padding: 2rem;
+  overflow-y: hidden;
 }
