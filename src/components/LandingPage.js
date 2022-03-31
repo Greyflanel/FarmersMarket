@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import video from "../assets/CPU.mp4";
-import lion from "../assets/rsz_1newbluelion53.png";
+import lion from "../assets/lion.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import KUTE from "kute.js";
@@ -11,23 +10,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
   useEffect(() => {
-    let tween = KUTE.fromTo(
-      "#blob1",
-      { path: "#blob1" },
-      { path: "#blob2" },
-      { repeat: 99999999999, duration: 4800, yoyo: true }
-    );
-    tween.start();
+    // let tween = KUTE.fromTo(
+    //   "#blob1",
+    //   { path: "#blob1" },
+    //   { path: "#blob2" },
+    //   { repeat: 99999999999, duration: 4800, yoyo: true }
+    // );
+    // tween.start();
 
-    let tween2 = KUTE.fromTo(
-      "#blob3",
-      { path: "#blob3" },
-      { path: "#blob4" },
-      { repeat: 99999999999, 
-        duration: 4800, 
-        yoyo: true }
-    );
-    tween2.start();
+    // let tween2 = KUTE.fromTo(
+    //   "#blob3",
+    //   { path: "#blob3" },
+    //   { path: "#blob4" },
+    //   { repeat: 99999999999, 
+    //     duration: 4800, 
+    //     yoyo: true }
+    // );
+    // tween2.start();
 
     
     let tl4 = gsap.timeline({
@@ -48,12 +47,12 @@ const LandingPage = () => {
     // tl3
     //   .set(".svg-container", { rotateZ: "90deg", scale: 0.8 })
 
-    tl4
-      .set("#blob", { autoAlpha: 1, yPercent: 300, xPercent: -50 })
-      .to("#blob", { x: "-30%", y: "-70%", duration: 30 });
-    tl5
-      .set("#new-blob", { autoAlpha: 1, yPercent: -200, xPercent: -40 })
-      .to("#new-blob", { x: "40%", y: "-80%", duration: 30 });
+    // tl4
+    //   .set("#blob", { autoAlpha: 1, yPercent: 300, xPercent: -50 })
+    //   .to("#blob", { x: "-30%", y: "-70%", duration: 30 });
+    // tl5
+    //   .set("#new-blob", { autoAlpha: 1, yPercent: -200, xPercent: -40 })
+    //   .to("#new-blob", { x: "40%", y: "-80%", duration: 30 });
 
     // tl6
     //   .set(".landing-page-text", {
@@ -80,7 +79,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page-container">
-      <svg
+      {/* <svg
         id="blob"
         viewBox="0 0 900 600"
         width="900"
@@ -103,7 +102,7 @@ const LandingPage = () => {
             fill="#08208e"
           ></path>
         </g>
-      </svg>
+      </svg> */}
       <section className="first-section">
         {/* <video id="video-bg" muted autoPlay>
           <source src={video} type="video/mp4" />
