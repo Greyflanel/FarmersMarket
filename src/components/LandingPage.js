@@ -3,32 +3,11 @@ import "../styles/index.css";
 import lion from "../assets/lion.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import KUTE from "kute.js";
-import FlipCard from "../components/Card.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
   useEffect(() => {
-    // let tween = KUTE.fromTo(
-    //   "#blob1",
-    //   { path: "#blob1" },
-    //   { path: "#blob2" },
-    //   { repeat: 99999999999, duration: 4800, yoyo: true }
-    // );
-    // tween.start();
-
-    // let tween2 = KUTE.fromTo(
-    //   "#blob3",
-    //   { path: "#blob3" },
-    //   { path: "#blob4" },
-    //   { repeat: 99999999999, 
-    //     duration: 4800, 
-    //     yoyo: true }
-    // );
-    // tween2.start();
-
-    
     let tl4 = gsap.timeline({
       yoyo: "true",
       repeat: -1,
@@ -41,84 +20,14 @@ const LandingPage = () => {
       zIndex: 9999,
       ease: "power4.inout",
     });
-
-    
-
-    // tl3
-    //   .set(".svg-container", { rotateZ: "90deg", scale: 0.8 })
-
-    // tl4
-    //   .set("#blob", { autoAlpha: 1, yPercent: 300, xPercent: -50 })
-    //   .to("#blob", { x: "-30%", y: "-70%", duration: 30 });
-    // tl5
-    //   .set("#new-blob", { autoAlpha: 1, yPercent: -200, xPercent: -40 })
-    //   .to("#new-blob", { x: "40%", y: "-80%", duration: 30 });
-
-    // tl6
-    //   .set(".landing-page-text", {
-    //     transformOrigin: "bottom",
-    //     rotateY: "-30deg",
-    //     rotateX: "-50deg",
-    //     // backfaceVisibility: "hidden",
-    //   })
-    //   .to(".landing-page-text", {
-    //     autoAlpha: 1,
-    //     duration: 14,
-    //     y: "12%",
-    //     x: "24%",
-    //     rotateX: "0deg",
-    //     rotateY: "45deg",
-    //     rotateZ: "1.5deg",
-
-    //   })
-    // .to(".landing-page-text", {
-    //   rotateZ: "0deg",
-    //   duration: 2
-    // });
   }, []);
 
   return (
     <div className="landing-page-container">
-      {/* <svg
-        id="blob"
-        viewBox="0 0 900 600"
-        width="900"
-        height="600"
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-      >
-        <g transform="translate(452.60822487675944 340.5005591574244)">
-          <path
-            id="blob1"
-            d="M169.3 -167.7C215.2 -123.5 245.1 -61.8 242 -3.1C239 55.6 202.9 111.3 157.1 136.3C111.3 161.3 55.6 155.6 8.8 146.8C-37.9 138 -75.9 125.9 -125.9 100.9C-175.9 75.9 -237.9 37.9 -246.4 -8.5C-254.9 -54.9 -209.8 -109.8 -159.8 -154C-109.8 -198.2 -54.9 -231.6 3.4 -235C61.8 -238.4 123.5 -211.8 169.3 -167.7"
-            opacity="1"
-            fill="#F5BC18"
-          ></path>
-        </g>
-        <g transform="translate(501.67205826772965 288.8382467986756)">
-          <path
-            id="blob2"
-            d="M111.6 -105.2C129.9 -66.1 119.8 -20.5 107.2 20.3C94.5 61.1 79.4 97.2 39.4 138.1C-0.6 179 -65.4 224.6 -115.9 211.5C-166.4 198.4 -202.6 126.4 -217.5 52.2C-232.5 -22.1 -226.1 -98.6 -186.3 -142.7C-146.5 -186.8 -73.2 -198.4 -13.3 -187.8C46.6 -177.2 93.3 -144.4 111.6 -105.2"
-            fill="#08208e"
-          ></path>
-        </g>
-      </svg> */}
       <section className="first-section">
-        {/* <video id="video-bg" muted autoPlay>
-          <source src={video} type="video/mp4" />
-        </video> */}
         <div className="blue-lion">
           <img  src={lion} alt="Stylized Lion"/>
         </div>
-        
-        {/* <div className="landing-page-text">
-          <h1>
-            Sharif's
-            <br />
-            Computer Parts
-            <br /> & Electronics
-          </h1>
-        </div> */}
         <div className="landing-page-content"></div>
         <div className="landing-page-content2"></div>
         <div className="overlay"></div>
