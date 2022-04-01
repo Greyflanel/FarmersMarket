@@ -774,12 +774,11 @@ a {
 
 .logo {
   position: relative;
-  left: -2.8%;
-  width: clamp(7.5rem, 3.5vw + 6rem, 10.25rem);
-  height: auto;
+  left: -2.5%;
+  width: 9%;
   z-index: -1;
-  border-radius: 99999999999px;
-  backdrop-filter: brightness("800%") saturate("500%") blur(300px);
+  filter: brightness(1.7);
+  top: 0;
 }
 
 .spinner {
@@ -842,7 +841,7 @@ h3 {
 
 .blue-lion {
   position: relative;
-  width: 35vw;
+  width: 40vw;
 }
 
 .blue-lion img {
@@ -850,6 +849,6 @@ h3 {
   width: 100%;
   top: 8rem;
   left: 1rem;
- 
+  border-radius: 1%;
 }
 
