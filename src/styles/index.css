@@ -39,7 +39,7 @@ header {
   z-index: 500;
   width: 100vw;
   height: 12vh;
-  min-height: 85px;
+  min-height: 90px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.09);
   pointer-events: none;
@@ -115,10 +115,6 @@ nav.active {
   position: absolute;
   justify-content: center;
   z-index: 200;
-}
-
-nav .logo {
-  color: rgba(4, 0, 54, 0.623);
 }
 
 .toggle {
@@ -774,9 +770,8 @@ a {
 
 .logo {
   position: relative;
-  left: -2.5%;
-  width: 9%;
-  z-index: -1;
+  left: -3.2%;
+  width: clamp(170px, 10%, 250px);
   filter: brightness(1.7);
   top: 0;
 }
@@ -841,12 +836,12 @@ h3 {
 
 .blue-lion {
   position: relative;
-  width: 40vw;
+ 
 }
 
 .blue-lion img {
   position: absolute;
-  width: 100%;
+  width: clamp(290px, 38vw, 60%);
   top: 8rem;
   left: 1rem;
   border-radius: 1%;

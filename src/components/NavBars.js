@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/index.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import logo from "../assets/Untitled.png";
+import logo from "../assets/Sharif-Logo.png";
 import {
   NavItem,
   UncontrolledDropdown,
