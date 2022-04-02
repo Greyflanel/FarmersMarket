@@ -38,21 +38,16 @@ header {
   top: 0;
   z-index: 500;
   width: 100vw;
-<<<<<<< HEAD
-  height: 13vh;
-  min-height: 85px;
-=======
-  height: 12vh;
+  height: 11vh;
   min-height: 90px;
->>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.09);
   pointer-events: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2%;
-  backdrop-filter: blur(10px);
+  padding: 0 2%;
+  
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.4px);
@@ -71,9 +66,10 @@ header h2 {
 .btn-margin,
 #qsLogoutBtn {
   position: relative;
+  right: 8rem;
   z-index: 50000;
   pointer-events: auto;
-  padding: 0.4rem 1.2rem;
+  padding: 0.4rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 9999px;
@@ -82,12 +78,10 @@ header h2 {
   border: 0.1px solid rgb(255, 255, 255) !important;
 }
 
-@media (min-width: 250px) {
-  .btn-margin {
-    right: 100px;
-  }
+@media (min-width: 250px) and  (max-width: 350px) {
+  .btn-margin,
   #qsLogoutBtn {
-    right: 100px;
+    right: 80px;
   }
 }
 
@@ -122,15 +116,10 @@ nav.active {
   z-index: 200;
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
 .toggle {
   position: absolute;
   top: 2.5vh;
-  right: 1.5vw;
+  margin-right: calc(1.8vw + 80px);
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
@@ -150,7 +139,7 @@ nav.active {
 .active {
   position: absolute;
   top: 2.5vh;
-  right: 1.5vw;
+  right: 1.8vw;
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/rt3HybH/close.png);
@@ -776,22 +765,16 @@ a {
 
 .logo-wrapper {
   position: relative;
-<<<<<<< HEAD
-  width: 9.5rem;
+  width: 9.8rem;
   display: flex;
 }
 
 .logo {
  width: 100%; 
- margin-left: calc(1% + -1.5vw);
+ margin-left: calc(-1vw - 20px);
  
-=======
-  left: -3.2%;
-  width: clamp(170px, 10%, 250px);
-  filter: brightness(1.7);
-  top: 0;
->>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
 }
+
 
 .spinner {
   margin-top: 20%;
@@ -853,18 +836,19 @@ h3 {
 
 .blue-lion {
   position: relative;
-<<<<<<< HEAD
-  width: 38vw;
-=======
  
->>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
 }
 
 .blue-lion img {
   position: absolute;
-  width: clamp(290px, 38vw, 60%);
+  width: clamp(290px, 36vw, 50%);
   top: 8rem;
-  left: 1rem;
+  left: 1.8rem;
   border-radius: 1%;
 }
 
+@media (max-width: 350px) {
+  .blue-lion img {
+    left: 0.2rem;
+  }
+}
