@@ -38,8 +38,13 @@ header {
   top: 0;
   z-index: 500;
   width: 100vw;
+<<<<<<< HEAD
   height: 13vh;
   min-height: 85px;
+=======
+  height: 12vh;
+  min-height: 90px;
+>>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.09);
   pointer-events: none;
@@ -117,8 +122,11 @@ nav.active {
   z-index: 200;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
 .toggle {
   position: absolute;
   top: 2.5vh;
@@ -768,6 +776,7 @@ a {
 
 .logo-wrapper {
   position: relative;
+<<<<<<< HEAD
   width: 9.5rem;
   display: flex;
 }
@@ -776,6 +785,12 @@ a {
  width: 100%; 
  margin-left: calc(1% + -1.5vw);
  
+=======
+  left: -3.2%;
+  width: clamp(170px, 10%, 250px);
+  filter: brightness(1.7);
+  top: 0;
+>>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
 }
 
 .spinner {
@@ -838,12 +853,16 @@ h3 {
 
 .blue-lion {
   position: relative;
+<<<<<<< HEAD
   width: 38vw;
+=======
+ 
+>>>>>>> 7847c43c0a63850a3a99f7eec4aada2304588da0
 }
 
 .blue-lion img {
   position: absolute;
-  width: 100%;
+  width: clamp(290px, 38vw, 60%);
   top: 8rem;
   left: 1rem;
   border-radius: 1%;
