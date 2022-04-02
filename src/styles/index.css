@@ -35,7 +35,6 @@ body {
 
 header {
   position: fixed;
-  overflow: hidden;
   top: 0;
   z-index: 500;
   width: 100vw;
@@ -82,7 +81,7 @@ header h2 {
 @media (min-width: 250px) and  (max-width: 350px) {
   .btn-margin,
   #qsLogoutBtn {
-    right: 90px;
+    right: 5rem;
   }
 }
 
@@ -120,7 +119,7 @@ nav.active {
 .toggle {
   position: absolute;
   top: 2.5vh;
-  margin-right: calc(1.8vw + 80px);
+  right: 1.8vw;
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
@@ -766,16 +765,15 @@ a {
 
 .logo-wrapper {
   position: relative;
-  width: 8.8rem;
+  width: 9.8rem;
   display: flex;
 }
 
 .logo {
  width: 100%; 
- margin-left: calc(-0.5vw - 20px);
+ margin-left: calc(-1vw - 20px);
  
 }
-
 
 .spinner {
   margin-top: 20%;
