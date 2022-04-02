@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/index.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import logo from "../assets/Untitled-1.png";
+import logo from "../assets/Untitled-3.png";
 import {
   NavItem,
   UncontrolledDropdown,
@@ -22,7 +22,10 @@ const NavBar = () => {
   return (
     <div>
       <header>
-        <img src={logo} alt="Sharif logo" className="logo" />
+        <div className="logo-wrapper">
+          <img src={logo} alt="Sharif logo" className="logo" />
+        </div>
+        
         <div>
           {!isAuthenticated && (
             <NavItem>

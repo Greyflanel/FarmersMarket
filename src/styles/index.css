@@ -38,7 +38,7 @@ header {
   top: 0;
   z-index: 500;
   width: 100vw;
-  height: 12vh;
+  height: 13vh;
   min-height: 85px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.09);
@@ -117,9 +117,7 @@ nav.active {
   z-index: 200;
 }
 
-nav .logo {
-  color: rgba(4, 0, 54, 0.623);
-}
+
 
 .toggle {
   position: absolute;
@@ -239,10 +237,6 @@ section {
   position: absolute;
   border-radius: 5%;
   background-attachment: fixed;
-}
-
-.first-section h2 {
-
 }
 
 /* .landing-page-text h1 {
@@ -772,13 +766,16 @@ a {
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo {
+.logo-wrapper {
   position: relative;
-  left: -2.5%;
-  width: 9%;
-  z-index: -1;
-  filter: brightness(1.7);
-  top: 0;
+  width: 9.5rem;
+  display: flex;
+}
+
+.logo {
+ width: 100%; 
+ margin-left: calc(1% + -1.5vw);
+ 
 }
 
 .spinner {
@@ -841,7 +838,7 @@ h3 {
 
 .blue-lion {
   position: relative;
-  width: 40vw;
+  width: 38vw;
 }
 
 .blue-lion img {
