@@ -10,7 +10,7 @@ export const ShoppingCart = () => {
     .reduce((acc, curr) => parseFloat(acc) + parseFloat(curr.price), 0)
     .toFixed(2);
   const [showCart, setShowCart] = useState(false);
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(true);
   return (
     <div className="shopping-cart">
       {showCart ? <StripeContainer/> : cart.map((cart) => (
@@ -20,8 +20,8 @@ export const ShoppingCart = () => {
         <p>{cart.length} item(s) in your Cart</p>
         <p>Total: ${totalPrice}</p>
         {showButton ? <button
-          onClick={() => setShowCart(true)}
-          className="checkout-btn">Checkout</button> : setShowButton(true)}
+          onClick={() => { setShowCart(true); setShowButton(false) }}
+          className="checkout-btn">Checkout</button> : null};
         
       </div>
     </div>
