@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
+import  "../styles/index.css";
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
@@ -23,8 +24,8 @@ const CARD_OPTIONS = {
 
 export default function PaymentForm() {
     const [ success, setSuccess ] = useState(false);
-    const stripe = useStripe();
-    const elements = useElements();
+    const stripe = useStripe()
+    const elements = useElements()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -34,42 +35,41 @@ export default function PaymentForm() {
         })
     
 
-    if(!error) {
-        try {
-            const {id} = paymentMethod
-            const response = await axios.post("http://localhost:4000/payment", {
-                amount: 1000,
-                id
-            })
+        if (!error) {
+            try {
+                const { id } = paymentMethod
+                const response = await axios.post("http://localhost:4000/payment", {
+                    amount: 1000,
+                    id
+                })
 
-            if(response.data.success) {
-                console.log("Successful Payment")
-                setSuccess(true)
+                if (response.data.success) {
+                    console.log("Successful Payment")
+                    setSuccess(true)
+                }
+            } catch (error) {
+                console.log("Error", error)
             }
-        } catch (error) {
-            console.log("Error", error)
+        } else {
+            console.log(error.message)
         }
-    } else {
-        console.log(error.message)
     }
-
-  return (
-    <>
-    {!success ? 
-    <form onSubmit={handleSubmit}>
-        <fieldset className="FormGroup">
-                      <div className="FormRow">
-                          <CardElement options={CARD_OPTIONS}/>
-            </div>
-                  </fieldset>
-                  <button>Pay</button>
-              </form>
-              :
-              <div>
-                  <h2>Thank you for your purchase!</h2>
-              </div>
-}
-    </>
-  )
-}
-}
+        return (
+            <>
+                {!success ?
+                    <form className="stripe-form"onSubmit={handleSubmit}>
+                        <fieldset className="FormGroup">
+                            <div className="FormRow">
+                                <CardElement options={CARD_OPTIONS} />
+                            </div>
+                        </fieldset>
+                        <button className="pay-button">Pay</button>
+                    </form>
+                    :
+                    <div>
+                        <h2>Thank you for your purchase!</h2>
+                    </div>
+                }
+            </>
+        )
+    };
