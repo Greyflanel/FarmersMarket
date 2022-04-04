@@ -835,7 +835,7 @@ h3 {
 
 .blue-lion {
   position: relative;
- 
+  
 }
 
 .blue-lion img {
@@ -844,6 +844,7 @@ h3 {
   top: 8rem;
   left: 1.8rem;
   border-radius: 1%;
+  background-color: #182642;
 }
 
 @media (max-width: 350px) {
