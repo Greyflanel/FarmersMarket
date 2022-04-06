@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import lion from "../assets/lion.png";
+import lion from "../assets/lion1.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,6 +8,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
   useEffect(() => {
+    let tl2 = gsap.timeline({
+      // yes, we can add it to an entire timeline!
+      scrollTrigger: {
+        trigger: ".first-section",
+
+        pin: true, // pin the trigger element while active
+        anticipatePin: 1,
+        start: "top top", // when the top of the trigger hits the top of the viewport
+        end: "-=100", // end after scrolling 500px beyond the start
+        scrub: -10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        // snap: {
+        //   snapTo: "labels", // snap to the closest label in the timeline
+        //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+        //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+        //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+        // },
+      },
+    });
+    tl2.play();
+
     let tl4 = gsap.timeline({
       yoyo: "true",
       repeat: -1,
@@ -27,8 +47,12 @@ const LandingPage = () => {
       <section className="first-section">
         <div className="blue-lion">
           <img src={lion} alt="Stylized Lion" />
+          {/* <video  width="650">
+            <source muted autoplay loop src={lion}
+            type="video/mp4"></source>
+          </video> */}
         </div>
-        <h2>TITLE</h2>
+        <h2 className="landing-page-title">Computer Parts and Electronics</h2>
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
@@ -77,10 +101,6 @@ const LandingPage = () => {
       </section>
 
       <section className="third-section">
-        {/* <div className="blob-text">
-          <img src={blobText} alt="blob shape" />
-        </div> */}
-
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
@@ -156,22 +176,4 @@ const LandingPage = () => {
 
 export default LandingPage;
 
-// let tl2 = gsap.timeline({
-//   // yes, we can add it to an entire timeline!
-//   scrollTrigger: {
-//     trigger: ".first-section",
 
-//     pin: true, // pin the trigger element while active
-//     anticipatePin: 1,
-//     start: "top top", // when the top of the trigger hits the top of the viewport
-//     end: "-=100", // end after scrolling 500px beyond the start
-//     scrub: -10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-//     // snap: {
-//     //   snapTo: "labels", // snap to the closest label in the timeline
-//     //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-//     //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-//     //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-//     // },
-//   },
-// });
-// tl2.play()
