@@ -843,7 +843,7 @@ h3 {
   width: clamp(290px, 36vw, 50%);
   top: 8rem;
   left: 1.8rem;
-  border-radius: 1%;
+  border-radius: 5%;
   /* background-color: #182642; */
   background-blend-mode: multiply;
 }
@@ -874,6 +874,6 @@ video {
 .landing-page-title {
   position: absolute;
   top: 30vh;
-  left: 50vw;
+  left: 45vw;
   font-weight: 400;
 }
