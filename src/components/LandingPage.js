@@ -17,7 +17,7 @@ const LandingPage = () => {
         anticipatePin: 1,
         start: "top top", // when the top of the trigger hits the top of the viewport
         end: "-=100", // end after scrolling 500px beyond the start
-        scrub: -10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         // snap: {
         //   snapTo: "labels", // snap to the closest label in the timeline
         //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
