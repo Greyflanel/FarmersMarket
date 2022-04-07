@@ -230,11 +230,11 @@ section {
   color: var(--primary);
 }
 
-/* .first-section img {
+.first-section img {
   position: absolute;
   border-radius: 5%;
   background-attachment: fixed;
-} */
+}
 
 /* .landing-page-text h1 {
   font-weight: 300;
@@ -281,7 +281,18 @@ section {
   background-blend-mode: multiply;
 }
 
-
+.overlay1 {
+  position: absolute;
+  mix-blend-mode: color;
+  width: 100vw;
+  height: 100vh;
+  background-color: linear-gradient(
+    to left,
+    rgba(23, 65, 128, 0.1),
+    rgba(8, 12, 80, 0.967)
+  );
+  background-attachment: fixed;
+}
 
 .blob-text {
   position: absolute;
@@ -294,7 +305,6 @@ section {
 .blob2-image {
   opacity: 1;
 } */
-
 
 .menu {
   display: none;
@@ -396,6 +406,8 @@ section {
 ul {
   position: relative;
   background-color: var(--dark-accent);
+  backdrop-filter: blur(25px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 999999999;
   height: 100vh;
   width: 350px;
@@ -826,8 +838,7 @@ h3 {
 .blue-lion {
   position: relative;
   height: 100vh;
-  /* background-color: rgba(255, 255, 255, 0.1); */
-  /* mix-blend-mode: multiply; */
+  
 }
 
 .blue-lion img {
@@ -835,9 +846,9 @@ h3 {
   width: clamp(290px, 36vw, 50%);
   top: 8rem;
   left: 1.8rem;
-  /* mix-blend-mode: screen; */
-  border-radius: 10px;
-  /* background-color: #182642; */
+  border-radius: 4%;
+ 
+  background-blend-mode: multiply;
   
 }
 
@@ -858,10 +869,10 @@ video {
 .first-section {
   /* background: conic-gradient(from 150deg at 44% 41%, #395075, #fafafa, #f5bc18); */
   
-  background: conic-gradient(from 150deg at 54% 61%, #395075, #fafafa);
+  background: conic-gradient(from 150deg at 54% 61%, #395075, #fafafa, #f5be18b6);
   /* background: conic-gradient(from 100deg at 90% 68%, #395075, #fafafa, #f5be18d4); */
   /* background-image: url("../assets/magicpattern-svg-chart-1649181005901.svg"); */
-  text-shadow: 2px 4px 8px rgb(153, 153, 153);
+  text-shadow: 2px 3px 4px rgb(153, 153, 153);
 }
 
 .landing-page-title {
@@ -870,4 +881,3 @@ video {
   left: 45vw;
   font-weight: 400;
 }
-
