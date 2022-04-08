@@ -45,14 +45,12 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        <div className="blue-lion">
-          <img src={lion} alt="Stylized Lion" />
-          {/* <video  width="650">
-            <source muted autoplay loop src={lion}
-            type="video/mp4"></source>
-          </video> */}
+        <div className="overlay">
+          <div className="blue-lion">
+            <img src={lion} alt="Stylized Lion" />
+          </div>
+          <h2 className="landing-page-title">Computer Parts and Electronics</h2>
         </div>
-        <h2 className="landing-page-title">Computer Parts and Electronics</h2>
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"

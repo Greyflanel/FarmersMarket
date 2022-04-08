@@ -1,3 +1,56 @@
+/*-----CSS RESET------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-----END of CSS RESET------*/
+
 /* CSS HEX */
 body {
   --primary: #395075;
@@ -8,8 +61,6 @@ body {
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
@@ -22,10 +73,6 @@ body {
   text-align: center;
   scroll-behavior: smooth;
 }
-
-/* * {
-  border: 1px solid #f00 !important;
-} */
 
 body {
   text-align: center;
@@ -179,6 +226,7 @@ section {
   font-weight: 200;
   text-shadow: 2px 3px 4px rgb(88, 88, 88);
   height: 100vh;
+  
 }
 
 .custom-shape-divider-bottom-1645215428 {
@@ -225,15 +273,55 @@ section {
 }
 
 .first-section {
-  overflow-y: hidden;
-  display: grid;
-  color: var(--primary);
+  overflow: hidden;
+  text-shadow: 2px 3px 4px rgb(153, 153, 153);
 }
 
-.first-section img {
+.landing-page-title {
   position: absolute;
-  border-radius: 5%;
-  background-attachment: fixed;
+  top: 30vh;
+  left: 52vw;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  line-height: clamp(2.5rem, 6vw, 5rem);
+  color: var(--primary);
+  
+}
+
+.blue-lion  {
+  position: absolute;
+  display: flex;
+  
+  width: 30vw;
+  top: 4rem;
+  left: -1%;
+  
+}
+
+.blue-lion img {
+  width: 100%;
+  position: absolute;
+  top: 4rem;
+  left: 0.5rem;
+  mix-blend-mode: lighten;
+  /* box-shadow: 0 0 16px 8px rgba(255, 255, 255, 0.363); */
+  border-bottom-right-radius: 45px;
+  
+}
+
+@media (max-width: 350px) {
+  .blue-lion img {
+    left: 0.2rem;
+
+  }
+}
+
+.overlay {
+  position: relative;
+  top: 11vh;
+  height: 100vh;
+  background: conic-gradient(from 130deg at 44% 38%,  #182642, white );
+  
 }
 
 /* .landing-page-text h1 {
@@ -279,19 +367,6 @@ section {
   height: 100vh;
   background: rgba(0, 0, 0, 0);
   background-blend-mode: multiply;
-}
-
-.overlay1 {
-  position: absolute;
-  mix-blend-mode: color;
-  width: 100vw;
-  height: 100vh;
-  background-color: linear-gradient(
-    to left,
-    rgba(23, 65, 128, 0.1),
-    rgba(8, 12, 80, 0.967)
-  );
-  background-attachment: fixed;
 }
 
 .blob-text {
@@ -352,12 +427,6 @@ section {
   padding: 0.5rem 2rem;
   border-radius: 10px;
   box-shadow: 0 1px 1px 2px #eef3fe;
-}
-
-.blob-text {
-  position: absolute;
-  top: 0;
-  left: 10%;
 }
 
 .svg-container {
@@ -769,6 +838,7 @@ a {
   position: relative;
   width: 9.8rem;
   display: flex;
+  
 }
 
 .logo {
@@ -830,54 +900,3 @@ a {
   align-items: center;
 }
 
-h1,
-h3 {
-	text-align: center;
-}
-
-.blue-lion {
-  position: relative;
-  height: 100vh;
-  
-}
-
-.blue-lion img {
-  position: absolute;
-  width: clamp(290px, 36vw, 50%);
-  top: 8rem;
-  left: 1.8rem;
-  border-radius: 4%;
- 
-  background-blend-mode: multiply;
-  
-}
-
-@media (max-width: 350px) {
-  .blue-lion img {
-    left: 0.2rem;
-
-  }
-}
-
-video {
-  position: absolute;
-  top: 20%;
-  left: 2%;
-  
-}
-
-.first-section {
-  /* background: conic-gradient(from 150deg at 44% 41%, #395075, #fafafa, #f5bc18); */
-  
-  background: conic-gradient(from 150deg at 54% 61%, #395075, #fafafa, #f5be18b6);
-  /* background: conic-gradient(from 100deg at 90% 68%, #395075, #fafafa, #f5be18d4); */
-  /* background-image: url("../assets/magicpattern-svg-chart-1649181005901.svg"); */
-  text-shadow: 2px 3px 4px rgb(153, 153, 153);
-}
-
-.landing-page-title {
-  position: absolute;
-  top: 30vh;
-  left: 45vw;
-  font-weight: 400;
-}
