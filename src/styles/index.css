@@ -235,7 +235,7 @@ section {
   min-height: 32vh;
   font-size: 3rem;
   font-weight: 200;
-  text-shadow: 2px 3px 4px rgb(88, 88, 88);
+  text-shadow: 2px 3px 4px rgb(154, 153, 153);
   height: 100vh;
   
 }
@@ -290,6 +290,7 @@ section {
 
 .landing-page-title {
   position: absolute;
+  z-index: 99999999999999999999999999999;
   top: 30vh;
   left: 52vw;
   font-weight: 400;
@@ -319,16 +320,16 @@ section {
 
 .blue-lion {
   position: absolute;
-  top: 20%;
-  left: -30%;
-  width: 60%;
-  
+  top: 30%;
+  left: 2%;
+  width: 30%;
+  background-color: transparent;
 }
 
 .blue-lion img {
   height: 100%;
   width: 100%;
-  
+  background-color: transparent;
 }
 
 .overlay {
@@ -336,11 +337,12 @@ section {
   height: 100vh;
   background: conic-gradient(from 130deg at 34% 28%,white,  #182642 );
   z-index: -1;
-  mix-blend-mode: lighten;
+ 
 }
 
 .overlay2 {
   position: absolute;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
   background: url("../assets/white.jpg");

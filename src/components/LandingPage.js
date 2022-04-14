@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import lion from "../assets/lion1.png";
+import lion from "../assets/lion-transparent.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -45,14 +45,12 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
+        <h2 className="landing-page-title">Computer Parts and Electronics</h2>
         <div className="overlay">
           <div className="overlay2">
             <div className="blue-lion">
               <img src={lion} alt="Stylized Lion" />
             </div>
-            <h2 className="landing-page-title">
-              Computer Parts and Electronics
-            </h2>
           </div>
         </div>
         <div className="custom-shape-divider-bottom-1645215428">
