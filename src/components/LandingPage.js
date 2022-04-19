@@ -45,11 +45,13 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
+        <h2 className="landing-page-title">Computer Parts and Electronics</h2>
         <div className="overlay">
-          <div className="blue-lion">
-            <img src={lion} alt="Stylized Lion" />
+          <div className="overlay2">
+            <div className="blue-lion">
+              <img src={lion} alt="Stylized Lion" />
+            </div>
           </div>
-          <h2 className="landing-page-title">Computer Parts and Electronics</h2>
         </div>
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
