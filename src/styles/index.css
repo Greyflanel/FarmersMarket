@@ -53,7 +53,7 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: #395075;
+  --primary: #385075;
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
 }
@@ -280,10 +280,11 @@ section {
 .landing-page-title {
   position: absolute;
   top: 30vh;
-  left: 52vw;
+  left: 45vw;
+  width: 45vw;
   font-weight: 400;
-  font-size: clamp(1.5rem, 5vw, 4rem);
-  line-height: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(1.5rem, 5vw, 4.5rem);
+  line-height: clamp(1.5rem, 15vh, 6rem);
   color: var(--primary);
   
 }
@@ -293,9 +294,10 @@ section {
   display: flex;
   
   width: 30vw;
-  top: 4rem;
+  top: 10rem;
   left: -1%;
-  
+  mix-blend-mode: overlay;
+  filter: drop-shadow(10px 10px 14px rgb(64, 64, 64))
 }
 
 .blue-lion img {
@@ -303,7 +305,7 @@ section {
   position: absolute;
   top: 4rem;
   left: 0.5rem;
-  mix-blend-mode: lighten;
+  
   /* box-shadow: 0 0 16px 8px rgba(255, 255, 255, 0.363); */
   border-bottom-right-radius: 45px;
   
@@ -320,7 +322,7 @@ section {
   position: relative;
   top: 11vh;
   height: 100vh;
-  background: conic-gradient(from 130deg at 44% 38%,  #182642, white );
+  background: conic-gradient(from 130deg at 34% 38%,  #182642, white );
   
 }
 
