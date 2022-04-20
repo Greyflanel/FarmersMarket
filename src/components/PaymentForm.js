@@ -34,11 +34,10 @@ export default function PaymentForm() {
             card: elements.getElement(CardElement)
         })
     
-
         if (!error) {
             try {
                 const { id } = paymentMethod
-                const response = await axios.post("https://api.computerspartselectronics.com/payment", {
+                const response = await axios.post("http://localhost:4000/create-payment-intent", {
                     amount: 1000,
                     id
                 })
