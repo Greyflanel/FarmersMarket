@@ -19,11 +19,15 @@ function Completion(props) {
   }, [stripePromise]);
 
   return (
-    <>
-      <h1>Thank you!</h1>
-      <a href="/">home</a>
+    <div className="completion-container">
+      <div className="payment-completion">
+        <h1>Payment was Successful</h1>
+        <h2>Thank you!</h2>
+      <a className="payment-completion-home-button" href="/">Home</a>
       <div id="messages" role="alert" style={messageBody ? {display: 'block'} : {}}>{messageBody}</div>
-    </>
+      </div>
+      
+    </div>
   );
 }
 

@@ -199,7 +199,7 @@ nav.active {
 }
 
 .mb-5 {
-  padding-top: 25vh;
+  
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -316,16 +316,15 @@ section {
   font-size: clamp(1.5rem, 5vw, 4.5rem);
   line-height: clamp(1.5rem, 15vh, 6rem);
   color: var(--primary);
-  
+  text-shadow: 1px 1px 2px rgb(186, 186, 186);
 }
 
 .blue-lion  {
   position: absolute;
   display: flex;
-  
-  width: 30vw;
-  top: 10rem;
-  left: -1%;
+  top: 30%;
+  left: 2%;
+  width: 30%;
   mix-blend-mode: overlay;
   filter: drop-shadow(10px 10px 14px rgb(64, 64, 64))
 }
@@ -361,18 +360,18 @@ section {
   font-size: 4rem;
 } */
 
-.blue-lion {
+/* .blue-lion {
   position: absolute;
   top: 30%;
   left: 2%;
   width: 30%;
-  background-color: transparent;
-}
+  
+} */
 
 .blue-lion img {
   height: 100%;
   width: 100%;
-  background-color: transparent;
+  
 }
 
 .overlay {
@@ -380,7 +379,7 @@ section {
   height: 100vh;
   background: conic-gradient(from 130deg at 34% 28%,white,  #182642 );
   z-index: -1;
- 
+  
 }
 
 .overlay2 {
@@ -895,3 +894,43 @@ a {
   align-items: center;
 }
 
+#payment-form {
+  margin-top: 14vh;
+  background-color: var(--primary);
+  padding: 4rem;
+  
+}
+
+.completion-container {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-completion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30vh;
+  font-size: 2rem;
+  width: 25%;
+  line-height: 3rem;
+}
+
+.payment-completion-home-button {
+  background-color: var(--dark-accent);
+  margin-top: 3rem;
+  width: 30%;
+  padding: 0.5rem 2rem;
+  border-radius: 9999999px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+#submit {
+  background-color: var(--dark-accent);
+  width: 40%;
+  border: none;
+  border-radius: 9999999px;
+  padding: 0.3rem 0;
+  color: var(--primary);
+}
