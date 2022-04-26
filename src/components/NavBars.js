@@ -28,7 +28,7 @@ const NavBar = () => {
           <User/>
         </div>
 
-        <div>
+        
           {!isAuthenticated && (
             <NavItem>
               <button
@@ -42,20 +42,15 @@ const NavBar = () => {
             </NavItem>
           )}
           {isAuthenticated && (
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownMenu>
                 <DropdownItem
                   id="qsLogoutBtn"
                   onClick={() => logoutWithRedirect()}
                 >
                   Log out
                 </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
           )}
-        </div>
+        
       </header>
-
       <nav className={isActive ? "" : "nav.active"}>
         <div className={isActive ? "menu" : "menu.active"}>
           <ul>
@@ -65,11 +60,11 @@ const NavBar = () => {
             <li>
               <a href="/products">Shop</a>
             </li>
-            <li>
+            {/* <li>
               <a href="/cart">Cart</a>
-            </li>
+            </li> */}
             <li>
-              <a href="/external-api">API</a>
+              <a href="/external-api">Cart</a>
             </li>
           </ul>
         </div>

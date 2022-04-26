@@ -14,7 +14,6 @@ function Payment(props) {
       .then(({clientSecret}) => setClientSecret(clientSecret));
   }, []);
 
-
   return (
     <>
       <h1>Payment</h1>

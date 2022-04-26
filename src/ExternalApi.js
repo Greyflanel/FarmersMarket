@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Alert } from "reactstrap";
+import { Alert } from "reactstrap";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import { getConfig } from "./config.js";
 import ShoppingCart from "./components/ShoppingCart.js";
@@ -8,7 +8,7 @@ import Loading from "./components/Loading.js";
 
 export const ExternalApiComponent = () => {
   
-  const { apiOrigin = "http://localhost:4000/create-payment-intent", audience } = getConfig();
+  const { apiOrigin = "https://api.computerspartselectronics.com/create-payment-intent", audience } = getConfig();
 
   const [state, setState] = useState({
     showResult: false,
@@ -66,9 +66,9 @@ export const ExternalApiComponent = () => {
           
         },
       });
-
+      
       const responseData = await response.json();
-
+      
       setState({
         ...state,
         showResult: true,

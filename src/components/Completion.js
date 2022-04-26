@@ -26,7 +26,6 @@ function Completion(props) {
       <a className="payment-completion-home-button" href="/">Home</a>
       <div id="messages" role="alert" style={messageBody ? {display: 'block'} : {}}>{messageBody}</div>
       </div>
-      
     </div>
   );
 }

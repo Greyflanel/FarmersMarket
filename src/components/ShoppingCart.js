@@ -15,11 +15,11 @@ const ShoppingCart = () => {
     fetch("http://localhost:4000/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
+      body: JSON.stringify(cart),
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
-  }, []);
+  }, [cart]);
 
 
   const totalPrice = cart
@@ -36,20 +36,29 @@ const ShoppingCart = () => {
   const [showButton, setShowButton] = useState(true);
   return (
     <div className="shopping-cart">
-      {showCart ? 
-          <Elements options={options} stripe={stripePromise}>
-            <CheckoutForm />
-          </Elements>
-        : cart.map((cart) => (
-        <ShoppingCartItem key={cart.product} {...cart} />
-      ))}
+      {showCart ? (
+        <Elements options={options} stripe={stripePromise}>
+          <CheckoutForm />
+        </Elements>
+      ) : (
+        cart.map((cart) => <ShoppingCartItem key={cart.product} {...cart} />)
+      )}
       <div className="shopping-cart-checkout">
         <p>{cart.length} item(s) in your Cart</p>
         <p>Total: ${totalPrice}</p>
-        {showButton ? <button
-          onClick={() => { setShowCart(true); setShowButton(false) }}
-          className="checkout-btn">Checkout</button> : null};
-        
+        {showButton ? (
+          <button
+            onClick={() => {
+              setShowCart(true);
+              setShowButton(false);
+            }}
+            className="checkout-btn"
+          >
+            Checkout
+          </button>
+        ) : (
+          cart.map((cart) => <ShoppingCartItem key={cart.product} {...cart} />)
+        )}
       </div>
     </div>
   );

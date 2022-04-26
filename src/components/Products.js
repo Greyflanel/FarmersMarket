@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProductContext from "../Contexts/ProductContext";
+import { productList } from "./server.js";
 import { NavLink } from "react-router-dom";
 import "../styles/product_list.css";
 import gsap from "gsap";
@@ -8,11 +9,11 @@ import axios from "axios";
 gsap.registerPlugin(ScrollTrigger);
 
 const Products = (props) => {
-  const [ prod, setProd ] = useState([]);
-  
+  const [ prod, setProd ] = useState(productList);
+  console.log(productList)
   useEffect(() => {
     axios
-      .get('http://localhost:4000')
+      .get('')
       .then(response => {
         setProd(response.data)
       })
