@@ -53,7 +53,7 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: #385075;
+  --primary: rgb(56, 80, 117);
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
   /* color-scheme: dark; */
@@ -92,7 +92,7 @@ header {
   background: rgba(255, 255, 255, 0.09);
   pointer-events: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 2%;
   background: rgba(255, 255, 255, 0.1);
@@ -110,10 +110,12 @@ header h2, h3 {
   color: rgb(255, 255, 255);
 }
 
-.btn-margin,
-#qsLogoutBtn {
+
+#qsLogoutBtn,
+#qsLoginBtn
+ {
   position: relative;
-  right: 8rem;
+  right: -40%;
   z-index: 50000;
   pointer-events: auto;
   padding: 0.4rem 1rem;
@@ -128,7 +130,7 @@ header h2, h3 {
 @media (min-width: 250px) and  (max-width: 350px) {
   .btn-margin,
   #qsLogoutBtn {
-    right: 5rem;
+    
   }
 }
 
@@ -290,27 +292,31 @@ section {
 }
 
 .user-profile {
-  position: relative;
+  position: absolute;
+  right: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  padding: 1.3rem 2.5rem;
+  text-shadow: 2px 3px 4px var(--primary);
 }
 
 .user-profile h2 {
   color: var(--primary);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  
 }
 
 .user-profile h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--primary);
 }
 
 .landing-page-title {
   position: absolute;
   top: 30vh;
-  left: 45vw;
+  left: 35vw;
   width: 45vw;
   font-weight: 400;
   font-size: clamp(1.5rem, 5vw, 4.5rem);
@@ -322,11 +328,11 @@ section {
 .blue-lion  {
   position: absolute;
   display: flex;
-  top: 30%;
-  left: 2%;
+  top: 45%;
+  right: 1%;
   width: 30%;
-  mix-blend-mode: overlay;
-  filter: drop-shadow(10px 10px 14px rgb(64, 64, 64))
+  mix-blend-mode: darken;
+  filter: drop-shadow(1px 1px 2px rgb(161, 159, 159))
 }
 
 /* .blue-lion img {
@@ -377,7 +383,7 @@ section {
 .overlay {
   position: relative;
   height: 100vh;
-  background: conic-gradient(from 130deg at 34% 28%,white,  #182642 );
+  /* background: conic-gradient(from 130deg at 34% 28%,white,  #182642 ); */
   z-index: -1;
   
 }
@@ -834,20 +840,27 @@ a {
 }
 
 .logo-wrapper {
-  position: relative;
-  width: 9.4rem;
+  position: absolute;
+  left: calc(1vw - 12px);
+  padding: 0.2rem;
+  width: 7rem;
   display: flex;
-  
+  filter: brightness(105%) drop-shadow(2px 2px 2px var(--primary));
 }
 
 .logo {
  width: 100%; 
- margin-left: calc(-1vw - 20px);
+ 
  
 }
 
 .spinner {
-  margin-top: 25%;
+  position: relative;
+  top: 40vh;
+}
+
+.spinner img {
+  
 }
 
 .FormGroup {
@@ -941,8 +954,4 @@ a {
   border-radius: 9999999px;
   color: var(--primary);
   font-size: 1.2rem;
-}
-
-iframe {
-  color: red;
 }

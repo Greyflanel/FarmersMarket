@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/index.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import logo from "../assets/Sharif-Logo2.png";
+import logo from "../assets/lion-head6.png";
 import User from "./User.js";
 import {
   NavItem,
@@ -25,10 +25,10 @@ const NavBar = () => {
       <header>
         <div className="logo-wrapper">
           <img src={logo} alt="Sharif logo" className="logo" />
-          <User/>
+          
         </div>
 
-        
+        <User/>
           {!isAuthenticated && (
             <NavItem>
               <button

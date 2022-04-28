@@ -33,8 +33,8 @@
   background-size: cover;
   background-repeat:   no-repeat;
   background-attachment: fixed;
-  background: no-repeat center url("/src/assets/png-lion2.0.png");
-  background-size: 40%;
+  background: no-repeat center url("/src/assets/LionStatue-tv.png");
+  background-size: 20%;
 }
 
 .card {

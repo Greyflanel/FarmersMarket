@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import lion from "../assets/lionize.png";
+import lion from "../assets/lion-head6.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

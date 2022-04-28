@@ -27,11 +27,21 @@ const ShoppingCart = () => {
     .toFixed(2);
   const appearance = {
     theme: "stripe",
+
+    variables: {
+      // colorText: '#ffffff',
+      // colorTextSecondary: 'black',
+      // colorTextPlaceholder: 'black',
+      colorText: 'red'
+     
+      
+    },
   };
   const options = {
     clientSecret,
     appearance,
   };
+  
   const [showCart, setShowCart] = useState(false);
   const [showButton, setShowButton] = useState(true);
   return (

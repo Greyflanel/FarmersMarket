@@ -2,7 +2,8 @@ import {
   PaymentElement
 } from '@stripe/react-stripe-js'
 import {useState} from 'react'
-import {useStripe, useElements} from '@stripe/react-stripe-js';
+import { useStripe, useElements } from '@stripe/react-stripe-js';
+import Loading from "../components/Loading.js";
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -20,7 +21,8 @@ export default function CheckoutForm() {
     }
 
     setIsLoading(true);
-
+    const loading = isLoading ? <Loading /> : null;
+    
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
