@@ -843,9 +843,9 @@ a {
   position: absolute;
   left: calc(1vw - 12px);
   padding: 0.2rem;
-  width: 7rem;
+  width: 12rem;
   display: flex;
-  filter: brightness(105%) drop-shadow(2px 2px 2px var(--primary));
+  
 }
 
 .logo {
