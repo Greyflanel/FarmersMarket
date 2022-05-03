@@ -53,7 +53,7 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: rgb(56, 80, 117);
+  --primary: #385075;
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
   /* color-scheme: dark; */
@@ -289,6 +289,7 @@ section {
 .first-section {
   overflow: hidden;
   text-shadow: 2px 3px 4px rgb(153, 153, 153);
+  
 }
 
 .user-profile {
@@ -316,7 +317,7 @@ section {
 .landing-page-title {
   position: absolute;
   top: 30vh;
-  left: 35vw;
+  right: 3vw;
   width: 45vw;
   font-weight: 400;
   font-size: clamp(1.5rem, 5vw, 4.5rem);
@@ -327,63 +328,23 @@ section {
 
 .blue-lion  {
   position: absolute;
+  z-index: 1000;
   display: flex;
-  top: 45%;
-  right: 1%;
-  width: 30%;
-  mix-blend-mode: darken;
-  filter: drop-shadow(1px 1px 2px rgb(161, 159, 159))
-}
-
-/* .blue-lion img {
-  width: 100%;
-  position: absolute;
-  top: 15vh;
-  left: 4rem;
-  border: 6px solid rgba(rgb(42, 36, 234), 0.8);
-  box-shadow: 0 0 26px 16px rgba(255, 255, 255, 0.863) inset;
-  border-radius: 45px;
+  top: 28%;
+  left: 3%;
   
+  filter: drop-shadow(10px 10px 20px rgb(161, 159, 159))
 }
-
-@media (max-width: 350px) {
-  .blue-lion img {
-    left: 0.2rem;
-
-  }
-}
-
-.overlay {
-  position: relative;
-  top: 11vh;
-  height: 100vh;
-  background: conic-gradient(from 130deg at 34% 38%,  #182642, white );
-  
-}
-
-/* .landing-page-text h1 {
-  font-weight: 300;
-  font-size: 4rem;
-} */
-
-/* .blue-lion {
-  position: absolute;
-  top: 30%;
-  left: 2%;
-  width: 30%;
-  
-} */
 
 .blue-lion img {
-  height: 100%;
-  width: 100%;
-  
+  width: 85%;
+  border-radius: 35px;
 }
 
 .overlay {
   position: relative;
   height: 100vh;
-  /* background: conic-gradient(from 130deg at 34% 28%,white,  #182642 ); */
+  background: radial-gradient(circle at 71% 51%,#ffffff, #385075);
   z-index: -1;
   
 }
@@ -393,8 +354,8 @@ section {
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background: url("../assets/white.jpg");
-  mix-blend-mode: multiply;
+  /* background: conic-gradient(from 145deg at -50% 47%, rgba(255,255,255,1), #385075); */
+ 
 }
 
 #payment-form {
@@ -843,7 +804,7 @@ a {
   position: absolute;
   left: calc(1vw - 12px);
   padding: 0.2rem;
-  width: 12rem;
+  width: 10rem;
   display: flex;
   
 }
