@@ -45,7 +45,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        <h2 className="landing-page-title">Computer Parts and Electronics</h2>
+        <h2 className="landing-page-title tracking-in-expand">Sharif's <br/>Computer Parts and Electronics</h2>
         <div className="overlay">
           <div className="overlay2">
             <div className="blue-lion">
