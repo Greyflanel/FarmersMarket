@@ -114,8 +114,8 @@ header h2, h3 {
 #qsLogoutBtn,
 #qsLoginBtn
  {
-  position: relative;
-  right: -40%;
+  position: absolute;
+  right: 2 0%;
   z-index: 50000;
   pointer-events: auto;
   padding: 0.4rem 1rem;
@@ -125,6 +125,11 @@ header h2, h3 {
   background-color: var(--primary);
   color: white;
   border: 0.1px solid rgb(255, 255, 255) !important;
+}
+
+#qsLoginBtn {
+  /* position: absolute;
+  right: 0; */
 }
 
 @media (min-width: 250px) and  (max-width: 350px) {
@@ -414,7 +419,7 @@ section {
 
 .second-section, .third-section {
   color: var(--primary);
-  background-image: url("/src/assets/white.jpg");
+  /* background-image: url("/src/assets/white.jpg"); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

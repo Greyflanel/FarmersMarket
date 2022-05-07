@@ -3,7 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { productList } from "./components/server.js";
 import LandingPage from "./components/LandingPage.js";
 import Products from "./components/Products";
-import {ShoppingCart} from "./components/ShoppingCart.js";
+import { ShoppingCart } from "./components/ShoppingCart.js";
+
 import NavBar from "./components/NavBars";
 import ProductContext from "./Contexts/ProductContext.js";
 import {AuthProvider} from "./Contexts/AuthContext.js";

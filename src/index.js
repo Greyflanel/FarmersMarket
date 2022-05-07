@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./styles/index.css";
 import App from "./App";
@@ -24,14 +24,15 @@ const providerConfig = {
   redirectUri: window.location.origin,
   onRedirectCallback,
 };
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-ReactDOM.render(
+root.render(
   <Auth0Provider {...providerConfig}>
     <Router>
       <App />
     </Router>
   </Auth0Provider>,
-  document.getElementById("root")
+ 
 );
 
 

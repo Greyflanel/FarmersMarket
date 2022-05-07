@@ -3,7 +3,7 @@ import "../styles/index.css";
 import lion from "../assets/lion-outline8.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import ThreeJs from "../components/Three.js";
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
@@ -45,11 +45,14 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        <h2 className="landing-page-title tracking-in-expand">Sharif's <br/>Computer Parts and Electronics</h2>
+        <h2 className="landing-page-title tracking-in-expand">
+          Sharif's <br />
+          Computer Parts and Electronics
+        </h2>
         <div className="overlay">
           <div className="overlay2">
             <div className="blue-lion">
-              <img src={lion} alt="Stylized Lion" />
+              {/* <img src={lion} alt="Stylized Lion" /> */}
             </div>
           </div>
         </div>
@@ -74,6 +77,7 @@ const LandingPage = () => {
         </div>
       </section>
       <section className="second-section">
+        <ThreeJs />
         <div className="custom-shape-divider-top-1645218211">
           <svg
             data-name="Layer 1"
