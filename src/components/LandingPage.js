@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import lion from "../assets/lion-outline8.png";
+import video from "../assets/videobg.mp4";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ThreeJs from "../components/Three.js";
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
@@ -52,7 +52,11 @@ const LandingPage = () => {
         <div className="overlay">
           <div className="overlay2">
             <div className="blue-lion">
-              {/* <img src={lion} alt="Stylized Lion" /> */}
+          <video id="vid" width="100%"
+            height="100%"
+            autoPlay muted>
+                <source src={video} type="video/mp4"/>
+              </video>
             </div>
           </div>
         </div>
@@ -77,7 +81,7 @@ const LandingPage = () => {
         </div>
       </section>
       <section className="second-section">
-        <ThreeJs />
+        
         <div className="custom-shape-divider-top-1645218211">
           <svg
             data-name="Layer 1"

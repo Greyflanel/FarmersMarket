@@ -4,7 +4,7 @@ import { productList } from "./components/server.js";
 import LandingPage from "./components/LandingPage.js";
 import Products from "./components/Products";
 import { ShoppingCart } from "./components/ShoppingCart.js";
-
+import Three from "./components/Three.js";
 import NavBar from "./components/NavBars";
 import ProductContext from "./Contexts/ProductContext.js";
 import {AuthProvider} from "./Contexts/AuthContext.js";
@@ -24,6 +24,7 @@ const App = () => {
     fetch("/config").then(async (r) => {
       const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
+      
     });
   }, []);
   return (
@@ -35,7 +36,7 @@ const App = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/products/:id" element={<Product />} />
             <Route path="/products" element={<Products />} />
-            {/* <Route path="/cart" element={<ShoppingCart />} /> */}
+            <Route path="/three" element={<Three />} />
             <Route path="/external-api" element={<ExternalApi />} />
             <Route
               path="/"

@@ -27,11 +27,14 @@ const providerConfig = {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
+  
   <Auth0Provider {...providerConfig}>
-    <Router>
-      <App />
+      <Router>
+  <React.StrictMode>      
+        <App />
+  </React.StrictMode>      
     </Router>
-  </Auth0Provider>,
+  </Auth0Provider>
  
 );
 

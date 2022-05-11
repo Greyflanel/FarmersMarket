@@ -112,7 +112,8 @@ function Points() {
 function AnimationCanvas() {
   return (
     <Canvas
-      
+      width="800"
+      height="800"
       camera={{ position: [100, 10, 0], fov: 75 }}
     >
       <Suspense fallback={null}>
