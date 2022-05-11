@@ -295,6 +295,8 @@ section {
 .first-section {
   overflow: hidden;
   text-shadow: 2px 3px 4px var(--primary);
+  
+  
 }
 
 
@@ -325,7 +327,7 @@ section {
   display: flex;
   justify-content: center;
   width: calc(65% - 2rem);
-  font-weight: 400;
+  font-weight: 300;
   font-size: clamp(1.5rem, 6vw, 4rem);
   line-height: clamp(2rem, 10vh, 12rem);
   color: white;
@@ -364,18 +366,7 @@ section {
  * animation tracking-in-expand
  * ----------------------------------------
  */
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 @keyframes tracking-in-expand {
   0% {
@@ -393,13 +384,34 @@ section {
  .blue-lion  {
   width: 100vw;
   height: 100vh;
-  margin-bottom: 100vh;
+  
   mix-blend-mode: screen;
 }
 
 #vid {
   position: relative;
   object-fit: cover;
+  bottom: 1rem;
+}
+
+.blur {
+  position: absolute;
+  top: 12%;
+  
+  background: rgba(0, 0, 0, 0.462);
+  width: 100vw;
+  height: 0vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  z-index: 1000;
+  border-radius: 25px;
+  box-shadow: 1px 1px 80px 20px rgb(175, 175, 175),
+  inset 1px 1px 80px 20px rgb(175, 175, 175);
+}
+
+.blur:hover + video {
+  
 }
 
 .overlay {

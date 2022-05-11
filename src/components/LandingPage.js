@@ -29,9 +29,6 @@ const LandingPage = () => {
     tl2.play();
 
     let tl4 = gsap.timeline({
-      yoyo: "true",
-      repeat: -1,
-      zIndex: 99999,
       ease: "power4.inout",
     });
     let tl5 = gsap.timeline({
@@ -40,6 +37,14 @@ const LandingPage = () => {
       zIndex: 9999,
       ease: "power4.inout",
     });
+
+    tl4.to(".blur", { 
+      backdropFilter: "blur(3px)",
+      duration: 4,
+      delay: 5,
+      
+    })
+
   }, []);
 
   return (
@@ -52,11 +57,14 @@ const LandingPage = () => {
         <div className="overlay">
           <div className="overlay2">
             <div className="blue-lion">
-          <video id="vid" width="100%"
+              <div className="blur"></div>
+                <video id="vid"  width="100%"
             height="100%"
-            autoPlay muted>
+            autoPlay loop muted>
                 <source src={video} type="video/mp4"/>
               </video>
+              
+          
             </div>
           </div>
         </div>
