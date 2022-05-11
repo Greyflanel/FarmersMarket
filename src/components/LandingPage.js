@@ -39,9 +39,9 @@ const LandingPage = () => {
     });
 
     tl4.to(".blur", { 
-      backdropFilter: "blur(3px)",
-      duration: 4,
-      delay: 5,
+      // backdropFilter: "blur(3px)",
+      // duration: 4,
+      // delay: 5,
       
     })
 
@@ -58,13 +58,10 @@ const LandingPage = () => {
           <div className="overlay2">
             <div className="blue-lion">
               <div className="blur"></div>
-                <video id="vid"  width="100%"
-            height="100%"
-            autoPlay loop muted>
-                <source src={video} type="video/mp4"/>
+              <video id="vid" width="100%" height="100%" autoPlay loop muted>
+                <source src={video} type="video/mp4" />
               </video>
-              
-          
+              <div className="blur blur-bottom"></div>
             </div>
           </div>
         </div>
@@ -89,7 +86,6 @@ const LandingPage = () => {
         </div>
       </section>
       <section className="second-section">
-        
         <div className="custom-shape-divider-top-1645218211">
           <svg
             data-name="Layer 1"
