@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import lion from "../assets/lion-outline8.png";
-import video from "../assets/videobg.mp4";
+import video from "../assets/videobg2.mp4";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
