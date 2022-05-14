@@ -298,7 +298,6 @@ section {
   overflow: hidden;
   text-shadow: 2px 3px 4px var(--primary);
   
-  
 }
 
 
@@ -310,7 +309,7 @@ section {
   justify-content: center;
   gap: 0.5rem;
   padding: 1.3rem 2.5rem;
-  text-shadow: 2px 3px 4px var(--primary);
+  text-shadow: 2px 3px 4px white;
 }
 
 .user-profile h2 {
@@ -328,10 +327,10 @@ section {
   position: absolute;
   display: flex;
   justify-content: center;
-  width: calc(65% - 2rem);
+  width: calc(65% - 1rem);
   font-weight: 300;
-  font-size: clamp(1.5rem, 6vw, 4rem);
-  line-height: clamp(2rem, 8vh, 12rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: clamp(2rem, 9vh, 17rem);
   color: white;
   z-index: 999999999999999;
   /* text-shadow: 1px 1px 2px var(--primary);
@@ -342,9 +341,9 @@ section {
   border-radius: 10px; 
   box-shadow: 0 0 1px 1px #eef3fe48;  */
 }
-.landing-page-title::first-line {
-  font-weight: 500;
-  
+.landing-page-title span {
+  font-size: clamp(2.5rem, 5vw, 8rem);
+  margin-right: -22%;
 }
 
 .first-section h2 {
