@@ -53,7 +53,7 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: #385075;
+  --primary: #2C5197;
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
   /* color-scheme: dark; */
@@ -120,8 +120,8 @@ header h2, h3 {
 #qsLogoutBtn,
 #qsLoginBtn
  {
-  position: relative;
-  right: 1%;
+  position: absolute;
+  right: calc(8% + 3rem);
   z-index: 50000;
   pointer-events: auto;
   padding: 0.4rem 1rem;
@@ -133,7 +133,7 @@ header h2, h3 {
   border: 0.1px solid rgb(255, 255, 255) !important;
 }
 
-@media (min-width: 250px) and  (max-width: 350px) {
+@media (min-width: 250px) and  (max-width: 750px) {
   .btn-margin,
   #qsLogoutBtn {
     
@@ -273,6 +273,7 @@ section {
 
 .custom-shape-divider-top-1645218211 {
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -303,7 +304,7 @@ section {
 
 .user-profile {
   position: absolute;
-  right: 15rem;
+  right: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -314,12 +315,12 @@ section {
 
 .user-profile h2 {
   color: var(--primary);
-  font-size: clamp(0.7rem, 1.7vw, 1.2rem);
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
   
 }
 
 .user-profile h3 {
-  font-size: clamp(0.5rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   color: var(--primary);
 }
 
@@ -859,7 +860,7 @@ a {
 
 .logo-wrapper {
   position: absolute;
-  left: calc(2vw - 28px);
+  left: calc(1% - 2rem);
   padding: 0.2rem;
   width: 9rem;
   display: flex;
