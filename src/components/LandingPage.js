@@ -2,11 +2,15 @@ import React, { useEffect } from "react";
 import "../styles/index.css";
 import lion from "../assets/lion-outline8.png";
 import video from "../assets/videobg2.mp4";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { productList } from "./server.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
+  
+  
   useEffect(() => {
     let tl2 = gsap.timeline({
       // yes, we can add it to an entire timeline!
@@ -65,6 +69,31 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+        {/* <InfiniteScroll
+          dataLength={items.length} //This is important field to render the next data
+          next={fetchData}
+          hasMore={true}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{ textAlign: "center" }}>
+              <b>Yay! You have seen it all</b>
+            </p>
+          }
+          // below props only if you need pull down functionality
+          refreshFunction={this.refresh}
+          pullDownToRefresh
+          pullDownToRefreshThreshold={50}
+          pullDownToRefreshContent={
+            <h3 style={{ textAlign: "center" }}>
+              &#8595; Pull down to refresh
+            </h3>
+          }
+          releaseToRefreshContent={
+            <h3 style={{ textAlign: "center" }}>&#8593; Release to refresh</h3>
+          }
+        >
+          {items}
+        </InfiniteScroll> */}
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"

@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Products = (props) => {
   const [ prod, setProd ] = useState(productList);
-  console.log(productList)
+  
   useEffect(() => {
     axios
       .get('')
