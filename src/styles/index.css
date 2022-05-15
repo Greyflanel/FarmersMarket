@@ -53,7 +53,7 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: #2C5197;
+  --primary: #22417c;
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
   /* color-scheme: dark; */
@@ -108,13 +108,6 @@ header h2, h3 {
   font-weight: 500;
   text-shadow: 0.5px 0.5px 1px rgba(62, 83, 200, 0.794);
   color: rgb(255, 255, 255);
-}
-.anim {
-  position: absolute;
-  top: 40%;
-  height: 40vh;
-  border: 10px solid red;
-  background-color: black;
 }
 
 #qsLogoutBtn,
@@ -229,14 +222,6 @@ nav.active {
   position: relative;
 }
 
-.landing-page-container {
-  position: relative;
-  height: 100%;
-  width: 100vw;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
 section {
   position: relative;
   overflow-x: hidden;
@@ -300,7 +285,6 @@ section {
   
 }
 
-
 .user-profile {
   position: absolute;
   right: 18rem;
@@ -323,32 +307,63 @@ section {
   color: var(--primary);
 }
 
+.landing-page-container {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 .landing-page-title {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  width: calc(65% - 1rem);
+  display: grid;
+  margin-left: calc(-20% + 2rem);
+  margin-top: 10%;
+  grid-template-columns: 60% 48% 38% 26.5%;
+  grid-template-rows: 20%;
+  
+  width: calc(60% - 10rem);
   font-weight: 300;
   font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: clamp(2rem, 9vh, 17rem);
-  color: white;
+  line-height: clamp(0.2rem, 7vh, 9rem);
+  color: var(--primary);
   z-index: 999999999999999;
-  /* text-shadow: 1px 1px 2px var(--primary);
-  /* border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 0.1px solid rgba(255, 255, 255, 0.2); */
-  /* /* backdrop-filter: blur(10px); */
-  /* padding: 1.2rem 1.8rem;
-  border-radius: 10px; 
-  box-shadow: 0 0 1px 1px #eef3fe48;  */
+  text-shadow: 1px 1.5px 3px rgb(255, 255, 255);
+  
 }
-.landing-page-title span {
-  font-size: clamp(2.5rem, 5vw, 8rem);
-  margin-right: -22%;
+
+.row1 {
+  font-size: clamp(3.2rem, 8vw, 6rem);
+  margin: -6%;
+  color: white;
+ text-shadow: 1px 1.5px 3px var(--primary);
+ grid-column: 1;
+ grid-row: 1;
+}
+
+.row2 {
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: -200%;
+  
+}
+
+.row3 {
+  grid-row: 3;
+  grid-column: 3;
+  margin-left: -460%;
+}
+
+.row4 {
+  grid-row: 4;
+  grid-column: 4;
+  margin-left: -850%;
 }
 
 .first-section h2 {
   left: 20%;
-  top: 15%;
+  top: 10%;
 }
 
 .tracking-in-expand {

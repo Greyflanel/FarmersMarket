@@ -55,8 +55,8 @@ const LandingPage = () => {
     <div className="landing-page-container">
       <section className="first-section">
         <h2 className="landing-page-title tracking-in-expand">
-         <span>Sharif's</span>  <br />
-          Computer Parts and Electronics
+         <span className="row1">Sharif's</span>  <br />
+        <span className="row2">Computer</span>   <span className="row3">Parts and</span> <span className="row4">Electronics</span> 
         </h2>
         <div className="overlay">
           <div className="overlay2">
