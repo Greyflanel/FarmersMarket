@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import lion from "../assets/lion-outline8.png";
-import video from "../assets/videobg2.mp4";
-import InfiniteScroll from "react-infinite-scroll-component";
+// import lion from "../assets/lion-circle3.png";
+import video from "../assets/sharif-bg.mp4";
+
 import { productList } from "./server.js";
+import FeaturedProduct from "../components/FeaturedProduct.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -42,11 +43,10 @@ const LandingPage = () => {
       ease: "power4.inout",
     });
 
-    tl4.to(".blur", { 
-      // backdropFilter: "blur(3px)",
-      // duration: 4,
-      // delay: 5,
+    tl4.to(".logo-ball", { 
       
+      duration: 10,
+      transformOrigin: "50%"
     })
 
   }, []);
@@ -54,13 +54,13 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        <h2 className="landing-page-title tracking-in-expand">
+        {/* <h2 className="landing-page-title tracking-in-expand">
          <span className="row1">Sharif's</span><br />
          <span className="row2">Computer</span><br />
          <span className="row3">Parts</span><br />
          <span className="row4">and</span><br />
          <span className="row5">Electronics</span><br />
-        </h2>
+        </h2> */}
         <div className="overlay">
           <div className="overlay2">
             <div className="blue-lion">
@@ -68,6 +68,7 @@ const LandingPage = () => {
               <video id="vid" width="100%" height="100%" autoPlay loop muted>
                 <source src={video} type="video/mp4" />
               </video>
+              {/* <img src={lion} alt="sharif logo" className="logo-ball" /> */}
               <div className="blur blur-bottom"></div>
             </div>
           </div>
@@ -142,6 +143,7 @@ const LandingPage = () => {
           </svg>
         </div>
         <h2>Second-Section</h2>
+        <FeaturedProduct/>
       </section>
 
       <section className="third-section">
