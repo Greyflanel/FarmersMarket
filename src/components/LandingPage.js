@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-// import lion from "../assets/lion-circle3.png";
-import video from "../assets/sharif-bg.mp4";
-
+import lion from "../assets/Lion-Logo.png";
+import video from "../assets/videobg3.mp4";
+// import lion from "../assets/circle-lion.png";
 import { productList } from "./server.js";
 import FeaturedProduct from "../components/FeaturedProduct.js";
 import { gsap } from "gsap";
@@ -35,6 +35,7 @@ const LandingPage = () => {
 
     let tl4 = gsap.timeline({
       ease: "power4.inout",
+      
     });
     let tl5 = gsap.timeline({
       yoyo: "true",
@@ -43,10 +44,11 @@ const LandingPage = () => {
       ease: "power4.inout",
     });
 
-    tl4.to(".logo-ball", { 
+    tl4.to(".logo-ball", {
+      delay: 0.5,
+      scale: 1.5,
+      duration: 15,
       
-      duration: 10,
-      transformOrigin: "50%"
     })
 
   }, []);
@@ -68,7 +70,7 @@ const LandingPage = () => {
               <video id="vid" width="100%" height="100%" autoPlay loop muted>
                 <source src={video} type="video/mp4" />
               </video>
-              {/* <img src={lion} alt="sharif logo" className="logo-ball" /> */}
+              <img src={lion} alt="sharif logo" className="logo-ball" />
               <div className="blur blur-bottom"></div>
             </div>
           </div>
