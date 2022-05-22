@@ -408,10 +408,17 @@ section {
 
 .logo-ball {
   position: absolute;
-  top: 24%;
-  left: 34%;
-  width: 35vw;
-  
+  top: 22%;
+  left: 31.6%;
+  width: 35.7vw;
+  transform-origin: 50.5% 49.5%;
+}
+
+.lion {
+  position: absolute;
+  top: 23%;
+  left: 25%;
+  width: 48vw;
 }
 
 .tracking-in-expand {

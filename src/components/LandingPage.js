@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import lion from "../assets/Lion-Logo.png";
+import lionText from "../assets/Lion-Logo-Text2.png";
 import video from "../assets/videobg3.mp4";
 // import lion from "../assets/circle-lion.png";
 import { productList } from "./server.js";
@@ -34,8 +35,8 @@ const LandingPage = () => {
     tl2.play();
 
     let tl4 = gsap.timeline({
-      ease: "power4.inout",
       
+      repeat: "-1"
     });
     let tl5 = gsap.timeline({
       yoyo: "true",
@@ -45,10 +46,10 @@ const LandingPage = () => {
     });
 
     tl4.to(".logo-ball", {
-      delay: 0.5,
-      scale: 1.5,
-      duration: 15,
       
+      
+      duration: 5000,
+      rotation: "7200deg"
     })
 
   }, []);
@@ -70,7 +71,8 @@ const LandingPage = () => {
               <video id="vid" width="100%" height="100%" autoPlay loop muted>
                 <source src={video} type="video/mp4" />
               </video>
-              <img src={lion} alt="sharif logo" className="logo-ball" />
+              <img src={lionText} alt="sharif logo text" className="logo-ball" />
+              <img src={lion} alt="lion logo" className="lion" />
               <div className="blur blur-bottom"></div>
             </div>
           </div>
@@ -145,7 +147,7 @@ const LandingPage = () => {
           </svg>
         </div>
         <h2>Second-Section</h2>
-        <FeaturedProduct/>
+        <FeaturedProduct />
       </section>
 
       <section className="third-section">
