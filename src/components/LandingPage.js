@@ -16,40 +16,47 @@ const LandingPage = () => {
   useEffect(() => {
     let tl2 = gsap.timeline({
       // yes, we can add it to an entire timeline!
-      scrollTrigger: {
-        trigger: ".first-section",
+      // scrollTrigger: {
+      //   trigger: ".first-section",
 
-        pin: true, // pin the trigger element while active
-        anticipatePin: 1,
-        start: "top top", // when the top of the trigger hits the top of the viewport
-        end: "-=100", // end after scrolling 500px beyond the start
-        scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        // pin: true, // pin the trigger element while active
+        // anticipatePin: 1,
+        // start: "top top", // when the top of the trigger hits the top of the viewport
+        // end: "-=100", // end after scrolling 500px beyond the start
+        // scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         // snap: {
         //   snapTo: "labels", // snap to the closest label in the timeline
         //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
         //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
         //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
         // },
-      },
+      // },
     });
     tl2.play();
 
     let tl4 = gsap.timeline({
-      
       repeat: "-1"
     });
     let tl5 = gsap.timeline({
-      yoyo: "true",
-      repeat: -1,
+      repeat: 0,
       zIndex: 9999,
       ease: "power4.inout",
+      
+      
     });
 
     tl4.to(".logo-ball", {
-      
-      
       duration: 5000,
       rotation: "7200deg"
+    })
+
+    tl5.to(".title", { 
+      autoAlpha: 1
+      
+    }).to(".title", {
+      
+      
+     
     })
 
   }, []);
@@ -64,16 +71,30 @@ const LandingPage = () => {
          <span className="row4">and</span><br />
          <span className="row5">Electronics</span><br />
         </h2> */}
+        <h1 className="title tracking-in-expand">
+          <span className="row1">SHARIF'S</span>
+          <br />
+          Computer <br />
+          Parts <br />
+          and <br />
+          Electronics
+        </h1>
         <div className="overlay">
           <div className="overlay2">
             <div className="blue-lion">
-              <div className="blur"></div>
-              <video id="vid" width="100%" height="100%" autoPlay loop muted>
+              {/* <div className="blur"></div> */}
+              {/* <video id="vid" width="100%" height="100%" autoPlay loop muted>
                 <source src={video} type="video/mp4" />
-              </video>
-              <img src={lionText} alt="sharif logo text" className="logo-ball" />
-              <img src={lion} alt="lion logo" className="lion" />
-              <div className="blur blur-bottom"></div>
+              </video> */}
+              <div className="landing-logo">
+                <img
+                  src={lionText}
+                  alt="sharif logo text"
+                  className="logo-ball"
+                />
+                <img src={lion} alt="lion logo" className="lion" />
+              </div>
+              {/* <div className="blur blur-bottom"></div> */}
             </div>
           </div>
         </div>

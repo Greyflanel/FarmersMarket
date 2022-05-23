@@ -166,6 +166,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 500;
+  overflow: hidden;
   width: 100vw;
   height: 11vh;
   min-height: 90px;
@@ -192,8 +193,8 @@ h3 {
   color: rgb(255, 255, 255);
 }
 
-#qsLogoutBtn,
-#qsLoginBtn {
+#qsLogoutBtn
+ {
   position: absolute;
   right: calc(8% + 3rem);
   z-index: 50000;
@@ -207,11 +208,26 @@ h3 {
   border: 0.1px solid rgb(255, 255, 255) !important;
 }
 
-@media (min-width: 250px) and (max-width: 750px) {
+#qsLoginBtn {
+  position: absolute;
+  top: 33%;
+  right: calc(8% + 3rem);
+  z-index: 100000;
+  pointer-events: auto;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 9999px;
+  background-color: var(--primary);
+  color: white;
+  border: 0.1px solid rgb(255, 255, 255) !important;
+}
+
+/* @media (min-width: 250px) and (max-width: 750px) {
   .btn-margin,
   #qsLogoutBtn {
   }
-}
+} */
 
 .nav-item {
   list-style: none;
@@ -360,6 +376,7 @@ section {
 .first-section {
   overflow: hidden;
   text-shadow: 2px 3px 4px var(--primary);
+  height: 85vh;
 }
 
 .user-profile {
@@ -406,22 +423,34 @@ section {
   font-size: clamp(4.5rem, 6.5vw, 5rem);
 }
 
-.logo-ball {
+.title {
   position: absolute;
-  top: 22%;
-  left: 31.6%;
-  width: 35.7vw;
-  transform-origin: 50.5% 49.5%;
+  top: 25%;
+  width: 40%;
+  font-size: 6.5rem;
+  font-weight: 300;
+  left: 0;
+  background: linear-gradient(35deg, #122851,  #f5bc18,  rgba(255, 255, 255, 0.682));
+  background-size: contain;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  visibility: hidden;
 }
 
-.lion {
-  position: absolute;
-  top: 23%;
-  left: 25%;
-  width: 48vw;
+.title .row1 {
+  font-weight: 500;
+  color: var(--primary);
+  
+  /* background-color: var(--primary); */
+  /* background-clip: text;
+  color: transparent; */
 }
 
 .tracking-in-expand {
+  margin-top: -3%;
+  margin-left: 3%;
+  text-align: left;
   animation: tracking-in-expand 1.5s ease-out both;
 }
 
@@ -450,7 +479,34 @@ section {
   bottom: 1rem;
 }
 
-.blur {
+.landing-logo {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 20vh;
+  left: 1.5vw;
+  visibility: hidden;
+}
+
+.logo-ball {
+  position: absolute;
+  z-index: 999999999999999;
+  top: -13.5%;
+  left: 1%;
+  width: 35vw;
+  transform-origin: 50.5% 49.5%;
+ 
+}
+
+.lion {
+  position: absolute;
+  width: 27rem;
+  left: 7.5%;
+  z-index: 999999999999999;
+  
+}
+
+/* .blur {
   position: absolute;
   top: 12%;
   background: rgba(255, 255, 255, 0.1);
@@ -465,37 +521,46 @@ section {
 .blur-bottom {
   top: 93vh;
   box-shadow: 1px 1px 120px 100px var(--primary);
-}
+} */
 
 .overlay {
   position: relative;
   height: 100vh;
-  /* background: radial-gradient(circle at 91% 51%, #ffffff, #385075); */
+  /* background: radial-gradient(circle at 1% 91%, #ffffff, #385075); */
   z-index: -1;
 }
 
-.overlay2 {
+/* .overlay2 {
   position: absolute;
   z-index: 1;
   width: 100vw;
   height: 100vh;
   background-color: var(--primary);
-}
-
-/* .overlay3 {
-  content: "";
-  background: no-repeat center left url(../assets/circular-title2.png);
-  
-  position: absolute;
-  left: 35%;
-  z-index: 999999999;
-  width: 100%;
-  height: 100vh;
-  transform: rotateX(3600deg);
 } */
 
 #payment-form {
   margin-top: 30%;
+}
+
+ .overlay2 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #122851,  #fff, #122851,  #fff);
+  background-size: 600% 100%;
+  animation: gradient 100s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .second-section,
@@ -936,13 +1001,13 @@ a {
 
 .logo-wrapper {
   position: absolute;
-  left: -18%;
-  bottom: -0.5rem;
+  left: -3%;
   
+  z-index: -1;
 }
 
 .logo-wrapper img {
-  width: 18%;
+  width: 70%;
   
   
 }
