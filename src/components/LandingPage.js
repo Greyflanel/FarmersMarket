@@ -51,10 +51,10 @@ const LandingPage = () => {
     })
 
     tl5.to(".title", { 
-      autoAlpha: 1
+      
       
     }).to(".title", {
-      
+      autoAlpha: 1
       
      
     })
@@ -75,26 +75,20 @@ const LandingPage = () => {
           <span className="row1">SHARIF'S</span>
           <br />
           Computer <br />
-          Parts <br />
+          Parts
           and <br />
           Electronics
         </h1>
         <div className="overlay">
           <div className="overlay2">
-            <div className="blue-lion">
-              {/* <div className="blur"></div> */}
-              {/* <video id="vid" width="100%" height="100%" autoPlay loop muted>
-                <source src={video} type="video/mp4" />
-              </video> */}
-              <div className="landing-logo">
-                <img
-                  src={lionText}
-                  alt="sharif logo text"
-                  className="logo-ball"
-                />
-                <img src={lion} alt="lion logo" className="lion" />
-              </div>
-              {/* <div className="blur blur-bottom"></div> */}
+            
+            <div className="landing-logo">
+              <img
+                src={lionText}
+                alt="sharif logo text"
+                className="logo-ball"
+              />
+              <img src={lion} alt="lion logo" className="lion" />
             </div>
           </div>
         </div>
