@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import lion from "../assets/Lion-Logo.png";
-import lionText from "../assets/Lion-Logo-Text2.png";
-import video from "../assets/videobg3.mp4";
-// import lion from "../assets/circle-lion.png";
 import { productList } from "./server.js";
 import FeaturedProduct from "../components/FeaturedProduct.js";
+import CircleLogo from "../components/CircleLogo.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -41,82 +38,77 @@ const LandingPage = () => {
       repeat: 0,
       zIndex: 9999,
       ease: "power4.inout",
-      
-      
     });
 
-    tl4.to(".logo-ball", {
+    tl4.to(".logo-text", {
       duration: 5000,
-      rotation: "7200deg"
+      rotation: "7200deg",
     })
 
-    tl5.to(".title", { 
-      
-      
-    }).to(".title", {
-      autoAlpha: 1
-      
-     
-    })
-
+    tl5
+      .set(".title", {
+        
+        letterSpacing: "-0.6em",
+      })
+      .set(
+        ".circle-logo-container",
+        {
+          autoAlpha: 0,
+          opacity: 0,
+        }
+      )
+      .to(".circle-logo-container", {
+        opacity: 0,
+        
+        
+      })
+      .to(".title", {
+        autoAlpha: 1,
+        duration: 1.7,
+        letterSpacing: "-0.02",
+      })
+      .to(
+        ".title",
+        {
+          
+          opacity: 0,
+        }, "+=4"
+        
+    ).to(".circle-logo-container", {
+      autoAlpha: 1,
+      opacity: 0,
+      duration: 1.5,
+    }).to(".circle-logo-Container", {
+      opacity: 0.5,
+      duration: 2,
+    }, "+=3")
+      .to(
+        ".circle-logo-container",
+        {
+          opacity: 1,
+        }
+    ).to(".circle-logo-container", {
+      duration: 3,
+      }, "-=7.5");
   }, []);
 
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        {/* <h2 className="landing-page-title tracking-in-expand">
-         <span className="row1">Sharif's</span><br />
-         <span className="row2">Computer</span><br />
-         <span className="row3">Parts</span><br />
-         <span className="row4">and</span><br />
-         <span className="row5">Electronics</span><br />
-        </h2> */}
-        <h1 className="title tracking-in-expand">
+        <h1 className="title">
           <span className="row1">SHARIF'S</span>
           <br />
           Computer <br />
-          Parts
-          and <br />
+          Parts and <br />
           Electronics
         </h1>
+
         <div className="overlay">
           <div className="overlay2">
-            
-            <div className="landing-logo">
-              <img
-                src={lionText}
-                alt="sharif logo text"
-                className="logo-ball"
-              />
-              <img src={lion} alt="lion logo" className="lion" />
-            </div>
+            <CircleLogo />
           </div>
         </div>
-        {/* <InfiniteScroll
-          dataLength={items.length} //This is important field to render the next data
-          next={fetchData}
-          hasMore={true}
-          loader={<h4>Loading...</h4>}
-          endMessage={
-            <p style={{ textAlign: "center" }}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }
-          // below props only if you need pull down functionality
-          refreshFunction={this.refresh}
-          pullDownToRefresh
-          pullDownToRefreshThreshold={50}
-          pullDownToRefreshContent={
-            <h3 style={{ textAlign: "center" }}>
-              &#8595; Pull down to refresh
-            </h3>
-          }
-          releaseToRefreshContent={
-            <h3 style={{ textAlign: "center" }}>&#8593; Release to refresh</h3>
-          }
-        >
-          {items}
-        </InfiniteScroll> */}
+
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
@@ -161,7 +153,6 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        <h2>Second-Section</h2>
         <FeaturedProduct />
       </section>
 
