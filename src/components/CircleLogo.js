@@ -1,5 +1,5 @@
 import React from "react";
-import lionText from "../assets/Lion-Logo-Text2.png";
+import lionText from "../assets/Lion-Logo-Text.png";
 import lion from "../assets/Lion-Logo.png";
 import "../styles/index.css";
 

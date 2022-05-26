@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import { productList } from "./server.js";
+import circuit from "../assets/circuit-image.jpg"
 import FeaturedProduct from "../components/FeaturedProduct.js";
 import CircleLogo from "../components/CircleLogo.js";
 import { gsap } from "gsap";
@@ -95,6 +96,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
+        {/* <img src={circuit} alt="" className="circuit-background" /> */}
         <h1 className="title">
           <span className="row1">SHARIF'S</span>
           <br />
