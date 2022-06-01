@@ -32,7 +32,7 @@ const LandingPage = () => {
       // },
     });
     tl2.play();
-
+    let tl3 = gsap.timeline({ repeat: 0 })
     let tl4 = gsap.timeline({
       repeat: "-1"
     });
@@ -41,6 +41,12 @@ const LandingPage = () => {
       zIndex: 9999,
       ease: "power4.inout",
     });
+
+    tl3.to(".overlay2", { 
+      duration: 1,
+      autoAlpha: 1,
+      
+     })
 
     tl4.to(".logo-text", {
       duration: 5000,
@@ -66,7 +72,7 @@ const LandingPage = () => {
       })
       .to(".title", {
         autoAlpha: 1,
-        duration: 1.7,
+        duration: 1.2,
         letterSpacing: "-0.02",
       })
       .to(
@@ -79,16 +85,9 @@ const LandingPage = () => {
     ).to(".circle-logo-container", {
       autoAlpha: 1,
       opacity: 0,
-      duration: 2.5,
-    })
-      .to(
-        ".circle-logo-container",
-        {
-          opacity: 1,
-        }
-    ).to(".circle-logo-container", {
-      duration: 3,
-      });
+      duration: 4,
+    }, "-=5")
+      
   }, []);
 
   return (
