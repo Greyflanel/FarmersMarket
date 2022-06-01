@@ -76,16 +76,10 @@ const LandingPage = () => {
           opacity: 1,
         }, "+=4"
         
-    ).to(".title", {
-      delimiter: " ",
-      duration: 4,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, assumenda non maiores natus"
-    }).to(".title", {
-     
-    }).to(".circle-logo-container", {
+    ).to(".circle-logo-container", {
       autoAlpha: 1,
       opacity: 0,
-      duration: 1.5,
+      duration: 2.5,
     })
       .to(
         ".circle-logo-container",

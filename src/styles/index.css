@@ -424,7 +424,7 @@ section {
 
 .title {
   position: absolute;
-  top: 25%;
+  top: 30%;
   width: 50%;
   font-size: 5rem;
   font-weight: 300;
@@ -452,11 +452,13 @@ section {
 .circle-logo-container {
   position: relative;
   top: 10%;
+  left: 65vw;
+  width: 33%;
   height: 55%;
   overflow: hidden;
   display: grid;
- place-items: center;
- 
+  place-items: center;
+  
 }
 
 .circle-logo {
@@ -468,15 +470,15 @@ section {
 
 .lion {
   position: absolute;
-  width: 23rem;
-  left: -12rem;
+  width: 28rem;
+  left: -13.9rem;
   
  
 }
 
 .logo-text {
   position: absolute;
-  transform-origin: 49%;
+  transform-origin: 49.2%;
   
 }
 
@@ -510,8 +512,9 @@ section {
   height: 100%;
   background: repeating-linear-gradient(45deg, #122851,  #fff, #122851);
   background-size: 600% 100%;
-  animation: gradient 100s linear infinite;
+  animation: gradient 30s linear infinite;
   animation-direction: alternate;
+ animation-timing-function: ease-in-out;
 }
 
 @keyframes gradient {
