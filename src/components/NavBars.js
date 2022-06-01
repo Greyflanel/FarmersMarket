@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/index.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import logo from "../assets/newlogo.png";
+import logo from "../assets/NEWLOGO6000.png";
 import User from "./User.js";
 import {
   NavItem,
@@ -24,7 +24,7 @@ const NavBar = () => {
     <div>
       <header>
         <div className="logo-wrapper">
-          {/* <img src={logo} alt="Sharif logo" className="logo" /> */}
+          <img src={logo} alt="Sharif logo" className="logo" />
           
         </div>
 

@@ -79,10 +79,7 @@ const LandingPage = () => {
       autoAlpha: 1,
       opacity: 0,
       duration: 1.5,
-    }).to(".circle-logo-Container", {
-      opacity: 0.5,
-      duration: 2,
-    }, "+=3")
+    })
       .to(
         ".circle-logo-container",
         {

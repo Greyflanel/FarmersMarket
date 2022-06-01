@@ -134,7 +134,7 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: #122851;
+  --primary: #36486B;
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
   /* color-scheme: dark; */
@@ -378,7 +378,7 @@ section {
 .first-section {
   overflow: hidden;
   text-shadow: 2px 3px 4px var(--primary);
-  height: 85vh;
+  height: 75vh;
   
 }
 
@@ -425,7 +425,7 @@ section {
 .title {
   position: absolute;
   top: 25%;
-  width: 40%;
+  width: 50%;
   font-size: 5rem;
   font-weight: 300;
   left: 0;
@@ -454,7 +454,6 @@ section {
   top: 10%;
   height: 55%;
   overflow: hidden;
-  /* visibility: hidden; */
   display: grid;
  place-items: center;
  
@@ -462,9 +461,6 @@ section {
 
 .circle-logo {
  position: absolute;
- /* display: flex;
- justify-content: center;
- align-items: center; */
  display: grid;
  place-items: center;
  
@@ -514,7 +510,7 @@ section {
   height: 100%;
   background: repeating-linear-gradient(45deg, #122851,  #fff, #122851);
   background-size: 600% 100%;
-  animation: gradient 150s linear infinite;
+  animation: gradient 100s linear infinite;
   animation-direction: alternate;
 }
 
@@ -968,13 +964,13 @@ a {
 
 .logo-wrapper {
   position: absolute;
-  left: -3%;
+  left: -10%;
   
   z-index: -1;
 }
 
 .logo-wrapper img {
-  width: 70%;
+  width: 35%;
   
   
 }
