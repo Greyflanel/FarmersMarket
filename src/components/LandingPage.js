@@ -88,7 +88,7 @@ const LandingPage = () => {
         }
     ).to(".circle-logo-container", {
       duration: 3,
-      }, "-=7.5");
+      });
   }, []);
 
   return (
