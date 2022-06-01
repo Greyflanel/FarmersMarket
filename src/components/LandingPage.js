@@ -6,8 +6,9 @@ import FeaturedProduct from "../components/FeaturedProduct.js";
 import CircleLogo from "../components/CircleLogo.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(ScrollTrigger);
-
+gsap.registerPlugin(TextPlugin);
 const LandingPage = () => {
   
   
@@ -72,10 +73,16 @@ const LandingPage = () => {
         ".title",
         {
           
-          opacity: 0,
+          opacity: 1,
         }, "+=4"
         
-    ).to(".circle-logo-container", {
+    ).to(".title", {
+      delimiter: " ",
+      duration: 4,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, assumenda non maiores natus"
+    }).to(".title", {
+     
+    }).to(".circle-logo-container", {
       autoAlpha: 1,
       opacity: 0,
       duration: 1.5,
