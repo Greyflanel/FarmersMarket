@@ -378,13 +378,13 @@ section {
 .first-section {
   overflow: hidden;
   text-shadow: 2px 3px 4px var(--primary);
-  height: 75vh;
+  height: 90vh;
   
 }
 
 .user-profile {
   position: absolute;
-  right: 18rem;
+  left: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -412,16 +412,6 @@ section {
   
 }
 
-.landing-page-title {
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  line-height: clamp(3rem, 6vh, 9rem);
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  text-align: start;
-  text-shadow: 0.5px 0.5px 1px rgb(255, 255, 255);
-}
-
 .title {
   position: absolute;
   top: 30%;
@@ -429,36 +419,35 @@ section {
   font-size: 5rem;
   font-weight: 300;
   left: 0;
-  background: linear-gradient(
-    0deg, #122851,    rgba(255, 255, 255, 1));
-  background-size: 50%;
+  background: repeating-linear-gradient(
+    45deg, #122851,    rgba(255, 255, 255, 1));
+  background-size: 100%;
   background-clip: text;
   color: transparent;
   text-shadow: none;
   visibility: hidden;
   margin-top: -3%;
-  margin-left: 3%;
+  margin-left: 2%;
   text-align: left;
   
 }
 
 .title .row1 {
   font-weight: 400;
-  
+  color: white;
   font-size: 7rem;
-  
+  text-shadow: 0.5px 1.5px 2.5px var(--primary);
 }
 
 .circle-logo-container {
   position: relative;
-  top: 10%;
-  left: 65vw;
-  width: 33%;
+  top: 12%;
+  padding: 18rem;
+  width: 100%;
   height: 55%;
   overflow: hidden;
-  display: grid;
-  place-items: center;
-  
+  display: flex;
+  justify-content: flex-end;
 }
 
 .circle-logo {
@@ -485,7 +474,7 @@ section {
 .overlay {
   position: relative;
   height: 100vh;
-  /* background: radial-gradient(circle at 1% 91%, #ffffff, #385075); */
+  
   z-index: -1;
 }
 
@@ -496,6 +485,27 @@ section {
   height: 100vh;
   background-color: var(--primary);
 } */
+
+.carousel {
+  position: relative;
+  z-index: 999999999999999999999999;
+  height: 20vh;
+  
+}
+
+.carousel-items {
+  width: 10vw;
+  z-index: 999999999999999;
+}
+
+.sc-bczRLJ {
+  background-color: var(--primary) !important;
+  color: var(--dark-accent);
+}
+
+.sc-gKXOVf {
+  background-color: var(--dark-accent) !important;
+}
 
 #payment-form {
   margin-top: 30%;
@@ -511,8 +521,8 @@ section {
   width: 100%;
   height: 100%;
   visibility: hidden;
-  background: repeating-linear-gradient(45deg, #122851,  rgba(255, 255, 255, 0.32), #122851);
-  background-size: 350% 100%;
+  background: conic-gradient(from 45deg at 40% 65%, #2e3d5a, #ffffff);
+  background-size: 100% 100%;
   animation: gradient 3.5s linear;
   
  animation-timing-function: ease-in-out;

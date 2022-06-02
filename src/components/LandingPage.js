@@ -65,11 +65,6 @@ const LandingPage = () => {
           opacity: 0,
         }
       )
-      .to(".circle-logo-container", {
-        opacity: 0,
-        
-        
-      })
       .to(".title", {
         autoAlpha: 1,
         duration: 1.2,
@@ -85,7 +80,7 @@ const LandingPage = () => {
     ).to(".circle-logo-container", {
       autoAlpha: 1,
       opacity: 0,
-      duration: 4,
+      duration: 2,
     }, "-=5")
       
   }, []);
@@ -127,7 +122,9 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
+        
       </section>
+      {/* <FeaturedProduct /> */}
       <section className="second-section">
         <div className="custom-shape-divider-top-1645218211">
           <svg
@@ -152,7 +149,6 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        <FeaturedProduct />
       </section>
 
       <section className="third-section">
