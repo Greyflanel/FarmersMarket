@@ -122,9 +122,9 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        
+        {/* <FeaturedProduct /> */}
       </section>
-      {/* <FeaturedProduct /> */}
+      
       <section className="second-section">
         <div className="custom-shape-divider-top-1645218211">
           <svg

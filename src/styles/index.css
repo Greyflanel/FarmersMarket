@@ -134,7 +134,7 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: #36486B;
+  --primary: #2e3d5a;
   --dark-accent: #f5bc18;
   --light-accent: #ea7729;
   /* color-scheme: dark; */
@@ -500,11 +500,11 @@ section {
 
 .sc-bczRLJ {
   background-color: var(--primary) !important;
-  color: var(--dark-accent);
+  color: var(--primary);
 }
 
 .sc-gKXOVf {
-  background-color: var(--dark-accent) !important;
+  background-color: var(--primary) !important;
 }
 
 #payment-form {
