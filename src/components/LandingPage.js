@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
 import { productList } from "./server.js";
-import circuit from "../assets/circuit-image.jpg"
+import circuit from "../assets/circuit-image.jpg";
 import FeaturedProduct from "../components/FeaturedProduct.js";
 import CircleLogo from "../components/CircleLogo.js";
 import { gsap } from "gsap";
@@ -10,79 +10,76 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 const LandingPage = () => {
-  
-  
   useEffect(() => {
     let tl2 = gsap.timeline({
       // yes, we can add it to an entire timeline!
       // scrollTrigger: {
       //   trigger: ".first-section",
-
-        // pin: true, // pin the trigger element while active
-        // anticipatePin: 1,
-        // start: "top top", // when the top of the trigger hits the top of the viewport
-        // end: "-=100", // end after scrolling 500px beyond the start
-        // scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        // snap: {
-        //   snapTo: "labels", // snap to the closest label in the timeline
-        //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-        //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-        //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-        // },
+      // pin: true, // pin the trigger element while active
+      // anticipatePin: 1,
+      // start: "top top", // when the top of the trigger hits the top of the viewport
+      // end: "-=100", // end after scrolling 500px beyond the start
+      // scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      // snap: {
+      //   snapTo: "labels", // snap to the closest label in the timeline
+      //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+      //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+      //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+      // },
       // },
     });
     tl2.play();
-    let tl3 = gsap.timeline({ repeat: 0 })
+    let tl3 = gsap.timeline({ repeat: 0 });
     let tl4 = gsap.timeline({
-      repeat: "-1"
+      repeat: "-1",
     });
     let tl5 = gsap.timeline({
       repeat: 0,
       zIndex: 9999,
-      ease: "power4.inout",
+      ease: "power4.inOut",
     });
 
-    tl3.to(".overlay2", { 
-      duration: 1,
+    tl3.to(".overlay2", {
       autoAlpha: 1,
-      
-     })
+    });
 
     tl4.to(".logo-text", {
       duration: 5000,
       rotation: "7200deg",
-    })
+    });
 
     tl5
       .set(".title", {
-        
-        letterSpacing: "-0.6em",
+        letterSpacing: "-0.65em",
       })
-      .set(
-        ".circle-logo-container",
-        {
-          autoAlpha: 0,
-          opacity: 0,
-        }
-      )
+      .set(".circle-logo-container", {
+        autoAlpha: 0,
+
+        clipPath: "circle(0.0% at 50% 50%)",
+      })
       .to(".title", {
         autoAlpha: 1,
-        duration: 1.2,
+        duration: 1.5,
         letterSpacing: "-0.02",
       })
       .to(
         ".title",
         {
-          
           opacity: 1,
-        }, "+=4"
-        
-    ).to(".circle-logo-container", {
-      autoAlpha: 1,
-      opacity: 0,
-      duration: 2,
-    }, "-=5")
-      
+        },
+        "+=5"
+      )
+      .to(
+        ".circle-logo-container",
+        {
+          autoAlpha: 1,
+
+          clipPath: "circle(50% at 100% 50%)",
+          duration: 2.5,
+          ease: "power4.inout",
+        },
+        "-=6.8"
+      );
   }, []);
 
   return (
@@ -97,10 +94,8 @@ const LandingPage = () => {
           Electronics
         </h1>
 
-        <div className="overlay">
-          <div className="overlay2">
-            <CircleLogo />
-          </div>
+        <div className="overlay2">
+          <CircleLogo />
         </div>
 
         <div className="custom-shape-divider-bottom-1645215428">
@@ -112,7 +107,7 @@ const LandingPage = () => {
           >
             <path
               d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".0"
+              opacity="0"
               className="shape-fill"
             ></path>
             <path
@@ -124,7 +119,7 @@ const LandingPage = () => {
         </div>
         {/* <FeaturedProduct /> */}
       </section>
-      
+
       <section className="second-section">
         <div className="custom-shape-divider-top-1645218211">
           <svg
@@ -226,5 +221,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
-
