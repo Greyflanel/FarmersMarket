@@ -73,7 +73,6 @@ const LandingPage = () => {
         ".circle-logo-container",
         {
           autoAlpha: 1,
-
           clipPath: "circle(50% at 100% 50%)",
           duration: 2.5,
           ease: "power4.inout",
