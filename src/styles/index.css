@@ -173,9 +173,6 @@ header {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.09);
   pointer-events: none;
-  display: flex;padding: 0 20%;
-  align-items: center;
-  
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.4px);
@@ -183,7 +180,9 @@ header {
   box-shadow: 2px 2px 2px 4px #2f303165, 0 0 2px 3px #8b8b8b5e inset;
   box-shadow: 0px 5px 10px -3px #191f2c,
     inset 1px 1px 1px 2px rgba(255, 255, 255, 0.04);
-   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header h2,
@@ -206,6 +205,7 @@ h3 {
   background-color: var(--primary);
   color: white;
   border: 0.1px solid rgb(255, 255, 255) !important;
+  width: clamp(4rem, 25%, 6rem );
 }
 
 #qsLoginBtn {
@@ -214,20 +214,30 @@ h3 {
   right: calc(8% + 3rem);
   z-index: 100000;
   pointer-events: auto;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 9999px;
   background-color: var(--primary);
   color: white;
   border: 0.1px solid rgb(255, 255, 255) !important;
+  width: clamp(4rem, 25%, 6rem );
 }
 
-/* @media (min-width: 250px) and (max-width: 750px) {
-  .btn-margin,
-  #qsLogoutBtn {
+@media (max-width: 400px) {
+  #qsLogoutBtn, #qsLoginBtn {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 2%;
   }
-} */
+}
+@media (max-width: 400px) {
+  #qsLoginBtn {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 2%;
+  }
+}
 
 .nav-item {
   list-style: none;
@@ -327,6 +337,7 @@ section {
   font-weight: 200;
   text-shadow: 2px 3px 4px rgb(154, 153, 153);
   height: 100vh;
+  display: flex;
 }
 
 .custom-shape-divider-bottom-1645215428 {
@@ -377,10 +388,19 @@ section {
 }
 
 .first-section {
+  position: relative;
   overflow: hidden;
+  z-index: 99;
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
-  
+  background: conic-gradient(from 45deg at 40% 65%, #2e3d5a, #ffffff);
+}
+
+@media (max-width: 1000px) {
+  .first-section {
+    display: flex;
+    height: 95vh;
+  }
 }
 
 .user-profile {
@@ -417,57 +437,29 @@ section {
   position: absolute;
   top: 32%;
   width: 50%;
-  font-size: 5rem;
+  font-size: clamp(3rem, 8vw, 4rem);
   font-weight: 300;
   left: 0;
   background: url("../assets/yellow-dots1.png");
-  
   text-shadow: none;
   visibility: hidden;
   margin-top: -3%;
   margin-left: 2%;
   text-align: left;
-  
 }
 
 .title .row1 {
   font-weight: 400;
   color: white;
-  font-size: 7rem;
+  font-size: clamp(4.5rem, 12vw, 6rem);
   text-shadow: 0.5px 1.5px 2.5px var(--primary);
 }
 
-/* .circle-logo-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  right: 20%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  
+@media (max-width: 400px) {
+  .title {
+    top: 15%;
+  }
 }
-
-.circle-logo {
- position: absolute;
- display: grid;
- place-items: center;
- z-index: 9999999999999999999999999999999999999999999999999999;
-}
-
-.lion {
-  position: absolute;
-  width: 28rem;
-  left: -13.9rem;
- 
-  z-index: 9999999999999999999999999999999999999999999999999999;
-}
-
-.logo-text {
-  position: absolute;
-  transform-origin: 49.2%;
-  
-} */
 
 .overlay {
   position: relative;
@@ -505,14 +497,6 @@ section {
  position: relative;
 
   
-}
-
- .overlay2 {
-  width: 100%;
-  height: 100%;
-  
-  background: conic-gradient(from 45deg at 40% 65%, #2e3d5a, #ffffff);
-  background-size: 100% 100%;
 }
 
 .second-section,
@@ -952,16 +936,16 @@ a {
 }
 
 .logo-wrapper {
-  position: absolute;
-  left: calc(-30rem + 15%);
-  
-  z-index: -1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-wrapper img {
-  width: 40%;
-  
-  
+  position: absolute;
+  width: clamp(8.5rem, 25%, 16rem );
+  left: 0;
 }
 
 .spinner {

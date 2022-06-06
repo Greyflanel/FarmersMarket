@@ -5,12 +5,10 @@ import logo from "../assets/NEWLOGO6000.png";
 import User from "./User.js";
 import {
   NavItem,
-  UncontrolledDropdown,
-  DropdownMenu,
   DropdownItem,
 } from "reactstrap";
 
-const NavBar = () => {
+const Header = () => {
   const [isActive, setIsActive] = useState("false");
   const menuToggle = () => setIsActive(!isActive);
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
@@ -25,9 +23,7 @@ const NavBar = () => {
       <header>
         <div className="logo-wrapper">
           <img src={logo} alt="Sharif logo" className="logo" />
-          
         </div>
-
         <User/>
           {!isAuthenticated && (
             <NavItem>
@@ -49,7 +45,6 @@ const NavBar = () => {
                   Log out
                 </DropdownItem>
           )}
-        
       </header>
       <nav className={isActive ? "" : "nav.active"}>
         <div className={isActive ? "menu" : "menu.active"}>
@@ -77,4 +72,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;

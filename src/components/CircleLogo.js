@@ -2,6 +2,7 @@ import React, {useRef, useEffect} from "react";
 import lionText from "../assets/Lion-Logo-Text.png";
 import lion from "../assets/cartoon-lion-logo2.png";
 import styled from "styled-components";
+import { devices } from "./devices.js";
 import { gsap } from "gsap";
 import "../styles/index.css";
 
@@ -35,12 +36,15 @@ const circleRef = useRef(null);
 
 const LogoContainer = styled.div`
   position: absolute;
-  width: 100%;
   height: 100%;
   right: 20%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media ${devices.mobileS} {
+    
+    display: none;
+  }
 `
 
 const Logo = styled.div`
@@ -48,7 +52,8 @@ const Logo = styled.div`
   display: grid;
   place-items: center;
   z-index: 100;
-`
+  
+`;
 
 const Lion = styled.img`
   position: absolute;
