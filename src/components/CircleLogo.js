@@ -12,58 +12,47 @@ const circleRef = useRef(null);
     let tl = gsap.timeline({ repeat: 0 });
     tl.set(circleRef.current, {
       autoAlpha: 0,
-      clipPath: "circle(0.0% at 50% 50%)"
+      clipPath: "circle(0.0% at 50% 100%)"
     }).to(
       circleRef.current,
       {
         autoAlpha: 1,
-        clipPath: "circle(50% at 100% 50%)",
-        duration: 2.5,
-        ease: "power4.inout",
+        clipPath: "circle(100% at 50% 50%)",
+        duration: 1.5,
+        ease: "power1.in",
       }
     );
   }, []);
 
   return ( 
-    <LogoContainer ref={circleRef}>
-      <Logo>
+    <LogoContainer className="logo-container" ref={circleRef}>
         <LogoText src={lionText} alt="sharif logo text" className="logo-text" />
         <Lion src={lion} alt="lion logo" className="lion" />
-      </Logo>
     </LogoContainer>
   );
 }
 
 const LogoContainer = styled.div`
-  position: absolute;
-  height: 100%;
-  right: 20%;
+  position: relative;
   display: flex;
-  justify-content: flex-end;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  @media ${devices.mobileS} {
-    
-    display: none;
-  }
+  /* border: 1px solid red; */
+  
 `
 
-const Logo = styled.div`
-  position: absolute;
-  display: grid;
-  place-items: center;
-  z-index: 100;
-  
-`;
-
 const Lion = styled.img`
-  position: absolute;
-  width: 28rem;
-  left: -13.9rem;
-  z-index: 10;
+  position: relative;
+  width: 60%;
+  
+  /* border: 1px solid red; */
+  
 `
 
 const LogoText = styled.img`
   position: absolute;
-  transform-origin: 49.2%;
-`
+  width: 100%;
+  filter: drop-shadow(0.5px 1.5px 1.5px var(--primary));
+`;
 

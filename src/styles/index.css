@@ -1,10 +1,5 @@
 /*-----CSS RESET------*/
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* <a href="https://www.mockofun.com">Design created with MockoFUN</a> */
 html,
 body,
 div,
@@ -141,6 +136,7 @@ body {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
+
 
 * {
   box-sizing: border-box;
@@ -389,6 +385,9 @@ section {
 
 .first-section {
   position: relative;
+  display: flex;
+  align-items: top;
+  justify-content: center;
   overflow: hidden;
   z-index: 99;
   text-shadow: 2px 3px 4px var(--primary);
@@ -398,7 +397,6 @@ section {
 
 @media (max-width: 1000px) {
   .first-section {
-    display: flex;
     height: 95vh;
   }
 }
@@ -440,7 +438,6 @@ section {
   font-size: clamp(3rem, 8vw, 4rem);
   font-weight: 300;
   left: 0;
-  background: url("../assets/yellow-dots1.png");
   text-shadow: none;
   visibility: hidden;
   margin-top: -3%;
@@ -449,12 +446,15 @@ section {
 }
 
 .title .row1 {
-  font-weight: 400;
+  
+  
   color: white;
   font-size: clamp(4.5rem, 12vw, 6rem);
   text-shadow: 0.5px 1.5px 2.5px var(--primary);
   
 }
+
+
 
 @media (max-width: 400px) {
   .title {
@@ -462,11 +462,13 @@ section {
   }
 }
 
-.overlay {
+.overlay2 {
   position: relative;
-  height: 100vh;
-  
+  width: 28vw;
   z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel {
@@ -949,12 +951,13 @@ a {
   left: 0;
 }
 
+.logo-container {
+  width: 100%;
+}
+
 .spinner {
   position: relative;
   top: 40vh;
-}
-
-.spinner img {
 }
 
 .FormGroup {

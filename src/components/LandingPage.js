@@ -36,7 +36,7 @@ const LandingPage = () => {
     let tl5 = gsap.timeline({
       repeat: 0,
       zIndex: 9999,
-      ease: "power4.inOut",
+      
     });
 
     tl3.to(".overlay2", {
@@ -67,17 +67,17 @@ const LandingPage = () => {
         {
           opacity: 1,
         },
-        "+=5"
+        "+=10"
       )
       .to(
         ".circle-logo-container",
         {
           autoAlpha: 1,
           clipPath: "circle(50% at 100% 50%)",
-          duration: 2.5,
-          ease: "power4.inout",
-        },
-        "-=6.8"
+          duration: 2,
+          ease: "elastic.inOut",
+        }
+       
       );
   }, []);
 
@@ -92,11 +92,9 @@ const LandingPage = () => {
           Parts and <br />
           Electronics
         </h1>
-
         <div className="overlay2">
           <CircleLogo />
         </div>
-
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
