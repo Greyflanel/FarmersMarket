@@ -802,18 +802,10 @@ a {
 
 .logo-wrapper {
   position: absolute;
-  left: calc(1vw - 12px);
-  padding: 0.2rem;
-  width: 10rem;
-  display: flex;
-  
+  width: clamp(2.5rem, 25%, 5rem );
+  left: 0.5rem;
 }
 
-.logo {
- width: 100%; 
- 
- 
-}
 
 .spinner {
   position: relative;

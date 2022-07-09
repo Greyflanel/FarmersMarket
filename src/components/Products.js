@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ProductContext from "../Contexts/ProductContext";
 import { productList } from "./server.js";
 import { NavLink } from "react-router-dom";
@@ -13,15 +13,16 @@ const Products = (props) => {
   console.log(productList)
   useEffect(() => {
     axios
-      .get('')
+      .get('https://api.computerspartselectronics.com/products')
       .then(response => {
+        console.log(response.data)
         setProd(response.data)
       })
       .catch(error => {
       console.log({error})
     })
   }, [setProd])
-  
+  console.log(productList)
   return (
     <section className="container">
         <div className="product-container">
