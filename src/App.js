@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { productList } from "./components/server.js";
 import LandingPage from "./components/LandingPage.js";
 import Products from "./components/Products";
-import {ShoppingCart} from "./components/ShoppingCart.js";
-import NavBar from "./components/NavBars";
+import { ShoppingCart } from "./components/ShoppingCart.js";
+import Header from "./components/Header";
 import ProductContext from "./Contexts/ProductContext.js";
 import {AuthProvider} from "./Contexts/AuthContext.js";
 import { CartProvider } from "./Contexts/CartContext.js";
@@ -23,18 +23,18 @@ const App = () => {
     fetch("/config").then(async (r) => {
       const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
+      
     });
   }, []);
   return (
     <AuthProvider>
       <ProductContext.Provider value={{ productsList }}>
         <CartProvider>
-          <NavBar />
+          <Header />
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/products/:id" element={<Product />} />
             <Route path="/products" element={<Products />} />
-            {/* <Route path="/cart" element={<ShoppingCart />} /> */}
             <Route path="/external-api" element={<ExternalApi />} />
             <Route
               path="/"
