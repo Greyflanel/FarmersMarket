@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Products = (props) => {
   const [ prod, setProd ] = useState(productList);
-  console.log(productList)
+  
   useEffect(() => {
     axios
       .get('https://api.computerspartselectronics.com/products')
@@ -27,19 +27,19 @@ const Products = (props) => {
     <section className="container">
         <div className="product-container">
           {prod.map((product) => (
-            <div key={product.product}>
+            <div key={product.name}>
               <NavLink to={`/products/${product.id}`} className="card">
                 <div className="items">
                   <div className="circle"></div>
                   <img
                     className="product-list-image"
-                    src={product.product}
-                    alt={product.product}
+                    src={product.image}
+                    alt={product.name}
                   />
                 </div>
                 <div className="product-name">
-                  <h2>{product.product}</h2>
-                  <h3>${product.price}</h3>
+                  <h2>{product.name}</h2>
+                  <h3>${product.pricePerPound}</h3>
                 </div>
                 <div className="product-details">
                 <p>{product.product_details}</p>

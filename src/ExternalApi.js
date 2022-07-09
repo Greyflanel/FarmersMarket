@@ -114,16 +114,10 @@ export const ExternalApiComponent = () => {
               log in again
             </a>
           </Alert>
-        )}
-
-        
-
-        
+        )}        
       </div>
-
       <div className="result-block-container">
         <ShoppingCart/>
-        
       </div>
     </>
   );
