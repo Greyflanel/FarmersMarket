@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "../styles/index.css";
 import { productList } from "./server.js";
 import circuit from "../assets/circuit-image.jpg";
-import FeaturedProduct from "../components/FeaturedProduct.js";
 import CircleLogo from "../components/CircleLogo.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
