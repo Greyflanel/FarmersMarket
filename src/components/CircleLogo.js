@@ -39,6 +39,7 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
+  background-color: transparent !important;
   
 `
 
@@ -54,5 +55,5 @@ const LogoText = styled.img`
   position: absolute;
   width: 100%;
   filter: drop-shadow(0.5px 1.5px 1.5px var(--primary));
-`;
+`
 
