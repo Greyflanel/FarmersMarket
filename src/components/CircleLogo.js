@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 import lionText from "../assets/Lion-Logo-Text.png";
-import lion from "../assets/cartoon-lion-logo222.png";
+import lion from "../assets/cartoon-lion-logo22.png";
 import styled from "styled-components";
 import { devices } from "./devices.js";
 import { gsap } from "gsap";
