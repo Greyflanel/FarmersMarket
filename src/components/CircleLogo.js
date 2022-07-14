@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 import lionText from "../assets/Lion-Logo-Text.png";
-import lion from "../assets/cartoon-lion-logo22.png";
+import lion from "../assets/cartoon-lion-logo22222.png";
 import styled from "styled-components";
 import { devices } from "./devices.js";
 import { gsap } from "gsap";
@@ -12,7 +12,7 @@ const circleRef = useRef(null);
     let tl = gsap.timeline({ repeat: 0 });
     tl.set(circleRef.current, {
       autoAlpha: 0,
-      clipPath: "circle(0.0% at 50% 100%)"
+      clipPath: "circle(0.0% at 0% 100%)"
     }).to(
       circleRef.current,
       {
@@ -20,7 +20,7 @@ const circleRef = useRef(null);
         clipPath: "circle(100% at 50% 50%)",
         duration: 1.5,
         ease: "power1.in",
-      }
+      }, "+=0.15"
     );
   }, []);
 

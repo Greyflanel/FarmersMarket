@@ -49,7 +49,8 @@ const LandingPage = () => {
 
     tl5
       .set(".title", {
-        letterSpacing: "-0.65em",
+        letterSpacing: "-0.75em",
+        ease: "power4.inOut",
       })
       .set(".circle-logo-container", {
         autoAlpha: 0,
@@ -59,7 +60,7 @@ const LandingPage = () => {
       .to(".title", {
         autoAlpha: 1,
         duration: 1.5,
-        letterSpacing: "-0.02",
+        letterSpacing: "-0.0",
       })
       .to(
         ".title",
@@ -68,16 +69,6 @@ const LandingPage = () => {
         },
         "+=10"
       )
-      .to(
-        ".circle-logo-container",
-        {
-          autoAlpha: 1,
-          clipPath: "circle(50% at 100% 50%)",
-          duration: 2,
-          ease: "elastic.inOut",
-        }
-       
-      );
   }, []);
 
   return (

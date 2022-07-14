@@ -129,9 +129,9 @@ table {
 
 /* CSS HEX */
 body {
-  --primary: #2e3d5a;
-  --dark-accent: #f5bc18;
-  --light-accent: #ea7729;
+  --primary: #004C54;
+  --dark-accent: #ACC0C6;
+  --light-accent: #ACC0C6;
   /* color-scheme: dark; */
 }
 
@@ -143,7 +143,7 @@ body {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 
-  /* border: 2px solid red !important; */
+  border: 2px solid red !important;
 }
 
 html,
@@ -392,7 +392,7 @@ section {
   z-index: 99;
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
-  background: conic-gradient(from 45deg at 40% 65%, #2e3d5a, #ffffff);
+  background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff);
 }
 
 @media (max-width: 1000px) {
@@ -443,6 +443,7 @@ section {
   margin-top: -3%;
   margin-left: 2%;
   text-align: left;
+  
 }
 
 .title .row1 {
@@ -505,7 +506,7 @@ section {
 .second-section,
 .third-section {
   color: var(--primary);
-  background-image: url("/src/assets/white.jpg");
+  background-image: url("/src/assets/white-green.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -514,17 +515,6 @@ section {
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
-}
-
-.second-section::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: #ffffff99;
-  z-index: -1;
 }
 
 .second-section h2 {
@@ -541,22 +531,6 @@ section {
 
 .svg-container {
   position: relative;
-}
-
-.third-section::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-attachment: fixed;
-  z-index: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 300px;
-  mix-blend-mode: saturation;
-  background-color: #ecf3f9;
 }
 
 .third-section h2 {
@@ -836,7 +810,7 @@ a:hover {
 }
 
 .fourth-section {
-  background-color: #f5bc18;
+  background-color: var(--primary);
   height: 40vh;
 }
 
@@ -943,12 +917,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .logo-wrapper img {
   position: absolute;
-  width: clamp(8.5rem, 25%, 16rem );
+  width: clamp(2.5rem, 5%, 5.3rem );
   left: 0;
+  background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff);
 }
 
 .logo-container {
