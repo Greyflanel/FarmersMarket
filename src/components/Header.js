@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/index.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import logo from "../assets/cartoon-lion-logo22222.png";
+import logo from "../assets/Green-Lion-Laptop.png";
 import User from "./User.js";
 import {
   NavItem,

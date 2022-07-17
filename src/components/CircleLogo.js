@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 import lionText from "../assets/Lion-Logo-Text.png";
-import lion from "../assets/cartoon-lion-logo22222.png";
+import lion from "../assets/lion.png";
 import styled from "styled-components";
 import { devices } from "./devices.js";
 import { gsap } from "gsap";
@@ -12,15 +12,15 @@ const circleRef = useRef(null);
     let tl = gsap.timeline({ repeat: 0 });
     tl.set(circleRef.current, {
       autoAlpha: 0,
-      clipPath: "circle(0.0% at 0% 100%)"
+      clipPath: "circle(0% at 0% 50%)"
     }).to(
       circleRef.current,
       {
         autoAlpha: 1,
         clipPath: "circle(100% at 50% 50%)",
-        duration: 1.5,
-        ease: "power1.in",
-      }, "+=0.15"
+        duration: 4,
+        ease: "power4.inOut",
+      }, "-=1"
     );
   }, []);
 
@@ -46,7 +46,7 @@ const LogoContainer = styled.div`
 const Lion = styled.img`
   position: relative;
   width: 60%;
-  
+  left: 0.8rem;
   /* border: 1px solid red; */
   
 `

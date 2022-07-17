@@ -922,9 +922,9 @@ a {
 
 .logo-wrapper img {
   position: absolute;
-  width: clamp(2.5rem, 5%, 5.3rem );
+  width: clamp(2.5rem, 25%, 9.5rem );
   left: 0;
-  background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff);
+  /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
 }
 
 .logo-container {
