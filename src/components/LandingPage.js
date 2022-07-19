@@ -52,10 +52,10 @@ const LandingPage = () => {
         letterSpacing: "-0.75em",
         ease: "power4.inOut",
       })
-      .set(".circle-logo-container", {
-        autoAlpha: 0,
+      .set(".logo-container", {
+        autoAlpha: 1,
 
-        clipPath: "circle(0.0% at 50% 50%)",
+        clipPath: "circle(0% at 50% 50%)",
       })
       .to(".title", {
         autoAlpha: 1,
@@ -74,14 +74,16 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        {/* <img src={circuit} alt="" className="circuit-background" /> */}
-        <h1 className="title">
+        <div className="title-container">
+          <h1 className="title">
           <span className="row1">SHARIF'S</span>
           <br />
           Computer <br />
           Parts and <br />
           Electronics
         </h1>
+        </div>
+        
         <div className="overlay2">
           <CircleLogo />
         </div>
