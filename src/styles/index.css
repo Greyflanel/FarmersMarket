@@ -357,6 +357,12 @@ section {
   
 }
 
+@media (max-width: 400px) {
+  .custom-shape-divider-bottom-1645215428 svg {
+    height: 120px;
+  }
+}
+
 .custom-shape-divider-bottom-1645215428 .shape-fill {
   fill: #ecf3f9;
 }
@@ -949,12 +955,13 @@ a {
 
 .logo-container {
   width: 100%;
+  z-index: 100;
 }
 
 @media (max-width: 468px) {
   .logo-container {
     min-width: 300px;
-    top: 7%;
+    top: 14vh;
 }
 }
 .spinner {

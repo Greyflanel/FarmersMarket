@@ -54,7 +54,7 @@ const LandingPage = () => {
       })
       .set(".logo-container", {
         autoAlpha: 1,
-
+        duration: 1.5,
         clipPath: "circle(0% at 50% 50%)",
       })
       .to(".title", {
