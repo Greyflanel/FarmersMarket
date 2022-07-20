@@ -194,7 +194,7 @@ h3 {
   right: calc(8% + 3rem);
   z-index: 50000;
   pointer-events: auto;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 9999px;
@@ -220,15 +220,9 @@ h3 {
   width: clamp(4rem, 25%, 6rem );
 }
 
+
 @media (max-width: 400px) {
-  #qsLogoutBtn, #qsLoginBtn {
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 2%;
-  }
-}
-@media (max-width: 400px) {
-  #qsLoginBtn {
+  #qsLoginBtn, #qsLogoutBtn {
     top: 35%;
     right: 30vw;
     font-size: 0.9rem;
@@ -387,6 +381,12 @@ section {
   
 }
 
+@media (max-width: 400px) {
+  .custom-shape-divider-top-1645218211 svg {
+    height: 120px;
+  }
+}
+
 .custom-shape-divider-top-1645218211 .shape-fill {
   fill: #ecf3f9;
 }
@@ -400,7 +400,7 @@ section {
   z-index: 99;
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
-  
+  width: 100vw;
   background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff);
 }
 
@@ -423,6 +423,8 @@ section {
   text-shadow: 2px 3px 4px white;
 }
 
+
+
 .user-profile h2 {
   color: var(--primary);
   font-size: clamp(1rem, 1.7vw, 1.2rem);
@@ -431,7 +433,15 @@ section {
 .user-profile h3 {
   font-size: clamp(0.9rem, 1.5vw, 1rem);
   color: var(--primary);
+
 }
+
+@media (max-width: 400px) {
+  .user-profile {
+    
+   width: 25vw;
+}
+ }
 
 .landing-page-container {
   position: relative;
@@ -443,16 +453,18 @@ section {
 }
 
 .title-container {
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: -15vh;
   left: 0;
+  display: flex;
+  align-items: center;
   
 }
 
 @media (max-width: 400px) {
   .title-container {
-   position: absolute;
+  width: 100%;
    
   }
 }
@@ -460,10 +472,11 @@ section {
 .title {
   position: absolute;
   top: 32%;
-  width: 60%;
+  left: 2rem;
+  width: 100%;
   font-size: clamp(3rem, 8vw, 4rem);
   font-weight: 300;
-  left: 5vw;
+ 
   text-shadow: none;
   visibility: hidden;
   z-index: 10;
@@ -476,7 +489,7 @@ section {
   
   color: white;
   font-size: clamp(3rem, 12vw, 6rem);
-  text-shadow: 0.5px 1.5px 2.5px var(--primary);
+  text-shadow: 0.5px 1.5px 2.5px grey;
   
 }
 
@@ -484,8 +497,8 @@ section {
 
 @media (max-width: 400px) {
   .title {
-    top: 30%;
-    font-size: 2rem;
+    top: 35%;
+    font-size: 1.8rem;
   }
 }
 
@@ -496,6 +509,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .carousel {

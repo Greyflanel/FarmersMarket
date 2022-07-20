@@ -13,9 +13,7 @@ const User = () => {
     isAuthenticated && (
       <div className="user-profile">
         <h2>Welcome</h2>
-        {/* <img src={user.picture} alt={user.name} /> */}
         <h3>{user.name}</h3>
-        {/* <p>{user.email}</p> */}
       </div>
     )
   );
