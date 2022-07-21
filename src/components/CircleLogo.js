@@ -16,6 +16,7 @@ const circleRef = useRef(null);
     }).to(
       circleRef.current,
       {
+        delay: 0.5,
         autoAlpha: 1,
         clipPath: "circle(100% at 50% 50%)",
         duration: 5,

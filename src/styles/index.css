@@ -188,6 +188,7 @@ h3 {
   color: rgb(255, 255, 255);
 }
 
+
 #qsLogoutBtn
  {
   position: absolute;
@@ -498,6 +499,7 @@ section {
 @media (max-width: 400px) {
   .title {
     top: 35%;
+    left: 0;
     font-size: 1.8rem;
   }
 }
