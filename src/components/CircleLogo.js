@@ -12,13 +12,13 @@ const circleRef = useRef(null);
     let tl = gsap.timeline({ repeat: 0 });
     tl.set(circleRef.current, {
       autoAlpha: 0,
-      
+      clipPath: "circle(0% at 50% 50%)"
     }).to(
       circleRef.current,
       {
         delay: 0.5,
         autoAlpha: 1,
-        clipPath: "circle(100% at 50% 50%)",
+        clipPath: "circle(50% at 50% 50%)",
         duration: 5,
         ease: "power4.inOut",
       }, "-=1"
