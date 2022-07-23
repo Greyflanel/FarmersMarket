@@ -12,7 +12,7 @@ const circleRef = useRef(null);
     let tl = gsap.timeline({ repeat: 0 });
     tl.set(circleRef.current, {
       autoAlpha: 0,
-      clipPath: "circle(0% at 0% 0%)"
+      
     }).to(
       circleRef.current,
       {
