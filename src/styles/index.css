@@ -466,6 +466,7 @@ section {
 @media (max-width: 400px) {
   .title-container {
   width: 100%;
+   top: -13vh;
    
   }
 }
