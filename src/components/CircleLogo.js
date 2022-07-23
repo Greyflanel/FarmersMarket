@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 import lionText from "../assets/Lion-Logo-Text.png";
-import lion from "../assets/hi-res-lion.png";
+import lion from "../assets/hi-res-lion2.0.png";
 import styled from "styled-components";
 import { devices } from "./devices.js";
 import { gsap } from "gsap";
@@ -46,8 +46,8 @@ const LogoContainer = styled.div`
 
 const Lion = styled.img`
   position: relative;
-  width: 60%;
- 
+  width: 62%;
+  padding-top: 0.8vh;
   /* border: 1px solid red; */
   
 `
@@ -55,6 +55,6 @@ const Lion = styled.img`
 const LogoText = styled.img`
   position: absolute;
   width: 100%;
-  filter: drop-shadow(1px 1px 1.5px var(--primary));
+  filter: drop-shadow(1px 0.8px 1px var(--primary));
 `
 
