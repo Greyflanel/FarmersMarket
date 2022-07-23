@@ -31,7 +31,7 @@
   color: white;
   background-image: url("/src/assets/white-green.jpg");
   background-position: center;
-  
+  background-size: cover;
   background-repeat:   no-repeat;
   background-attachment: fixed;
  
