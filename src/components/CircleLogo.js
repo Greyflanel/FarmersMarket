@@ -21,7 +21,7 @@ const circleRef = useRef(null);
         clipPath: "circle(50% at 50% 50%)",
         duration: 2,
         ease: "sine.out",
-      }, "-=0.3"
+      }
     );
   }, []);
 

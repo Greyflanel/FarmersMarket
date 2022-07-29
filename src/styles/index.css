@@ -466,7 +466,7 @@ section {
 @media (max-width: 400px) {
   .title-container {
   width: 100%;
-   top: -13vh;
+   top: -16vh;
    
   }
 }
@@ -507,7 +507,7 @@ section {
 
 .overlay2 {
   position: relative;
-  width: 28vw;
+  width: clamp(350px, 60rem, 28vw );
   z-index: -1;
   display: flex;
   align-items: center;
@@ -971,7 +971,7 @@ a {
 }
 
 .logo-container {
-  width: clamp(300px, 20rem, 80vw);
+  width: 82rem;
   z-index: 100;
 }
 
