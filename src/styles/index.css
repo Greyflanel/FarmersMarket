@@ -971,16 +971,16 @@ a {
 }
 
 .logo-container {
-  width: 100%;
+  width: clamp(300px, 20rem, 80vw);
   z-index: 100;
 }
 
-@media (max-width: 468px) {
+/* @media (max-width: 500px) {
   .logo-container {
     min-width: 300px;
     top: 14vh;
 }
-}
+} */
 .spinner {
   position: relative;
   top: 40vh;

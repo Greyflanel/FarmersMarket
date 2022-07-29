@@ -19,9 +19,9 @@ const circleRef = useRef(null);
         delay: 0.5,
         autoAlpha: 1,
         clipPath: "circle(50% at 50% 50%)",
-        duration: 5,
-        ease: "power4.inOut",
-      }, "-=1"
+        duration: 2,
+        ease: "sine.out",
+      }, "-=0.3"
     );
   }, []);
 
@@ -36,7 +36,7 @@ const circleRef = useRef(null);
 const LogoContainer = styled.div`
   position: relative;
   display: flex;
-  width: 100%;
+  width: 350%;
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
