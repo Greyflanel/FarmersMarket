@@ -9,20 +9,25 @@ import "../styles/index.css";
 export default function CircleLogo() {
 const circleRef = useRef(null);
   useEffect(() => {
-    let tl = gsap.timeline({ repeat: 0 });
-    tl.set(circleRef.current, {
-      autoAlpha: 0,
-      clipPath: "circle(0% at 50% 50%)"
-    }).to(
-      circleRef.current,
-      {
-        delay: 0.5,
-        autoAlpha: 1,
-        clipPath: "circle(50% at 50% 50%)",
-        duration: 2,
-        ease: "sine.out",
-      }
-    );
+    
+      let tl = gsap.timeline({ repeat: 0 });
+      if (circleRef) {
+      tl.set(circleRef.current, {
+        autoAlpha: 0,
+        clipPath: "circle(0% at 50% 50%)"
+      }).to(
+        circleRef.current,
+        {
+          delay: 0.5,
+        
+          clipPath: "circle(50% at 50% 50%)",
+          duration: 2,
+          ease: "sine.out",
+        }
+      );
+      } else {
+        return;
+    }
   }, []);
 
   return ( 
