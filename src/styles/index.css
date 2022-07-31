@@ -463,7 +463,7 @@ section {
   
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .title-container {
   width: 100%;
    top: -16vh;
@@ -497,7 +497,7 @@ section {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .title {
     top: 35%;
     left: 0;
@@ -507,12 +507,18 @@ section {
 
 .overlay2 {
   position: relative;
-  width: clamp(350px, 60rem, 28vw );
+  width: clamp(300px, 35rem, 35vw );
   z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
   
+}
+
+@media (max-width:600px) {
+  .overlay2 {
+    top: 13%;
+  }
 }
 
 .carousel {
