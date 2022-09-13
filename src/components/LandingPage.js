@@ -12,20 +12,20 @@ const LandingPage = () => {
   useEffect(() => {
     let tl2 = gsap.timeline({
       // yes, we can add it to an entire timeline!
-      // scrollTrigger: {
-      //   trigger: ".first-section",
-      // pin: true, // pin the trigger element while active
-      // anticipatePin: 1,
-      // start: "top top", // when the top of the trigger hits the top of the viewport
-      // end: "-=100", // end after scrolling 500px beyond the start
-      // scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      // snap: {
-      //   snapTo: "labels", // snap to the closest label in the timeline
-      //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-      //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-      //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-      // },
-      // },
+      scrollTrigger: {
+        trigger: ".first-section",
+        pin: true, // pin the trigger element while active
+        anticipatePin: 1,
+        start: "top top", // when the top of the trigger hits the top of the viewport
+        end: "-=100", // end after scrolling 500px beyond the start
+        scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        snap: {
+          snapTo: "labels", // snap to the closest label in the timeline
+          duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+          ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+        },
+      },
     });
     tl2.play();
     let tl3 = gsap.timeline({ repeat: 0 });
@@ -35,7 +35,6 @@ const LandingPage = () => {
     let tl5 = gsap.timeline({
       repeat: 0,
       zIndex: 9999,
-      
     });
 
     tl3.to(".overlay2", {
@@ -55,7 +54,6 @@ const LandingPage = () => {
       .set(".logo-container", {
         autoAlpha: 1,
         duration: 1.5,
-        
       })
       .to(".title", {
         autoAlpha: 1,
@@ -68,7 +66,7 @@ const LandingPage = () => {
           opacity: 1,
         },
         "+=10"
-      )
+      );
   }, []);
 
   return (
@@ -76,17 +74,14 @@ const LandingPage = () => {
       <section className="first-section">
         <div className="title-container">
           <h1 className="title">
-          <span className="row1">SHARIF'S</span>
-          <br />
-          Computer <br />
-          Parts and <br />
-          Electronics
-        </h1>
+            <span className="row1">SHARIF'S</span>
+            <br />
+            Computer <br />
+            Parts and <br />
+            Electronics
+          </h1>
         </div>
-        
-        <div className="overlay2">
-          <CircleLogo />
-        </div>
+    {/* <CircleLogo/> */}
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
@@ -106,7 +101,6 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        {/* <FeaturedProduct /> */}
       </section>
 
       <section className="second-section">

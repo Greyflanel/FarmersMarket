@@ -402,7 +402,13 @@ section {
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
   width: 100vw;
-  background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff);
+  /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
+  background-color: #A4ACAF;
+  background-image: url(../assets/good.jpg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: darken;
 }
 
 @media (max-width: 1000px) {
@@ -482,14 +488,13 @@ section {
   text-shadow: none;
   visibility: hidden;
   z-index: 10;
-  
-  
+  color: #ecf3f9;
 }
 
 .title .row1 {
   
   
-  color: white;
+  color: var(--primary);
   font-size: clamp(3rem, 12vw, 6rem);
   text-shadow: 0.5px 1.5px 2.5px grey;
   
@@ -971,9 +976,10 @@ a {
 
 .logo-wrapper img {
   position: absolute;
-  width: clamp(2.5rem, 25%, 9.5rem );
+  width: clamp(2.5rem, 25%, 6rem );
   left: 0;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
+  mix-blend-mode: hard-light;
 }
 
 .logo-container {
