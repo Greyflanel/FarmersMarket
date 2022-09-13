@@ -130,7 +130,7 @@ table {
 /* CSS HEX */
 body {
   --primary: #004C54;
-  --dark-accent: #ACC0C6;
+  --dark-accent: #A4ACAF;
   --light-accent: #ACC0C6;
   /* color-scheme: dark; */
 }
@@ -241,6 +241,7 @@ nav {
   top: 0;
   right: 0;
   height: 100vh;
+  
   z-index: 500;
   display: flex;
   justify-content: center;
@@ -266,7 +267,7 @@ nav.active {
 .toggle {
   position: absolute;
   top: 2.5vh;
-  right: 1.8vw;
+  right: 2vw;
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
@@ -359,7 +360,7 @@ section {
 }
 
 .custom-shape-divider-bottom-1645215428 .shape-fill {
-  fill: #ecf3f9;
+  fill: var(--primary);
 }
 
 .custom-shape-divider-top-1645218211 {
@@ -389,7 +390,7 @@ section {
 }
 
 .custom-shape-divider-top-1645218211 .shape-fill {
-  fill: #ecf3f9;
+  fill: var(--primary);
 }
 
 .first-section {
@@ -405,7 +406,7 @@ section {
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   background-color: #A4ACAF;
   background-image: url(../assets/good.jpg);
-  background-size: 40%;
+  background-size:  clamp(400px, 45rem, 45vw );
   background-repeat: no-repeat;
   background-position: center center;
   background-blend-mode: darken;
@@ -416,8 +417,6 @@ section {
     height: 95vh;
   }
 }
-
-
 
 .user-profile {
   position: absolute;
@@ -482,13 +481,14 @@ section {
   top: 32%;
   left: 2rem;
   width: 100%;
-  font-size: clamp(3rem, 8vw, 4rem);
+  font-size: clamp(3rem, 8vw, 3.5rem);
   font-weight: 300;
- 
+  
   text-shadow: none;
   visibility: hidden;
   z-index: 10;
-  color: #ecf3f9;
+  color: white;
+  text-shadow: 2px 2px 3px var(--primary);
 }
 
 .title .row1 {
@@ -560,7 +560,7 @@ section {
 .second-section,
 .third-section {
   color: var(--primary);
-  background-image: url("/src/assets/white-green.jpg");
+  background-color: var(--dark-accent);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -864,7 +864,7 @@ a:hover {
 }
 
 .fourth-section {
-  background-color: var(--primary);
+  background-color: var(--dark-accent);
   height: 40vh;
 }
 
@@ -977,9 +977,10 @@ a {
 .logo-wrapper img {
   position: absolute;
   width: clamp(2.5rem, 25%, 6rem );
-  left: 0;
+  left: 0.4rem;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   mix-blend-mode: hard-light;
+  
 }
 
 .logo-container {
