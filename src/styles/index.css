@@ -340,7 +340,7 @@ section {
   left: 0;
   width: 100%;
   overflow: hidden;
-  line-height: 0;
+  
   transform: rotate(180deg);
 }
 
@@ -398,14 +398,14 @@ section {
   display: flex;
   align-items: top;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 99;
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
   width: 100vw;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
-  background-color: #A4ACAF;
-  background-image: url(../assets/image4.png);
+  background-color: var(--light-accent);
+  background-image: url(../assets/image3.png);
   background-size:  clamp(400px, 45rem, 45vw );
   background-repeat: no-repeat;
   background-position: center center;
@@ -560,7 +560,7 @@ section {
 .second-section,
 .third-section {
   color: var(--primary);
-  background-color: var(--dark-accent);
+  background-color: var(--light-accent);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -864,7 +864,7 @@ a:hover {
 }
 
 .fourth-section {
-  background-color: var(--dark-accent);
+  background-color: var(--light-accent);
   height: 40vh;
 }
 
@@ -977,7 +977,7 @@ a {
 .logo-wrapper img {
   position: absolute;
   width: clamp(2.5rem, 25%, 9rem );
-  left: -1rem;;
+  left: -1rem;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   mix-blend-mode: hard-light;
   
