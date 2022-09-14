@@ -405,7 +405,7 @@ section {
   width: 100vw;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   background-color: #A4ACAF;
-  background-image: url(../assets/good.jpg);
+  background-image: url(../assets/image4.png);
   background-size:  clamp(400px, 45rem, 45vw );
   background-repeat: no-repeat;
   background-position: center center;
@@ -976,8 +976,8 @@ a {
 
 .logo-wrapper img {
   position: absolute;
-  width: clamp(2.5rem, 25%, 6rem );
-  left: 0.4rem;
+  width: clamp(2.5rem, 25%, 9rem );
+  left: -1rem;;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   mix-blend-mode: hard-light;
   
