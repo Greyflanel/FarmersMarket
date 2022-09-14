@@ -340,7 +340,7 @@ section {
   left: 0;
   width: 100%;
   overflow: hidden;
-  
+  line-height: 0;
   transform: rotate(180deg);
 }
 
@@ -398,7 +398,7 @@ section {
   display: flex;
   align-items: top;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 99;
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
@@ -976,7 +976,7 @@ a {
 
 .logo-wrapper img {
   position: absolute;
-  width: clamp(2.5rem, 25%, 9rem );
+  width: clamp(6.5rem, 25%, 8rem );
   left: -1rem;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   mix-blend-mode: hard-light;
