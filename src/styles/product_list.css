@@ -1,10 +1,7 @@
 :root {
---light-pink: #ffadadff;
---deep-champagne: #ffd6a5ff;
---lemon-yellow-crayola: rgb(252, 255, 172);
-
---new-blue: rgb(1, 86, 155);
---primary: #385075;
+ --primary: #004C54;
+  --dark-accent: #A4ACAF;
+  --light-accent: #acc0c6;
 }
 
  
@@ -29,12 +26,14 @@
   flex-wrap: wrap;
   gap: 1rem;
   color: white;
-  background-image: url("/src/assets/white-green.jpg");
+  background-image: url("/src/assets/newbg.png");
   background-position: center;
   background-size: cover;
   background-repeat:   no-repeat;
   background-attachment: fixed;
- 
+  background-color: var(--light-accent);
+  background-blend-mode: color-burn;
+  background-attachment: fixed;
 }
 
 .card {
