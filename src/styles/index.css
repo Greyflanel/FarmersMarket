@@ -341,7 +341,7 @@ section {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
+  transform: rotate(180deg); 
 }
 
 .custom-shape-divider-bottom-1645215428 svg {
@@ -350,7 +350,7 @@ section {
   width: calc(155% + 1.3px);
   height: 180px;
   transform: rotateY(180deg);
-  
+   
 }
 
 @media (max-width: 400px) {
@@ -576,7 +576,7 @@ section {
   background-size: cover;
   background-image: url("../assets/newbg.png");
   background-color: var(--light-accent);
-  background-blend-mode: multiply;
+  background-blend-mode: color-burn;
   background-attachment: fixed;
 }
 .second-section h2 {
