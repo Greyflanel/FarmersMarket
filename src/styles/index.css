@@ -347,8 +347,8 @@ section {
 .custom-shape-divider-bottom-1645215428 svg {
   position: relative;
   display: block;
-  width: calc(145% + 1.3px);
-  height: 190px;
+  width: calc(155% + 1.3px);
+  height: 180px;
   transform: rotateY(180deg);
   
 }
@@ -370,17 +370,17 @@ section {
   left: 0;
   width: 100%;
   overflow: hidden;
-  line-height: 0;
+  
 }
 
 .custom-shape-divider-top-1645218211 svg {
   position: relative;
   display: block;
-  width: calc(177% + 1.3px);
-  height: 257px;
+  width: calc(180% + 1.3px);
+  height: 227px;
   transform: rotateY(180deg);
   z-index: 9999999999999999999999999999;
-  
+  overflow: hidden;
 }
 
 @media (max-width: 400px) {
@@ -406,10 +406,10 @@ section {
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   background-color: var(--light-accent);
   background-image: url(../assets/current.png);
-  background-size:  clamp(450px, 40rem, 40vw );
+  background-size:  clamp(350px, 32rem, 40vw );
   background-repeat: no-repeat;
   background-position: center center;
-  background-blend-mode: darken;
+  
 }
 
 @media (max-width: 1000px) {
