@@ -15,7 +15,7 @@ const Products = (props) => {
     axios
       .get('https://api.computerspartselectronics.com/products')
       .then(response => {
-        console.log(response.data)
+        console.log(response.data, "DATA")
         setProd(response.data)
       })
       .catch(error => {
@@ -27,8 +27,8 @@ const Products = (props) => {
     <section className="container">
         <div className="product-container">
           {prod.map((product) => (
-            <div key={product.name}>
-              <NavLink to={`/products/${product.id}`} className="card">
+            <div >
+              <NavLink key={product.name} to={`/products/${product.id}`} className="card">
                 <div className="items">
                   <div className="circle"></div>
                   <img

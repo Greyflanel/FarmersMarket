@@ -405,13 +405,29 @@ section {
   height: 90vh;
   width: 100vw;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
-  background-color: var(--light-accent);
+  
+  background-image: url(../assets/current.png);
+  background-size:  clamp(350px, 32rem, 40vw );
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #acc0c6;
+  
+background: linear-gradient(-220deg, #acc0c6 0%, #004c548f 99%, #a4acaf 80%);
+;
+;
+}
+.first-section::after {
+  content: "";
+  width: 100vw;
+  background-color: transparent;
   background-image: url(../assets/current.png);
   background-size:  clamp(350px, 32rem, 40vw );
   background-repeat: no-repeat;
   background-position: center center;
   
 }
+
+
 
 @media (max-width: 1000px) {
   .first-section {
