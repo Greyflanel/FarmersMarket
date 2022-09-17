@@ -133,6 +133,7 @@ body {
   --dark-accent: #A4ACAF;
   --light-accent: #acc0c6;
   /* color-scheme: dark; */
+  background-color: var(--light-accent);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
@@ -575,7 +576,7 @@ section {
   content: "";
   width: 100vw;
   background-size: cover;
-  background-image: url("../assets/newbg.png");
+  background-image: url("../assets/newbg2.png");
   background-color: var(--light-accent);
   background-blend-mode: color-burn;
   background-attachment: fixed;
@@ -633,7 +634,7 @@ a {
 }
 
 a:hover {
-  color: var(--primary);
+  color: var(--dark-accent);
 }
 
 .product-container {
@@ -654,7 +655,7 @@ a:hover {
   min-width: 300px;
   max-width: 600px;
   height: 80%;
-  color: var(--white);
+  color: var(--primary);
   font-size: 1.7rem;
   font-weight: 100;
   z-index: 100;
@@ -681,6 +682,7 @@ a:hover {
   padding-top: 1.2rem;
   font-weight: 500;
   font-size: 1.5rem;
+  color: var(--primary);
 }
 
 .singleCard img {
@@ -689,6 +691,7 @@ a:hover {
   height: auto;
   border-radius: 5px;
   border: 2px solid #ffffff;
+  border-color: var(--primary);
 }
 
 .singleCard button {
@@ -740,6 +743,7 @@ a:hover {
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.1);
   margin: 6%;
+  
 }
 
 .shopping-cart-item button {
@@ -874,7 +878,7 @@ a:hover {
 
 .fourth-section {
   background-color: var(--light-accent);
-  height: 40vh;
+  height: 42vh;
 }
 
 .cardinal {

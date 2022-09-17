@@ -21,23 +21,25 @@
   margin: 0;
   padding: 10rem;
   min-height: 100vh;
-  overflow: hidden;
+  
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   color: white;
-  background-image: url("/src/assets/newbg.png");
+  background-image: url("/src/assets/newbg2.png");
   background-position: center;
   background-size: cover;
   background-repeat:   no-repeat;
   background-attachment: fixed;
   background-color: var(--light-accent);
   background-blend-mode: color-burn;
-  background-attachment: fixed;
+  
 }
 
 .card {
-  width: 90%;
+  width: 65vw;
+  min-width: 280px;
+  max-width: 400px;
   border-radius: 30px;
   margin: 2.5% 0;
   padding: 6rem; 
@@ -67,10 +69,10 @@ transform: translateY(-8px);
 }
 
 .items {
-  width: 280px;
+  width: 60vw;
   height: 280px;
   display: flex;
- 
+  min-width: 260px
   
 }
 .items img {
