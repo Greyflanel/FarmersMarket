@@ -411,10 +411,7 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #acc0c6;
-  
-background: linear-gradient(-220deg, #acc0c6 0%, #004c548f 99%, #a4acaf 80%);
-;
-;
+  background: linear-gradient(-220deg, #acc0c6 0%, #004c548f 99%, #a4acaf 80%);
 }
 .first-section::after {
   content: "";
@@ -575,22 +572,14 @@ background: linear-gradient(-220deg, #acc0c6 0%, #004c548f 99%, #a4acaf 80%);
   
 }
 
-.second-section,
-.third-section {
+ .second-section,.third-section {
   color: var(--primary);
-  background-color: var(--light-accent);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
+   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-}
- .second-section,.third-section {
-  content: "";
   width: 100vw;
+  background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../assets/newbg.png");
   background-color: var(--light-accent);
