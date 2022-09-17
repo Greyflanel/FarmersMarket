@@ -418,9 +418,10 @@ section {
   }
 }
 
+
 .user-profile {
   position: absolute;
-  left: 18rem;
+  left: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -568,7 +569,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  
 }
  .second-section,.third-section {
   content: "";
@@ -985,7 +986,7 @@ a {
 .logo-wrapper img {
   position: absolute;
   width: clamp(6.5rem, 25%, 8rem );
-  left: -1rem;
+  left: -0.5rem;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   mix-blend-mode: hard-light;
   
