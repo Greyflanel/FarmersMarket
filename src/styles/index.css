@@ -576,7 +576,7 @@ section {
   content: "";
   width: 100vw;
   background-size: cover;
-  background-image: url("../assets/newbg2.png");
+  background-image: url("../assets/newbg.png");
   background-color: var(--light-accent);
   background-blend-mode: color-burn;
   background-attachment: fixed;
