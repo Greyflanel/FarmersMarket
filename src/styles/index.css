@@ -226,7 +226,7 @@ h3 {
 @media (max-width: 400px) {
   #qsLoginBtn, #qsLogoutBtn {
     top: 35%;
-    right: 30vw;
+    
     font-size: 0.9rem;
     font-weight: 500;
     padding: 2%;
@@ -454,13 +454,16 @@ section {
 .user-profile h3 {
   font-size: clamp(0.9rem, 1.5vw, 1rem);
   color: var(--primary);
-
+  word-wrap: break-word;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .user-profile {
-    
-   width: 25vw;
+   top: -2vh;
+   left: 13vw; 
+   width: 45vw;
+   line-height: 1rem;
+   
 }
  }
 
@@ -525,21 +528,6 @@ section {
   }
 }
 
-.overlay2 {
-  position: relative;
-  width: clamp(300px, 35rem, 33vw );
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-@media (max-width:600px) {
-  .overlay2 {
-    top: 13%;
-  }
-}
 
 .carousel {
   position: relative;
@@ -581,6 +569,7 @@ section {
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   background-image: url("../assets/newbg.png");
   background-color: var(--light-accent);
   background-blend-mode: color-burn;
