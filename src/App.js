@@ -19,13 +19,13 @@ const App = () => {
   const {productsList, setProductsList} = useState(productList);
   const [stripePromise, setStripePromise] = useState(null);
 
-  useEffect(() => {
-    fetch("/config").then(async (r) => {
-      const { publishableKey } = await r.json();
-      setStripePromise(loadStripe(publishableKey));
+  // useEffect(() => {
+  //   fetch("/config").then(async (r) => {
+  //     const { publishableKey } = await r.json();
+  //     setStripePromise(loadStripe(publishableKey));
       
-    });
-  }, []);
+  //   });
+  // }, []);
   return (
     <AuthProvider>
       <ProductContext.Provider value={{ productsList }}>
