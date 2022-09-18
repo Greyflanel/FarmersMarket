@@ -1009,7 +1009,7 @@ a {
 
 .logo-wrapper img {
   position: absolute;
-  width: clamp(6.5rem, 25%, 8rem );
+  width: clamp(6.5rem, 25%, 7rem );
   left: -0.5rem;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   mix-blend-mode: hard-light;
