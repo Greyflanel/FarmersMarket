@@ -446,7 +446,7 @@ section {
 
 
 .user-profile h2 {
-  color: white;
+  color: var(--primary);
   font-size: clamp(1rem, 1.7vw, 1.2rem);
 }
 
@@ -572,6 +572,7 @@ section {
   background-image: url("../assets/newbg.png");
   background-color: var(--light-accent);
   background-blend-mode: color-burn;
+  
   background-attachment: fixed;
 }
 .second-section h2 {
