@@ -5,12 +5,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 const User = () => {
   
   const { user, isAuthenticated, isLoading } = useAuth0();
-  const userName = user.name.replace(/@.*/, "");
+  
   if (isLoading) {
     return <div></div>;
   }
 
-  
+  const userName = user.name.replace(/@.*/, "");
   return (
     isAuthenticated && (
       <div className="user-profile">
