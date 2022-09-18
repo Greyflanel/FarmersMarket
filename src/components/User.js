@@ -10,12 +10,12 @@ const User = () => {
     return <div></div>;
   }
 
-  // const userName = user.name.replace(/@.*/, "");
+  const userName = user.name.replace(/@.*/, "");
   return (
     isAuthenticated && (
       <div className="user-profile">
         <h2>Welcome</h2>
-        <h3>{user.name}</h3>
+        <h3>{userName}</h3>
       </div>
     )
   );
