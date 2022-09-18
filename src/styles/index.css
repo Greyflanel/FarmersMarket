@@ -133,7 +133,7 @@ body {
   --dark-accent: #A4ACAF;
   --light-accent: #acc0c6;
   /* color-scheme: dark; */
-  /* background-color: var(--light-accent); */
+  background-color: var(--light-accent);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
