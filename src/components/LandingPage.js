@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../styles/index.css";
 import { productList } from "./server.js";
 import circuit from "../assets/circuit-image.jpg";
-import CircleLogo from "../components/CircleLogo.js";
+// import FeaturedItems from "../components/FeaturedItems.jsx";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -81,7 +81,8 @@ const LandingPage = () => {
             Electronics
           </h1>
         </div> */}
-        {/* <CircleLogo/> */}
+        {/* <FeaturedItems className="featuredItem" /> */}
+        
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
