@@ -10,22 +10,22 @@ import {AuthProvider} from "./Contexts/AuthContext.js";
 import { CartProvider } from "./Contexts/CartContext.js";
 import Product from "./components/Product.js";
 import ExternalApi from "./ExternalApi.js";
-// import { loadStripe } from "@stripe/stripe-js";
-// import Payment from "./components/Payment.js";
-// import Completion from "./components/Completion.js";
+import { loadStripe } from "@stripe/stripe-js";
+import Payment from "./components/Payment.js";
+import Completion from "./components/Completion.js";
 
 const App = () => {
   
   const {productsList, setProductsList} = useState(productList);
-  // const [stripePromise, setStripePromise] = useState(null);
+  const [stripePromise, setStripePromise] = useState(null);
 
-  // useEffect(() => {
-  //   fetch("/config").then(async (r) => {
-  //     const { publishableKey } = await r.json();
-  //     setStripePromise(loadStripe(publishableKey));
+  useEffect(() => {
+    fetch("/config").then(async (r) => {
+      const { publishableKey } = await r.json();
+      setStripePromise(loadStripe(publishableKey));
       
-  //   });
-  // }, []);
+    });
+  }, []);
   return (
     <AuthProvider>
       <ProductContext.Provider value={{ productsList }}>
@@ -36,14 +36,14 @@ const App = () => {
             <Route path="/products/:id" element={<Product />} />
             <Route path="/products" element={<Products />} />
             <Route path="/external-api" element={<ExternalApi />} />
-            {/* <Route
+            <Route
               path="/"
               element={<Payment stripePromise={stripePromise} />}
             />
             <Route
               path="/completion"
               element={<Completion stripePromise={stripePromise} />}
-            /> */}
+            />
           </Routes>
         </CartProvider>
       </ProductContext.Provider>
