@@ -10,7 +10,6 @@ const User = () => {
     return <div></div>;
   }
 
-  
   return (
     isAuthenticated && (
       <div className="user-profile">
