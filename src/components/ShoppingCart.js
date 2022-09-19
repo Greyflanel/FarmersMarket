@@ -17,7 +17,7 @@ const ShoppingCart = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cart),
     })
-      .then((res) => res.JSON())
+      .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
   }, [cart]);
 

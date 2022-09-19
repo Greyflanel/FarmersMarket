@@ -8,7 +8,7 @@ import Loading from "./components/Loading.js";
 
 export const ExternalApiComponent = () => {
   
-  const { apiOrigin = "https://api.computerspartselectronics.com/create-payment-intent"} = getConfig();
+  const { apiOrigin = "https://api.computerspartselectronics.com/create-payment-intent", audience } = getConfig();
 
   const [state, setState] = useState({
     showResult: false,
