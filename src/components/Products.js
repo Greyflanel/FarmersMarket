@@ -21,7 +21,7 @@ const Products = (props) => {
       console.log({error})
     })
   }, [setProd])
-  console.log(prod)
+  
   return (
     <section className="container">
       <div className="product-container">
@@ -29,7 +29,7 @@ const Products = (props) => {
           <div>
             <NavLink to={`/products/${product.id}`} className="card">
               <div key={product.name} className="items">
-                <div className="circle"></div>
+                
                 <img
                   className="product-list-image"
                   src={product.image}

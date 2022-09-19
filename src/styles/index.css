@@ -459,7 +459,6 @@ section {
 
 @media (max-width: 600px) {
   .user-profile {
-   top: -2vh;
    left: 14vw; 
    width: 45vw;
    line-height: 1rem;
