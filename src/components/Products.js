@@ -26,9 +26,9 @@ const Products = (props) => {
     <section className="container">
       <div className="product-container">
         {prod.map((product) => (
-          <div>
+          <div key={product.name}>
             <NavLink to={`/products/${product.id}`} className="card">
-              <div key={product.name} className="items">
+              <div  className="items">
                 
                 <img
                   className="product-list-image"

@@ -21,7 +21,7 @@ export default function CheckoutForm() {
     }
 
     setIsLoading(true);
-    const loading = isLoading ? <Loading /> : null;
+    // const loading = isLoading ? <Loading /> : null;
     
     const { error } = await stripe.confirmPayment({
       elements,
