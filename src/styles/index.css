@@ -1139,7 +1139,8 @@ a {
 }
 
 #submit {
- 
+  width: 50%;
+  min-width: 150px;
   border: none;
   line-height: 2.5rem;
   margin-top: 1rem;
