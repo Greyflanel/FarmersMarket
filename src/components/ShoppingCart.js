@@ -30,9 +30,9 @@ const ShoppingCart = () => {
 
     variables: {
       // colorText: '#ffffff',
-      // colorTextSecondary: 'black',
-      // colorTextPlaceholder: 'black',
-      colorText: 'red'
+      colorTextSecondary: 'black',
+      colorTextPlaceholder: 'black',
+      colorText: 'darkgrey',
      
       
     },
@@ -46,13 +46,15 @@ const ShoppingCart = () => {
   const [showButton, setShowButton] = useState(true);
   return (
     <div className="shopping-cart">
-      {showCart ? (
-        <Elements options={options} stripe={stripePromise}>
-          <CheckoutForm />
-        </Elements>
-      ) : (
-        cart.map((cart) => <ShoppingCartItem key={cart.product} {...cart} />)
-      )}
+      <div className="scroll-cart">
+        {showCart ? (
+          <Elements options={options} stripe={stripePromise}>
+            <CheckoutForm />
+          </Elements>
+        ) : (
+          cart.map((cart) => <ShoppingCartItem key={cart.product} {...cart} />)
+        )}
+      </div>
       <div className="shopping-cart-checkout">
         <p>{cart.length} item(s) in your Cart</p>
         <p>Total: ${totalPrice}</p>
@@ -67,7 +69,7 @@ const ShoppingCart = () => {
             Checkout
           </button>
         ) : (
-          cart.map((cart) => <ShoppingCartItem key={cart.product} {...cart} />)
+          null
         )}
       </div>
     </div>

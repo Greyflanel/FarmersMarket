@@ -9,14 +9,14 @@ const [cart, setCart] = useContext(CartContext);
     };
     
     return (
-        <div className="shopping-cart-item">
-            <h2>{props.product}</h2>
-            <img src={props.product_image_url} alt={props.product}/>
-            <h5>${props.price}</h5>
-            <div>
-                <button onClick={removeFromCart}>Remove from Cart</button>
-            </div>
+      <div className="shopping-cart-item">
+        <button onClick={removeFromCart}className="close-icon">×</button>
+        <h2>{props.product}</h2>
+        <img src={props.product_image_url} alt={props.product} />
+        <h5>${props.price}</h5>
+        <div>
         </div>
+      </div>
     );
 };
 

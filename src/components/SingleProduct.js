@@ -58,7 +58,7 @@ const SingleProduct = (props) => {
         price: props.singleProduct[0].price,
         product_image_url: props.singleProduct[0].product_image_url,
       };
-      const noDuplicates = cart.filter((item) => item.product !== product);
+      const noDuplicates = cart.filter((item) => item.product !== product || item.product === product);
       setCart([...noDuplicates, cartItem]);
     };
 
