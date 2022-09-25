@@ -410,7 +410,7 @@ section {
   width: 100vw;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   
-  background-image: url(../assets/current1.png);
+  background-image: url(../assets/current.png);
   background-size:  clamp(350px, 32rem, 40vw );
   background-repeat: no-repeat;
   background-position: center center;
@@ -765,7 +765,6 @@ a:hover {
   align-items: center;
   overflow: hidden;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.479);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -854,7 +853,7 @@ a:hover {
 
 .shopping-cart-checkout p {
   position: relative;
-  font-size: clamp(1rem, 1.5rem, 2.5rem);
+  font-size: clamp(1rem, 1.4rem, 3rem);
   height: 4vh;
   
 }
@@ -1129,7 +1128,6 @@ a {
 
 #payment-form {
   width: 100%;
-  overflow: hidden;
   margin: 0;
   background-color: var(--primary);
   padding: 4rem 0.2rem;
