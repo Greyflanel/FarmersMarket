@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
+axios.defaults.baseURL = "https://api.computerspartselectronics.com";
 
 const useAxios = ({ url, method, body = null, headers = null }) => {
   const [response, setResponse] = useState(null);
@@ -24,7 +24,7 @@ const useAxios = ({ url, method, body = null, headers = null }) => {
   };
 
   useEffect(() => {
-      fetchData();
+      fetchData('GET', '/products, null, null');
        // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [method, url, body, headers]);
  

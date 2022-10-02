@@ -1,44 +1,36 @@
 import React, { useState, useEffect, useContext } from "react";
-import ProductContext from "../Contexts/ProductContext";
-import { productList } from "./server.js";
+import { useMemo } from "react";
+import Loading from "./Loading.js";
+import { useAxios } from "./useAxios.js";
 import { NavLink } from "react-router-dom";
 import "../styles/product_list.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import axios from "axios";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Products = (props) => {
-  const [ prod, setProd ] = useState([]);
-  
-  useEffect(() => {
-    axios
-      .get('https://api.computerspartselectronics.com/products')
-      .then(response => {
-        setProd(response.data)
-      })
-      .catch(error => {
-      console.log({error})
-    })
-  }, [setProd])
-  
-  return (
-    <section className="container">
+  const { data, error, loaded } = useAxios("/products", "GET", {});
+
+  if (loaded) {
+    return error ? (
+      <span>Error: {error}</span>
+    ) : (
+      <section className="container">
       <div className="product-container">
-        {prod.map((product) => (
-          <div key={product.name}>
+        {data.map((product) => (
+          <div key={product.product}>
             <NavLink to={`/products/${product.id}`} className="card">
-              <div  className="items">
-                
+              <div className="items">
                 <img
                   className="product-list-image"
                   src={product.image}
-                  alt={product.name}
+                  alt={product.product}
                 />
               </div>
               <div className="product-name">
-                <h2>{product.name}</h2>
-                <h3>${product.pricePerPound}</h3>
+                <h2>{product.product}</h2>
+                <h3>${product.price}</h3>
               </div>
               <div className="product-details">
                 <p>{product.product_details}</p>
@@ -46,9 +38,13 @@ const Products = (props) => {
             </NavLink>
           </div>
         ))}
+            
       </div>
+      
     </section>
-  );
+    );
+  }
+  return <Loading/>;
 };
 
 export default Products;

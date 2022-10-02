@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/index.css";
+import cartIcon from "../assets/cart.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../assets/current.png";
 import User from "./User.js";
@@ -46,7 +47,10 @@ const Header = () => {
                 >
                   Log out
                 </DropdownItem>
-          )}
+        )}
+        <div className="cart_link">
+          <a href="/cart"><img src={cartIcon} alt="shopping cart icon" /></a>
+        </div>
       </header>
       <nav className={isActive ? "" : "nav.active"}>
         <div className={isActive ? "menu" : "menu.active"}>
@@ -57,12 +61,12 @@ const Header = () => {
             <li>
               <a href="/products">Shop</a>
             </li>
-            {/* <li>
-              <a href="/cart">Cart</a>
-            </li> */}
             <li>
-              <a href="/external-api">Cart</a>
+              <a href="/about">About</a>
             </li>
+            {/* <li>
+              <a href="/external-api">Cart</a>
+            </li> */}
           </ul>
         </div>
         <button

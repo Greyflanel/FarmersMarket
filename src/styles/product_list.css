@@ -19,15 +19,14 @@
   width: 100vw;
   height: 100%;
   margin: 0;
-  padding: 10rem;
   min-height: 100vh;
-  position: absolute;
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   color: white;
-  
   background-color: var(--light-accent);
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-container::before {

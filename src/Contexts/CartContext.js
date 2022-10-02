@@ -18,3 +18,12 @@ export const CartProvider = (props) => {
     </CartContext.Provider>
   );
 };
+
+// axios
+//   .get("https://api.computerspartselectronics.com/products")
+//   .then((response) => {
+//     setProd(response.data);
+//   })
+//   .catch((error) => {
+//     console.log({ error });
+//   });

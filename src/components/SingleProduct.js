@@ -63,7 +63,7 @@ const SingleProduct = (props) => {
     };
 
     return (
-      <div className="product-container">
+      <div className="single-product-container">
         <div className="single-product-details">
           <h2 className="details-h2">Product Details</h2>
         </div>

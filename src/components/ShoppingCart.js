@@ -44,6 +44,7 @@ const ShoppingCart = () => {
   
   const [showCart, setShowCart] = useState(false);
   const [showButton, setShowButton] = useState(true);
+  
   return (
     <div className="shopping-cart">
       <div className="scroll-cart">
