@@ -64,9 +64,6 @@ const SingleProduct = (props) => {
 
     return (
       <div className="single-product-container">
-        <div className="single-product-details">
-          <h2 className="details-h2">Product Details</h2>
-        </div>
         <div className="singleCard">
           <h2>{product}</h2>
           <img className="cartItem" src={product_image_url} alt={product} />
@@ -75,6 +72,9 @@ const SingleProduct = (props) => {
           <button className="add-to-cart-btn" onClick={addItem}>
             Add to Cart
           </button>
+        </div>
+        <div className="single-product-details">
+          <h2 className="details-h2">Product Details</h2>
         </div>
         <button
           onClick={() => (window.location.href = "/products")}
