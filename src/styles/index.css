@@ -163,7 +163,7 @@ body {
 header {
   position: fixed;
   top: 0;
-  z-index: 500;
+  z-index: 200;
   overflow: hidden;
   width: 100vw;
   height: 11vh;
@@ -182,14 +182,6 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-
-@media (max-width: 500px) {
-  header > *  {
-  
-}
-}
-
-
 
 header h2,
 h3 {
