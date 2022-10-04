@@ -311,7 +311,7 @@ nav {
   right: 0;
   height: 100vh;
   
-  z-index: 500;
+  z-index: 5000000000000000000000000000000000000;
   display: flex;
   justify-content: center;
   align-items: center;
