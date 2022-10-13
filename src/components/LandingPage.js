@@ -158,7 +158,7 @@ const LandingPage = () => {
         {/* <h2>Third-Section</h2> */}
       </section>
       <section className="fourth-section">
-        <div className="custom-shape-divider-top-1645218211">
+        <footer className="custom-shape-divider-top-1645218211">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ const LandingPage = () => {
               className="shape-fill"
             ></path>
           </svg>
-        </div>
+        </footer>
 
         {/* <div className="cardinal">
           <div className="face face1">

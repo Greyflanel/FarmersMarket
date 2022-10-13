@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/index.css";
 import cartIcon from "../assets/cart.png";
 import { useAuth0 } from "@auth0/auth0-react";
-import logo from "../assets/current.png";
+import logo from "../assets/Lion-Logo-Text7.png";
 import User from "./User.js";
 import {
   NavItem,

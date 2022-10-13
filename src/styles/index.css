@@ -201,13 +201,13 @@ h3 {
   z-index: 50000;
   pointer-events: auto;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
   border-radius: 9999px;
   background-color: var(--primary);
   color: white;
   border: 2px solid var(--light-accent) !important;
-  width: clamp(4rem, 25%, 6rem );
+  width: clamp(4rem, 25%, 5.2rem );
   transition: 0.6s;
 }
 
@@ -218,23 +218,23 @@ h3 {
   z-index: 5000;
   pointer-events: auto;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
   border-radius: 9999px;
   background-color: var(--primary);
   color: white;
   border: 2px solid var(--light-accent) !important;
-  width: clamp(4rem, 25%, 6rem );
+  width: clamp(4rem, 25%, 5.2rem );
   transition: 0.6s;
 }
 
-#qsLoginBtn, #qsLogoutBtn:hover {
+#qsLoginBtn:hover, #qsLogoutBtn:hover {
   scale: 1.1;
 }
 
 @media (max-width: 500px) {
   #qsLoginBtn, #qsLogoutBtn {
-    margin: 0 1.5rem;
+    margin: 0 1rem;
     font-size: 0.8rem;
     font-weight: 500;
     min-width: 90px;
@@ -244,7 +244,7 @@ h3 {
 .cart_link {
   position: absolute;
   z-index: 999;
-  right: calc(16vw + 100px);
+  right: calc(14vw + 100px);
   display: flex;
   pointer-events: all;
   transition: 0.6s;
@@ -258,7 +258,7 @@ h3 {
 
 
 .cart_link img {
-  width: 5rem;
+  width: 4rem;
   
 }
 
@@ -491,21 +491,14 @@ section {
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
   width: 100vw;
-  /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
-  
-  background-image: url(../assets/current.png);
-  background-size:  clamp(350px, 32rem, 40vw );
-  background-repeat: no-repeat;
-  background-position: center center;
-  
   background: radial-gradient(circle, rgb(172, 192, 198) 8%, rgba(0, 76, 84, 0.24) 100%, rgba(164,172,175,0.8631827731092436) 100%);
 }
 .first-section::after {
   content: "";
   width: 100vw;
   
-  background-image: url(../assets/current.png);
-  background-size:  clamp(350px, 32rem, 40vw );
+  background-image: url(../assets/Lion-Logo-Text7.png);
+  background-size:  clamp(350px, 37rem, 40vw );
   background-repeat: no-repeat;
   background-position: center center;
   
@@ -538,7 +531,7 @@ section {
   
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .title-container {
   width: 100%;
    top: -16vh;
@@ -572,7 +565,7 @@ section {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .title {
     top: 35%;
     left: 0;
@@ -692,15 +685,15 @@ a {
   height: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
+  justify-content: space-around;
   align-items: center;
   
   color: white;
   
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .single-product-container {
     position: relative;
     flex-direction: row;
@@ -756,7 +749,7 @@ a {
   backdrop-filter: blur(8px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .singleCard {
    
    
@@ -831,7 +824,8 @@ a {
   .single-product-details {
     top: 100vh;
     width: 80vw;
-    right: 10%;
+    right: 8%;
+    
   }
   
 }
@@ -1017,7 +1011,7 @@ a {
   transition: 0.6s;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .back-to-product-list-btn {
     bottom: 2%;
   }
@@ -1152,7 +1146,7 @@ a {
 
 .logo-wrapper img {
   position: absolute;
-  width: clamp(6.5rem, 25%, 7rem );
+  width: clamp(7rem, 25%, 9rem );
   left: -0.5rem;
   /* background: conic-gradient(from 45deg at 40% 65%, #004C54, #ffffff); */
   mix-blend-mode: hard-light;
