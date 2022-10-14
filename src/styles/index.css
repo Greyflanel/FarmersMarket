@@ -276,6 +276,7 @@ span.cart-item-count {
   font-size: 0.7rem;
   font-weight: 500;
   color: white;
+  min-width: 1.5rem;
 }
 
 .user-profile {

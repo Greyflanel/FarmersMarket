@@ -28,33 +28,36 @@ const Header = () => {
       <header>
         <div className="logo-wrapper">
           <img src={logo} alt="Sharif logo" className="logo" />
-          
         </div>
 
-        <User/>
-          {!isAuthenticated && (
-            <NavItem>
-              <button
-                id="qsLoginBtn"
-                color="primary"
-                className="btn-margin"
-                onClick={() => loginWithRedirect()}
-              >
-                Log in
-              </button>
-            </NavItem>
-          )}
-          {isAuthenticated && (
-                <DropdownItem
-                  id="qsLogoutBtn"
-                  onClick={() => logoutWithRedirect()}
-                >
-                  Log out
-                </DropdownItem>
+        <User />
+        {!isAuthenticated && (
+          <NavItem>
+            <button
+              id="qsLoginBtn"
+              color="primary"
+              className="btn-margin"
+              onClick={() => loginWithRedirect()}
+            >
+              Log in
+            </button>
+          </NavItem>
+        )}
+        {isAuthenticated && (
+          <DropdownItem id="qsLogoutBtn" onClick={() => logoutWithRedirect()}>
+            Log out
+          </DropdownItem>
         )}
         <div className="cart_link">
-          <span className="cart-item-count">{cart.length}</span>
-          <a href="/cart"><img src={cartIcon} alt="shopping cart icon" /></a>
+          <span
+            className="cart-item-count"
+            style={{ visibility: cart.length > 0 ? "visible" : "hidden" }}
+          >
+            {cart.length > 0 ? cart.length : null}
+          </span>
+          <a href="/cart">
+            <img src={cartIcon} alt="shopping cart icon" />
+          </a>
         </div>
       </header>
       <nav className={isActive ? "" : "nav.active"}>
