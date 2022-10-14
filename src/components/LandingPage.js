@@ -15,15 +15,6 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        {/* <div className="title-container">
-          <h1 className="title">
-            <span className="row1">SHARIF'S</span>
-            <br />
-            Computer <br />
-            Parts and <br />
-            Electronics
-          </h1>
-        </div> */}
         {/* <CircleLogo/> */}
         <div className="custom-shape-divider-bottom-1645215428">
           <svg

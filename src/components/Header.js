@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../styles/index.css";
 import cartIcon from "../assets/cart.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../assets/Lion-Logo-Text7.png";
 import User from "./User.js";
+import { CartContext } from "../Contexts/CartContext.js";
+
+
 import {
   NavItem,
   DropdownItem,
@@ -13,12 +16,13 @@ const Header = () => {
   const [isActive, setIsActive] = useState("false");
   const menuToggle = () => setIsActive(!isActive);
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
-
+  const [cart] = useContext(CartContext);
+  console.log(cart)
   const logoutWithRedirect = () =>
     logout({
       returnTo: window.location.origin,
     });
-
+    
   return (
     <div>
       <header>
@@ -49,6 +53,7 @@ const Header = () => {
                 </DropdownItem>
         )}
         <div className="cart_link">
+          <span className="cart-item-count">{cart.length}</span>
           <a href="/cart"><img src={cartIcon} alt="shopping cart icon" /></a>
         </div>
       </header>
