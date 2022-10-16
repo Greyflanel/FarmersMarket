@@ -17,7 +17,7 @@ const Header = () => {
   const menuToggle = () => setIsActive(!isActive);
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   const [cart] = useContext(CartContext);
-  console.log(cart)
+  
   const logoutWithRedirect = () =>
     logout({
       returnTo: window.location.origin,

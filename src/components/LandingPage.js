@@ -10,12 +10,19 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 const LandingPage = () => {
  
- 
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, ease: "none" });
 
+    tl.to(".logo-text", {  rotation: "-725deg",  transformOrigin: "50% 48%", duration: '500', })
+  });
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        {/* <CircleLogo/> */}
+        <div className="featured-items1">
+          <h2>FEATURED ITEMS</h2>
+          <h4>ITEM</h4>
+          <h4>ITEM</h4>
+        </div>
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
@@ -40,6 +47,12 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
+        <div className="featured-items2">
+          <h2>FEATURED ITEMS</h2>
+          <h4>ITEM</h4>
+          <h4>ITEM</h4>
+        </div>
+        {/* <CircleLogo /> */}
       </section>
 
       <section className="second-section">

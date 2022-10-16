@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
-import lionText from "../assets/Lion-Logo-Text.png";
-import lion from "../assets/good-cropped.jpg";
+import lionText from "../assets/currently3.png";
+import lion from "../assets/currently2.png";
 import styled from "styled-components";
 import { devices } from "./devices.js";
 import { gsap } from "gsap";
@@ -8,32 +8,12 @@ import "../styles/index.css";
 
 export default function CircleLogo() {
 const circleRef = useRef(null);
-  useEffect(() => {
-    
-      let tl = gsap.timeline({ repeat: 0 });
-      if (circleRef) {
-      tl.set(circleRef.current, {
-        autoAlpha: 0,
-        clipPath: "circle(0% at 50% 50%)"
-      }).to(
-        circleRef.current,
-        {
-          delay: 0.5,
-        
-          clipPath: "circle(50% at 50% 50%)",
-          duration: 2,
-          ease: "sine.out",
-        }
-      );
-      } else {
-        return;
-    }
-  }, []);
+  
 
   return ( 
     <LogoContainer className="logo-container" ref={circleRef}>
         <LogoText src={lionText} alt="sharif logo text" className="logo-text" />
-        {/* <Lion src={lion} alt="lion logo" className="lion" /> */}
+        <Lion src={lion} alt="lion logo" className="lion" />
     </LogoContainer>
   );
 }
@@ -41,7 +21,7 @@ const circleRef = useRef(null);
 const LogoContainer = styled.div`
   position: relative;
   display: flex;
-  width: 350%;
+  width: 40%;
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
@@ -49,17 +29,16 @@ const LogoContainer = styled.div`
   
 `
 
-// const Lion = styled.img`
-//   position: relative;
-//   width: 62%;
-//   padding-top: 0.8vh;
-//   /* border: 1px solid red; */
+const Lion = styled.img`
+  position: absolute;
+  width: 62%;
   
-// `
+  
+`
 
 const LogoText = styled.img`
   position: absolute;
-  width: 100%;
+  width: 64%;
   filter: drop-shadow(1px 0.8px 1px var(--primary));
 `
 
