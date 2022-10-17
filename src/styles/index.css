@@ -427,7 +427,7 @@ nav.active {
 
 section {
   position: relative;
-  overflow-x: hidden;
+  
   width: 100%;
   min-height: 32vh;
   font-size: 3rem;
@@ -501,7 +501,7 @@ section {
   display: flex;
   align-items: top;
   justify-content: center;
-  overflow: hidden;
+ 
   z-index: 9;
   text-shadow: 2px 3px 4px var(--primary);
   height: 90vh;
@@ -515,7 +515,7 @@ section {
   background-image: url(../assets/Lion-Logo-Text7.png);
   background-size:  clamp(350px, 37rem, 40vw );
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 45%;
   
 }
 
@@ -524,6 +524,14 @@ section {
 @media (max-width: 1000px) {
   .first-section {
     height: 95vh;
+  }
+}
+@media (max-width: 700px) {
+  .first-section::after { 
+  background-image: url(../assets/Lion-Logo-Text7.png), url(../assets/Lion-Logo-Text.png);
+  background-size:  clamp(250px, 37rem, 40vw );
+  background-repeat: no-repeat;
+  background-position: center 18%;
   }
 }
 
@@ -595,7 +603,7 @@ section {
   right: 0rem;
   left: 2vw;
   padding: 0.5rem;
-  width: 30vw;
+  width: 33vw;
   height: 60vh;
   border-radius: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -611,8 +619,29 @@ section {
   column-gap: 10px;
 }
 
+@media (max-width: 700px) {
+  .featured-items1 {
+    height: 50vh;
+    width: 80vw;
+    top: 52vh;
+    left: 10%;
+  }
+}
+@media (max-width: 700px) {
+  .featured-items2 {
+    height: 50vh;
+    width: 80vw;
+    top: 110%;
+    margin-left: -55%;
+  }
+}
+
+.featured-items1 {
+
+}
+
 .featured-items2 {
-  left: 67vw;
+  left: 64vw;
   
 }
 
@@ -625,6 +654,135 @@ section {
 
 .featured-items1 h4, .featured-items2 h4 {
   font-size: 1.8rem;
+}
+
+.browse-all-button-container {
+  position: absolute;
+  top: 65vh;
+
+}
+@media (max-width: 700px) {
+  .browse-all-button-container {
+    top: 40vh;
+}
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+ 
+}
+
+.browse-all-button {
+  width: 15vw;
+  min-width: 200px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background: radial-gradient(
+    circle at 40px 10px,
+    var(--light-accent),
+    var(--primary)
+  );
+  transition: all 0.4s linear;
+  color: white;
+  cursor: pointer;
+  
+}
+
+.browse-all-button-container {
+  margin-top: 1rem;
+}
+
+.browse-all-button-container button a:hover {
+  transform: scale(1.1);
+  color: var(--primary);
+}
+
+.product-categories {
+  position: relative;
+  top: 10rem;
+  width: 90vw;
+  height: 55vh;
+  
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background-color: rgba(172, 192, 198, 0.2);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 0.1px solid rgba(255, 255, 255, 0.3); */
+  backdrop-filter: blur(10px);
+  transition: 0.2s ease-in-out;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 16% 16% 16% 18% 18% 16%;
+}
+
+@media (max-width: 700px) {
+  .product-categories {
+    top: 0rem;
+  }
+  
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid var(--primary);
+  height: 100%;
+  word-break: break-all;
+  transition: 0.1s;
+  
+}
+
+.category h4 {
+  font-size: clamp(1rem, 1.8rem, 3rem);
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .category h4 {
+    
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 1px;
+  }
+}
+
+.category:nth-child(1) {
+  /* background-color: #004C54; */
+  border: none;
+  /* color: var(--light-accent);
+  text-shadow: none; */
+}
+.category:nth-child(2) {
+  
+}
+.category:nth-child(3) {
+  /* background-color: var(--primary);
+  color: var(--light-accent);
+  text-shadow: none; */
+}
+.category:nth-child(4) {
+  padding: 0 0.8rem;
+}
+
+
+  .category:hover {
+    background-color: var(--primary);
+    color: white;
+    text-shadow: none;
+    
+} 
+
+.category:nth-child(5) {
+  /* background-color: var(--primary);
+  color: var(--light-accent);
+  text-shadow: none; */
+}
+.category:nth-child(6) {
+  
 }
 
 .carousel {
@@ -671,8 +829,8 @@ section {
   background-image: url("../assets/newbg.png");
   background-color: var(--light-accent);
   background-blend-mode: color-burn;
-  
   background-attachment: fixed;
+  
 }
 .second-section h2 {
   font-size: 4rem;

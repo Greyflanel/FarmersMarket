@@ -47,6 +47,11 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
+        <div className="browse-all-button-container">
+          <button>
+            <a className="browse-all-button" href="/products">Browse All</a>
+          </button>
+        </div>
         <div className="featured-items2">
           <h2>FEATURED ITEMS</h2>
           <h4>ITEM</h4>
@@ -73,6 +78,26 @@ const LandingPage = () => {
               className="shape-fill"
             ></path>
           </svg>
+        </div>
+        <div className="product-categories">
+          <div className="category">
+            <h4>CPU</h4>
+          </div>
+          <div className="category">
+            <h4>GPU</h4>
+          </div>
+          <div className="category">
+            <h4>PSU</h4>
+          </div>
+          <div className="category">
+            <h4>Motherboards</h4>
+          </div>
+          <div className="category">
+            <h4>Cases</h4>
+          </div>
+          <div className="category">
+            <h4>Monitors</h4>
+          </div>
         </div>
       </section>
 
