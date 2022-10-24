@@ -29,7 +29,6 @@ const Header = () => {
         <div className="logo-wrapper">
           <img src={logo} alt="Sharif logo" className="logo" />
         </div>
-
         <User />
         {!isAuthenticated && (
           <NavItem>

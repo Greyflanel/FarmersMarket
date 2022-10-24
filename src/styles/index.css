@@ -171,9 +171,9 @@ header {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.09);
   pointer-events: none;
-  background: var(--light-accent);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.4px);
+  background-color: var(--light-accent);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 2px 2px 2px 4px #2f303165, 0 0 2px 3px #8b8b8b5e inset;
   box-shadow: 0px 5px 10px -3px #191f2c,
@@ -515,7 +515,7 @@ section {
   background-image: url(../assets/Lion-Logo-Text7.png);
   background-size:  clamp(350px, 37rem, 40vw );
   background-repeat: no-repeat;
-  background-position: center 45%;
+  background-position: center 40%;
   
 }
 
@@ -531,7 +531,7 @@ section {
   background-image: url(../assets/Lion-Logo-Text7.png), url(../assets/Lion-Logo-Text.png);
   background-size:  clamp(250px, 37rem, 40vw );
   background-repeat: no-repeat;
-  background-position: center 18%;
+  background-position: center 20%;
   }
 }
 
@@ -599,51 +599,53 @@ section {
 .featured-items1, .featured-items2 {
   position: absolute;
   z-index: 99999999999999999999999999999999;
-  top: 20vh;
-  right: 0rem;
+  top: 15vh;
+  right: 0;
   left: 2vw;
   padding: 0.5rem;
   width: 33vw;
-  height: 60vh;
+  height: 50vh;
   border-radius: 30px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   background-color: rgba(172, 192, 198, 0.2);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 0.1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
   transition: 0.2s ease-in-out;
-  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); */
   display: grid;
   grid-template-columns: 100% ;
   grid-template-rows: 15% 42% 42%; 
   column-gap: 10px;
+  background-image: url(../assets/new-chip.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90%;
 }
 
 @media (max-width: 700px) {
   .featured-items1 {
-    height: 50vh;
+    height: 40vh;
     width: 80vw;
-    top: 52vh;
     left: 10%;
+    top: 51vh;
   }
-}
-@media (max-width: 700px) {
-  .featured-items2 {
-    height: 50vh;
-    width: 80vw;
-    top: 110%;
-    margin-left: -55%;
-  }
-}
-
-.featured-items1 {
-
 }
 
 .featured-items2 {
-  left: 64vw;
+  left: 65vw;
   
 }
+
+@media (max-width: 700px) {
+  .featured-items2 {
+  left: 10%;
+  top: 92vh;
+  height: 40vh;
+  width: 80vw;
+}
+}
+
 
    
 .featured-items1 h2, .featured-items2 h2 {
@@ -654,6 +656,7 @@ section {
 
 .featured-items1 h4, .featured-items2 h4 {
   font-size: 1.8rem;
+  
 }
 
 .browse-all-button-container {
@@ -680,6 +683,7 @@ button {
   min-width: 200px;
   padding: 0.5rem;
   font-size: 1.5rem;
+  font-weight: 350;
   border-radius: 5px;
   background: radial-gradient(
     circle at 40px 10px,
@@ -703,27 +707,30 @@ button {
 
 .product-categories {
   position: relative;
-  top: 10rem;
+  top: 16%;
   width: 90vw;
-  height: 55vh;
-  
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background-color: rgba(172, 192, 198, 0.2);
-  /* border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 0.1px solid rgba(255, 255, 255, 0.3); */
+  height: 60vh;
+  border-radius: 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 0.1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   transition: 0.2s ease-in-out;
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
   display: grid;
-  grid-template-columns: 16% 16% 16% 18% 18% 16%;
+  grid-template-columns: 16% 16% 16% 17% 17% 16%;
+  grid-template-rows: auto;
+  
 }
 
 @media (max-width: 700px) {
   .product-categories {
-    top: 0rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    top: 20vh;
+    
   }
-  
 }
+
 
 .category {
   display: flex;
@@ -732,58 +739,81 @@ button {
   border-left: 1px solid var(--primary);
   height: 100%;
   word-break: break-all;
-  transition: 0.1s;
+  min-width: 2rem;
+  transition: 0.9s;
   
 }
 
 .category h4 {
-  font-size: clamp(1rem, 1.8rem, 3rem);
+  position: relative;
+  top: 15%;
+  font-size: clamp(0.5rem, 1.6rem, 3rem);
   font-weight: 400;
 }
 
 @media (max-width: 700px) {
-  .category h4 {
+  .category h4{
+    top: 3.5rem;
     
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    letter-spacing: 1px;
+  }
+}
+@media (max-width: 700px) {
+  .category {
+    border: 1px solid var(--primary);
+    
   }
 }
 
+
 .category:nth-child(1) {
-  /* background-color: #004C54; */
-  border: none;
-  /* color: var(--light-accent);
-  text-shadow: none; */
+  background-image: url(../assets/cpu-g.png);
+  background-size: clamp(2rem, 3.5rem, 5rem);
+  background-repeat: no-repeat;
+  background-position: 50% 50% ;
+  
+  
 }
+
 .category:nth-child(2) {
+  background-image: url(../assets/gpu-g.png);
+  background-size: clamp(2rem, 3.5rem, 5rem);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   
 }
 .category:nth-child(3) {
-  /* background-color: var(--primary);
-  color: var(--light-accent);
-  text-shadow: none; */
+  background-image: url(../assets/cases-g.png);
+  background-size: clamp(2rem, 3.5rem, 5rem);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .category:nth-child(4) {
   padding: 0 0.8rem;
+  background-image: url(../assets/motherboard-g.png);
+  background-size: clamp(2rem, 3.5rem, 5rem);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.category:nth-child(5) {
+  padding: 0 0.8rem;
+  background-image: url(../assets/cases-g.png);
+  background-size: clamp(2rem, 3.5rem, 5rem);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.category:nth-child(6) {
+  padding: 0 0.8rem;
+  background-image: url(../assets/monitor-g.png);
+  background-size: clamp(2.5rem, 3.5rem, 5rem);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 
   .category:hover {
-    background-color: var(--primary);
-    color: white;
-    text-shadow: none;
-    
+    background-position: 50% 40%;
+    background-size: 6rem;
 } 
-
-.category:nth-child(5) {
-  /* background-color: var(--primary);
-  color: var(--light-accent);
-  text-shadow: none; */
-}
-.category:nth-child(6) {
-  
-}
 
 .carousel {
   position: relative;
@@ -808,12 +838,6 @@ button {
 
 #payment-form {
   margin-top: 30%;
-}
-
-.circuit-background {
- position: relative;
-
-  
 }
 
  .second-section,.third-section {

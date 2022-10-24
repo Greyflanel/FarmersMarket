@@ -11,7 +11,7 @@ const User = () => {
   }
 
   return (
-    isAuthenticated && (
+    isAuthenticated && user.email_verified &&(
       <div className="user-profile">
         <h2>Welcome</h2>
         <h3>{user.nickname}</h3>

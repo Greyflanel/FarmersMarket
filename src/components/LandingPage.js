@@ -20,8 +20,12 @@ const LandingPage = () => {
       <section className="first-section">
         <div className="featured-items1">
           <h2>FEATURED ITEMS</h2>
-          <h4>ITEM</h4>
-          <h4>ITEM</h4>
+          <div className="first-featured-item1">
+            {/* <h4>ITEM</h4> */}
+          </div>
+          <div className="second-featured-item1">
+            {/* <h4>ITEM</h4> */}
+            </div>
         </div>
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
@@ -49,15 +53,16 @@ const LandingPage = () => {
         </div>
         <div className="browse-all-button-container">
           <button>
-            <a className="browse-all-button" href="/products">Browse All</a>
+            <a className="browse-all-button" href="/products">
+              Browse All
+            </a>
           </button>
         </div>
         <div className="featured-items2">
           <h2>FEATURED ITEMS</h2>
-          <h4>ITEM</h4>
-          <h4>ITEM</h4>
+          {/* <h4>ITEM</h4>
+          <h4>ITEM</h4> */}
         </div>
-        {/* <CircleLogo /> */}
       </section>
 
       <section className="second-section">
@@ -126,8 +131,6 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
-        {/* <Svg /> */}
-        {/* <h2>Third-Section</h2> */}
       </section>
       <section className="fourth-section">
         <footer className="custom-shape-divider-top-1645218211">
