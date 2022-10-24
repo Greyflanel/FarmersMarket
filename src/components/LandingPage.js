@@ -57,6 +57,11 @@ const LandingPage = () => {
               Browse All
             </a>
           </button>
+          <div className="category-title-container">
+            <h3>Or</h3>
+            <h3>Browse By Category</h3>
+          </div>
+          
         </div>
         <div className="featured-items2">
           <h2>FEATURED ITEMS</h2>
