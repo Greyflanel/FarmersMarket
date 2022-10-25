@@ -18,15 +18,6 @@ const LandingPage = () => {
   return (
     <div className="landing-page-container">
       <section className="first-section">
-        <div className="featured-items1">
-          <h2>FEATURED ITEMS</h2>
-          <div className="first-featured-item1">
-            {/* <h4>ITEM</h4> */}
-          </div>
-          <div className="second-featured-item1">
-            {/* <h4>ITEM</h4> */}
-            </div>
-        </div>
         <div className="custom-shape-divider-bottom-1645215428">
           <svg
             data-name="Layer 1"
@@ -51,6 +42,11 @@ const LandingPage = () => {
             ></path>
           </svg>
         </div>
+        <div className="featured-items1">
+          <h2>FEATURED ITEMS</h2>
+          <div className="first-featured-item1">{/* <h4>ITEM</h4> */}</div>
+          <div className="second-featured-item1">{/* <h4>ITEM</h4> */}</div>
+        </div>
         <div className="browse-all-button-container">
           <button>
             <a className="browse-all-button" href="/products">
@@ -61,7 +57,6 @@ const LandingPage = () => {
             <h3 className="or">Or</h3>
             <h3>Browse By Category</h3>
           </div>
-          
         </div>
         <div className="featured-items2">
           <h2>FEATURED ITEMS</h2>
