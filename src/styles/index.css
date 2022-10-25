@@ -632,7 +632,7 @@ section {
     height: 25vh;
     width: 90vw;
     left: 5%;
-    top: 51vh;
+    top: 53vh;
   }
 }
 
@@ -644,7 +644,7 @@ section {
 @media (max-width: 700px) {
   .featured-items2 {
   left: 5%;
-  top: 78vh;
+  top: 80vh;
   height: 25vh;
   width: 90vw;
 }
@@ -700,7 +700,7 @@ button {
 @media (max-width: 700px) {
   .browse-all-button-container {
     
-    top: 42vh;
+    top: 44vh;
   }
 }
 
@@ -798,7 +798,7 @@ button {
 
 .category:nth-child(1) {
   background-image: url(../assets/cpu-g.png);
-  background-size: clamp(2rem, 4rem, 5.5rem);
+  background-size: clamp(2.5rem, 4rem, 5.5rem);
   background-repeat: no-repeat;
   background-position: 50% 50% ;
   
@@ -807,28 +807,28 @@ button {
 
 .category:nth-child(2) {
   background-image: url(../assets/gpu-g.png);
-  background-size: clamp(2rem, 4rem, 5.5rem);
+  background-size: clamp(2.5rem, 4rem, 5.5rem);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   
 }
 .category:nth-child(3) {
   background-image: url(../assets/cases-g.png);
-  background-size: clamp(2rem, 4rem, 5.5rem);
+  background-size: clamp(2.5rem, 4rem, 5.5rem);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .category:nth-child(4) {
   padding: 0 0.8rem;
   background-image: url(../assets/motherboard-g.png);
-  background-size: clamp(2rem, 4rem, 5.5rem);
+  background-size: clamp(2.5rem, 4rem, 5.5rem);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .category:nth-child(5) {
   padding: 0 0.8rem;
   background-image: url(../assets/cases-g.png);
-  background-size: clamp(2rem, 4rem, 5.5rem);
+  background-size: clamp(2.5rem, 4rem, 5.5rem);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
