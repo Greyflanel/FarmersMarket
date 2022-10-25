@@ -58,7 +58,7 @@ const LandingPage = () => {
             </a>
           </button>
           <div className="category-title-container">
-            <h3>Or</h3>
+            <h3 className="or">Or</h3>
             <h3>Browse By Category</h3>
           </div>
           
