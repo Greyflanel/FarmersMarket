@@ -635,7 +635,7 @@ section {
     height: 25vh;
     width: 90vw;
     left: 5%;
-    top: 57vh;
+    top: 60vh;
   }
 }
 
@@ -647,7 +647,7 @@ section {
 @media (max-width: 700px) {
   .featured-items2 {
   left: 5%;
-  top: 85vh;
+  top: 87vh;
   height: 25vh;
   width: 90vw;
 }
@@ -703,7 +703,7 @@ button {
 @media (max-width: 700px) {
   .browse-all-button-container {
     
-    top: 48vh;
+    top: 49vh;
   }
 }
 
