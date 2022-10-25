@@ -820,9 +820,9 @@ button {
   background-position: 50% 50%;
 }
 .category:nth-child(4) {
-  padding: 0 0.2rem;
+  padding: 1rem 0.5rem;
   background-image: url(../assets/motherboard-g.png);
-  background-size: clamp(2.5rem, 4rem, 5.5rem);
+  background-size: clamp(2.5rem, 3.2rem, 4.5rem);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
