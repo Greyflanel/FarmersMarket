@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
-import { productList } from "./server.js";
-import circuit from "../assets/circuit-image.jpg";
-import CircleLogo from "../components/CircleLogo.js";
+import compImage from "../assets/desktop-setup1.png";
+import pic1 from "../assets/social-card-pic1.jpg";
+import pic2 from "../assets/social-card-pic2.jpg";
+import pic3 from "../assets/social-card-pic3.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -11,9 +12,56 @@ gsap.registerPlugin(TextPlugin);
 const LandingPage = () => {
  
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, ease: "none" });
+    const tl1 = gsap.timeline({ repeat: 0, });
+    const tl2 = gsap.timeline({ repeat: 0, });
+    const tl3 = gsap.timeline({ repeat: 3});
+    
 
-    tl.to(".logo-text", {  rotation: "-725deg",  transformOrigin: "50% 48%", duration: '500', })
+    tl1.to("header", {
+      scrollTrigger: {
+        trigger: ".first-section",
+        scrub: 0,
+        start: "top top",
+        
+        ease: "power4",
+      },
+     
+      background: "rgba(173, 193, 199, 1)",
+      
+    });
+    tl2.set(".featured-items2", {
+      
+     
+    }).to(".featured-items1, .featured-items2", {
+      scrollTrigger: {
+        trigger: ".first-section",
+        scrub: 0.8,
+        start: "top top",
+        
+        ease: "none",
+        
+      },
+      
+      
+      
+    });
+
+    // tl3.to("a", {  repeat: 3, repeatDelay: 1, repeatRefresh: true });
+    const handleOnMouseMove = e => {
+      const { currentTarget: target } = e;
+
+      const rect = target.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
+      
+      target.style.setProperty("--mouse-x", `${x}px`);
+      target.style.setProperty("--mouse-y", `${y}px`);
+    }
+
+    for (const card of document.querySelectorAll(".cardi")) {
+      card.onmousemove = e => handleOnMouseMove(e);
+    }
+
   });
   return (
     <div className="landing-page-container">
@@ -43,9 +91,7 @@ const LandingPage = () => {
           </svg>
         </div>
         <div className="featured-items1">
-          <h2>FEATURED ITEMS</h2>
-          <div className="first-featured-item1">{/* <h4>ITEM</h4> */}</div>
-          <div className="second-featured-item1">{/* <h4>ITEM</h4> */}</div>
+          <img className="front-item" src={compImage} alt="computer" />
         </div>
         <div className="browse-all-button-container">
           <button>
@@ -53,15 +99,14 @@ const LandingPage = () => {
               Browse All
             </a>
           </button>
+
           <div className="category-title-container">
-            <h3 className="or">Or</h3>
-            <h3>Browse By Category</h3>
+            <h5 className="or">Or</h5>
+            <h5>Browse By Category</h5>
           </div>
         </div>
         <div className="featured-items2">
-          <h2>FEATURED ITEMS</h2>
-          {/* <h4>ITEM</h4>
-          <h4>ITEM</h4> */}
+          <img className="back-item" src={compImage} alt="computer" />
         </div>
       </section>
 
@@ -86,22 +131,34 @@ const LandingPage = () => {
         </div>
         <div className="product-categories">
           <div className="category">
-            <h4>CPU</h4>
+            <a className="category-link" href="/products">
+              <h4>CPUs</h4>
+            </a>
           </div>
           <div className="category">
-            <h4>GPU</h4>
+            <a className="category-link" href="/products">
+              <h4>GPUs</h4>
+            </a>
           </div>
           <div className="category">
-            <h4>PSU</h4>
+            <a className="category-link" href="/products">
+              <h4>PSUs</h4>
+            </a>
           </div>
           <div className="category">
-            <h4>Motherboards</h4>
+            <a className="category-link" href="/products">
+              <h4>Motherboards</h4>
+            </a>
           </div>
           <div className="category">
-            <h4>Cases</h4>
+            <a className="category-link" href="/products">
+              <h4>Cases & Accessories</h4>
+            </a>
           </div>
           <div className="category">
-            <h4>Monitors</h4>
+            <a className="category-link" href="/products">
+              <h4>Monitors</h4>
+            </a>
           </div>
         </div>
       </section>
@@ -133,6 +190,34 @@ const LandingPage = () => {
         </div>
       </section>
       <section className="fourth-section">
+        <div className="cardi-container">
+          <h5>What People are Saying...</h5>
+          <div id="cards">
+            <div className="cardi">
+              <img src={pic1} alt="profile of person" />
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                tenetur reiciendis suscipit consectetur dolores. Aliquam."
+              </p>
+            </div>
+            <div className="cardi">
+              <img src={pic2} alt="profile of person" />
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                tenetur reiciendis suscipit consectetur dolores. Aliquam."
+              </p>
+            </div>
+            <div className="cardi">
+              <img src={pic3} alt="profile of person" />
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                tenetur reiciendis suscipit consectetur dolores. Aliquam."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* <Svg /> */}
         <footer className="custom-shape-divider-top-1645218211">
           <svg
             data-name="Layer 1"
