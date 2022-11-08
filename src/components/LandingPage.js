@@ -91,7 +91,7 @@ const LandingPage = () => {
           </svg>
         </div>
         <div className="featured-items1">
-          <img className="front-item" src={compImage} alt="computer" />
+          {/* <img className="front-item" src={compImage} alt="computer" /> */}
         </div>
         <div className="browse-all-button-container">
           <button>
@@ -106,7 +106,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="featured-items2">
-          <img className="back-item" src={compImage} alt="computer" />
+          {/* <img className="back-item" src={compImage} alt="computer" /> */}
         </div>
       </section>
 

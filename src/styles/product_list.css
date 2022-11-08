@@ -18,10 +18,10 @@
 .product-container {
   width: 100vw;
   height: 100%;
-  padding: 7rem 0;
+  padding: 8rem 0;
   min-height: 100vh;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   color: white;
   background-color: var(--light-accent);
   overflow-x: hidden;
@@ -39,7 +39,6 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  
   background-repeat:   no-repeat;
   background-attachment: fixed;
   background-color: var(--light-accent);
@@ -47,82 +46,69 @@
 }
 
 .card {
-  width: 65vw;
-  min-width: 280px;
-  max-width: 400px;
-  border-radius: 30px;
-  padding: 3rem 10rem; 
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: var(--light-accent);
+  background-color: rgba(255,255,255,0.2);
+  position: relative;
+  height: 18rem;
+  width: 30rem;
+  min-width: 250px;
+  /* border-radius: 10px; */
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(50px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 0.1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  transition: 0.2s ease-in-out;
-  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--primary);
   
+}
+
+@media (max-width: 500px) {
+  .card:nth-child(1) {
+    scale: 0.7;
+    margin-top: -4.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .card  {
+    scale: 0.7;
+    margin-top: -5rem;
+  }
 }
 
 .card:hover {
-
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(2.4px);
--webkit-backdrop-filter: blur(2.2px);
-border: 1px solid rgba(255, 255, 255, 0.3);
-
-transform: translateY(-8px);
-    
-}
-
-.items {
- 
-  height: 280px;
-  display: flex;
-  min-width: 260px;
-  max-width: 350px;
-  
-}
-.items img {
-  border-radius: 3px;
-  z-index: 200;
-  padding: 2rem;
+scale: 1.05;
 }
 
 .product-name {
-  margin-top: 50px;
-  
-  
-  
+  position: relative;
+  top: -5.3rem;
+  width: 100%;
 }
 .product-name h2 {
   width: 100%;
-  padding:  0.5rem 1rem;
+  padding:  1rem;
   background: var(--primary);
   color: var(--light-accent);
   cursor: pointer;
-  border-radius: 999999px;
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.8rem;
 }
 
 .product-name h3 {
+  position: relative;
   font-size: 1.7rem;
   font-weight: 500;
   color: var(--primary);
-  margin-top: 10%;
+  bottom: -8rem;
   text-shadow:2px 3px 4px rgba(88, 88, 88, 0.609);
 }
 
 .product-list-image {
   margin: 0 auto;
   width: 250px;
-  height: 280px;
-  border: 1px solid var(--primary);
-  object-fit: cover;
+  height: 300px;
+  /* border: 1px solid var(--primary); */
+  object-fit: contain;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 

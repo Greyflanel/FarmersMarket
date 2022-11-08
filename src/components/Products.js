@@ -1,30 +1,39 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useMemo } from "react";
-import Loading from "./Loading.js";
-import { useAxios } from "./useAxios.js";
+import ProductContext from "../Contexts/ProductContext";
+import { productList } from "./server.js";
 import { NavLink } from "react-router-dom";
 import "../styles/product_list.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import axios from "axios";
+import ks from "../assets/ks.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const Products = (props) => {
-  const { data, error, loaded } = useAxios("/products", "GET", {});
+  const [prod, setProd] = useState([]);
 
-  if (loaded) {
-    return error ? (
-      <span>Error: {error}</span>
-    ) : (
-      <section className="container">
+  useEffect(() => {
+    axios
+      .get("https://api.computerspartselectronics.com/products")
+      .then((response) => {
+        console.log(response.data)
+        setProd(response.data);
+      })
+      .catch((error) => {
+        console.log({ error });
+      });
+  }, [setProd]);
+
+  return (
+    <section className="container">
       <div className="product-container">
-        {data.map((product) => (
+        {prod.map((product) => (
           <div key={product.product}>
             <NavLink to={`/products/${product.id}`} className="card">
               <div className="items">
                 <img
                   className="product-list-image"
-                  src={product.image}
+                  src={ks}
                   alt={product.product}
                 />
               </div>
@@ -38,13 +47,9 @@ const Products = (props) => {
             </NavLink>
           </div>
         ))}
-            
       </div>
-      
     </section>
-    );
-  }
-  return <Loading/>;
+  );
 };
 
 export default Products;

@@ -14,7 +14,7 @@ const ShoppingCart = () => {
     // Create PaymentIntent as soon as the page loads
     fetch("https://api.computerspartselectronics.com/create-payment-intent", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "https://computerspartselectronics.com" },
       body: JSON.stringify(cart),
     })
       .then((res) => res.json())

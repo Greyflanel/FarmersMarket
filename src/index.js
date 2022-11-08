@@ -6,7 +6,7 @@ import App from "./App";
 import { Auth0Provider } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 import { getConfig } from "./config";
-import { AxiosInstanceProvider } from "./Contexts/AxiosInstanceProvider";
+
 
 const OnRedirectCallback = (appState) => {
   const History = useNavigate();
@@ -32,11 +32,7 @@ root.render(
   <Auth0Provider {...providerConfig}>
     <Router>
       <React.StrictMode>
-        <AxiosInstanceProvider
-          config={{ baseURL: "https://api.computerspartselectronics.com" }}
-        >
           <App />
-        </AxiosInstanceProvider>
       </React.StrictMode>
     </Router>
   </Auth0Provider>
