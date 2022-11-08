@@ -12,9 +12,9 @@ const SingleProduct = (props) => {
       const cartItem = {
         product: props.singleProduct[0].product,
         price: props.singleProduct[0].price,
-        product_image_url: props.singleProduct[0].product_image_url,
+        product_image: props.singleProduct[0].product_image,
       };
-      const noDuplicates = cart.filter((item) => item.product !== product || item.product === product);
+      const noDuplicates = cart.filter((item) => item.product !== product);
       setCart([...noDuplicates, cartItem]);
     };
 
