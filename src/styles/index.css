@@ -262,23 +262,24 @@ h3 {
   
 }
 
-.cart_link:hover {
-  scale: 1.1;
- }
-
 span.cart-item-count {
   position: absolute;
   right: -0.6rem;
   top: -0.2rem;
   border-radius: 50%;
   background-color: var(--primary);
-  padding: 0.33rem;
-  font-size: 0.78rem;
-  font-weight: 500;
+  padding: 0.38rem;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: white;
-  min-width: 1.5rem;
+  min-width: 1.6rem;
   z-index: 999999999999999999;
 }
+
+.cart_link:hover {
+  scale: 1.1;
+  
+ }
 
 .user-profile {
   position: absolute;
