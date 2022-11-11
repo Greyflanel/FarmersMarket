@@ -832,7 +832,7 @@ button {
   height: 100%;
   word-break: break-all;
   min-width: 2rem;
-  transition: 0.9s;
+  transition: 0.7s;
   
 }
 
@@ -918,6 +918,7 @@ button {
   .category:hover {
     background-position: 50% 40%;
     background-size: 6rem;
+    
 } 
 
 .category-link {

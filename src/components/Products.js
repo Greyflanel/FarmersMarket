@@ -14,7 +14,7 @@ const Products = (props) => {
 
   useEffect(() => {
     axios
-      .get("https://api.computerspartselectronics.com/products")
+      .get("http://localhost:4000/products")
       .then((response) => {
         console.log(response.data)
         setProd(response.data);
@@ -27,26 +27,28 @@ const Products = (props) => {
   return (
     <section className="container">
       <div className="product-container">
-        {prod.map((product) => (
-          <div key={product.product}>
-            <NavLink to={`/products/${product.id}`} className="card">
-              <div className="items">
-                <img
-                  className="product-list-image"
-                  src={ks}
-                  alt={product.product}
-                />
-              </div>
-              <div className="product-name">
-                <h2>{product.product}</h2>
-                <h3>${product.price}</h3>
-              </div>
-              <div className="product-details">
-                <p>{product.product_details}</p>
-              </div>
-            </NavLink>
-          </div>
-        ))}
+        {prod
+          .map((product) => (
+            <div key={product.product}>
+              <NavLink to={`/products/${product.id}`} className="card">
+                <div className="items">
+                  <img
+                    className="product-list-image"
+                    src={ks}
+                    alt={product.product}
+                  />
+                </div>
+                <div className="product-name">
+                  <h2>{product.product}</h2>
+                  <h3>${product.price}</h3>
+                </div>
+                <div className="product-details">
+                  <p>{product.desc}</p>
+                </div>
+              </NavLink>
+            </div>
+          ))}
+      
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ import ExternalApi from "./ExternalApi.js";
 import { loadStripe } from "@stripe/stripe-js";
 import Payment from "./components/Payment.js";
 import Completion from "./components/Completion.js";
+import Category from "./components/Category.js";
 
 const App = () => {
   const [stripePromise, setStripePromise] = useState(null);
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/:category" element={<Category />} />
           <Route path="/cart" element={<ExternalApi />} />
           <Route path="/" element={<Payment stripePromise={stripePromise} />} />
           <Route

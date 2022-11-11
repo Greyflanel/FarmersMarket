@@ -131,32 +131,32 @@ const LandingPage = () => {
         </div>
         <div className="product-categories">
           <div className="category">
-            <a className="category-link" href="/products">
+            <a className="category-link" href="/cpu">
               <h4>CPUs</h4>
             </a>
           </div>
           <div className="category">
-            <a className="category-link" href="/products">
+            <a className="category-link" href="/gpu">
               <h4>GPUs</h4>
             </a>
           </div>
           <div className="category">
-            <a className="category-link" href="/products">
+            <a className="category-link" href="/psu">
               <h4>PSUs</h4>
             </a>
           </div>
           <div className="category">
-            <a className="category-link" href="/products">
+            <a className="category-link" href="/motherboards">
               <h4>Motherboards</h4>
             </a>
           </div>
           <div className="category">
-            <a className="category-link" href="/products">
+            <a className="category-link" href="/cases&accessories">
               <h4>Cases & Accessories</h4>
             </a>
           </div>
           <div className="category">
-            <a className="category-link" href="/products">
+            <a className="category-link" href="/monitors">
               <h4>Monitors</h4>
             </a>
           </div>
