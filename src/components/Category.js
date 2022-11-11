@@ -14,7 +14,7 @@ const Category = (props) => {
   console.log(category)
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/${category}`)
+      .get(`https://computerspartselectronics.com/${category}`)
       .then((response) => {
         console.log(response.data)
         setProd(response.data);
