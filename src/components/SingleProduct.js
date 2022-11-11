@@ -7,7 +7,7 @@ const SingleProduct = (props) => {
   const [cart, setCart] = useContext(CartContext);
 
   if (props.singleProduct.length > 0) {
-    const { product, product_image_url, price } = props.singleProduct[0];
+    const { product, product_image, price } = props.singleProduct[0];
     const addItem = () => {
       const cartItem = {
         product: props.singleProduct[0].product,
@@ -22,7 +22,7 @@ const SingleProduct = (props) => {
       <div className="single-product-container">
         <div className="singleCard">
           <h2>{product}</h2>
-          <img className="cartItem" src={product_image_url} alt={product} />
+          <img className="cartItem" src={product_image} alt={product} />
           <h3>Price: ${price}</h3>
           <br />
           <button className="add-to-cart-btn" onClick={addItem}>
