@@ -14,7 +14,7 @@ const Products = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/products")
+      .get("https://api.computerspartselectronics.com/products")
       .then((response) => {
         console.log(response.data)
         setProd(response.data);

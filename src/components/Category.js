@@ -14,7 +14,7 @@ const Category = (props) => {
   console.log(category)
   useEffect(() => {
     axios
-      .get(`https://computerspartselectronics.com/${category}`)
+      .get(`https://api.computerspartselectronics.com/${category}`)
       .then((response) => {
         console.log(response.data)
         setProd(response.data);
