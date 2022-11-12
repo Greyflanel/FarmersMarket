@@ -11,12 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
 const Category = (props) => {
   const [prod, setProd] = useState([]);
   const { category } = useParams();
-  console.log(category)
+  
   useEffect(() => {
     axios
       .get(`https://api.computerspartselectronics.com/${category}`)
       .then((response) => {
-        console.log(response.data)
         setProd(response.data);
       })
       .catch((error) => {
@@ -25,8 +24,9 @@ const Category = (props) => {
   }, [setProd, category]);
 
   return (
-    <section className="container">
+    <section className="product-category container">
       <div className="product-container">
+        <h2 className="category-title">{category.toUpperCase()}</h2>
         {prod.map((product) => (
           <div key={product.product}>
             <NavLink to={`/products/${product.id}`} className="card">

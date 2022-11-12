@@ -925,6 +925,20 @@ button {
   height: 100%;
 }
 
+.category-title {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  font-weight: 400;
+  color: var(--primary);
+  
+}
+
+.product-container h2 {
+  position: relative;
+  
+}
+
 .carousel {
   position: relative;
   z-index: 999999999999999999999999;
