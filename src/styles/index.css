@@ -624,6 +624,9 @@ section {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
 }
 
 .featured-items2 {
@@ -646,6 +649,9 @@ section {
   padding: 0.5rem 1rem;
   text-shadow: none;
   overflow: hidden;
+  background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
 }
 
 @media (max-width: 700px) {
@@ -828,11 +834,11 @@ button {
   grid-template-columns: 16% 16% 16% 17% 17% 17%;
   grid-template-rows: auto;
   border-left: none;
-  background-color: rgba(255,255,255,0.2);
+  background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
+  backdrop-filter: blur(50px);
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
-  backdrop-filter: blur(50px);
 }
 
 @media (max-width: 700px) {
