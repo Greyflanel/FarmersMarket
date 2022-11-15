@@ -101,8 +101,7 @@ const LandingPage = () => {
           </button>
 
           <div className="category-title-container">
-            <h5 className="or">Or</h5>
-            <h5>Browse By Category</h5>
+            <h5>Or Browse By Category</h5>
           </div>
         </div>
         <div className="featured-items2">

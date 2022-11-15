@@ -742,7 +742,7 @@ button {
     var(--primary)
   );
   transition: all 0.4s linear;
-  color: white;
+  color: rgba(255, 255, 255, 0.671);
   cursor: pointer;
   
 }
@@ -767,10 +767,17 @@ button {
 .category-title-container {
   position: relative;
   width: 100vw;
-  margin-top: 50vh;
-  color: var(--primary);
-  line-height: 2.5rem;
-  text-shadow: 2px 3px 4px rgb(154 153 153);
+  padding: 2rem;
+  height: 20vh;
+  margin: 0px;
+  overflow: hidden;
+  top: 46vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: none;
+  
 }
 
 @media (max-width: 700px) {
@@ -793,13 +800,19 @@ button {
 }
 
 .category-title-container h5 {
-  font-size: clamp(1rem, 2.6rem, 4rem);
-  position: absolute;
-  width: 100vw;
-  top: 1.5rem;
+ position: absolute;
+  width: 50vw;
+  top: 0;
   font-weight: 300;
   color: var(--primary);
- 
+  font-size: clamp(2.5rem, 3.5rem, 4.5rem);
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(50px);
+  padding: 1rem;
+  border-radius: 15px;
+  text-shadow: 2px 3px 4px rgb(154 153 153);
+  background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
+  backdrop-filter: blur(50px);
 }
 
 .product-categories {
@@ -1723,11 +1736,10 @@ button.close-icon:hover {
   position: relative;
   width: 100vw;
   padding: 2rem;
-  height: 60vh;
+  height: 68vh;
   margin: 0px;
   overflow: hidden;
-  top: -82vh;
-  /* background-color: hsla(194, 19%, 73%, 0.888); */
+  top: -81vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1737,11 +1749,17 @@ button.close-icon:hover {
 
 .cardi-container h5 {
   position: absolute;
-  width: 40vw;
+  width: 48vw;
   top: 3rem;
   font-weight: 300;
   color: var(--primary);
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 3.5rem, 4.5rem);
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(50px);
+  padding: 1rem;
+  border-radius: 15px;
+  background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
+  backdrop-filter: blur(50px);
 }
 
 @media (max-width: 700px) {
@@ -1804,6 +1822,7 @@ button.close-icon:hover {
   text-align: right;
   padding: 1rem;
   width: 80%;
+  
 }
 
 /* @media (max-width: 700px) {
