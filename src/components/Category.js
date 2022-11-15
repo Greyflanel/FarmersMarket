@@ -26,7 +26,7 @@ const Category = (props) => {
   return (
     <section className="product-category container">
       <div className="product-container">
-        <h2 className="category-title">{category.toUpperCase()}</h2>
+        <h2 id="category-list-title">{category.toUpperCase()}</h2>
         {prod.map((product) => (
           <div key={product.product}>
             <NavLink to={`/products/${product.id}`} className="card">

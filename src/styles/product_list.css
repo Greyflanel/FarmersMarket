@@ -57,7 +57,8 @@
   backdrop-filter: blur(50px);
   display: flex;
   border: 1px solid var(--primary);
-  
+  border-radius: 10px;
+  transition: all 0.4s;
 }
 
 @media (max-width: 500px) {
@@ -75,7 +76,7 @@
 }
 
 .card:hover {
-scale: 1.05;
+scale: 1.04;
 }
 
 .product-name {
