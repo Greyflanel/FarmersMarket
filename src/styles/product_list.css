@@ -59,6 +59,7 @@
   border: 1px solid var(--primary);
   border-radius: 10px;
   transition: all 0.4s;
+  text-shadow: none;
 }
 
 @media (max-width: 500px) {
@@ -76,7 +77,9 @@
 }
 
 .card:hover {
-scale: 1.04;
+scale: 1.03;
+text-shadow: none;
+
 }
 
 .product-name {

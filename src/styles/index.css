@@ -1833,7 +1833,7 @@ button.close-icon:hover {
 }*/
 
 .cardi::before {
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.5), transparent 40%);
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.4), transparent 50%);
   border-radius: inherit;
   content: "";
   height: 100%;
