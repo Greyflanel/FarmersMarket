@@ -526,7 +526,7 @@ section {
   content: "";
   width: 100vw;
   background-image: url(../assets/Lion-Logo-Text7.png);
-  background-size:  clamp(250px, 37rem, 40vw );
+  background-size:  clamp(220px, 37rem, 40vw );
   background-repeat: no-repeat;
   background-position: center 35%;
   
@@ -657,11 +657,11 @@ section {
 @media (max-width: 700px) {
   .featured-items1 {
     z-index: 99999999999999999999999999999999;
-    height: 38vh;
+    height: 30vh;
     width: 90vw;
     left: 0;
-    top: 33vh;
-    border-radius: 0;
+    top: 50vh;
+    border-radius: 10px;
     background-color: var(--light-accent);
     margin: 0 auto;
   }
@@ -692,10 +692,10 @@ section {
 @media (max-width: 700px) {
   .featured-items2 {
   left: 0;
-  top: 75vh;
-  height: 38vh;
+  top: 82vh;
+  height: 30vh;
   width: 90vw;
-  border-radius: 0;
+  border-radius: 10px;
   background-color: var(--light-accent);
   margin: 0 auto;
 }
@@ -739,7 +739,7 @@ button {
   width: 15vw;
   min-width: 220px;
   padding: 0.5rem;
-  font-size: 2.2rem;
+  font-size: clamp(0.5rem, 2.2rem, 3.5rem);
   font-weight: 350;
   border-radius: 5px;
   background: radial-gradient(
@@ -753,6 +753,12 @@ button {
   
 }
 
+@media (max-width: 700px) {
+  .browse-all-button {
+    font-size: 2.1rem;
+  }
+}
+
 .browse-all-button-container {
  position: absolute;
   top: 72vh;
@@ -761,7 +767,8 @@ button {
 
 @media (max-width: 700px) {
   .browse-all-button-container {
-    top: 115vh;
+    top: 36vh;
+    
   }
 }
 
@@ -771,13 +778,13 @@ button {
 }
 
 .category-title-container {
-  position: relative;
+  position: absolute;
   width: 100vw;
   padding: 2rem;
   height: 20vh;
   margin: 0px;
   overflow: hidden;
-  top: 46vh;
+  top: 125vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -789,10 +796,11 @@ button {
 @media (max-width: 700px) {
   .category-title-container {
   width: 100vw;
-  margin-top: 1.2rem;
+  top: 56rem;
   
 }
 }
+
 
 .or {
   margin-top: -3rem;
@@ -807,11 +815,10 @@ button {
 
 .category-title-container h5 {
  position: absolute;
-  width: 50vw;
+  width: 35vw;
   top: 0;
   font-weight: 300;
   color: var(--primary);
-  font-size: clamp(2.5rem, 3.5rem, 4.5rem);
   background-color: rgba(255,255,255,0.2);
   backdrop-filter: blur(50px);
   padding: 1rem;
@@ -819,6 +826,17 @@ button {
   text-shadow: 2px 3px 4px rgb(154 153 153);
   background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
   backdrop-filter: blur(50px);
+  font-size: clamp(1rem, 2.8rem, 3.5rem);
+}
+
+@media (max-width: 700px) {
+  .category-title-container h5 {
+     width: 90vw;
+     background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
+    backdrop-filter: blur(50px);
+    font-size: 2.4rem;
+    
+}
 }
 
 .product-categories {
@@ -829,7 +847,7 @@ button {
   border-radius: 5px;
   backdrop-filter: blur(10px); 
   transition: 0.2s ease-in-out;
-  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 16% 16% 16% 17% 17% 17%;
   grid-template-rows: auto;
@@ -843,11 +861,13 @@ button {
 
 @media (max-width: 700px) {
   .product-categories {
-    width: 95vw;
+    width: 100vw;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33.3% 33.3% 33.3%;
     top: 20vh;
-    
+    color: var(--primary);
+    text-shadow: none;
+    border-radius: 0;
   }
 }
 
@@ -867,14 +887,15 @@ button {
 .category h4 {
   position: relative;
   top: 15%;
-  font-size: clamp(0.5rem, 1.6rem, 3rem);
+  font-size: clamp(1rem, 1.8rem, 3.5rem);
   font-weight: 400;
+  color: var(--primary);
 }
 
 @media (max-width: 700px) {
   .category h4{
-    top: 3.5rem;
-    
+    top: 3.3rem;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 700px) {
@@ -928,12 +949,15 @@ button {
 
 
 .category:nth-child(5) {
-  padding: 0 0.8rem;
+  
   background-image: url(../assets/cases-g.png);
   background-size: clamp(2.5rem, 4rem, 5.5rem);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+
+
 .category:nth-child(6) {
   padding: 0 0.8rem;
   background-image: url(../assets/monitor-g.png);
@@ -1254,7 +1278,7 @@ a {
   padding: 2rem;
   position: absolute;
   z-index: 100;
-  width: clamp(320px, 25%, 30vw);
+  width: clamp(360px, 25%, 30vw);
   margin-top: 11vh;
   height: 85vh;
   display: flex;
@@ -1279,22 +1303,6 @@ a {
   margin-bottom: 2rem;
   scrollbar-color: var(--primary) var(--dark-accent);
 }
-
-/* .scroll-cart::-webkit-scrollbar {
-  display: none;
-} */
-
-/* .shopping-cart::after {
-  content: "";
-  position: absolute;
-  top: 15vh;
-  display: block;
-  height: 80vh;
-  width: 20%;
-  background-color: #004c5417;
-  border-radius: 10px;
-  pointer-events: none;
-} */
 
 .shopping-cart-item {
   
@@ -1353,10 +1361,6 @@ a {
   position: relative;
   font-size: clamp(1rem, 1.4rem, 3rem);
   height: 4vh;
-  
-}
-
-.shopping-cart-checkout p:first-child {
   
 }
 
@@ -1436,27 +1440,6 @@ a {
   background-color: var(--primary);
 }
 
-/* .cards {
-  width: 100%;
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 400px) 2000px);
-  gap: 10px;
-}
-
-.card-img {
-  width: 4rem;
-  
-}
-
-.card {
-  height: 50vh;
-  
-} */
-.cards {
-  /* transform: rotate(90deg); */
-}
-
 .svg {
   position: absolute;
   bottom: 10%;
@@ -1470,7 +1453,13 @@ a {
 .fourth-section {
   background-color: var(--light-accent);
   background: radial-gradient(circle, rgb(172, 192, 198) 8%, rgba(0, 76, 84, 0.24) 100%, rgba(164,172,175,0.8631827731092436) 100%);
-  height: 42vh;
+  height: 54vh;
+}
+
+@media (max-width: 700px) {
+  .fourth-section {
+    height: 36vh; 
+  }
 }
 
 .cardinal {
@@ -1586,14 +1575,6 @@ a {
   
 }
 
-
-
-/* @media (max-width: 500px) {
-  .logo-container {
-    min-width: 300px;
-    top: 14vh;
-}
-} */
 .spinner {
   position: relative;
   top: 40vh;
@@ -1740,6 +1721,7 @@ button.close-icon:hover {
 
 .cardi-container {
   position: relative;
+  z-index: 9;
   width: 100vw;
   padding: 2rem;
   height: 68vh;
@@ -1755,11 +1737,11 @@ button.close-icon:hover {
 
 .cardi-container h5 {
   position: absolute;
-  width: 48vw;
+  width: 35vw;
   top: 3rem;
   font-weight: 300;
   color: var(--primary);
-  font-size: clamp(2.5rem, 3.5rem, 4.5rem);
+  font-size: clamp(1rem, 2.8rem, 3.5rem);
   background-color: rgba(255,255,255,0.2);
   backdrop-filter: blur(50px);
   padding: 1rem;
@@ -1771,14 +1753,14 @@ button.close-icon:hover {
 @media (max-width: 700px) {
   .cardi-container {
     height: 100vh;
-    top: -53rem;
-    padding: 1rem;
+    top: -45rem;
   }
 }
 @media (max-width: 700px) {
   .cardi-container h5 {
-    top: 3rem;
-    font-size: 2rem;
+    top: 1.5rem;
+    width: 90vw;
+    font-size: 2.4rem;
   }
 }
 
@@ -1802,60 +1784,22 @@ button.close-icon:hover {
   background-color: rgba(255,255,255,0.02);
   position: relative;
   height: 30vh;
-  width: clamp(10rem, 35rem, 45rem);
+  width: clamp(10rem, 30rem, 45rem);
   min-width: 300px;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
   backdrop-filter: blur(50px);
-  padding-right: 2rem;
+  
 }
 
 @media (max-width: 700px) {
   .cardi {
     width: 100%;
-    height: 11rem;
-    padding: 1rem;
+    height: 10.5rem;
     
   }
 }
-
-.cardi p {
-  font-size: clamp(0.8rem, 1.9rem, 3rem);
-  position: absolute;
-  top: 4rem;
-  left: 6rem;
-  text-align: right;
-  padding: 1rem;
-  width: 80%;
-  
-}
-
-/* @media (max-width: 700px) {
-  .cardi p {
-  font-size: 1rem;
-  
-  top: 50%;
-  
-}
-} */
-
-
-/* .cardi:nth-child(1) {
-  background-image: url(../assets/social-card-pic1.jpg);
-  background-size: 30%;
-  background-repeat: no-repeat;
-  
-}
-.cardi:nth-child(2) {
-  background-image: url(../assets/social-card-pic2.jpg);
-  background-size: 30%;
-  background-repeat: no-repeat;
-}*/
-/* .cardi:nth-child(3) img {
- 
- 
-}*/
 
 .cardi::before {
   background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.4), transparent 50%);
@@ -1864,23 +1808,40 @@ button.close-icon:hover {
   height: 100%;
   left: 0px;
   position: absolute;
-  
   width: 100%;
   z-index: 1000;
  
 }
 
+.cardi p {
+  font-size: clamp(1rem, 1.6rem, 3.5rem);
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  margin-right: 0.8vw;
+  margin-bottom: 0.8vw;
+}
+
+@media (max-width: 700px) {
+  .cardi p {
+    font-size: 1.1rem;
+    margin: 0.8rem;
+    text-shadow: none;
+    font-weight: 300;
+  }
+}
 .cardi img {
   position: absolute;
   width: 7rem;
-  top: 1rem;
-  left: 1rem;
+  top: 0.8vw;
+  left: 0.8vw;
   border-radius: 10px;
   
 }
 
 @media (max-width: 700px) {
   .cardi img {
-    width: 5rem;
+    width: 4rem;
+    margin: 0.3rem;
   }
 }

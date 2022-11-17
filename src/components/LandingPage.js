@@ -99,10 +99,10 @@ const LandingPage = () => {
               Browse All
             </a>
           </button>
-
+          </div>
           <div className="category-title-container">
             <h5>Or Browse By Category</h5>
-          </div>
+          
         </div>
         <div className="featured-items2">
           {/* <img className="back-item" src={compImage} alt="computer" /> */}
