@@ -659,11 +659,11 @@ section {
     z-index: 99999999999999999999999999999999;
     height: 30vh;
     width: 90vw;
-    left: 0;
+    left: 4vw;
     top: 50vh;
     border-radius: 10px;
     background-color: var(--light-accent);
-    margin: 0 auto;
+    
   }
 }
 
@@ -691,13 +691,13 @@ section {
 
 @media (max-width: 700px) {
   .featured-items2 {
-  left: 0;
+  left: 4vw;
   top: 82vh;
   height: 30vh;
   width: 90vw;
   border-radius: 10px;
   background-color: var(--light-accent);
-  margin: 0 auto;
+  
 }
 }
 
@@ -796,7 +796,7 @@ button {
 @media (max-width: 700px) {
   .category-title-container {
   width: 100vw;
-  top: 56rem;
+  top: 121vh;
   
 }
 }
@@ -1756,6 +1756,13 @@ button.close-icon:hover {
     top: -45rem;
   }
 }
+
+@media (max-width: 980px) {
+  .cardi-container {
+    height: 100vh;
+    top: -45rem;
+  }
+}
 @media (max-width: 700px) {
   .cardi-container h5 {
     top: 1.5rem;
@@ -1784,7 +1791,7 @@ button.close-icon:hover {
   background-color: rgba(255,255,255,0.02);
   position: relative;
   height: 30vh;
-  width: clamp(10rem, 30rem, 45rem);
+  width: 28vw;
   min-width: 300px;
   border-radius: 10px;
   cursor: pointer;
@@ -1795,8 +1802,15 @@ button.close-icon:hover {
 
 @media (max-width: 700px) {
   .cardi {
-    width: 100%;
+    width: 80%;
     height: 10.5rem;
+    
+  }
+}
+
+@media (max-width: 980px) {
+  .cardi {
+    width: 20%;
     
   }
 }
@@ -1814,7 +1828,7 @@ button.close-icon:hover {
 }
 
 .cardi p {
-  font-size: clamp(1rem, 1.6rem, 3.5rem);
+  font-size: 1.3rem;
   position: absolute;
   bottom: 0;
   text-align: right;
