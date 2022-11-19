@@ -527,13 +527,13 @@ section {
   content: "";
   width: 100vw;
   background-image: url(../assets/Lion-Logo-Text7.png);
-  background-size:  clamp(250px, 37rem, 40vw );
+  background-size:  clamp(280px, 37rem, 40vw );
   background-repeat: no-repeat;
   background-position: center 35%;
   
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .first-section::after { 
   width: 100vw;
   background-repeat: no-repeat;
@@ -601,13 +601,13 @@ section {
   border-radius: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .featured-items1 {
     z-index: 99999999999999999999999999999999;
     height: 30vh;
     width: 90vw;
     left: 4vw;
-    top: 47vh;
+    top: 48vh;
     border-radius: 10px;
     background-color: var(--light-accent);
     
@@ -636,10 +636,10 @@ section {
   
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .featured-items2 {
   left: 4vw;
-  top: 79vh;
+  top: 80vh;
   height: 30vh;
   width: 90vw;
   border-radius: 10px;
@@ -684,7 +684,7 @@ button {
 .browse-all-button {
 
   
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 2.5rem;
   font-size: clamp(0.5rem, 2.2rem, 3rem);
   font-weight: 350;
   border-radius: 5px;
@@ -699,7 +699,7 @@ button {
   
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .browse-all-button {
     font-size: 1.6rem;
   }
@@ -707,13 +707,13 @@ button {
 
 .browse-all-button-container {
  position: absolute;
-  top: 72vh;
+  top: 71vh;
  
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .browse-all-button-container {
-    top: 37vh;
+    top: 39vh;
     
   }
 }
@@ -741,7 +741,7 @@ button {
   .category-title-container {
   width: 100vw;
   top: 121vh;
-  
+  overflow: visible;
 }
 }
 
@@ -777,6 +777,7 @@ button {
      background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
     backdrop-filter: blur(50px);
     font-size: 2.4rem;
+    top: -2rem;
     
 }
 }
@@ -1664,7 +1665,6 @@ button.close-icon:hover {
 .cardi-container {
   position: relative;
   z-index: 9;
- 
   margin: 0 auto;
   overflow: hidden;
   top: -81vh;
@@ -1684,8 +1684,8 @@ button.close-icon:hover {
 
 @media (max-width: 700px) {
   .cardi-container {
-    
-    top: -90vh;
+    overflow: visible;
+    top: -80vh;
   }
 }
 
@@ -1698,7 +1698,7 @@ button.close-icon:hover {
   top: 0.5rem;
   font-weight: 300;
   color: var(--primary);
-  font-size: clamp(1rem, 2.6rem, 3.5rem);
+  font-size: clamp(1rem, 2.7rem, 3.5rem);
   background-color: rgba(255,255,255,0.2);
   backdrop-filter: blur(50px);
   padding: 1rem;
@@ -1711,7 +1711,15 @@ button.close-icon:hover {
 
 @media (max-width: 700px) {
   .cardi-container h5 {
-    top: 0;
+    top: -10vh;
+    width: 90vw;
+    font-size: 2.4rem;
+    
+  }
+}
+@media (max-width: 700px) {
+  .cardi-container h5 {
+    top: -10vh;
     width: 90vw;
     font-size: 2.4rem;
     
