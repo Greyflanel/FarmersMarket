@@ -1731,8 +1731,8 @@ button.close-icon:hover {
 .cardi {
   background-color: rgba(255,255,255,0.02);
   position: relative;
-  height: 28vh;
-  max-height: 200px;
+  height: 27vh;
+  
   width: 24vw;
   min-width: 340px;
   max-width: 450px;
@@ -1743,18 +1743,17 @@ button.close-icon:hover {
   
 }
 
-@media (max-width: 700px) {
+@media (max-width: 980px) {
   .cardi {
-    
+    height: 13.5rem;
     
     
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 700px) {
   .cardi {
-   
-    
+   height: 13rem;
   }
 }
 
@@ -1771,9 +1770,11 @@ button.close-icon:hover {
 }
 
 .cardi p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 300;
   position: absolute;
   bottom: 0;
+  text-shadow: none;
   text-align: right;
   margin-right: 0.8vw;
   margin-bottom: 0.8vw;
@@ -1788,7 +1789,7 @@ button.close-icon:hover {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 90px) {
   .cardi p {
     font-size: 1.2rem;
     margin: 0.8rem;
@@ -1798,7 +1799,7 @@ button.close-icon:hover {
 }
 .cardi img {
   position: absolute;
-  width: 7rem;
+  width: 5.9rem;
   top: 0.8vw;
   left: 0.8vw;
   border-radius: 10px;
@@ -1807,13 +1808,13 @@ button.close-icon:hover {
 
 @media (max-width: 700px) {
   .cardi img {
-    width: 4rem;
+    
     margin: 0.3rem;
   }
 }
 @media (max-width: 900px) {
   .cardi img {
-    width: 5rem;
+    width: 3.rem;
     margin: 0.3rem;
   }
 }
