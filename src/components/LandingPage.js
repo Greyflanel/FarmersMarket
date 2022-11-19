@@ -108,7 +108,6 @@ const LandingPage = () => {
           {/* <img className="back-item" src={compImage} alt="computer" /> */}
         </div>
       </section>
-
       <section className="second-section">
         <div className="custom-shape-divider-top-1645218211">
           <svg

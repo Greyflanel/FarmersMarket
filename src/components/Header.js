@@ -71,9 +71,6 @@ const Header = () => {
             <li>
               <a href="/about">About</a>
             </li>
-            {/* <li>
-              <a href="/external-api">Cart</a>
-            </li> */}
           </ul>
         </div>
         <button
