@@ -607,7 +607,7 @@ section {
     height: 30vh;
     width: 90vw;
     left: 4vw;
-    top: 48vh;
+    top: 52vh;
     border-radius: 10px;
     background-color: var(--light-accent);
     
@@ -639,7 +639,7 @@ section {
 @media (max-width: 800px) {
   .featured-items2 {
   left: 4vw;
-  top: 80vh;
+  top: 84vh;
   height: 30vh;
   width: 90vw;
   border-radius: 10px;
@@ -713,7 +713,7 @@ button {
 
 @media (max-width: 800px) {
   .browse-all-button-container {
-    top: 39vh;
+    top: 42vh;
     
   }
 }
@@ -740,7 +740,7 @@ button {
 @media (max-width: 700px) {
   .category-title-container {
   width: 100vw;
-  top: 121vh;
+  top: 120vh;
   overflow: visible;
 }
 }
@@ -757,7 +757,7 @@ button {
 }
 
 .category-title-container h5 {
- position: absolute;
+  position: absolute;
   top: 0;
   font-weight: 300;
   color: var(--primary);
@@ -777,7 +777,7 @@ button {
      background: radial-gradient(circle, rgb(172, 192, 198) 15%, rgba(0, 76, 84, 0.04) 100%, rgba(164,172,175,0.8631827731092436) 0%);
     backdrop-filter: blur(50px);
     font-size: 2.4rem;
-    top: -2rem;
+    top: -2vh;
     
 }
 }
@@ -804,7 +804,7 @@ button {
 
 @media (max-width: 700px) {
   .product-categories {
-    width: 98vw;
+    width: 96vw;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33.3% 33.3% 33.3%;
     top: 18vh;
@@ -890,7 +890,6 @@ button {
   }
 }
 
-
 .category:nth-child(5) {
   
   background-image: url(../assets/cases-g.png);
@@ -899,8 +898,6 @@ button {
   background-position: 50% 50%;
 }
 
-
-
 .category:nth-child(6) {
   padding: 0 0.8rem;
   background-image: url(../assets/monitor-g.png);
@@ -908,7 +905,6 @@ button {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-
 
   .category:hover {
     background-position: 50% 40%;
@@ -1717,14 +1713,7 @@ button.close-icon:hover {
     
   }
 }
-@media (max-width: 700px) {
-  .cardi-container h5 {
-    top: -10vh;
-    width: 90vw;
-    font-size: 2.4rem;
-    
-  }
-}
+
 
 #cards {
   display: flex;
@@ -1762,6 +1751,7 @@ button.close-icon:hover {
 @media (max-width: 700px) {
   .cardi {
    height: 13rem;
+   scale: 0.85;
   }
 }
 
