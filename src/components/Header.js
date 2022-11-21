@@ -73,10 +73,13 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <button
+        <div className="toggle-wrapper">
+          <button
           className={isActive ? "toggle" : "active"}
           onClick={menuToggle}
         ></button>
+        </div>
+        
       </nav>
     </div>
   );

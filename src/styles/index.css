@@ -164,7 +164,6 @@ header {
   position: fixed;
   top: 0;
   z-index: 90;
-  /* scale: 0.5; */
   overflow: hidden;
   width: 100vw;
   height: 11vh;
@@ -1513,6 +1512,14 @@ a {
   left: -0.6rem;
   
 }
+@media (max-width: 350px) {
+  .logo-wrapper img {
+  position: absolute;
+  width: 6.7rem;
+  
+}
+}
+
 
 .spinner {
   position: relative;
@@ -1690,7 +1697,7 @@ button.close-icon:hover {
 .cardi-container h5 {
   position: absolute;
   width: 36vw;
-  min-width: 350px;
+  min-width: 300px;
   top: 0.5rem;
   font-weight: 300;
   color: var(--primary);
@@ -1814,5 +1821,11 @@ button.close-icon:hover {
   .cardi img {
     width: 3.rem;
     margin: 0.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .cardi:nth-last-child() {
+    color: red;
   }
 }
