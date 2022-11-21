@@ -1819,13 +1819,13 @@ button.close-icon:hover {
 }
 @media (max-width: 900px) {
   .cardi img {
-    width: 3.rem;
+    width: 4rem;
     margin: 0.3rem;
   }
 }
-
-@media (max-width: 700px) {
-  .cardi:nth-last-child() {
-    color: red;
+.cardi:nth-last-child(1) {
+    background-color: var(--light-accent);
   }
+@media (max-width: 700px) {
+  
 }
