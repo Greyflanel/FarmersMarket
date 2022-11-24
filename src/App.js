@@ -31,7 +31,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/:category" element={<Category />} />
           <Route path="/cart" element={<ExternalApi />} />
-          <Route path="/" element={<Payment stripePromise={stripePromise} />} />
+          {/* <Route path="/" element={<Payment stripePromise={stripePromise} />} /> */}
           <Route
             path="/completion"
             element={<Completion stripePromise={stripePromise} />}

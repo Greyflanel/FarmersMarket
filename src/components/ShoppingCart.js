@@ -7,9 +7,9 @@ import { Elements } from "@stripe/react-stripe-js";
 
 const stripePromise = loadStripe("pk_test_jeQ7448CGihtpeuK8t7VPzYj00WRgJLHT6");
 const ShoppingCart = () => {
-  const [cart] = useContext(CartContext);
+  const [cart, setCart] = useContext(CartContext);
   const [clientSecret, setClientSecret] = useState("");
-
+ 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     fetch("https://api.computerspartselectronics.com/create-payment-intent", {

@@ -150,7 +150,7 @@ const LandingPage = () => {
           </div>
           <div className="category">
             <a className="category-link" href="/cases&accessories">
-              <h4>Cases & Accessories</h4>
+              <h4>Cases & Misc</h4>
             </a>
           </div>
           <div className="category">

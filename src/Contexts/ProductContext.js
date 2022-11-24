@@ -10,7 +10,6 @@ export const ProductProvider = (props) => {
 
     useEffect(() => {
         
-        
         axios.get("https://api.computerspartselectronics.com/products")
             .then((res) => {
                     console.log(res.data)
@@ -20,7 +19,6 @@ export const ProductProvider = (props) => {
             })
             .catch((error) => {
                 setError(error);
-                    
             });
     }, [products]);
 

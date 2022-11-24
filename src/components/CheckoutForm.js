@@ -1,16 +1,17 @@
 import {
   PaymentElement
 } from '@stripe/react-stripe-js'
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import { useStripe, useElements } from '@stripe/react-stripe-js';
 import Loading from "../components/Loading.js";
+import { CartContext } from '../Contexts/CartContext.js';
 
 export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [cart, setCart] = useContext(CartContext);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -22,7 +23,7 @@ export default function CheckoutForm() {
 
     setIsLoading(true);
     // const loading = isLoading ? <Loading /> : null;
-    
+    setCart([])
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {

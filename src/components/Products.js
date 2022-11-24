@@ -11,12 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Products = (props) => {
   const [prod, setProd] = useState([]);
-
+  
   useEffect(() => {
     axios
       .get("https://api.computerspartselectronics.com/products")
       .then((response) => {
-        console.log(response.data)
         setProd(response.data);
       })
       .catch((error) => {
